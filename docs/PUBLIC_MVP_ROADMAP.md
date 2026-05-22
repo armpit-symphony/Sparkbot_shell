@@ -6,6 +6,8 @@ This roadmap sequences `Sparkbot_shell` extraction. It is deliberately layered s
 
 ## Phase A - Shell Docs/Foundation
 
+Status: completed in `public-release-extraction-map-refresh`.
+
 Imports: README, classification docs, extraction map, sanitization checklist, repo separation rules, readiness assessment.
 
 Exclusions: all runtime source, proprietary modules, live connectors, Robo bridge, LIMA/Arc/Office/IT wiring.
@@ -16,15 +18,19 @@ Blockers: unclear public/private boundaries, missing license decision, missing i
 
 ## Phase B - Clean App Frame Import
 
+Status: completed in `public-release-layer-1-app-frame` as a static shell scaffold.
+
 Imports: static app shell, global nav, public route frame, public surface tabs.
 
 Exclusions: devtools, admin/template routes, private tabs, live terminal, private Robo controls.
 
-Validation: frontend build, desktop/mobile browser smoke for nonblank shell and navigation.
+Validation: frontend build, static source-copy scan, desktop/mobile browser smoke for nonblank shell and navigation.
 
 Blockers: private labels, hidden debug routes, shell requiring private backend state.
 
 ## Phase C - Core Brain/Chat/Model Stack
+
+Status: recommended next layer.
 
 Imports: Main Chat / DM, model stack config, model selector, basic model route contracts.
 

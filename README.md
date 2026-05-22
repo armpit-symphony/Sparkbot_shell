@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in staging/planning. Code import has not started on this branch. The current work is extraction mapping, public/private classification, sanitization planning, and release sequencing from the Sparkbot R&D repo.
+This repo is in public-release staging. Layer 1 now contains a static Vite + React + TypeScript app frame with global navigation and public-safe placeholder pages. It has no backend runtime, no model calls, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -33,6 +33,27 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Public MVP roadmap](docs/PUBLIC_MVP_ROADMAP.md)
 - [Repo separation rules](docs/REPO_SEPARATION_RULES.md)
 - [Extraction readiness assessment](docs/EXTRACTION_READINESS_ASSESSMENT.md)
+- [Layer 1 app frame status](docs/LAYER_1_APP_FRAME_STATUS.md)
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the static shell locally:
+
+```bash
+npm run dev
+```
+
+Build the static shell:
+
+```bash
+npm run build
+```
 
 ## Current Caveats
 
@@ -41,7 +62,8 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
+- Layer 1 pages are placeholders only. They intentionally do not persist settings, store model-seat credentials, execute Round Table meetings, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, or control robots/IoT.
 
 ## Next Step
 
-Layer 1 shell import after QA and extraction approval: clean app frame, global navigation, static public shell, and public-safe contracts only.
+Recommended Layer 2 is a chat/model config shell: static-to-interactive Main Chat scaffolding, model stack forms, and setup-needed state without live provider calls or credential storage until the boundary is reviewed.

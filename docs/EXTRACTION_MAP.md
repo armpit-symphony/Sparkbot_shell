@@ -4,13 +4,13 @@ Updated: 2026-05-22
 
 Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
 
-This is a planning map only. Do not copy code from Sparkbot R&D into `Sparkbot_shell` until an import layer is explicitly approved.
+This is a planning map with Layer 1 started. Do not copy additional code from Sparkbot R&D into `Sparkbot_shell` until the next import layer is explicitly approved.
 
 Priority legend: `P0_PUBLIC_MVP`, `P1_PUBLIC_POLISH`, `P2_ADVANCED_PUBLIC`, `TEASER_ONLY`, `PRIVATE_REMOVE`, `REVIEW_REQUIRED`.
 
 | Area | Source path(s) in Sparkbot R&D | Proposed destination in Sparkbot_shell | Public action | Required sanitization | Dependencies | Risk | Priority |
 |---|---|---|---|---|---|---|---|
-| App shell/global nav | `frontend/src/routes/__root.tsx`, `frontend/src/routes/_layout.tsx`, `frontend/src/components/Sidebar/AppSidebar.tsx`, `frontend/src/components/Common/SparkbotSurfaceTabs.tsx`, `frontend/src/routeTree.gen.ts` | `frontend/src/app/`, `frontend/src/routes/`, `frontend/src/components/shell/` | import | Remove devtools/template/admin routes; scrub private labels; keep public tabs only. | Router, auth shell, sidebar components. | Medium | P0_PUBLIC_MVP |
+| App shell/global nav | R&D reference only: `frontend/src/routes/__root.tsx`, `frontend/src/routes/_layout.tsx`, `frontend/src/components/Sidebar/AppSidebar.tsx`, `frontend/src/components/Common/SparkbotSurfaceTabs.tsx`, `frontend/src/routeTree.gen.ts` | `src/App.tsx`, `src/styles.css`, `src/pages/` | import | Layer 1 completed as a fresh static scaffold; no devtools/template/admin routes; scrub private labels; keep public tabs only. | Vite, React, TypeScript. | Medium | P0_PUBLIC_MVP |
 | Workstation | `frontend/src/pages/WorkstationPage.tsx`, `frontend/src/routes/workstation.tsx`, `frontend/src/config/workstationStations.ts` | `frontend/src/features/workstation/` | simplify | Strip private desks, live terminal defaults, proprietary copy, and hidden automation. | App shell, model config, Round Table launch. | High | P0_PUBLIC_MVP |
 | Main Chat/DM | `frontend/src/routes/dm.tsx`, `backend/app/api/routes/chat/llm.py`, `backend/app/api/routes/chat/model.py`, `backend/app/services/guardian/memory.py` | `frontend/src/features/chat/`, `backend/app/api/chat/` | import | Remove legacy debug chat route; keep public command channel and redacted context. | Auth, model routing, memory adapter. | High | P0_PUBLIC_MVP |
 | Round Table launch | `frontend/src/lib/workstationMeeting.ts`, `frontend/src/pages/WorkstationPage.tsx`, `backend/app/services/guardian/meeting_assignments.py`, `backend/app/services/guardian/meeting_heartbeat.py` | `frontend/src/features/roundtable/launch/`, `backend/app/services/meetings/` | simplify | Keep manifest/seat metadata only; avoid localStorage credentials and private heartbeat assumptions. | Workstation, model seats, rooms API. | High | P0_PUBLIC_MVP |
@@ -35,4 +35,4 @@ Priority legend: `P0_PUBLIC_MVP`, `P1_PUBLIC_POLISH`, `P2_ADVANCED_PUBLIC`, `TEA
 
 ## Import Discipline
 
-Layer 1 should import only the clean app frame, global navigation, static public shell, and public-safe contracts. Later layers can import model/chat, Workstation, Round Table, memory, Task Guardian, and connectors after each dependency is reviewed and validated.
+Layer 1 imported only the clean app frame, global navigation, static public shell, and public-safe docs links. Later layers can import or rewrite model/chat, Workstation, Round Table, memory, Task Guardian, and connectors only after each dependency is reviewed and validated.
