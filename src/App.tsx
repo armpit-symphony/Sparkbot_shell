@@ -56,7 +56,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 5 memory/context shell</span>
+            <span>Layer 6 Task Guardian health shell</span>
           </span>
         </a>
 
@@ -115,7 +115,8 @@ export function App() {
             guardrailProfiles={shellState.guardrailProfiles}
             guardrailProfile={shellState.guardrailProfile}
             taskGuardianTemplates={shellState.taskGuardianTemplates}
-            deliveryChannels={shellState.deliveryChannels}
+            taskDeliveryPreferences={shellState.taskDeliveryPreferences}
+            healthReportPreviews={shellState.healthReportPreviews}
             onGuardrailProfileChange={(guardrailProfile) =>
               setShellState((current) => ({ ...current, guardrailProfile }))
             }
@@ -132,11 +133,12 @@ export function App() {
           <section className="page-section">
             <div className="intro-row">
               <div>
-                <p className="section-label">Public Layer 5</p>
+                <p className="section-label">Public Layer 6</p>
                 <h2>Task Guardian preview</h2>
                 <p>
-                  Task Guardian is the scheduled work manager direction. This preview shows read-only health templates
-                  and context-event labels without a scheduler, memory write, or external sends.
+                  Task Guardian is the scheduled work manager direction. This preview shows read-only PC/server health
+                  reports, delivery preferences, and context-event labels without a scheduler, memory write, or external
+                  sends.
                 </p>
               </div>
               <aside className="status-card">
@@ -146,7 +148,8 @@ export function App() {
             </div>
             <TaskGuardianPreview
               templates={shellState.taskGuardianTemplates}
-              deliveryChannels={shellState.deliveryChannels}
+              deliveryPreferences={shellState.taskDeliveryPreferences}
+              healthReports={shellState.healthReportPreviews}
               contextEvents={shellState.memoryContext.events}
             />
           </section>

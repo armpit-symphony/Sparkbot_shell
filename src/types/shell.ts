@@ -1,4 +1,5 @@
 import type { MemoryContextShellState } from "./context";
+import type { HealthReportPreview, TaskDeliveryPreference, TaskGuardianTemplate } from "./taskGuardian";
 
 export type ModelProviderKind =
   | "openai"
@@ -19,15 +20,6 @@ export type ModelSeatSetupStatus = "configured" | "setup_needed" | "disabled" | 
 
 export type GuardrailProfileName = "Personal" | "Balanced" | "Locked" | "Custom";
 
-export type DeliveryChannelName = "app" | "telegram" | "discord" | "slack" | "whatsapp" | "sms";
-
-export type DeliveryChannelPreview = {
-  id: DeliveryChannelName;
-  label: string;
-  status: "default" | "optional" | "future";
-  description: string;
-};
-
 export type SpecialtyAgent = {
   id: string;
   name: string;
@@ -46,17 +38,6 @@ export type GuardrailProfile = {
   confirmationPosture: string;
   shellBehavior: string;
   customBlockerText?: string;
-};
-
-export type TaskGuardianTemplate = {
-  id: string;
-  title: string;
-  summary: string;
-  scheduleLabel: string;
-  readOnly: boolean;
-  enabledByDefault: boolean;
-  setupStatus: ModelSeatSetupStatus;
-  deliveryChannelIds: DeliveryChannelName[];
 };
 
 export type WorkstationPanel = {
@@ -200,7 +181,8 @@ export type ShellState = {
   specialtyAgents: SpecialtyAgent[];
   guardrailProfiles: GuardrailProfile[];
   taskGuardianTemplates: TaskGuardianTemplate[];
-  deliveryChannels: DeliveryChannelPreview[];
+  taskDeliveryPreferences: TaskDeliveryPreference[];
+  healthReportPreviews: HealthReportPreview[];
   meetingNotePreviews: MeetingNotePreview[];
   roundTable: RoundTableShellState;
   memoryContext: MemoryContextShellState;

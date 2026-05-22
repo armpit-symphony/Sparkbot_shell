@@ -54,8 +54,8 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
           <p className="section-label">Memory / context spine</p>
           <h2>Context adapter shell</h2>
           <p>
-            Layer 5 previews the public context contract. It does not persist memory, retrieve context, or call a
-            Guardian memory service.
+            Layer 6 previews source-labeled context events for health reports and delivery warnings. It does not persist
+            memory, retrieve context, or call a Guardian memory service.
           </p>
         </div>
         <span className="status-badge setup_needed">Contract only</span>
@@ -117,7 +117,7 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
             ))}
           </div>
         </div>
-        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in Layer 5.</small>
+        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in Layer 6.</small>
       </div>
     </section>
   );

@@ -1,15 +1,18 @@
 import type {
   ChatSession,
-  DeliveryChannelPreview,
   GuardrailProfile,
   MeetingNotePreview,
   ModelSeat,
   RoundTableShellState,
   ShellState,
   SpecialtyAgent,
-  TaskGuardianTemplate,
 } from "../types/shell";
 import { demoMemoryContextState } from "./demoContextState";
+import {
+  demoHealthReportPreviews,
+  demoTaskDeliveryPreferences,
+  demoTaskGuardianTemplates,
+} from "./demoTaskGuardianState";
 
 export const demoModelSeats: ModelSeat[] = [
   {
@@ -241,68 +244,6 @@ export const demoGuardrailProfiles: GuardrailProfile[] = [
   },
 ];
 
-export const demoDeliveryChannels: DeliveryChannelPreview[] = [
-  {
-    id: "app",
-    label: "App / in-room",
-    status: "default",
-    description: "Default delivery preview. Reports stay in the app/task history in later layers.",
-  },
-  {
-    id: "telegram",
-    label: "Telegram",
-    status: "optional",
-    description: "Opt-in connector later. No send path exists in Layer 3.",
-  },
-  {
-    id: "discord",
-    label: "Discord",
-    status: "optional",
-    description: "Opt-in connector later. Shared-channel private recall remains gated.",
-  },
-  {
-    id: "slack",
-    label: "Slack",
-    status: "optional",
-    description: "Opt-in connector later. Signed/allowed requests remain a future runtime requirement.",
-  },
-  {
-    id: "whatsapp",
-    label: "WhatsApp",
-    status: "optional",
-    description: "Opt-in connector later. Allowed-phone setup remains a future runtime requirement.",
-  },
-  {
-    id: "sms",
-    label: "SMS / text",
-    status: "future",
-    description: "Future/unsupported until a real provider and identity model exist.",
-  },
-];
-
-export const demoTaskGuardianTemplates: TaskGuardianTemplate[] = [
-  {
-    id: "task-pc-health",
-    title: "PC Health Check",
-    summary: "Read-only workstation health report preview for local installs.",
-    scheduleLabel: "Daily at 6:00 AM local time",
-    readOnly: true,
-    enabledByDefault: false,
-    setupStatus: "setup_needed",
-    deliveryChannelIds: ["app", "telegram", "discord", "slack", "whatsapp", "sms"],
-  },
-  {
-    id: "task-server-health",
-    title: "Server Health Check",
-    summary: "Read-only server health report preview for self-hosted installs.",
-    scheduleLabel: "Daily at 6:00 AM local time",
-    readOnly: true,
-    enabledByDefault: false,
-    setupStatus: "setup_needed",
-    deliveryChannelIds: ["app", "telegram", "discord", "slack", "whatsapp", "sms"],
-  },
-];
-
 export const demoMeetingNotePreviews: MeetingNotePreview[] = [
   {
     id: "note-roundtable-wrapup",
@@ -479,7 +420,8 @@ export const demoShellState: ShellState = {
   specialtyAgents: demoSpecialtyAgents,
   guardrailProfiles: demoGuardrailProfiles,
   taskGuardianTemplates: demoTaskGuardianTemplates,
-  deliveryChannels: demoDeliveryChannels,
+  taskDeliveryPreferences: demoTaskDeliveryPreferences,
+  healthReportPreviews: demoHealthReportPreviews,
   meetingNotePreviews: demoMeetingNotePreviews,
   roundTable: demoRoundTableState,
   memoryContext: demoMemoryContextState,

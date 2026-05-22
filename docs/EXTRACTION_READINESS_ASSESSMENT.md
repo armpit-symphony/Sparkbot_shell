@@ -6,9 +6,9 @@ Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connect
 
 ## Current Readiness
 
-Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, and Layer 5 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, Layer 5, and Layer 6 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
-The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
+The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check report shell, app/in-room delivery default, connector channel setup warnings, and Robo Preview teaser.
 
 ## Layer 1 Completed
 
@@ -67,14 +67,30 @@ Completed in `public-release-layer-5-memory-context-adapter-shell`:
 
 No backend memory runtime, Guardian memory service, database persistence, meeting-note persistence, real retrieval, connector recall, provider calls, Task Guardian execution, external sends, terminal/browser execution, Guardian internals, or Robo/LIMA bridge was added.
 
+## Layer 6 Completed
+
+Completed in `public-release-layer-6-task-guardian-health-shell`:
+
+- Frontend-only Task Guardian health-check report contract shapes.
+- `TaskSchedulePreview`, `TaskDeliveryPreference`, and `HealthReportPreview` types.
+- Static PC Health Check and Server Health Check templates.
+- Daily 6:00 AM local schedule preview with local-only toggle state.
+- App/in-room default delivery preview.
+- Telegram, Discord, Slack, and WhatsApp setup-needed/live-QA-unknown statuses.
+- SMS/text future/unsupported status.
+- Health report preview renderer with fake uptime/load/memory/disk examples, SEV labels, passed checks, and recommended actions.
+- Source-labeled context events for `task_guardian.health.pc`, `task_guardian.health.server`, app default delivery, and external delivery caveats.
+
+No backend Task Guardian runtime, real scheduler, real health collector, real system commands, remediation, connector sends, external delivery, SMS/text delivery, memory persistence, provider calls, terminal/browser execution, Guardian internals, or LIMA/Arc/Office/IT wiring was added.
+
 ## Ready To Import Soon
 
-These are candidates after Layer 5 validation and targeted review:
+These are candidates after Layer 6 validation and targeted review:
 
 - Public docs and package/download planning.
 - Public-safe model config contracts.
-- Task Guardian app-first health-check contract shape.
 - Connector identity/PIN contract shape.
+- Evidence/redaction checklist for runtime health report collection.
 
 ## Must Be Rewritten
 
@@ -115,7 +131,7 @@ These are no-go for public import:
 - `/login`, `/dm`, `/workstation`, `/meeting/:roomId`.
 - Command Center AI Setup and model-seat editor.
 - Command Center Security profile and confirmation flows.
-- Task Guardian health-check cards, app delivery, and recent report display.
+- Task Guardian health-check cards, app delivery, recent report display, and future runtime collector redaction.
 - Meeting notes save/edit/Main Chat recall.
 - Local AI against live Ollama and at least one OpenAI-compatible local endpoint.
 - Telegram, Discord, Slack, and WhatsApp live connector recall/delivery with test-only identities/channels.
@@ -123,7 +139,7 @@ These are no-go for public import:
 
 ## Can Proceed Despite UNKNOWN Connector QA
 
-Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, Layer 5 memory/context adapter shell work, and contract-only Layer 6 planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
+Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, Layer 5 memory/context adapter shell work, Layer 6 Task Guardian health shell work, and contract-only Layer 7 planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
 
 Allowed next work despite UNKNOWN connector QA:
 
@@ -142,12 +158,16 @@ Not allowed until live QA passes:
 
 ## Recommended Next Import Layer
 
-Layer 6 - choose one small contract-only slice.
+Layer 7 - connector identity/PIN and fail-closed delivery contract shell.
 
-Recommended options:
+Recommended scope:
 
-- Task Guardian app-first health-check report contract: safe report fields, redaction checklist, app/in-room delivery event shape, and no scheduler/execution.
-- Connector identity/PIN contract: fail-closed recall rules, linked identity shape, PIN session shape, live-QA no-go gates, and no connector sends.
+- Public fail-closed recall rules.
+- Linked identity shape.
+- PIN session shape.
+- Connector setup and live-QA no-go gates.
+- No connector sends.
+- No private recall GREEN claims while live QA remains UNKNOWN.
 
 Then proceed in order:
 

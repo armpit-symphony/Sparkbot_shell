@@ -1,12 +1,11 @@
 import { useMemo, useState } from "react";
 import type {
-  DeliveryChannelPreview,
   GuardrailProfile,
   GuardrailProfileName,
   ModelSeat,
   SpecialtyAgent,
-  TaskGuardianTemplate,
 } from "../types/shell";
+import type { HealthReportPreview, TaskDeliveryPreference, TaskGuardianTemplate } from "../types/taskGuardian";
 import { GuardrailProfileShell } from "./GuardrailProfileShell";
 import { InviteWingPanel } from "./InviteWingPanel";
 import { LocalAiSetupPanel } from "./LocalAiSetupPanel";
@@ -22,7 +21,8 @@ type ModelConfigShellProps = {
   guardrailProfiles: GuardrailProfile[];
   guardrailProfile: GuardrailProfileName;
   taskGuardianTemplates: TaskGuardianTemplate[];
-  deliveryChannels: DeliveryChannelPreview[];
+  taskDeliveryPreferences: TaskDeliveryPreference[];
+  healthReportPreviews: HealthReportPreview[];
   onModelSeatsChange: (seats: ModelSeat[]) => void;
   onSpecialtyAgentsChange: (agents: SpecialtyAgent[]) => void;
   onGuardrailProfilesChange: (profiles: GuardrailProfile[]) => void;
@@ -35,7 +35,8 @@ export function ModelConfigShell({
   guardrailProfiles,
   guardrailProfile,
   taskGuardianTemplates,
-  deliveryChannels,
+  taskDeliveryPreferences,
+  healthReportPreviews,
   onModelSeatsChange,
   onSpecialtyAgentsChange,
   onGuardrailProfilesChange,
@@ -135,7 +136,11 @@ export function ModelConfigShell({
         onProfilesChange={onGuardrailProfilesChange}
       />
 
-      <TaskGuardianPreview templates={taskGuardianTemplates} deliveryChannels={deliveryChannels} />
+      <TaskGuardianPreview
+        deliveryPreferences={taskDeliveryPreferences}
+        healthReports={healthReportPreviews}
+        templates={taskGuardianTemplates}
+      />
 
       <section className="config-panel">
         <div className="card-heading">

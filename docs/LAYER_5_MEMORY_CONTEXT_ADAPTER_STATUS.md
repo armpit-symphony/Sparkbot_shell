@@ -85,9 +85,10 @@ Layer 5 validation completed for this branch:
 
 ## Next Layer Recommendation
 
-Layer 6 should stay small. Recommended options:
+Layer 6 has now taken the Task Guardian app-first health-check contract option in `public-release-layer-6-task-guardian-health-shell`.
 
-- Task Guardian app-first health-check contract layer: public report shape, safe fields, redaction checklist, and app/in-room delivery contract only.
+The next layer should stay small. Recommended option:
+
 - Connector identity/PIN contract layer: public fail-closed recall rules, identity linking shape, PIN session shape, and live-QA no-go gates only.
 
-Do not add real scheduler execution, connector sends, memory persistence, provider calls, or Guardian internals in Layer 6.
+Do not add real scheduler execution, connector sends, memory persistence, provider calls, or Guardian internals in the next layer.

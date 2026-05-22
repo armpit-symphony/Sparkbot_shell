@@ -53,17 +53,23 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
   const manager = shellState.specialtyAgents.find((agent) => agent.id === "agent-meeting-manager");
   const latestMeetingNote = shellState.memoryContext.events.find((event) => event.sourceType === "meeting_note");
   const latestHealthReport = shellState.memoryContext.events.find((event) => event.sourceLabel === "task_guardian.health.pc");
+  const latestServerHealthReport = shellState.memoryContext.events.find(
+    (event) => event.sourceLabel === "task_guardian.health.server",
+  );
+  const deliveryStatus = shellState.memoryContext.events.find(
+    (event) => event.sourceLabel === "task_guardian.delivery.external_caveat",
+  );
   const connectorRecall = shellState.memoryContext.events.find((event) => event.sourceType === "connector");
 
   return (
     <section className="page-section">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 5</p>
+          <p className="section-label">Public Layer 6</p>
           <h2>Workstation operating floor</h2>
           <p>
             The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
-            model seats power Chat, Round Table, and Specialty Wing.
+            model seats power Chat, Round Table, Specialty Wing, and Task Guardian health previews.
           </p>
         </div>
         <aside className="status-card">
@@ -134,7 +140,8 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
       <SpecialtyWingPanel agents={shellState.specialtyAgents} modelSeats={shellState.modelSeats} />
       <TaskGuardianPreview
         templates={shellState.taskGuardianTemplates}
-        deliveryChannels={shellState.deliveryChannels}
+        deliveryPreferences={shellState.taskDeliveryPreferences}
+        healthReports={shellState.healthReportPreviews}
         contextEvents={shellState.memoryContext.events}
       />
 
@@ -144,7 +151,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <p className="section-label">Shared company memory preview</p>
             <h2>Memory / context spine</h2>
             <p>
-              Company memory is contract-only in Layer 5. Saved meeting notes and safe health summaries can become
+              Company memory is contract-only in Layer 6. Saved meeting notes and safe health summaries can become
               future context; drafts, raw transcripts, credentials, and unverified connector recall stay excluded.
             </p>
           </div>
@@ -164,6 +171,20 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
               <small>{latestHealthReport.sourceLabel}</small>
             </article>
           ) : null}
+          {latestServerHealthReport ? (
+            <article className="template-card">
+              <strong>{latestServerHealthReport.title}</strong>
+              <p>{latestServerHealthReport.summary}</p>
+              <small>{latestServerHealthReport.sourceLabel}</small>
+            </article>
+          ) : null}
+          {deliveryStatus ? (
+            <article className="template-card">
+              <strong>External delivery caveat</strong>
+              <p>{deliveryStatus.summary}</p>
+              <small>{deliveryStatus.sourceLabel}</small>
+            </article>
+          ) : null}
           {connectorRecall ? (
             <article className="template-card">
               <strong>Connector recall status</strong>
@@ -174,7 +195,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <article className="template-card">
             <strong>{shellState.memoryContext.retrievalPreview.resultCount}</strong>
             <p>demo context sources included in Main Chat handoff preview</p>
-            <small>Layer 5 contract only</small>
+            <small>Layer 6 contract only</small>
           </article>
         </div>
       </section>

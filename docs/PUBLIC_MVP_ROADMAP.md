@@ -90,17 +90,19 @@ Blockers before runtime import: persistence contract, memory identity boundary, 
 
 ## Phase H - Task Guardian Health Checks + Delivery
 
-Status: recommended next layer option for contract-only work.
+Status: started/completed as a shell-only Layer 6 pass in `public-release-layer-6-task-guardian-health-shell`.
 
-Imports: PC/server health checks, app/in-room delivery, public delivery preferences.
+Imports: Task Guardian health-check contract types, PC Health Check preview, Server Health Check preview, daily 6:00 AM local schedule preview, app/in-room default delivery, public delivery preferences, health report preview rendering, delivery status preview, and source-labeled health context events.
 
-Exclusions: remediation, package installs, service restarts, raw logs, private process listings, SMS sends.
+Exclusions: backend Task Guardian runtime, real scheduler, real health collector, real system commands, remediation, package installs, service restarts, raw logs, private process listings, connector sends, Telegram/Discord/Slack/WhatsApp delivery, SMS/text delivery, memory persistence, provider/model calls, terminal/browser execution, Guardian internals, and LIMA/Arc/Office/IT wiring.
 
-Validation: app-only health run, missing external setup warning, safe report content, scheduler low-frequency behavior.
+Validation: frontend build, Task Guardian route smoke, health report preview review, missing external setup warning, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers: mutating diagnostics, raw secrets/private paths in reports, multi-worker scheduling without leader lock.
+Blockers before runtime import: mutating diagnostics, raw secrets/private paths in reports, external delivery live QA, scheduler contract, evidence/redaction contract, and multi-worker scheduling without leader lock.
 
 ## Phase I - Connector Interfaces With Fail-Closed Identity/PIN
+
+Status: recommended Layer 7 contract-only work.
 
 Imports: public-safe connector interfaces for Telegram, Discord, Slack, and WhatsApp; connector PIN session concept.
 
