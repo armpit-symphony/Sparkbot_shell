@@ -1,23 +1,44 @@
 import { useMemo, useState } from "react";
-import type { GuardrailProfileName, ModelSeat } from "../types/shell";
+import type {
+  DeliveryChannelPreview,
+  GuardrailProfile,
+  GuardrailProfileName,
+  ModelSeat,
+  SpecialtyAgent,
+  TaskGuardianTemplate,
+} from "../types/shell";
+import { GuardrailProfileShell } from "./GuardrailProfileShell";
+import { InviteWingPanel } from "./InviteWingPanel";
 import { LocalAiSetupPanel } from "./LocalAiSetupPanel";
 import { ModelSeatCard } from "./ModelSeatCard";
 import { ModelSeatEditor } from "./ModelSeatEditor";
 import { SetupNotice } from "./SetupNotice";
+import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
+import { TaskGuardianPreview } from "./TaskGuardianPreview";
 
 type ModelConfigShellProps = {
   modelSeats: ModelSeat[];
+  specialtyAgents: SpecialtyAgent[];
+  guardrailProfiles: GuardrailProfile[];
   guardrailProfile: GuardrailProfileName;
+  taskGuardianTemplates: TaskGuardianTemplate[];
+  deliveryChannels: DeliveryChannelPreview[];
   onModelSeatsChange: (seats: ModelSeat[]) => void;
+  onSpecialtyAgentsChange: (agents: SpecialtyAgent[]) => void;
+  onGuardrailProfilesChange: (profiles: GuardrailProfile[]) => void;
   onGuardrailProfileChange: (profile: GuardrailProfileName) => void;
 };
 
-const guardrailProfiles: GuardrailProfileName[] = ["Personal", "Balanced", "Locked", "Custom"];
-
 export function ModelConfigShell({
   modelSeats,
+  specialtyAgents,
+  guardrailProfiles,
   guardrailProfile,
+  taskGuardianTemplates,
+  deliveryChannels,
   onModelSeatsChange,
+  onSpecialtyAgentsChange,
+  onGuardrailProfilesChange,
   onGuardrailProfileChange,
 }: ModelConfigShellProps) {
   const [selectedSeatId, setSelectedSeatId] = useState(modelSeats[0]?.id ?? "");
@@ -57,28 +78,6 @@ export function ModelConfigShell({
           severity: "info",
         }}
       />
-
-      <section className="config-panel">
-        <div className="card-heading">
-          <div>
-            <p className="section-label">Guardrails</p>
-            <h2>Public profile labels</h2>
-            <p>No Guardian internals or policy engine are imported in Layer 2.</p>
-          </div>
-        </div>
-        <div className="guardrail-tabs">
-          {guardrailProfiles.map((profile) => (
-            <button
-              className={profile === guardrailProfile ? "guardrail-tab active" : "guardrail-tab"}
-              key={profile}
-              type="button"
-              onClick={() => onGuardrailProfileChange(profile)}
-            >
-              {profile}
-            </button>
-          ))}
-        </div>
-      </section>
 
       <section className="model-config-grid">
         <div className="model-seat-list">
@@ -120,6 +119,39 @@ export function ModelConfigShell({
           onUpdate={updateSeat}
         />
       ) : null}
+
+      <InviteWingPanel modelSeats={modelSeats} onSelectSeat={setSelectedSeatId} />
+
+      <SpecialtyWingPanel
+        agents={specialtyAgents}
+        modelSeats={modelSeats}
+        onAgentsChange={onSpecialtyAgentsChange}
+      />
+
+      <GuardrailProfileShell
+        profiles={guardrailProfiles}
+        selectedProfile={guardrailProfile}
+        onSelectProfile={onGuardrailProfileChange}
+        onProfilesChange={onGuardrailProfilesChange}
+      />
+
+      <TaskGuardianPreview templates={taskGuardianTemplates} deliveryChannels={deliveryChannels} />
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">System / Shell status</p>
+            <h2>Layer 3 boundary</h2>
+            <p>No backend runtime, credential storage, live connector sends, scheduler, or Guardian enforcement is active.</p>
+          </div>
+        </div>
+        <div className="seat-flags">
+          <span>Layer 3 shell only</span>
+          <span>No credentials stored</span>
+          <span>No live connector sends</span>
+          <span>No runtime enforcement</span>
+        </div>
+      </section>
 
       <div className="runtime-boundary">
         <strong>Runtime boundary</strong>

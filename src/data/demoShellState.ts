@@ -1,4 +1,13 @@
-import type { ChatSession, ModelSeat, ShellState } from "../types/shell";
+import type {
+  ChatSession,
+  DeliveryChannelPreview,
+  GuardrailProfile,
+  MeetingNotePreview,
+  ModelSeat,
+  ShellState,
+  SpecialtyAgent,
+  TaskGuardianTemplate,
+} from "../types/shell";
 
 export const demoModelSeats: ModelSeat[] = [
   {
@@ -98,8 +107,222 @@ export const demoChatSession: ChatSession = {
   ],
 };
 
+export const demoSpecialtyAgents: SpecialtyAgent[] = [
+  {
+    id: "agent-meeting-manager",
+    name: "Meeting Manager",
+    role: "Coordinator / secretary",
+    description: "Default Seat 1 concept for Round Table meetings, assignments, and wrap-up notes.",
+    builtIn: true,
+    locked: true,
+    defaultSeat: 1,
+    modelSeatId: "seat-codex-openai",
+    tags: ["Round Table", "Notes", "Assignments"],
+  },
+  {
+    id: "agent-researcher",
+    name: "Researcher",
+    role: "Research specialist",
+    description: "Gathers public-safe context and frames open questions for later runtime layers.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-claude-anthropic",
+    tags: ["Research", "Context"],
+  },
+  {
+    id: "agent-builder",
+    name: "Builder",
+    role: "Implementation planner",
+    description: "Turns meeting decisions into implementation-shaped plans without executing code here.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-codex-openai",
+    tags: ["Build", "Plan"],
+  },
+  {
+    id: "agent-reviewer",
+    name: "Reviewer",
+    role: "Review specialist",
+    description: "Reviews proposals and planned changes for correctness, boundaries, and missing validation.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-claude-anthropic",
+    tags: ["Review", "Risk"],
+  },
+  {
+    id: "agent-planner",
+    name: "Planner",
+    role: "Sequencing specialist",
+    description: "Keeps work phased and maps safe next layers before runtime wiring.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-local-openai-compatible",
+    tags: ["Roadmap", "Scope"],
+  },
+  {
+    id: "agent-debugger",
+    name: "Debugger",
+    role: "Issue triage specialist",
+    description: "Plans diagnostic paths for later layers without running terminal or browser tools.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-local-ollama",
+    tags: ["Diagnostics", "QA"],
+  },
+  {
+    id: "agent-writer",
+    name: "Writer",
+    role: "Drafting specialist",
+    description: "Drafts operator-facing copy, summaries, and release notes in public-safe language.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-claude-anthropic",
+    tags: ["Docs", "Copy"],
+  },
+  {
+    id: "agent-analyst",
+    name: "Analyst",
+    role: "Synthesis specialist",
+    description: "Compares options and summarizes tradeoffs for the operator.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-grok-xai",
+    tags: ["Analysis", "Tradeoffs"],
+  },
+  {
+    id: "agent-operator",
+    name: "Operator",
+    role: "Human-facing coordinator",
+    description: "Frames safe next actions for the user without autonomous execution or monitoring.",
+    builtIn: true,
+    locked: true,
+    modelSeatId: "seat-codex-openai",
+    tags: ["Operator", "Safety"],
+  },
+  {
+    id: "agent-custom-placeholder",
+    name: "Custom agent placeholder",
+    role: "User-defined specialty",
+    description: "Future shell spot for a user-created specialty agent. No prompt or runtime persistence yet.",
+    builtIn: false,
+    locked: false,
+    modelSeatId: "seat-local-openai-compatible",
+    tags: ["Custom", "Shell only"],
+  },
+];
+
+export const demoGuardrailProfiles: GuardrailProfile[] = [
+  {
+    name: "Personal",
+    summary: "Capable-by-default shell posture for a local owner.",
+    confirmationPosture: "Confirm risky writes and privileged actions in later runtime layers.",
+    shellBehavior: "Preview label only. No enforcement runs in Layer 3.",
+  },
+  {
+    name: "Balanced",
+    summary: "Default public posture with more confirmations around risky work.",
+    confirmationPosture: "Ask before external messages, file mutation, connector sends, or elevated tools later.",
+    shellBehavior: "Preview label only. No enforcement runs in Layer 3.",
+  },
+  {
+    name: "Locked",
+    summary: "Stricter posture for high-risk actions and shared machines.",
+    confirmationPosture: "Block or elevate high-risk actions in later runtime layers.",
+    shellBehavior: "Preview label only. No enforcement runs in Layer 3.",
+  },
+  {
+    name: "Custom",
+    summary: "User-owned blocker text and future custom rules.",
+    confirmationPosture: "Operator defines blocker text; typed policy arrives later.",
+    shellBehavior: "Preview label only. No enforcement runs in Layer 3.",
+    customBlockerText: "Example: ask before modifying files, sending messages, or using external connectors.",
+  },
+];
+
+export const demoDeliveryChannels: DeliveryChannelPreview[] = [
+  {
+    id: "app",
+    label: "App / in-room",
+    status: "default",
+    description: "Default delivery preview. Reports stay in the app/task history in later layers.",
+  },
+  {
+    id: "telegram",
+    label: "Telegram",
+    status: "optional",
+    description: "Opt-in connector later. No send path exists in Layer 3.",
+  },
+  {
+    id: "discord",
+    label: "Discord",
+    status: "optional",
+    description: "Opt-in connector later. Shared-channel private recall remains gated.",
+  },
+  {
+    id: "slack",
+    label: "Slack",
+    status: "optional",
+    description: "Opt-in connector later. Signed/allowed requests remain a future runtime requirement.",
+  },
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    status: "optional",
+    description: "Opt-in connector later. Allowed-phone setup remains a future runtime requirement.",
+  },
+  {
+    id: "sms",
+    label: "SMS / text",
+    status: "future",
+    description: "Future/unsupported until a real provider and identity model exist.",
+  },
+];
+
+export const demoTaskGuardianTemplates: TaskGuardianTemplate[] = [
+  {
+    id: "task-pc-health",
+    title: "PC Health Check",
+    summary: "Read-only workstation health report preview for local installs.",
+    scheduleLabel: "Daily at 6:00 AM local time",
+    readOnly: true,
+    enabledByDefault: false,
+    setupStatus: "setup_needed",
+    deliveryChannelIds: ["app", "telegram", "discord", "slack", "whatsapp", "sms"],
+  },
+  {
+    id: "task-server-health",
+    title: "Server Health Check",
+    summary: "Read-only server health report preview for self-hosted installs.",
+    scheduleLabel: "Daily at 6:00 AM local time",
+    readOnly: true,
+    enabledByDefault: false,
+    setupStatus: "setup_needed",
+    deliveryChannelIds: ["app", "telegram", "discord", "slack", "whatsapp", "sms"],
+  },
+];
+
+export const demoMeetingNotePreviews: MeetingNotePreview[] = [
+  {
+    id: "note-roundtable-wrapup",
+    title: "Round Table wrap-up preview",
+    summary: "Meeting Manager summary, decisions, next steps, and open questions will appear here later.",
+    source: "Meeting Manager",
+  },
+  {
+    id: "note-memory-rollup",
+    title: "Shared memory preview",
+    summary: "Important meeting notes can roll into shared company memory after the runtime memory layer exists.",
+    source: "Memory/context spine",
+  },
+];
+
 export const demoShellState: ShellState = {
   modelSeats: demoModelSeats,
+  specialtyAgents: demoSpecialtyAgents,
+  guardrailProfiles: demoGuardrailProfiles,
+  taskGuardianTemplates: demoTaskGuardianTemplates,
+  deliveryChannels: demoDeliveryChannels,
+  meetingNotePreviews: demoMeetingNotePreviews,
   chatSession: demoChatSession,
   guardrailProfile: "Balanced",
 };

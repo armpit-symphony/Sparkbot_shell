@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChatShell } from "./components/ChatShell";
 import { ModelConfigShell } from "./components/ModelConfigShell";
+import { TaskGuardianPreview } from "./components/TaskGuardianPreview";
+import { WorkstationShell } from "./components/WorkstationShell";
 import { demoShellState } from "./data/demoShellState";
 import { DocsPage } from "./pages/DocsPage";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
@@ -53,7 +55,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 2 chat/model shell</span>
+            <span>Layer 3 workstation shell</span>
           </span>
         </a>
 
@@ -87,6 +89,7 @@ export function App() {
         </header>
 
         {activePage === "docs" ? <DocsPage /> : null}
+        {activePage === "workstation" ? <WorkstationShell shellState={shellState} /> : null}
         {activePage === "chat" ? (
           <ChatShell
             session={shellState.chatSession}
@@ -97,14 +100,50 @@ export function App() {
         {activePage === "command-center" ? (
           <ModelConfigShell
             modelSeats={shellState.modelSeats}
+            specialtyAgents={shellState.specialtyAgents}
+            guardrailProfiles={shellState.guardrailProfiles}
             guardrailProfile={shellState.guardrailProfile}
+            taskGuardianTemplates={shellState.taskGuardianTemplates}
+            deliveryChannels={shellState.deliveryChannels}
             onGuardrailProfileChange={(guardrailProfile) =>
               setShellState((current) => ({ ...current, guardrailProfile }))
+            }
+            onGuardrailProfilesChange={(guardrailProfiles) =>
+              setShellState((current) => ({ ...current, guardrailProfiles }))
+            }
+            onSpecialtyAgentsChange={(specialtyAgents) =>
+              setShellState((current) => ({ ...current, specialtyAgents }))
             }
             onModelSeatsChange={(modelSeats) => setShellState((current) => ({ ...current, modelSeats }))}
           />
         ) : null}
-        {activePage !== "docs" && activePage !== "chat" && activePage !== "command-center" ? (
+        {activePage === "task-guardian" ? (
+          <section className="page-section">
+            <div className="intro-row">
+              <div>
+                <p className="section-label">Public Layer 3</p>
+                <h2>Task Guardian preview</h2>
+                <p>
+                  Task Guardian is the scheduled work manager direction. This preview shows read-only health templates
+                  and delivery options without a scheduler or external sends.
+                </p>
+              </div>
+              <aside className="status-card">
+                <span>Runtime boundary</span>
+                <strong>No scheduler, worker, connector, or health collector is active.</strong>
+              </aside>
+            </div>
+            <TaskGuardianPreview
+              templates={shellState.taskGuardianTemplates}
+              deliveryChannels={shellState.deliveryChannels}
+            />
+          </section>
+        ) : null}
+        {activePage !== "docs" &&
+        activePage !== "workstation" &&
+        activePage !== "chat" &&
+        activePage !== "command-center" &&
+        activePage !== "task-guardian" ? (
           <PlaceholderPage page={activePage} />
         ) : null}
       </main>

@@ -6,9 +6,9 @@ Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connect
 
 ## Current Readiness
 
-Sparkbot Shell has completed Layer 1 and Layer 2 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1, Layer 2, and Layer 3 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
-The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room, Meeting Manager secretary, shared memory/context direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
+The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room direction, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
 
 ## Layer 1 Completed
 
@@ -31,13 +31,24 @@ Completed in `public-release-layer-2-chat-model-config-shell`:
 
 No backend runtime, model/provider calls, Local AI calls, credential persistence, connector sends, memory runtime, terminal/browser execution, or Guardian internals were added.
 
+## Layer 3 Completed
+
+Completed in `public-release-layer-3-workstation-command-center-shell`:
+
+- Workstation operating-floor shell consuming shared demo state.
+- Command Center shell refinement with model seats, Local AI, Invite Wing, Specialty Wing, guardrail profile shell, Task Guardian template preview, and shell status.
+- Specialty agents for Meeting Manager, Researcher, Builder, Reviewer, Planner, Debugger, Writer, Analyst, Operator, and a custom placeholder.
+- Task Guardian PC/server health-check preview and delivery channel preview.
+
+No backend runtime, provider calls, Local AI calls, credential persistence, connector sends, memory runtime, Round Table execution, Task Guardian scheduler/execution, terminal/browser execution, Guardian enforcement, or Robo/LIMA bridge was added.
+
 ## Ready To Import Soon
 
-These are candidates after Layer 2 validation and targeted review:
+These are candidates after Layer 3 validation and targeted review:
 
 - Public docs and package/download planning.
-- Workstation/Command Center shell refinements.
 - Public-safe model config contracts.
+- Round Table static flow.
 
 ## Must Be Rewritten
 
@@ -86,7 +97,7 @@ These are no-go for public import:
 
 ## Can Proceed Despite UNKNOWN Connector QA
 
-Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, and Layer 3 Workstation/Command Center shell refinement can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
+Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, and Layer 4 Round Table static flow can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
 
 Allowed next work despite UNKNOWN connector QA:
 
@@ -105,19 +116,19 @@ Not allowed until live QA passes:
 
 ## Recommended Next Import Layer
 
-Layer 3 - Workstation/Command Center shell refinement.
+Layer 4 - Round Table static flow.
 
 Scope:
 
-- Workstation panels consume public-safe model-seat state.
-- Command Center shell polish around model seats, Local AI, and guardrail profile labels.
-- Static Specialty Wing and Invite Wing planning surfaces.
-- No live model calls, provider credentials, connector delivery, memory recall, Task Guardian scheduling, or Robo bridge.
+- Static Round Table launch shape.
+- Meeting Manager as default Seat 1.
+- First pass, assignment, second pass, and wrap-up panels.
+- Static meeting notes and assignment previews.
+- No live model calls, provider credentials, room runtime, connector delivery, memory recall, Task Guardian scheduling, or Robo bridge.
 
 Then proceed in order:
 
-1. Layer 4 - Round Table static flow.
-2. Layer 5 - memory/context adapter.
+1. Layer 5 - memory/context adapter.
 
 Do not import everything at once.
 

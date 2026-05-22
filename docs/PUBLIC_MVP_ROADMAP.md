@@ -42,17 +42,19 @@ Blockers before runtime import: backend credential boundary, provider call contr
 
 ## Phase D - Workstation + Command Center
 
-Status: recommended next layer.
+Status: started/completed as a shell-only Layer 3 pass in `public-release-layer-3-workstation-command-center-shell`.
 
-Imports: Workstation public frame, Command Center AI Setup, Command Center Security public profiles.
+Imports: Workstation public frame, Command Center AI Setup shell, Invite Wing shell, Specialty Wing shell, Command Center Security profile shell, and Task Guardian template preview.
 
-Exclusions: private desks, enterprise workflow templates, live terminal default enablement, private service copy.
+Exclusions: private desks, enterprise workflow templates, live terminal default enablement, private service copy, backend runtime, provider calls, Local AI calls, credential storage, scheduler, connector sends, and Guardian enforcement.
 
-Validation: browser QA for Workstation nav, model setup persistence, security profile save/reload.
+Validation: frontend build, Workstation/Command Center smoke, shared demo-state review, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers: private automation surfaces, guardrail copy overpromising enforcement, production claims.
+Blockers before runtime import: backend state boundary, guardrail enforcement contract, Task Guardian scheduler contract, connector delivery contract, and browser QA.
 
 ## Phase E - Invite Wing/Model Seats/Local AI
+
+Status: shell shape started in Layer 2 and Layer 3; runtime import still pending.
 
 Imports: Invite Wing model seats, Command Center model-seat editor, Local AI provider layer.
 

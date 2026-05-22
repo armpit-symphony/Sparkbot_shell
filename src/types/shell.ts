@@ -17,6 +17,61 @@ export type ModelSeatSetupStatus = "configured" | "setup_needed" | "disabled" | 
 
 export type GuardrailProfileName = "Personal" | "Balanced" | "Locked" | "Custom";
 
+export type DeliveryChannelName = "app" | "telegram" | "discord" | "slack" | "whatsapp" | "sms";
+
+export type DeliveryChannelPreview = {
+  id: DeliveryChannelName;
+  label: string;
+  status: "default" | "optional" | "future";
+  description: string;
+};
+
+export type SpecialtyAgent = {
+  id: string;
+  name: string;
+  role: string;
+  description: string;
+  builtIn: boolean;
+  locked: boolean;
+  defaultSeat?: number;
+  modelSeatId: string;
+  tags: string[];
+};
+
+export type GuardrailProfile = {
+  name: GuardrailProfileName;
+  summary: string;
+  confirmationPosture: string;
+  shellBehavior: string;
+  customBlockerText?: string;
+};
+
+export type TaskGuardianTemplate = {
+  id: string;
+  title: string;
+  summary: string;
+  scheduleLabel: string;
+  readOnly: boolean;
+  enabledByDefault: boolean;
+  setupStatus: ModelSeatSetupStatus;
+  deliveryChannelIds: DeliveryChannelName[];
+};
+
+export type WorkstationPanel = {
+  id: string;
+  title: string;
+  summary: string;
+  statusLabel: string;
+  route?: string;
+};
+
+export type MeetingNotePreview = {
+  id: string;
+  title: string;
+  summary: string;
+  source: string;
+};
+
 export type ModelSeat = {
   id: string;
   label: string;
@@ -58,6 +113,11 @@ export type SetupNeededState = {
 
 export type ShellState = {
   modelSeats: ModelSeat[];
+  specialtyAgents: SpecialtyAgent[];
+  guardrailProfiles: GuardrailProfile[];
+  taskGuardianTemplates: TaskGuardianTemplate[];
+  deliveryChannels: DeliveryChannelPreview[];
+  meetingNotePreviews: MeetingNotePreview[];
   chatSession: ChatSession;
   guardrailProfile: GuardrailProfileName;
 };

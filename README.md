@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 2 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, and a Local AI setup shape. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 3 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, and Task Guardian template previews. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -35,6 +35,7 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Extraction readiness assessment](docs/EXTRACTION_READINESS_ASSESSMENT.md)
 - [Layer 1 app frame status](docs/LAYER_1_APP_FRAME_STATUS.md)
 - [Layer 2 chat/model config status](docs/LAYER_2_CHAT_MODEL_CONFIG_STATUS.md)
+- [Layer 3 workstation and command center status](docs/LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md)
 
 ## Development
 
@@ -63,8 +64,8 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 2 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, or control robots/IoT.
+- Layer 3 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended Layer 3 is Workstation + Command Center shell refinement: make the Workstation panels consume the same public-safe model-seat state and keep runtime behavior disabled until the backend boundary is reviewed.
+Recommended Layer 4 is Round Table static flow: meeting launch shape, Meeting Manager default Seat 1, meeting phases, assignment cards, and notes preview, still without real execution or model calls.

@@ -61,7 +61,7 @@ Layer 2 validation completed for this branch:
 
 ## Next Layer Recommendation
 
-Layer 3 should refine Workstation + Command Center shell integration:
+Layer 3 was approved and implemented in `public-release-layer-3-workstation-command-center-shell` as a frontend-only Workstation/Command Center shell refinement:
 
 - Show model-seat shell state across Workstation panels.
 - Add static Specialty Wing and Invite Wing planning surfaces.
