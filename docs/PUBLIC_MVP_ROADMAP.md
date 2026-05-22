@@ -130,7 +130,11 @@ Status: recommended Layer 8 contract/docs/QA work.
 
 Imports: QA docs, package script, release artifact inspection instructions.
 
-Exclusions: secrets, raw env files, private docs, tests/workflows unless recreated public-safe.
+Exclusions: secrets, raw env files, private docs, tests/workflows unless recreated public-safe, R&D path maps, internal extraction planning, private/source-boundary notes, and no-go/internal readiness docs.
+
+Public artifact docs: README, install/setup docs, capabilities docs, user-facing architecture overview, security/guardrail overview, Local AI setup overview, Round Table overview, Task Guardian overview, and connector setup caveats.
+
+Repo-only staging docs: extraction maps, readiness docs, staging docs, and no-go gates.
 
 Validation: browser checklist, live local AI QA, live connector QA, package dry-run on Windows/Git Bash and Linux clean clone, checksum inspection.
 

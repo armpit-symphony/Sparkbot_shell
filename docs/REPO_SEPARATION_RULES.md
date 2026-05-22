@@ -56,6 +56,34 @@ Public artifacts must be generated from a sanitized boundary:
 - Inspect generated artifacts before release.
 - Keep non-secret QA evidence; never include credentials, PINs, tokens, channel IDs, phone numbers, or private host paths.
 
+## Staging Docs Vs Public Artifact Docs
+
+Keep these in the `Sparkbot_shell` repo for staging and auditability:
+
+- Extraction maps.
+- Extraction readiness docs.
+- Staging status docs.
+- No-go gates and boundary checklists.
+
+Exclude these from public release artifacts:
+
+- R&D path maps.
+- Internal extraction planning.
+- Private/source-boundary notes.
+- No-go/internal readiness docs.
+
+Ship these in public release artifacts:
+
+- `README.md`.
+- Install/setup docs.
+- Capabilities docs.
+- User-facing architecture overview.
+- Security/guardrail overview.
+- Local AI setup overview.
+- Round Table overview.
+- Task Guardian overview.
+- Connector setup caveats.
+
 ## Modification Rule
 
 During planning/classification phases:

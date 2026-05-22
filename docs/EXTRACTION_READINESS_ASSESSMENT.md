@@ -182,6 +182,8 @@ Recommended scope:
 - Non-secret evidence expectations.
 - Package dry-run instructions.
 - No runtime connectors, sends, private recall, or production-readiness claims.
+- Repo-only staging doc retention for extraction maps, readiness docs, staging docs, and no-go gates.
+- Public artifact docs limited to README, install/setup, capabilities, user-facing architecture, security/guardrails, Local AI setup, Round Table, Task Guardian, and connector setup caveats.
 
 Then proceed in order:
 
@@ -193,6 +195,7 @@ Do not import everything at once.
 
 - Any source import includes private paths, domains, secrets, tokens, PINs, phone numbers, or channel IDs.
 - Public package contains `.github`, `.agents`, tests, env files, private docs, private Robo bridge, logs, local DBs, keys/certs, caches, or proposal scripts unintentionally.
+- Public package contains R&D path maps, internal extraction planning, private/source-boundary notes, or no-go/internal readiness docs.
 - Connector private recall is not fail-closed.
 - Live connector QA remains UNKNOWN but docs/UI claim GREEN external private recall.
 - Local AI endpoint status shows ready when unreachable.

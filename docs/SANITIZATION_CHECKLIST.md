@@ -6,6 +6,12 @@ Use this checklist before any Sparkbot R&D source is imported into `Sparkbot_she
 
 ## Repo And Artifact Boundary
 
+- [ ] Keep extraction maps, readiness docs, staging docs, and no-go gates in the repo for planning/audit history.
+- [ ] Exclude R&D path maps from public release artifacts.
+- [ ] Exclude internal extraction planning from public release artifacts.
+- [ ] Exclude private/source-boundary notes from public release artifacts.
+- [ ] Exclude no-go/internal readiness docs from public release artifacts.
+- [ ] Confirm public artifacts ship only user-facing docs: README, install/setup, capabilities, architecture overview, security/guardrail overview, Local AI setup, Round Table, Task Guardian, and connector setup caveats.
 - [ ] Confirm `.github` is excluded from public bundles unless intentionally recreated for public CI.
 - [ ] Confirm backend/frontend tests are excluded from generated public bundles until public-safe test ownership is decided.
 - [ ] Confirm `.venv-ci` and `backend/.venv-ci` are removed/excluded.
