@@ -1,7 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
+import { ChatShell } from "./components/ChatShell";
+import { ModelConfigShell } from "./components/ModelConfigShell";
+import { demoShellState } from "./data/demoShellState";
 import { DocsPage } from "./pages/DocsPage";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
 import type { PageKey } from "./types";
+import type { ShellState } from "./types/shell";
 
 type NavItem = {
   key: PageKey;
@@ -28,6 +32,7 @@ function getRouteFromHash(): PageKey {
 
 export function App() {
   const [activePage, setActivePage] = useState<PageKey>(() => getRouteFromHash());
+  const [shellState, setShellState] = useState<ShellState>(demoShellState);
   const activeNavItem = useMemo(
     () => navItems.find((item) => item.key === activePage) ?? navItems[0],
     [activePage],
@@ -48,7 +53,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 1 public frame</span>
+            <span>Layer 2 chat/model shell</span>
           </span>
         </a>
 
@@ -67,8 +72,8 @@ export function App() {
         </nav>
 
         <div className="boundary-note">
-          <strong>Static only.</strong>
-          <span>No backend, connectors, model calls, scheduling, or robotics control are wired in Layer 1.</span>
+          <strong>Shell only.</strong>
+          <span>No backend, connectors, live model calls, credential storage, scheduling, or robotics control.</span>
         </div>
       </aside>
 
@@ -81,7 +86,27 @@ export function App() {
           <div className="status-pill">Planning shell</div>
         </header>
 
-        {activePage === "docs" ? <DocsPage /> : <PlaceholderPage page={activePage} />}
+        {activePage === "docs" ? <DocsPage /> : null}
+        {activePage === "chat" ? (
+          <ChatShell
+            session={shellState.chatSession}
+            modelSeats={shellState.modelSeats}
+            onSessionChange={(chatSession) => setShellState((current) => ({ ...current, chatSession }))}
+          />
+        ) : null}
+        {activePage === "command-center" ? (
+          <ModelConfigShell
+            modelSeats={shellState.modelSeats}
+            guardrailProfile={shellState.guardrailProfile}
+            onGuardrailProfileChange={(guardrailProfile) =>
+              setShellState((current) => ({ ...current, guardrailProfile }))
+            }
+            onModelSeatsChange={(modelSeats) => setShellState((current) => ({ ...current, modelSeats }))}
+          />
+        ) : null}
+        {activePage !== "docs" && activePage !== "chat" && activePage !== "command-center" ? (
+          <PlaceholderPage page={activePage} />
+        ) : null}
       </main>
     </div>
   );

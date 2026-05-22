@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 1 now contains a static Vite + React + TypeScript app frame with global navigation and public-safe placeholder pages. It has no backend runtime, no model calls, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 2 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, and a Local AI setup shape. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -34,6 +34,7 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Repo separation rules](docs/REPO_SEPARATION_RULES.md)
 - [Extraction readiness assessment](docs/EXTRACTION_READINESS_ASSESSMENT.md)
 - [Layer 1 app frame status](docs/LAYER_1_APP_FRAME_STATUS.md)
+- [Layer 2 chat/model config status](docs/LAYER_2_CHAT_MODEL_CONFIG_STATUS.md)
 
 ## Development
 
@@ -62,8 +63,8 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 1 pages are placeholders only. They intentionally do not persist settings, store model-seat credentials, execute Round Table meetings, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, or control robots/IoT.
+- Layer 2 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, or control robots/IoT.
 
 ## Next Step
 
-Recommended Layer 2 is a chat/model config shell: static-to-interactive Main Chat scaffolding, model stack forms, and setup-needed state without live provider calls or credential storage until the boundary is reviewed.
+Recommended Layer 3 is Workstation + Command Center shell refinement: make the Workstation panels consume the same public-safe model-seat state and keep runtime behavior disabled until the backend boundary is reviewed.

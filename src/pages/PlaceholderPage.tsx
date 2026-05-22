@@ -7,7 +7,7 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
       "The Workstation is the operating floor where the user sees the public Sparkbot surfaces without exposing runtime internals.",
     status: "Layer 1 placeholder. Static panels only; no model routing, memory, or tool execution.",
     panels: [
-      { title: "Main Chat", body: "Operator middle-person and command channel.", meta: "Layer 2 planned" },
+      { title: "Main Chat", body: "Operator middle-person and command channel.", meta: "Layer 2 shell added" },
       { title: "Round Table", body: "Meeting room for AI agents and the Meeting Manager.", meta: "Layer 4 planned" },
       { title: "Model Seats", body: "Invite Wing slots for cloud, subscription, and Local AI models.", meta: "Config shell later" },
       { title: "Specialty Wing", body: "Public-safe custom agent roles with model-seat direction.", meta: "No prompts imported" },
@@ -49,7 +49,7 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
     title: "Setup and user-owned guardrails",
     summary:
       "Command Center will hold AI setup, model seats, Local AI direction, and public guardrail profiles.",
-    status: "Layer 1 placeholder. No persistence or credential storage exists.",
+    status: "Layer 2 model-seat shell is available from the Command Center nav. No persistence or credential storage exists.",
     panels: [
       { title: "AI Setup", body: "Model stack and provider setup direction." },
       { title: "Invite Wing", body: "Model-seat placeholders for cloud, subscription, and Local AI seats." },

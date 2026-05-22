@@ -56,7 +56,7 @@ Layer 1 validation completed for this branch:
 
 ## Next Layer Recommendation
 
-Layer 2 should focus on the Chat/model config shell:
+Layer 2 was approved and implemented in `public-release-layer-2-chat-model-config-shell` as a frontend-only Chat/model config shell:
 
 - Static-to-interactive Main Chat scaffolding.
 - Model stack and setup-needed forms.

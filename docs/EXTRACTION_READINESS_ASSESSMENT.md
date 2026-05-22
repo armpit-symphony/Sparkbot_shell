@@ -6,9 +6,9 @@ Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connect
 
 ## Current Readiness
 
-Sparkbot Shell has started Layer 1 with a static public app frame. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1 and Layer 2 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
-The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room, Meeting Manager secretary, shared memory/context direction, model seats, Local AI direction, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
+The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room, Meeting Manager secretary, shared memory/context direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
 
 ## Layer 1 Completed
 
@@ -20,14 +20,24 @@ Completed in `public-release-layer-1-app-frame`:
 
 No backend runtime, model calls, connector sends, scheduler, memory runtime, terminal/browser execution, or Robo/LIMA bridge was added.
 
+## Layer 2 Completed
+
+Completed in `public-release-layer-2-chat-model-config-shell`:
+
+- Interactive Main Chat frame using local React state only.
+- Model stack/model-seat shell with non-secret fields.
+- Setup-needed, disabled, configured, and unreachable sample states.
+- Local AI setup shape for Ollama, LM Studio, llama.cpp / llama-server, OpenAI-compatible local endpoints, and custom endpoints.
+
+No backend runtime, model/provider calls, Local AI calls, credential persistence, connector sends, memory runtime, terminal/browser execution, or Guardian internals were added.
+
 ## Ready To Import Soon
 
-These are candidates after Layer 1 validation and targeted review:
+These are candidates after Layer 2 validation and targeted review:
 
 - Public docs and package/download planning.
-- Public-safe model config contracts.
-- Chat/model config shell with no provider calls.
 - Workstation/Command Center shell refinements.
+- Public-safe model config contracts.
 
 ## Must Be Rewritten
 
@@ -76,7 +86,7 @@ These are no-go for public import:
 
 ## Can Proceed Despite UNKNOWN Connector QA
 
-Planning, classification, docs, Layer 1 shell frame work, and Layer 2 chat/model config shell work can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
+Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, and Layer 3 Workstation/Command Center shell refinement can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
 
 Allowed next work despite UNKNOWN connector QA:
 
@@ -95,20 +105,19 @@ Not allowed until live QA passes:
 
 ## Recommended Next Import Layer
 
-Layer 2 - Chat/model config shell.
+Layer 3 - Workstation/Command Center shell refinement.
 
 Scope:
 
- - Main Chat static-to-interactive scaffold.
- - Model stack forms and setup-needed states.
- - Public-safe model-seat shape.
- - No live model calls, provider credentials, connector delivery, memory recall, Task Guardian scheduling, or Robo bridge.
+- Workstation panels consume public-safe model-seat state.
+- Command Center shell polish around model seats, Local AI, and guardrail profile labels.
+- Static Specialty Wing and Invite Wing planning surfaces.
+- No live model calls, provider credentials, connector delivery, memory recall, Task Guardian scheduling, or Robo bridge.
 
 Then proceed in order:
 
-1. Layer 3 - Workstation/Command Center shell.
-2. Layer 4 - Round Table static flow.
-3. Layer 5 - memory/context adapter.
+1. Layer 4 - Round Table static flow.
+2. Layer 5 - memory/context adapter.
 
 Do not import everything at once.
 

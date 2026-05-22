@@ -7,10 +7,11 @@ const docs = [
   ["Repo separation rules", "REPO_SEPARATION_RULES.md"],
   ["Extraction readiness assessment", "EXTRACTION_READINESS_ASSESSMENT.md"],
   ["Layer 1 app frame status", "LAYER_1_APP_FRAME_STATUS.md"],
+  ["Layer 2 chat/model config status", "LAYER_2_CHAT_MODEL_CONFIG_STATUS.md"],
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-1-app-frame/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-2-chat-model-config-shell/docs";
 
 export function DocsPage() {
   return (
@@ -42,7 +43,7 @@ export function DocsPage() {
       <div className="runtime-boundary">
         <strong>Documentation boundary</strong>
         <p>
-          Layer 1 links local Markdown planning files only. It does not include internal R&D notes,
+          Layer 2 links repo Markdown planning files only. It does not include internal R&D notes,
           package artifacts, secrets, tests, workflows, or private deployment instructions.
         </p>
       </div>

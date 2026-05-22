@@ -30,17 +30,19 @@ Blockers: private labels, hidden debug routes, shell requiring private backend s
 
 ## Phase C - Core Brain/Chat/Model Stack
 
-Status: recommended next layer.
+Status: started/completed as a shell-only Layer 2 pass in `public-release-layer-2-chat-model-config-shell`.
 
-Imports: Main Chat / DM, model stack config, model selector, basic model route contracts.
+Imports: Main Chat / DM shell, model stack/config shell, model selector shell, setup-needed state, and model-seat form shape.
 
-Exclusions: proprietary Guardian internals, hidden breakglass flows, credential-bearing browser storage.
+Exclusions: proprietary Guardian internals, hidden breakglass flows, credential-bearing browser storage, backend calls, provider calls, Local AI calls, memory runtime, and connector sends.
 
-Validation: login/DM smoke, local/cloud model setup errors, redaction checks, backend route tests.
+Validation: frontend build, local-state chat smoke, setup-needed warnings, secret/private scan, and source-copy check.
 
-Blockers: credentials returned to frontend, unguarded tool execution, debug chat route leakage.
+Blockers before runtime import: backend credential boundary, provider call contracts, memory adapter contract, and live model/local endpoint QA.
 
 ## Phase D - Workstation + Command Center
+
+Status: recommended next layer.
 
 Imports: Workstation public frame, Command Center AI Setup, Command Center Security public profiles.
 
