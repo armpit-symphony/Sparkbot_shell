@@ -78,17 +78,19 @@ Blockers before runtime import: public room contract, provider-call contract, no
 
 ## Phase G - Unified Memory/Context + Meeting Notes
 
-Status: recommended next layer.
+Status: started/completed as a shell-only Layer 5 pass in `public-release-layer-5-memory-context-adapter-shell`.
 
-Imports: public memory/context adapter, meeting notes save/edit/recall, memory rollup contract.
+Imports: public memory/context adapter contract shape, `ContextEvent`, `MeetingNoteContract`, `ContextRetrievalPreview`, source labels, sensitivity labels, memory rollup states, Main Chat context handoff preview, Round Table note contract preview, Task Guardian context event preview, and Workstation company-memory panel.
 
-Exclusions: Guardian Spine commercial internals, raw transcripts in shared memory by default, private retention policy.
+Exclusions: backend memory runtime, real Guardian memory service, database persistence, meeting-note persistence, context retrieval, connector recall, provider/model calls, raw transcripts in shared memory by default, private retention policy, and Guardian Spine commercial internals.
 
-Validation: notes save/edit, stale rollup retirement, Main Chat recall, draft suppression, privacy scan.
+Validation: frontend build, Main Chat context handoff smoke, Round Table notes contract smoke, Task Guardian context preview smoke, draft suppression labels, runtime/persistence scan, source boundary check, and privacy/secret scan.
 
-Blockers: duplicate memory writes, failed/draft notes entering recall, private context exposed to wrong identity.
+Blockers before runtime import: persistence contract, memory identity boundary, redaction policy, stale rollup retirement behavior, recall access control, draft suppression tests, and private context exposure checks.
 
 ## Phase H - Task Guardian Health Checks + Delivery
+
+Status: recommended next layer option for contract-only work.
 
 Imports: PC/server health checks, app/in-room delivery, public delivery preferences.
 

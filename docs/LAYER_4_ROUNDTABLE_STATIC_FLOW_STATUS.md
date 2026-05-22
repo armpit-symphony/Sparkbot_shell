@@ -62,12 +62,14 @@ Layer 4 validation completed for this branch:
 - Source boundary check: no `backend/`, `src-tauri/`, `.github/`, `.agents/`, connector runtime, Guardian runtime, scheduler runtime, or Robo bridge files were added.
 - Targeted high-risk secret/private-path scan: no live secrets or private paths found.
 
-## Next Layer Recommendation
+## Layer 5 Follow-Up
 
-Layer 5 should define the public memory/context adapter shape:
+Layer 5 was completed in `public-release-layer-5-memory-context-adapter-shell` as a shell-only public memory/context adapter contract:
 
 - Meeting notes save/edit/recall contract.
 - Memory rollup draft/saved boundary.
 - Redaction and privacy review points.
 - Main Chat to Round Table context handoff shape.
 - No proprietary Guardian Spine internals, live memory writes, connector recall, or provider calls.
+
+Next recommended layer after Layer 5 is a small contract-only Task Guardian health-check report shape or connector identity/PIN shape.

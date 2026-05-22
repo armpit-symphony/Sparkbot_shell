@@ -1,3 +1,4 @@
+import type { MeetingNoteContract } from "../types/context";
 import type {
   MeetingActionItem,
   MeetingDecision,
@@ -14,6 +15,7 @@ type RoundTableFlowShellProps = {
   roundTable: RoundTableShellState;
   modelSeats: ModelSeat[];
   specialtyAgents: SpecialtyAgent[];
+  meetingNoteContract: MeetingNoteContract;
   onRoundTableChange: (roundTable: RoundTableShellState) => void;
 };
 
@@ -68,6 +70,7 @@ export function RoundTableFlowShell({
   roundTable,
   modelSeats,
   specialtyAgents,
+  meetingNoteContract,
   onRoundTableChange,
 }: RoundTableFlowShellProps) {
   const roundTableModelSeats = modelSeats.filter((seat) => seat.showInRoundTable);
@@ -394,7 +397,12 @@ export function RoundTableFlowShell({
         ) : null}
 
         {roundTable.currentPhase === "notes" ? (
-          <MeetingNotesShell roundTable={roundTable} updateRoundTable={updateRoundTable} onSave={saveNotesPreview} />
+          <MeetingNotesShell
+            roundTable={roundTable}
+            meetingNoteContract={meetingNoteContract}
+            updateRoundTable={updateRoundTable}
+            onSave={saveNotesPreview}
+          />
         ) : null}
       </section>
 
@@ -411,11 +419,12 @@ export function RoundTableFlowShell({
 
 type MeetingNotesShellProps = {
   roundTable: RoundTableShellState;
+  meetingNoteContract: MeetingNoteContract;
   updateRoundTable: (patch: Partial<RoundTableShellState>) => void;
   onSave: () => void;
 };
 
-function MeetingNotesShell({ roundTable, updateRoundTable, onSave }: MeetingNotesShellProps) {
+function MeetingNotesShell({ roundTable, meetingNoteContract, updateRoundTable, onSave }: MeetingNotesShellProps) {
   const notes = roundTable.notes;
 
   function updateNotes(patch: Partial<typeof notes>) {
@@ -489,8 +498,38 @@ function MeetingNotesShell({ roundTable, updateRoundTable, onSave }: MeetingNote
 
       <div className="runtime-boundary compact">
         <strong>Memory rollup preview</strong>
-        <p>{notes.memoryRollupLabel} The control below marks a local preview badge only.</p>
+        <p>
+          {notes.memoryRollupLabel} Save/update later writes one deduped rollup to shared memory after redaction checks.
+          Per-turn participant messages do not create meeting notes.
+        </p>
       </div>
+
+      <section className="meeting-contract-preview">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">MeetingNoteContract preview</p>
+            <h3>{meetingNoteContract.title}</h3>
+          </div>
+          <span className="context-sensitivity operator_private">{meetingNoteContract.sensitivity}</span>
+        </div>
+        <p>{meetingNoteContract.redactionNote}</p>
+        <div className="context-meta-row">
+          <span>{notes.status === "saved_preview" ? "draft=false preview" : "draft=true"}</span>
+          <span>{notes.status === "saved_preview" ? "memoryRollup=true preview" : "memoryRollup=false"}</span>
+          <span>contract {meetingNoteContract.rollupState}</span>
+          <span>{meetingNoteContract.redactionStatus}</span>
+          <span>{meetingNoteContract.approvalRequired ? "approval required" : "approval not required"}</span>
+          <span>{meetingNoteContract.lastEditedAt}</span>
+        </div>
+        <small>Allowed transition preview: draft -&gt; saved -&gt; published -&gt; retired.</small>
+        <div className="meeting-participant-strip">
+          {meetingNoteContract.participants.map((participant) => (
+            <span key={`${participant.seatLabel}-${participant.actorLabel}`}>
+              {participant.seatLabel}: {participant.actorLabel}
+            </span>
+          ))}
+        </div>
+      </section>
 
       <button type="button" onClick={onSave}>
         Mark local preview saved

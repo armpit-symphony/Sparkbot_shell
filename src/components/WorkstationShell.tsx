@@ -1,5 +1,6 @@
 import type { ShellState } from "../types/shell";
 import { InviteWingPanel } from "./InviteWingPanel";
+import { MemoryContextPreview } from "./MemoryContextPreview";
 import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { StatusBadge } from "./StatusBadge";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
@@ -50,12 +51,15 @@ const workstationPanels = [
 export function WorkstationShell({ shellState }: WorkstationShellProps) {
   const activeSeats = shellState.modelSeats.filter((seat) => seat.enabled);
   const manager = shellState.specialtyAgents.find((agent) => agent.id === "agent-meeting-manager");
+  const latestMeetingNote = shellState.memoryContext.events.find((event) => event.sourceType === "meeting_note");
+  const latestHealthReport = shellState.memoryContext.events.find((event) => event.sourceLabel === "task_guardian.health.pc");
+  const connectorRecall = shellState.memoryContext.events.find((event) => event.sourceType === "connector");
 
   return (
     <section className="page-section">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 3</p>
+          <p className="section-label">Public Layer 5</p>
           <h2>Workstation operating floor</h2>
           <p>
             The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
@@ -131,25 +135,55 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
       <TaskGuardianPreview
         templates={shellState.taskGuardianTemplates}
         deliveryChannels={shellState.deliveryChannels}
+        contextEvents={shellState.memoryContext.events}
       />
 
       <section className="config-panel">
         <div className="card-heading">
           <div>
             <p className="section-label">Shared company memory preview</p>
-            <h2>Meeting notes and context direction</h2>
+            <h2>Memory / context spine</h2>
+            <p>
+              Company memory is contract-only in Layer 5. Saved meeting notes and safe health summaries can become
+              future context; drafts, raw transcripts, credentials, and unverified connector recall stay excluded.
+            </p>
           </div>
         </div>
         <div className="mini-card-grid">
-          {shellState.meetingNotePreviews.map((note) => (
-            <article className="template-card" key={note.id}>
-              <strong>{note.title}</strong>
-              <p>{note.summary}</p>
-              <small>{note.source}</small>
+          {latestMeetingNote ? (
+            <article className="template-card">
+              <strong>{latestMeetingNote.title}</strong>
+              <p>{latestMeetingNote.summary}</p>
+              <small>{latestMeetingNote.sourceLabel}</small>
             </article>
-          ))}
+          ) : null}
+          {latestHealthReport ? (
+            <article className="template-card">
+              <strong>{latestHealthReport.title}</strong>
+              <p>{latestHealthReport.summary}</p>
+              <small>{latestHealthReport.sourceLabel}</small>
+            </article>
+          ) : null}
+          {connectorRecall ? (
+            <article className="template-card">
+              <strong>Connector recall status</strong>
+              <p>{connectorRecall.summary}</p>
+              <small>Code-gated / live QA unknown</small>
+            </article>
+          ) : null}
+          <article className="template-card">
+            <strong>{shellState.memoryContext.retrievalPreview.resultCount}</strong>
+            <p>demo context sources included in Main Chat handoff preview</p>
+            <small>Layer 5 contract only</small>
+          </article>
         </div>
       </section>
+
+      <MemoryContextPreview
+        events={shellState.memoryContext.events}
+        retrievalPreview={shellState.memoryContext.retrievalPreview}
+        compact
+      />
     </section>
   );
 }

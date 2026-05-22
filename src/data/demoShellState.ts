@@ -9,6 +9,7 @@ import type {
   SpecialtyAgent,
   TaskGuardianTemplate,
 } from "../types/shell";
+import { demoMemoryContextState } from "./demoContextState";
 
 export const demoModelSeats: ModelSeat[] = [
   {
@@ -481,6 +482,7 @@ export const demoShellState: ShellState = {
   deliveryChannels: demoDeliveryChannels,
   meetingNotePreviews: demoMeetingNotePreviews,
   roundTable: demoRoundTableState,
+  memoryContext: demoMemoryContextState,
   chatSession: demoChatSession,
   guardrailProfile: "Balanced",
 };

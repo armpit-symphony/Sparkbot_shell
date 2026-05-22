@@ -74,4 +74,4 @@ Layer 4 was completed in `public-release-layer-4-roundtable-static-flow` as a sh
 - Static meeting notes and assignment previews.
 - No room runtime, model calls, memory rollups, connector sends, scheduler, or Guardian internals.
 
-Next recommended layer after Layer 4 is the public memory/context adapter shape.
+Layer 5 has since completed the public memory/context adapter shell. The next recommended layer is a small contract-only Task Guardian health-check report shape or connector identity/PIN shape.

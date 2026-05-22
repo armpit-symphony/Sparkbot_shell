@@ -56,7 +56,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 4 Round Table shell</span>
+            <span>Layer 5 memory/context shell</span>
           </span>
         </a>
 
@@ -96,6 +96,7 @@ export function App() {
             roundTable={shellState.roundTable}
             modelSeats={shellState.modelSeats}
             specialtyAgents={shellState.specialtyAgents}
+            meetingNoteContract={shellState.memoryContext.meetingNoteContract}
             onRoundTableChange={(roundTable) => setShellState((current) => ({ ...current, roundTable }))}
           />
         ) : null}
@@ -103,6 +104,7 @@ export function App() {
           <ChatShell
             session={shellState.chatSession}
             modelSeats={shellState.modelSeats}
+            memoryContext={shellState.memoryContext}
             onSessionChange={(chatSession) => setShellState((current) => ({ ...current, chatSession }))}
           />
         ) : null}
@@ -130,11 +132,11 @@ export function App() {
           <section className="page-section">
             <div className="intro-row">
               <div>
-                <p className="section-label">Public Layer 3</p>
+                <p className="section-label">Public Layer 5</p>
                 <h2>Task Guardian preview</h2>
                 <p>
                   Task Guardian is the scheduled work manager direction. This preview shows read-only health templates
-                  and delivery options without a scheduler or external sends.
+                  and context-event labels without a scheduler, memory write, or external sends.
                 </p>
               </div>
               <aside className="status-card">
@@ -145,6 +147,7 @@ export function App() {
             <TaskGuardianPreview
               templates={shellState.taskGuardianTemplates}
               deliveryChannels={shellState.deliveryChannels}
+              contextEvents={shellState.memoryContext.events}
             />
           </section>
         ) : null}

@@ -780,6 +780,142 @@ textarea {
   font-weight: 800;
 }
 
+.memory-context-panel,
+.context-handoff-panel,
+.task-context-preview,
+.meeting-contract-preview {
+  display: grid;
+  gap: 13px;
+}
+
+.context-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.context-filter {
+  min-height: 34px;
+  padding: 6px 10px;
+  color: #244534;
+  background: #f3faf7;
+  border-color: #c8ddd4;
+}
+
+.context-filter.active,
+.context-filter:hover {
+  color: #f8fffc;
+  background: #25523f;
+  border-color: #25523f;
+}
+
+.context-event-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.context-event-list.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.context-event-card,
+.context-mini-card,
+.retrieval-preview,
+.meeting-contract-preview {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+}
+
+.context-mini-card {
+  background: #f8fbfa;
+  box-shadow: none;
+}
+
+.context-event-card p,
+.context-mini-card p,
+.retrieval-preview p,
+.meeting-contract-preview p {
+  margin-bottom: 0;
+}
+
+.context-source {
+  display: block;
+  margin-bottom: 5px;
+  color: #657873;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.context-sensitivity {
+  width: max-content;
+  max-width: 100%;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.context-sensitivity.public {
+  color: #225036;
+  background: #dff5e9;
+  border: 1px solid #9ad6b4;
+}
+
+.context-sensitivity.operator_private {
+  color: #254f74;
+  background: #e1effd;
+  border: 1px solid #a9ccea;
+}
+
+.context-sensitivity.credential_sensitive,
+.context-sensitivity.system_sensitive {
+  color: #7f2f2f;
+  background: #fbe1df;
+  border: 1px solid #e0aaa5;
+}
+
+.context-meta-row,
+.context-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.context-meta-row span,
+.context-columns span,
+.context-mini-card span {
+  width: max-content;
+  max-width: 100%;
+  padding: 3px 7px;
+  color: #2c463c;
+  background: #eef7f3;
+  border: 1px solid #cde2d8;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.context-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.context-columns div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-content: start;
+}
+
+.context-columns strong {
+  flex-basis: 100%;
+}
+
 @media (max-width: 920px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -834,7 +970,10 @@ textarea {
   .phase-nav,
   .seat-assignment-grid,
   .phase-card-grid,
-  .notes-list-grid {
+  .notes-list-grid,
+  .context-event-list,
+  .context-event-list.compact,
+  .context-columns {
     grid-template-columns: 1fr;
   }
 }

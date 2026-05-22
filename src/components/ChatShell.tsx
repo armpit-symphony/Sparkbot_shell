@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import type { MemoryContextShellState } from "../types/context";
 import type { ChatMessage, ChatSession, ModelSeat } from "../types/shell";
 import { SetupNotice } from "./SetupNotice";
 import { StatusBadge } from "./StatusBadge";
@@ -6,6 +7,7 @@ import { StatusBadge } from "./StatusBadge";
 type ChatShellProps = {
   session: ChatSession;
   modelSeats: ModelSeat[];
+  memoryContext: MemoryContextShellState;
   onSessionChange: (session: ChatSession) => void;
 };
 
@@ -15,12 +17,21 @@ function newMessageId(prefix: string) {
   return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
 }
 
-export function ChatShell({ session, modelSeats, onSessionChange }: ChatShellProps) {
+export function ChatShell({ session, modelSeats, memoryContext, onSessionChange }: ChatShellProps) {
   const [draft, setDraft] = useState("");
   const chatSeats = modelSeats.filter((seat) => seat.showInChat);
   const selectedSeat = useMemo(
     () => modelSeats.find((seat) => seat.id === session.selectedModelSeatId) ?? chatSeats[0] ?? modelSeats[0],
     [chatSeats, modelSeats, session.selectedModelSeatId],
+  );
+  const contextSources = useMemo(
+    () =>
+      memoryContext.events.filter(
+        (event) =>
+          memoryContext.retrievalPreview.includedSources.includes(event.sourceLabel) ||
+          event.modelSeatId === selectedSeat?.id,
+      ),
+    [memoryContext.events, memoryContext.retrievalPreview.includedSources, selectedSeat?.id],
   );
 
   function updateSelectedSeat(seatId: string) {
@@ -43,8 +54,8 @@ export function ChatShell({ session, modelSeats, onSessionChange }: ChatShellPro
       role: "assistant",
       content:
         selectedSeat.setupStatus === "configured"
-          ? `Layer 2 placeholder response using the ${selectedSeat.label} shell selection. No provider was called.`
-          : `Layer 2 placeholder response: ${selectedSeat.label} is ${selectedSeat.setupStatus}, so a later runtime layer would ask for setup before calling a model.`,
+          ? `Layer 5 placeholder response using the ${selectedSeat.label} shell selection. A later runtime layer could combine selected context sources; no provider or retrieval service was called.`
+          : `Layer 5 placeholder response: ${selectedSeat.label} is ${selectedSeat.setupStatus}, so a later runtime layer would ask for setup before calling a model or context service.`,
       createdAt: "Local shell state",
       modelSeatId: selectedSeat.id,
     };
@@ -60,16 +71,16 @@ export function ChatShell({ session, modelSeats, onSessionChange }: ChatShellPro
     <section className="page-section chat-shell">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 2</p>
+          <p className="section-label">Public Layer 5</p>
           <h2>Main Chat shell</h2>
           <p>
             Main Chat is the operator middle-person between you and the workstation. This shell captures local
-            placeholder messages only.
+            placeholder messages and previews which context sources a runtime layer could include.
           </p>
         </div>
         <aside className="status-card">
           <span>Layer boundary</span>
-          <strong>Layer 2 shell only - no live model calls yet.</strong>
+          <strong>Layer 5 preview - no real memory retrieval or live model calls yet.</strong>
         </aside>
       </div>
 
@@ -124,6 +135,25 @@ export function ChatShell({ session, modelSeats, onSessionChange }: ChatShellPro
               <span key={chip}>{chip}</span>
             ))}
           </div>
+
+          <section className="context-handoff-panel">
+            <div>
+              <p className="section-label">Context available</p>
+              <h3>Main Chat handoff preview</h3>
+              <p>These are demo source labels only. No memory query runs.</p>
+            </div>
+            {contextSources.slice(0, 3).map((event) => (
+              <article className="context-mini-card" key={event.id}>
+                <strong>{event.title}</strong>
+                <span>{event.sourceLabel}</span>
+                <small>{event.sensitivity}</small>
+              </article>
+            ))}
+            <div className="runtime-boundary compact">
+              <strong>Excluded/redacted</strong>
+              <p>{memoryContext.retrievalPreview.excludedSources.join(", ")}</p>
+            </div>
+          </section>
         </aside>
       </div>
 

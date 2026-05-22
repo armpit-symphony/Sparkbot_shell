@@ -1,16 +1,20 @@
+import type { ContextEvent } from "../types/context";
 import type { DeliveryChannelPreview, TaskGuardianTemplate } from "../types/shell";
 import { StatusBadge } from "./StatusBadge";
 
 type TaskGuardianPreviewProps = {
   templates: TaskGuardianTemplate[];
   deliveryChannels: DeliveryChannelPreview[];
+  contextEvents?: ContextEvent[];
 };
 
 function channelLabel(channels: DeliveryChannelPreview[], id: string) {
   return channels.find((channel) => channel.id === id)?.label ?? id;
 }
 
-export function TaskGuardianPreview({ templates, deliveryChannels }: TaskGuardianPreviewProps) {
+export function TaskGuardianPreview({ templates, deliveryChannels, contextEvents = [] }: TaskGuardianPreviewProps) {
+  const taskContextEvents = contextEvents.filter((event) => event.sourceType === "task_guardian");
+
   return (
     <section className="config-panel">
       <div className="card-heading">
@@ -54,6 +58,28 @@ export function TaskGuardianPreview({ templates, deliveryChannels }: TaskGuardia
           </article>
         ))}
       </div>
+
+      {taskContextEvents.length ? (
+        <section className="task-context-preview">
+          <div>
+            <p className="section-label">Memory event preview</p>
+            <h3>Task Guardian context handoff</h3>
+            <p>
+              Health reports can later become app/in-room context events. External delivery remains opt-in and
+              configured only.
+            </p>
+          </div>
+          <div className="mini-card-grid">
+            {taskContextEvents.map((event) => (
+              <article className="context-mini-card" key={event.id}>
+                <strong>{event.title}</strong>
+                <span>{event.sourceLabel}</span>
+                <small>{event.redactionNote}</small>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </section>
   );
 }

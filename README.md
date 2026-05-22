@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 4 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian template previews, and a Round Table static-to-interactive meeting flow. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 5 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian template previews, a Round Table static-to-interactive meeting flow, and a public memory/context adapter contract preview. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -37,6 +37,7 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Layer 2 chat/model config status](docs/LAYER_2_CHAT_MODEL_CONFIG_STATUS.md)
 - [Layer 3 workstation and command center status](docs/LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md)
 - [Layer 4 Round Table static flow status](docs/LAYER_4_ROUNDTABLE_STATIC_FLOW_STATUS.md)
+- [Layer 5 memory/context adapter status](docs/LAYER_5_MEMORY_CONTEXT_ADAPTER_STATUS.md)
 
 ## Development
 
@@ -65,8 +66,8 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 4 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
+- Layer 5 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, schedule Task Guardian jobs, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended Layer 5 is the public memory/context adapter shape: define how approved meeting notes and Chat context will later roll into shared memory, still without importing proprietary Guardian internals.
+Recommended Layer 6 is a small Task Guardian app-first health-check contract layer or connector identity/PIN contract layer, depending on approval. Keep live connector QA marked UNKNOWN until test-only channels pass.

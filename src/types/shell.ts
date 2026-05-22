@@ -1,3 +1,5 @@
+import type { MemoryContextShellState } from "./context";
+
 export type ModelProviderKind =
   | "openai"
   | "anthropic"
@@ -201,6 +203,7 @@ export type ShellState = {
   deliveryChannels: DeliveryChannelPreview[];
   meetingNotePreviews: MeetingNotePreview[];
   roundTable: RoundTableShellState;
+  memoryContext: MemoryContextShellState;
   chatSession: ChatSession;
   guardrailProfile: GuardrailProfileName;
 };

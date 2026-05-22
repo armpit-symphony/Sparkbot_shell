@@ -6,9 +6,9 @@ Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connect
 
 ## Current Readiness
 
-Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, and Layer 4 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, and Layer 5 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
-The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
+The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check direction, connector channels, and Robo Preview teaser.
 
 ## Layer 1 Completed
 
@@ -54,13 +54,27 @@ Completed in `public-release-layer-4-roundtable-static-flow`:
 
 No backend runtime, model/provider calls, Local AI calls, meeting persistence, memory/context runtime, connector sends, Guardian internals, Task Guardian execution, terminal/browser execution, or Robo/LIMA bridge was added.
 
+## Layer 5 Completed
+
+Completed in `public-release-layer-5-memory-context-adapter-shell`:
+
+- Frontend-only public memory/context contract shapes.
+- `ContextEvent`, `MeetingNoteContract`, and `ContextRetrievalPreview` types.
+- Source, actor, sensitivity, rollup-state, redaction-status, and approval-required labels.
+- Static demo context events for Main Chat, Round Table, meeting notes, Task Guardian, model seats, connectors, redaction boundaries, and retired rollups.
+- Main Chat, Round Table notes, Task Guardian, and Workstation context previews.
+- Draft/scaffold, raw transcript, credential, retired-rollup, and connector recall exclusion copy.
+
+No backend memory runtime, Guardian memory service, database persistence, meeting-note persistence, real retrieval, connector recall, provider calls, Task Guardian execution, external sends, terminal/browser execution, Guardian internals, or Robo/LIMA bridge was added.
+
 ## Ready To Import Soon
 
-These are candidates after Layer 4 validation and targeted review:
+These are candidates after Layer 5 validation and targeted review:
 
 - Public docs and package/download planning.
 - Public-safe model config contracts.
-- Public memory/context adapter shape.
+- Task Guardian app-first health-check contract shape.
+- Connector identity/PIN contract shape.
 
 ## Must Be Rewritten
 
@@ -109,7 +123,7 @@ These are no-go for public import:
 
 ## Can Proceed Despite UNKNOWN Connector QA
 
-Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, and Layer 5 memory/context adapter planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
+Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, Layer 5 memory/context adapter shell work, and contract-only Layer 6 planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
 
 Allowed next work despite UNKNOWN connector QA:
 
@@ -128,19 +142,16 @@ Not allowed until live QA passes:
 
 ## Recommended Next Import Layer
 
-Layer 5 - memory/context adapter shape.
+Layer 6 - choose one small contract-only slice.
 
-Scope:
+Recommended options:
 
-- Public contract for meeting notes save/edit/recall.
-- Memory rollup draft/saved boundary.
-- Main Chat to Round Table context handoff shape.
-- Redaction/privacy review points before memory writes.
-- No live memory persistence, proprietary Guardian Spine internals, connector recall, provider calls, or backend runtime wiring.
+- Task Guardian app-first health-check report contract: safe report fields, redaction checklist, app/in-room delivery event shape, and no scheduler/execution.
+- Connector identity/PIN contract: fail-closed recall rules, linked identity shape, PIN session shape, live-QA no-go gates, and no connector sends.
 
 Then proceed in order:
 
-1. Layer 6 - Task Guardian app-first health-check preview wiring or backend contract planning, depending on approval.
+1. Runtime-backed work only after the contract layer is approved and no-go gates are closed.
 
 Do not import everything at once.
 
