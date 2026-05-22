@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChatShell } from "./components/ChatShell";
+import { ConnectorIdentityShell } from "./components/ConnectorIdentityShell";
 import { ModelConfigShell } from "./components/ModelConfigShell";
 import { RoundTableFlowShell } from "./components/RoundTableFlowShell";
 import { TaskGuardianPreview } from "./components/TaskGuardianPreview";
@@ -22,6 +23,7 @@ const navItems: NavItem[] = [
   { key: "roundtable", label: "Round Table", eyebrow: "Agent meetings" },
   { key: "command-center", label: "Command Center", eyebrow: "Setup and safety" },
   { key: "task-guardian", label: "Task Guardian", eyebrow: "Scheduled work" },
+  { key: "connectors", label: "Connectors", eyebrow: "Identity gates" },
   { key: "robo-preview", label: "Robo Preview", eyebrow: "Teaser only" },
   { key: "docs", label: "Docs", eyebrow: "Planning links" },
 ];
@@ -56,7 +58,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 6 Task Guardian health shell</span>
+            <span>Layer 7 connector PIN shell</span>
           </span>
         </a>
 
@@ -76,7 +78,7 @@ export function App() {
 
         <div className="boundary-note">
           <strong>Shell only.</strong>
-          <span>No backend, connectors, live model calls, credential storage, scheduling, or robotics control.</span>
+          <span>No backend, connector runtime, live model calls, credential storage, scheduling, or robotics control.</span>
         </div>
       </aside>
 
@@ -117,6 +119,7 @@ export function App() {
             taskGuardianTemplates={shellState.taskGuardianTemplates}
             taskDeliveryPreferences={shellState.taskDeliveryPreferences}
             healthReportPreviews={shellState.healthReportPreviews}
+            connectorCards={shellState.connectorCards}
             onGuardrailProfileChange={(guardrailProfile) =>
               setShellState((current) => ({ ...current, guardrailProfile }))
             }
@@ -133,7 +136,7 @@ export function App() {
           <section className="page-section">
             <div className="intro-row">
               <div>
-                <p className="section-label">Public Layer 6</p>
+                <p className="section-label">Public Layer 7</p>
                 <h2>Task Guardian preview</h2>
                 <p>
                   Task Guardian is the scheduled work manager direction. This preview shows read-only PC/server health
@@ -150,16 +153,24 @@ export function App() {
               templates={shellState.taskGuardianTemplates}
               deliveryPreferences={shellState.taskDeliveryPreferences}
               healthReports={shellState.healthReportPreviews}
+              connectorCards={shellState.connectorCards}
               contextEvents={shellState.memoryContext.events}
             />
           </section>
+        ) : null}
+        {activePage === "connectors" ? (
+          <ConnectorIdentityShell
+            connectors={shellState.connectorCards}
+            contextEvents={shellState.memoryContext.events}
+          />
         ) : null}
         {activePage !== "docs" &&
         activePage !== "workstation" &&
         activePage !== "roundtable" &&
         activePage !== "chat" &&
         activePage !== "command-center" &&
-        activePage !== "task-guardian" ? (
+        activePage !== "task-guardian" &&
+        activePage !== "connectors" ? (
           <PlaceholderPage page={activePage} />
         ) : null}
       </main>

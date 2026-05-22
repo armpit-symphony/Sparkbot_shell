@@ -35,6 +35,12 @@ const workstationPanels = [
     status: "Preview only",
   },
   {
+    title: "Connectors",
+    route: "#/connectors",
+    summary: "Optional communication doors with identity/PIN gates and fail-closed private recall.",
+    status: "Layer 7 shell",
+  },
+  {
     title: "Local AI",
     route: "#/command-center",
     summary: "Ollama, LM Studio, llama.cpp, OpenAI-compatible, and custom endpoint setup shape.",
@@ -60,16 +66,21 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
     (event) => event.sourceLabel === "task_guardian.delivery.external_caveat",
   );
   const connectorRecall = shellState.memoryContext.events.find((event) => event.sourceType === "connector");
+  const optionalConnectors = shellState.connectorCards.filter((connector) => connector.kind !== "sms");
+  const liveQaUnknownCount = shellState.connectorCards.filter(
+    (connector) => connector.setupStatus === "live_qa_unknown",
+  ).length;
+  const unsupportedConnector = shellState.connectorCards.find((connector) => connector.kind === "sms");
 
   return (
     <section className="page-section">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 6</p>
+          <p className="section-label">Public Layer 7</p>
           <h2>Workstation operating floor</h2>
           <p>
             The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
-            model seats power Chat, Round Table, Specialty Wing, and Task Guardian health previews.
+            model seats power Chat, Round Table, Specialty Wing, Task Guardian health previews, and connector gates.
           </p>
         </div>
         <aside className="status-card">
@@ -142,8 +153,47 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
         templates={shellState.taskGuardianTemplates}
         deliveryPreferences={shellState.taskDeliveryPreferences}
         healthReports={shellState.healthReportPreviews}
+        connectorCards={shellState.connectorCards}
         contextEvents={shellState.memoryContext.events}
       />
+
+      <section className="config-panel connector-floor-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Connector doors</p>
+            <h2>Communication channels into Sparkbot</h2>
+            <p>
+              Telegram, Discord, Slack, and WhatsApp are optional configured channels later. Private recall needs linked
+              identity or a time-limited PIN session, and live QA is still required.
+            </p>
+          </div>
+          <a className="text-button" href="#/connectors">Open Connectors</a>
+        </div>
+        <div className="mini-card-grid">
+          <article className="template-card">
+            <strong>{optionalConnectors.length}</strong>
+            <p>optional external connector shells with no real sends</p>
+            <small>External delivery remains opt-in</small>
+          </article>
+          <article className="template-card">
+            <strong>{liveQaUnknownCount}</strong>
+            <p>connector previews marked live-QA unknown</p>
+            <small>Do not claim private recall complete</small>
+          </article>
+          <article className="template-card">
+            <strong>Fail closed</strong>
+            <p>private meeting recall requires linked identity or PIN session in a later runtime</p>
+            <small>No private memory recall runs here</small>
+          </article>
+          {unsupportedConnector ? (
+            <article className="template-card">
+              <strong>{unsupportedConnector.label}</strong>
+              <p>{unsupportedConnector.caveat}</p>
+              <small>Future/unsupported</small>
+            </article>
+          ) : null}
+        </div>
+      </section>
 
       <section className="config-panel">
         <div className="card-heading">
@@ -151,7 +201,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <p className="section-label">Shared company memory preview</p>
             <h2>Memory / context spine</h2>
             <p>
-              Company memory is contract-only in Layer 6. Saved meeting notes and safe health summaries can become
+              Company memory is contract-only in Layer 7. Saved meeting notes and safe health summaries can become
               future context; drafts, raw transcripts, credentials, and unverified connector recall stay excluded.
             </p>
           </div>
@@ -195,7 +245,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <article className="template-card">
             <strong>{shellState.memoryContext.retrievalPreview.resultCount}</strong>
             <p>demo context sources included in Main Chat handoff preview</p>
-            <small>Layer 6 contract only</small>
+            <small>Layer 7 contract only</small>
           </article>
         </div>
       </section>

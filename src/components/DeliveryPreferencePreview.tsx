@@ -1,3 +1,4 @@
+import type { ConnectorCard, ConnectorKind } from "../types/connectors";
 import type {
   DeliveryChannelKind,
   DeliveryChannelStatus,
@@ -6,6 +7,7 @@ import type {
 
 type DeliveryPreferencePreviewProps = {
   preferences: TaskDeliveryPreference[];
+  connectorCards?: ConnectorCard[];
   compact?: boolean;
 };
 
@@ -34,7 +36,20 @@ export function deliveryStatusLabel(status: DeliveryChannelStatus) {
   return statusLabels[status];
 }
 
-export function DeliveryPreferencePreview({ preferences, compact = false }: DeliveryPreferencePreviewProps) {
+function findConnector(connectorCards: ConnectorCard[], channel: DeliveryChannelKind) {
+  if (channel === "app") return undefined;
+  return connectorCards.find((connector) => connector.kind === (channel as ConnectorKind));
+}
+
+function formatEnumLabel(value: string) {
+  return value.replaceAll("_", " ");
+}
+
+export function DeliveryPreferencePreview({
+  preferences,
+  connectorCards = [],
+  compact = false,
+}: DeliveryPreferencePreviewProps) {
   return (
     <section className={compact ? "delivery-preference-shell compact" : "delivery-preference-shell"}>
       <div className="card-heading">
@@ -47,21 +62,31 @@ export function DeliveryPreferencePreview({ preferences, compact = false }: Deli
       </div>
 
       <div className="delivery-grid">
-        {preferences.map((preference) => (
-          <article className={`delivery-card ${preference.status}`} key={preference.channel}>
-            <div className="card-heading">
-              <strong>{deliveryChannelLabel(preference.channel)}</strong>
-              <span>{deliveryStatusLabel(preference.status)}</span>
-            </div>
-            <p>{preference.statusMessage}</p>
-            <div className="seat-flags">
-              <span>{preference.enabled ? "Enabled in preview" : "Disabled in preview"}</span>
-              {preference.fallbackToApp ? <span>Fallback to app</span> : null}
-              {preference.status === "live_qa_unknown" ? <span>Live QA unknown</span> : null}
-              {preference.status === "unsupported" ? <span>Future/unsupported</span> : null}
-            </div>
-          </article>
-        ))}
+        {preferences.map((preference) => {
+          const connector = findConnector(connectorCards, preference.channel);
+
+          return (
+            <article className={`delivery-card ${preference.status}`} key={preference.channel}>
+              <div className="card-heading">
+                <strong>{deliveryChannelLabel(preference.channel)}</strong>
+                <span>{deliveryStatusLabel(preference.status)}</span>
+              </div>
+              <p>{preference.statusMessage}</p>
+              <div className="seat-flags">
+                <span>{preference.enabled ? "Enabled in preview" : "Disabled in preview"}</span>
+                {preference.fallbackToApp ? <span>Fallback to app</span> : null}
+                {preference.status === "live_qa_unknown" ? <span>Live QA unknown</span> : null}
+                {preference.status === "unsupported" ? <span>Future/unsupported</span> : null}
+              </div>
+              {connector ? (
+                <small>
+                  Connector gate: {formatEnumLabel(connector.identityStatus)}; recall policy:{" "}
+                  {formatEnumLabel(connector.recallPolicy)}.
+                </small>
+              ) : null}
+            </article>
+          );
+        })}
       </div>
 
       <p className="delivery-caveat">

@@ -12,10 +12,11 @@ const docs = [
   ["Layer 4 Round Table static flow status", "LAYER_4_ROUNDTABLE_STATIC_FLOW_STATUS.md"],
   ["Layer 5 memory/context adapter status", "LAYER_5_MEMORY_CONTEXT_ADAPTER_STATUS.md"],
   ["Layer 6 Task Guardian health status", "LAYER_6_TASK_GUARDIAN_HEALTH_STATUS.md"],
+  ["Layer 7 connector PIN status", "LAYER_7_CONNECTOR_PIN_STATUS.md"],
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-6-task-guardian-health-shell/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-7-connector-pin-shell/docs";
 
 export function DocsPage() {
   return (
@@ -47,7 +48,7 @@ export function DocsPage() {
       <div className="runtime-boundary">
         <strong>Documentation boundary</strong>
         <p>
-          Layer 6 links repo Markdown planning files only. It does not include internal R&D notes,
+          Layer 7 links repo Markdown planning files only. It does not include internal R&D notes,
           package artifacts, secrets, tests, workflows, or private deployment instructions.
         </p>
       </div>

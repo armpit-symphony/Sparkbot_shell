@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 6 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, and app-first delivery preference shells. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 7 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, and connector identity/PIN fail-closed recall previews. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -39,6 +39,7 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Layer 4 Round Table static flow status](docs/LAYER_4_ROUNDTABLE_STATIC_FLOW_STATUS.md)
 - [Layer 5 memory/context adapter status](docs/LAYER_5_MEMORY_CONTEXT_ADAPTER_STATUS.md)
 - [Layer 6 Task Guardian health status](docs/LAYER_6_TASK_GUARDIAN_HEALTH_STATUS.md)
+- [Layer 7 connector PIN status](docs/LAYER_7_CONNECTOR_PIN_STATUS.md)
 
 ## Development
 
@@ -65,11 +66,12 @@ npm run build
 - Live Telegram, Discord, Slack, and WhatsApp connector QA is still UNKNOWN because no safe test-only credentials/channels were configured.
 - External private recall is code-gated and fail-closed, but not live-verified.
 - External health-report delivery is setup-needed/live-QA-unknown and not implemented.
+- Connector identity/PIN sessions are contract previews only; no real verification or session storage exists.
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 6 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
+- Layer 7 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended Layer 7 is a small connector identity/PIN and fail-closed delivery contract shell. Keep live connector QA marked UNKNOWN until test-only channels pass.
+Recommended Layer 8 is a small public packaging/download QA shell or browser/live QA checklist layer. Keep live connector QA marked UNKNOWN until test-only channels pass.

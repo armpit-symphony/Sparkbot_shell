@@ -5,6 +5,7 @@ import type {
   ModelSeat,
   SpecialtyAgent,
 } from "../types/shell";
+import type { ConnectorCard } from "../types/connectors";
 import type { HealthReportPreview, TaskDeliveryPreference, TaskGuardianTemplate } from "../types/taskGuardian";
 import { GuardrailProfileShell } from "./GuardrailProfileShell";
 import { InviteWingPanel } from "./InviteWingPanel";
@@ -23,6 +24,7 @@ type ModelConfigShellProps = {
   taskGuardianTemplates: TaskGuardianTemplate[];
   taskDeliveryPreferences: TaskDeliveryPreference[];
   healthReportPreviews: HealthReportPreview[];
+  connectorCards: ConnectorCard[];
   onModelSeatsChange: (seats: ModelSeat[]) => void;
   onSpecialtyAgentsChange: (agents: SpecialtyAgent[]) => void;
   onGuardrailProfilesChange: (profiles: GuardrailProfile[]) => void;
@@ -37,6 +39,7 @@ export function ModelConfigShell({
   taskGuardianTemplates,
   taskDeliveryPreferences,
   healthReportPreviews,
+  connectorCards,
   onModelSeatsChange,
   onSpecialtyAgentsChange,
   onGuardrailProfilesChange,
@@ -139,6 +142,7 @@ export function ModelConfigShell({
       <TaskGuardianPreview
         deliveryPreferences={taskDeliveryPreferences}
         healthReports={healthReportPreviews}
+        connectorCards={connectorCards}
         templates={taskGuardianTemplates}
       />
 

@@ -77,6 +77,21 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
     boundary:
       "No remediation, package updates, service restarts, connector sends, or recurring jobs run here.",
   },
+  connectors: {
+    title: "Connector identity and PIN gates",
+    summary:
+      "Connectors are optional communication channels. Private recall must fail closed until identity and step-up verification rules are satisfied.",
+    status: "Layer 7 connector/PIN shell. No sends, webhooks, sessions, or private recall runtime.",
+    panels: [
+      { title: "Telegram", body: "Optional configured channel later; no chat target or send path here." },
+      { title: "Discord", body: "Shared-channel private recall remains blocked until stronger gates exist." },
+      { title: "Slack", body: "Allowed channel/user and linked owner checks are future runtime requirements." },
+      { title: "WhatsApp", body: "Allowed phone and verification checks are future runtime requirements." },
+      { title: "SMS / Text", body: "Future/unsupported until an identity and provider model exists." },
+    ],
+    boundary:
+      "No connector runtime, webhook, secret input, target identifier, PIN verification, connector session, send, or private memory recall exists.",
+  },
   "robo-preview": {
     title: "Robo Preview teaser",
     summary:

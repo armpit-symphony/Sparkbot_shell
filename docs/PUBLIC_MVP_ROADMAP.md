@@ -102,17 +102,19 @@ Blockers before runtime import: mutating diagnostics, raw secrets/private paths 
 
 ## Phase I - Connector Interfaces With Fail-Closed Identity/PIN
 
-Status: recommended Layer 7 contract-only work.
+Status: started/completed as a shell-only Layer 7 pass in `public-release-layer-7-connector-pin-shell`.
 
-Imports: public-safe connector interfaces for Telegram, Discord, Slack, and WhatsApp; connector PIN session concept.
+Imports: public-safe connector/PIN contract types, connector setup-needed cards, Telegram/Discord/Slack/WhatsApp status previews, SMS/text future/unsupported status, fail-closed private recall gate preview, PIN session preview, connector delivery caveat preview, Workstation connector panel, and source-labeled connector recall context events.
 
-Exclusions: production credentials, private channel IDs, unsupported SMS/text, relaxed shared-channel private recall.
+Exclusions: production credentials, private channel IDs, phone numbers, connector target IDs, signing secret values, verify token values, real connector runtime, real sends, real webhooks, real SMS/text provider, real PIN verification, real connector sessions, real private memory recall, real Task Guardian delivery, backend runtime, memory persistence, Guardian internals, terminal/browser execution, and LIMA/Arc/Office/IT wiring.
 
-Validation: test-only live connector QA, unverified recall fail-closed, PIN sessions, allowlist failures, non-secret evidence.
+Validation: frontend build, Connectors route smoke, Task Guardian delivery caveat smoke, connector recall gate labels, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers: no safe test credentials/channels, private recall marked GREEN without live QA, shared-channel leaks.
+Blockers before runtime import: no safe test credentials/channels, private recall marked GREEN without live QA, shared-channel leaks, synthetic owner attribution, long-lived PIN sessions, connector target leakage, and relaxed identity gates.
 
 ## Phase J - Robo Preview Teaser
+
+Status: future teaser/static stub work.
 
 Imports: static Robo Preview UI and non-executing backend stub contract.
 
@@ -123,6 +125,8 @@ Validation: preview renders, no live robotics tools are registered, package cont
 Blockers: live robotics endpoint exposure, private bridge source import, LIMA runtime wiring.
 
 ## Phase K - Browser/Live QA + Package QA
+
+Status: recommended Layer 8 contract/docs/QA work.
 
 Imports: QA docs, package script, release artifact inspection instructions.
 

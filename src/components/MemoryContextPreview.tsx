@@ -46,6 +46,9 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
     return events.filter((event) => active.sourceTypes?.includes(event.sourceType));
   }, [active.sourceTypes, events]);
   const displayedEvents = compact ? visibleEvents.slice(0, 4) : visibleEvents;
+  const connectorGateEvents = events.filter(
+    (event) => event.sourceType === "connector" && event.sourceLabel.startsWith("connector.recall."),
+  );
 
   return (
     <section className="config-panel memory-context-panel">
@@ -54,8 +57,8 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
           <p className="section-label">Memory / context spine</p>
           <h2>Context adapter shell</h2>
           <p>
-            Layer 6 previews source-labeled context events for health reports and delivery warnings. It does not persist
-            memory, retrieve context, or call a Guardian memory service.
+            Layer 7 previews source-labeled context events for health reports, delivery warnings, and connector recall
+            gates. It does not persist memory, retrieve context, or call a Guardian memory service.
           </p>
         </div>
         <span className="status-badge setup_needed">Contract only</span>
@@ -97,6 +100,28 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
         ))}
       </div>
 
+      {connectorGateEvents.length ? (
+        <section className="connector-gate-preview">
+          <div>
+            <p className="section-label">Connector recall gate</p>
+            <h3>Fail-closed private recall preview</h3>
+            <p>
+              Unauthorized connector recall is blocked/redacted. Linked or PIN-verified recall is shown only as future
+              runtime behavior.
+            </p>
+          </div>
+          <div className="mini-card-grid">
+            {connectorGateEvents.map((event) => (
+              <article className="context-mini-card" key={event.id}>
+                <strong>{event.title}</strong>
+                <span>{event.sourceLabel}</span>
+                <small>{event.redactionNote}</small>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <div className="retrieval-preview">
         <div>
           <p className="section-label">Retrieval preview</p>
@@ -117,7 +142,7 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
             ))}
           </div>
         </div>
-        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in Layer 6.</small>
+        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in Layer 7.</small>
       </div>
     </section>
   );

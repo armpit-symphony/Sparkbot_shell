@@ -1,3 +1,4 @@
+import type { ConnectorCard } from "./connectors";
 import type { MemoryContextShellState } from "./context";
 import type { HealthReportPreview, TaskDeliveryPreference, TaskGuardianTemplate } from "./taskGuardian";
 
@@ -183,6 +184,7 @@ export type ShellState = {
   taskGuardianTemplates: TaskGuardianTemplate[];
   taskDeliveryPreferences: TaskDeliveryPreference[];
   healthReportPreviews: HealthReportPreview[];
+  connectorCards: ConnectorCard[];
   meetingNotePreviews: MeetingNotePreview[];
   roundTable: RoundTableShellState;
   memoryContext: MemoryContextShellState;

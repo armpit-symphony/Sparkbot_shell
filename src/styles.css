@@ -840,6 +840,123 @@ textarea {
   border: 1px solid #a9ccea;
 }
 
+.connector-shell,
+.connector-status-panel,
+.connector-gate-panel,
+.connector-gate-preview,
+.connector-floor-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.connector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.connector-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(24, 34, 32, 0.06);
+}
+
+.connector-card.live_qa_unknown {
+  border-color: #d8b06c;
+}
+
+.connector-card.unsupported,
+.connector-card.not_configured {
+  border-color: #d6aaa6;
+}
+
+.connector-card p,
+.connector-step p,
+.connector-gate-preview p {
+  margin-bottom: 0;
+}
+
+.connector-status,
+.connector-policy-grid span,
+.connector-features span {
+  width: max-content;
+  max-width: 100%;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.connector-status.setup_needed,
+.connector-status.live_qa_unknown {
+  color: #775122;
+  background: #fff1d8;
+  border: 1px solid #ecc27b;
+}
+
+.connector-status.configured {
+  color: #225036;
+  background: #dff5e9;
+  border: 1px solid #9ad6b4;
+}
+
+.connector-status.unsupported,
+.connector-status.not_configured {
+  color: #7f2f2f;
+  background: #fbe1df;
+  border: 1px solid #e0aaa5;
+}
+
+.connector-policy-grid,
+.connector-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.connector-policy-grid span {
+  color: #254f74;
+  background: #e1effd;
+  border: 1px solid #a9ccea;
+}
+
+.connector-features span {
+  color: #2c463c;
+  background: #eef7f3;
+  border: 1px solid #cde2d8;
+}
+
+.connector-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.connector-step {
+  display: grid;
+  gap: 8px;
+  min-height: 150px;
+  padding: 12px;
+  background: #f8fbfa;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+}
+
+.connector-step span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #f8fffc;
+  background: #25523f;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
 .roundtable-shell {
   gap: 18px;
 }
@@ -1141,6 +1258,8 @@ textarea {
   .health-report-grid,
   .health-status-grid,
   .health-report-block.two-column,
+  .connector-grid,
+  .connector-flow-grid,
   .phase-nav,
   .seat-assignment-grid,
   .phase-card-grid,

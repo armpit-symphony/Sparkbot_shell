@@ -4,6 +4,7 @@ export type PageKey =
   | "roundtable"
   | "command-center"
   | "task-guardian"
+  | "connectors"
   | "robo-preview"
   | "docs";
 

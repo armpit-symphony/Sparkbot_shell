@@ -6,9 +6,9 @@ Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connect
 
 ## Current Readiness
 
-Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, Layer 5, and Layer 6 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, Layer 5, Layer 6, and Layer 7 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
-The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check report shell, app/in-room delivery default, connector channel setup warnings, and Robo Preview teaser.
+The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check report shell, app/in-room delivery default, connector identity/PIN gate previews, fail-closed private recall previews, connector channel setup warnings, and Robo Preview teaser.
 
 ## Layer 1 Completed
 
@@ -83,14 +83,29 @@ Completed in `public-release-layer-6-task-guardian-health-shell`:
 
 No backend Task Guardian runtime, real scheduler, real health collector, real system commands, remediation, connector sends, external delivery, SMS/text delivery, memory persistence, provider calls, terminal/browser execution, Guardian internals, or LIMA/Arc/Office/IT wiring was added.
 
+## Layer 7 Completed
+
+Completed in `public-release-layer-7-connector-pin-shell`:
+
+- Frontend-only connector identity/PIN contract shapes.
+- `ConnectorCard`, `ConnectorSetupStatus`, `ConnectorIdentityStatus`, `ConnectorRecallPolicy`, and `PinSessionPreview` types.
+- Static Telegram, Discord, Slack, WhatsApp, and SMS/text connector status cards.
+- Fail-closed private meeting recall gate preview.
+- PIN session preview as step-up verification only.
+- Workstation connector status panel and Connectors route.
+- Task Guardian delivery caveat integration with connector gate status labels.
+- Source-labeled context events for unauthorized connector recall and future PIN-gated recall.
+
+No connector runtime, real Telegram/Discord/Slack/WhatsApp sends, WhatsApp webhook, SMS/text provider, PIN verification, connector sessions, private memory recall, Task Guardian delivery, backend runtime, memory persistence, Guardian internals, terminal/browser execution, robotics/IoT control, or LIMA/Arc/Office/IT wiring was added.
+
 ## Ready To Import Soon
 
-These are candidates after Layer 6 validation and targeted review:
+These are candidates after Layer 7 validation and targeted review:
 
 - Public docs and package/download planning.
 - Public-safe model config contracts.
-- Connector identity/PIN contract shape.
 - Evidence/redaction checklist for runtime health report collection.
+- Browser/live QA checklist for public shell routes.
 
 ## Must Be Rewritten
 
@@ -139,7 +154,7 @@ These are no-go for public import:
 
 ## Can Proceed Despite UNKNOWN Connector QA
 
-Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, Layer 5 memory/context adapter shell work, Layer 6 Task Guardian health shell work, and contract-only Layer 7 planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
+Planning, classification, docs, Layer 1 shell frame work, Layer 2 chat/model config shell work, Layer 3 Workstation/Command Center shell refinement, Layer 4 Round Table static flow, Layer 5 memory/context adapter shell work, Layer 6 Task Guardian health shell work, Layer 7 connector/PIN shell work, and contract-only Layer 8 planning can proceed while connector live QA remains UNKNOWN because these layers should not import or claim live connector private recall.
 
 Allowed next work despite UNKNOWN connector QA:
 
@@ -158,16 +173,15 @@ Not allowed until live QA passes:
 
 ## Recommended Next Import Layer
 
-Layer 7 - connector identity/PIN and fail-closed delivery contract shell.
+Layer 8 - public packaging/download QA shell or browser/live QA checklist layer.
 
 Recommended scope:
 
-- Public fail-closed recall rules.
-- Linked identity shape.
-- PIN session shape.
-- Connector setup and live-QA no-go gates.
-- No connector sends.
-- No private recall GREEN claims while live QA remains UNKNOWN.
+- Public route QA checklist.
+- Release artifact exclusion checklist.
+- Non-secret evidence expectations.
+- Package dry-run instructions.
+- No runtime connectors, sends, private recall, or production-readiness claims.
 
 Then proceed in order:
 

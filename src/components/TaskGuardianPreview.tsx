@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ConnectorCard } from "../types/connectors";
 import type { ContextEvent } from "../types/context";
 import type {
   HealthReportPreview as HealthReportPreviewContract,
@@ -13,6 +14,7 @@ type TaskGuardianPreviewProps = {
   templates: TaskGuardianTemplate[];
   deliveryPreferences: TaskDeliveryPreference[];
   healthReports: HealthReportPreviewContract[];
+  connectorCards?: ConnectorCard[];
   contextEvents?: ContextEvent[];
 };
 
@@ -32,6 +34,7 @@ export function TaskGuardianPreview({
   templates,
   deliveryPreferences,
   healthReports,
+  connectorCards = [],
   contextEvents = [],
 }: TaskGuardianPreviewProps) {
   const [enabledPreview, setEnabledPreview] = useState<Record<string, boolean>>(() =>
@@ -50,11 +53,11 @@ export function TaskGuardianPreview({
           <p className="section-label">Task Guardian</p>
           <h2>Health-check report shell</h2>
           <p>
-            Task Guardian is a scheduled work manager direction. Layer 6 previews read-only PC/server health reports,
-            schedules, delivery preferences, and memory source labels using fake demo data only.
+            Task Guardian is a scheduled work manager direction. Layer 7 keeps app/in-room delivery as the default and
+            previews external connector readiness without adding sends.
           </p>
         </div>
-        <span className="status-badge setup_needed">Layer 6 shell</span>
+        <span className="status-badge setup_needed">Layer 7 shell</span>
       </div>
 
       <div className="runtime-boundary compact">
@@ -102,7 +105,7 @@ export function TaskGuardianPreview({
         ))}
       </div>
 
-      <DeliveryPreferencePreview preferences={deliveryPreferences} />
+      <DeliveryPreferencePreview connectorCards={connectorCards} preferences={deliveryPreferences} />
 
       <section className="health-report-section">
         <div className="card-heading">

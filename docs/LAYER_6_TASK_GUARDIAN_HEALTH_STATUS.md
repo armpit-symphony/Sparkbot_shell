@@ -106,8 +106,10 @@ Layer 6 validation completed for this branch:
 
 ## Next Layer Recommendation
 
-Layer 7 should stay contract-only. Recommended next layer:
+Layer 7 has now taken the connector identity/PIN and fail-closed delivery contract option in `public-release-layer-7-connector-pin-shell`.
 
-- Connector identity/PIN and fail-closed delivery contract shell for Telegram, Discord, Slack, and WhatsApp, with no connector sends and live-QA-unknown retained.
+The next layer should stay contract/docs/QA only. Recommended option:
 
-Do not add real scheduler execution, connector sends, memory persistence, provider calls, Guardian internals, LIMA/Arc/Office/IT wiring, or robotics/IoT control in Layer 7.
+- Public packaging/download QA shell and release artifact exclusion checklist, or a narrow browser/live QA checklist layer.
+
+Do not add real scheduler execution, connector sends, memory persistence, provider calls, Guardian internals, LIMA/Arc/Office/IT wiring, or robotics/IoT control in the next layer.

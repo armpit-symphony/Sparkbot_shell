@@ -7,6 +7,7 @@ import type {
   ShellState,
   SpecialtyAgent,
 } from "../types/shell";
+import { demoConnectorCards } from "./demoConnectorState";
 import { demoMemoryContextState } from "./demoContextState";
 import {
   demoHealthReportPreviews,
@@ -422,6 +423,7 @@ export const demoShellState: ShellState = {
   taskGuardianTemplates: demoTaskGuardianTemplates,
   taskDeliveryPreferences: demoTaskDeliveryPreferences,
   healthReportPreviews: demoHealthReportPreviews,
+  connectorCards: demoConnectorCards,
   meetingNotePreviews: demoMeetingNotePreviews,
   roundTable: demoRoundTableState,
   memoryContext: demoMemoryContextState,
