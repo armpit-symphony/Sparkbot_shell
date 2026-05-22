@@ -6,6 +6,7 @@ Use this checklist before any Sparkbot R&D source is imported into `Sparkbot_she
 
 ## Repo And Artifact Boundary
 
+- [ ] Apply [Public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.md) as the controlling Layer 8 release artifact boundary.
 - [ ] Keep extraction maps, readiness docs, staging docs, and no-go gates in the repo for planning/audit history.
 - [ ] Exclude R&D path maps from public release artifacts.
 - [ ] Exclude internal extraction planning from public release artifacts.

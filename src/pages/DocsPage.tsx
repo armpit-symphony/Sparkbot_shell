@@ -2,6 +2,7 @@ const docs = [
   ["Public release handoff", "PUBLIC_RELEASE_HANDOFF.md"],
   ["Feature classification", "FEATURE_CLASSIFICATION.md"],
   ["Extraction map", "EXTRACTION_MAP.md"],
+  ["Public artifact manifest", "PUBLIC_ARTIFACT_MANIFEST.md"],
   ["Sanitization checklist", "SANITIZATION_CHECKLIST.md"],
   ["Public MVP roadmap", "PUBLIC_MVP_ROADMAP.md"],
   ["Repo separation rules", "REPO_SEPARATION_RULES.md"],
@@ -48,8 +49,9 @@ export function DocsPage() {
       <div className="runtime-boundary">
         <strong>Documentation boundary</strong>
         <p>
-          Layer 7 links repo Markdown planning files only. It does not include internal R&D notes,
-          package artifacts, secrets, tests, workflows, or private deployment instructions.
+          This index links repo staging docs only. Layer 8 public release artifacts must exclude
+          extraction maps, R&D path maps, internal readiness/no-go docs, private/source-boundary
+          notes, and staging implementation planning.
         </p>
       </div>
     </section>

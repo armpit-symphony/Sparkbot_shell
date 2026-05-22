@@ -58,6 +58,8 @@ Public artifacts must be generated from a sanitized boundary:
 
 ## Staging Docs Vs Public Artifact Docs
 
+Phil decision for Layer 8: this is the controlling public artifact boundary. `Sparkbot_shell` can keep staging and extraction planning documents because it is still a public-release staging workspace, but user-facing release bundles must contain only clean public docs that help users install, understand, and safely use Sparkbot Shell.
+
 Keep these in the `Sparkbot_shell` repo for staging and auditability:
 
 - Extraction maps.

@@ -175,6 +175,8 @@ Not allowed until live QA passes:
 
 Layer 8 - public packaging/download QA shell or browser/live QA checklist layer.
 
+Controlling boundary: [Public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.md).
+
 Recommended scope:
 
 - Public route QA checklist.

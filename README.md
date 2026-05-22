@@ -29,6 +29,7 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Public release handoff](docs/PUBLIC_RELEASE_HANDOFF.md)
 - [Feature classification](docs/FEATURE_CLASSIFICATION.md)
 - [Extraction map](docs/EXTRACTION_MAP.md)
+- [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md)
 - [Sanitization checklist](docs/SANITIZATION_CHECKLIST.md)
 - [Public MVP roadmap](docs/PUBLIC_MVP_ROADMAP.md)
 - [Repo separation rules](docs/REPO_SEPARATION_RULES.md)
@@ -40,6 +41,12 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - [Layer 5 memory/context adapter status](docs/LAYER_5_MEMORY_CONTEXT_ADAPTER_STATUS.md)
 - [Layer 6 Task Guardian health status](docs/LAYER_6_TASK_GUARDIAN_HEALTH_STATUS.md)
 - [Layer 7 connector PIN status](docs/LAYER_7_CONNECTOR_PIN_STATUS.md)
+
+## Public Artifact Boundary
+
+Phil's Layer 8 rule is now the controlling public artifact policy: `Sparkbot_shell` may keep extraction maps, readiness docs, staging docs, and no-go gates in the repo, but generated public release artifacts must exclude R&D path maps, internal extraction planning, private/source-boundary notes, and no-go/internal readiness docs.
+
+Public artifacts should ship only clean user-facing docs: README, install/setup, capabilities, architecture overview, security/guardrail overview, Local AI setup, Round Table overview, Task Guardian overview, and connector setup caveats. See [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md).
 
 ## Development
 
@@ -74,4 +81,4 @@ npm run build
 
 ## Next Step
 
-Recommended Layer 8 is a small public packaging/download QA shell or browser/live QA checklist layer. Keep live connector QA marked UNKNOWN until test-only channels pass.
+Recommended Layer 8 is a small public packaging/download QA shell or browser/live QA checklist layer governed by the [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md). Keep live connector QA marked UNKNOWN until test-only channels pass.
