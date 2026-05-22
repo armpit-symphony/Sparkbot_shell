@@ -4,6 +4,7 @@ import type {
   GuardrailProfile,
   MeetingNotePreview,
   ModelSeat,
+  RoundTableShellState,
   ShellState,
   SpecialtyAgent,
   TaskGuardianTemplate,
@@ -316,6 +317,162 @@ export const demoMeetingNotePreviews: MeetingNotePreview[] = [
   },
 ];
 
+export const demoRoundTableState: RoundTableShellState = {
+  title: "Public release Layer 4 planning meeting",
+  problem: "Plan the next safe import layer without adding runtime behavior or private internals.",
+  currentPhase: "setup",
+  seats: [
+    {
+      id: "rt-seat-1",
+      seatNumber: 1,
+      agentId: "agent-meeting-manager",
+      modelSeatId: "seat-codex-openai",
+      roleLabel: "Meeting coordinator / secretary",
+      locked: true,
+    },
+    {
+      id: "rt-seat-2",
+      seatNumber: 2,
+      agentId: "agent-researcher",
+      modelSeatId: "seat-claude-anthropic",
+      roleLabel: "Research and context",
+    },
+    {
+      id: "rt-seat-3",
+      seatNumber: 3,
+      agentId: "agent-builder",
+      modelSeatId: "seat-codex-openai",
+      roleLabel: "Implementation plan",
+    },
+    {
+      id: "rt-seat-4",
+      seatNumber: 4,
+      agentId: "agent-reviewer",
+      modelSeatId: "seat-claude-anthropic",
+      roleLabel: "Boundary review",
+    },
+  ],
+  firstPassIdeas: [
+    {
+      id: "idea-1",
+      seatId: "rt-seat-1",
+      idea: "Keep the meeting flow explicit: setup, first pass, assessment, assignments, second pass, wrap-up, notes.",
+    },
+    {
+      id: "idea-2",
+      seatId: "rt-seat-2",
+      idea: "Show where participants and model seats would be selected without contacting providers.",
+    },
+    {
+      id: "idea-3",
+      seatId: "rt-seat-3",
+      idea: "Make assignment cards concrete enough for operators to understand the later runtime contract.",
+    },
+    {
+      id: "idea-4",
+      seatId: "rt-seat-4",
+      idea: "Preserve the public/private boundary by avoiding per-turn generated notes and memory writes.",
+    },
+  ],
+  managerAssessment:
+    "Meeting Manager should synthesize the first pass, assign focused follow-up work, then produce one editable wrap-up note after the meeting. This shell previews that flow only.",
+  assignments: [
+    {
+      id: "assignment-1",
+      assigneeSeatId: "rt-seat-2",
+      title: "Confirm public-safe labels",
+      prompt: "Check that the visible flow describes public shell behavior without promising live execution.",
+      status: "assigned",
+    },
+    {
+      id: "assignment-2",
+      assigneeSeatId: "rt-seat-3",
+      title: "Map the implementation layer",
+      prompt: "Describe the next code layer needed after the static flow: memory/context adapter shape.",
+      status: "assigned",
+    },
+    {
+      id: "assignment-3",
+      assigneeSeatId: "rt-seat-4",
+      title: "Review no-go gates",
+      prompt: "Verify that no backend, provider, connector, memory, or Guardian runtime behavior is implied.",
+      status: "assigned",
+    },
+  ],
+  secondPassResponses: [
+    {
+      id: "response-1",
+      assignmentId: "assignment-1",
+      seatId: "rt-seat-2",
+      response: "The shell should say model-seat setup is preview-only and external connector QA remains separate.",
+    },
+    {
+      id: "response-2",
+      assignmentId: "assignment-2",
+      seatId: "rt-seat-3",
+      response: "Layer 5 can define a public memory/context adapter contract before importing persistence.",
+    },
+    {
+      id: "response-3",
+      assignmentId: "assignment-3",
+      seatId: "rt-seat-4",
+      response: "Do not create per-turn notes. Keep one editable meeting-note draft with a memory rollup preview label.",
+    },
+  ],
+  wrapUp: {
+    summary:
+      "Layer 4 should demonstrate Round Table structure and notes editing while staying fully local to the browser session.",
+    decisions: [
+      { id: "decision-1", text: "Meeting Manager remains Seat 1 by default." },
+      { id: "decision-2", text: "Per-seat model-seat assignment is a shell selector only." },
+      { id: "decision-3", text: "Notes become memory/context later; this layer does not write memory." },
+    ],
+    actionItems: [
+      {
+        id: "action-1",
+        owner: "Meeting Manager",
+        text: "Prepare the editable wrap-up draft after the meeting flow.",
+        dueLabel: "Runtime layer later",
+      },
+      {
+        id: "action-2",
+        owner: "Operator",
+        text: "Approve Layer 5 memory/context adapter scope before persistence work.",
+        dueLabel: "Before Layer 5",
+      },
+    ],
+    nextSteps: [
+      "Validate the shell route and responsive layout.",
+      "Keep connector and provider status out of the Round Table runtime path.",
+      "Prepare Layer 5 memory/context adapter docs.",
+    ],
+    openQuestions: [
+      { id: "question-1", text: "Which memory adapter fields are required before notes persistence begins?" },
+      { id: "question-2", text: "What redaction policy applies before meeting notes enter shared memory?" },
+    ],
+  },
+  notes: {
+    status: "draft",
+    summary:
+      "Layer 4 preview note: Meeting Manager captures one editable summary after wrap-up. This is local state only.",
+    decisions: [
+      { id: "note-decision-1", text: "Use Meeting Manager as default Seat 1." },
+      { id: "note-decision-2", text: "Keep Round Table execution out of Layer 4." },
+    ],
+    actionItems: [
+      {
+        id: "note-action-1",
+        owner: "Builder",
+        text: "Draft Layer 5 memory/context adapter shape after approval.",
+        dueLabel: "Next layer",
+      },
+    ],
+    nextSteps: ["Review notes redaction requirements before any memory write exists."],
+    openQuestions: [{ id: "note-question-1", text: "Should saved notes require operator confirmation by default?" }],
+    memoryRollupLabel: "Saved notes will later enter shared memory/context.",
+  },
+};
+
 export const demoShellState: ShellState = {
   modelSeats: demoModelSeats,
   specialtyAgents: demoSpecialtyAgents,
@@ -323,6 +480,7 @@ export const demoShellState: ShellState = {
   taskGuardianTemplates: demoTaskGuardianTemplates,
   deliveryChannels: demoDeliveryChannels,
   meetingNotePreviews: demoMeetingNotePreviews,
+  roundTable: demoRoundTableState,
   chatSession: demoChatSession,
   guardrailProfile: "Balanced",
 };

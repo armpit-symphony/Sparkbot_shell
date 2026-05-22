@@ -9,10 +9,11 @@ const docs = [
   ["Layer 1 app frame status", "LAYER_1_APP_FRAME_STATUS.md"],
   ["Layer 2 chat/model config status", "LAYER_2_CHAT_MODEL_CONFIG_STATUS.md"],
   ["Layer 3 workstation and command center status", "LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md"],
+  ["Layer 4 Round Table static flow status", "LAYER_4_ROUNDTABLE_STATIC_FLOW_STATUS.md"],
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-3-workstation-command-center-shell/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-4-roundtable-static-flow/docs";
 
 export function DocsPage() {
   return (
@@ -44,7 +45,7 @@ export function DocsPage() {
       <div className="runtime-boundary">
         <strong>Documentation boundary</strong>
         <p>
-          Layer 3 links repo Markdown planning files only. It does not include internal R&D notes,
+          Layer 4 links repo Markdown planning files only. It does not include internal R&D notes,
           package artifacts, secrets, tests, workflows, or private deployment instructions.
         </p>
       </div>

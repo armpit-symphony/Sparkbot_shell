@@ -66,15 +66,19 @@ Blockers: secret exposure, duplicate-seat selector bugs, unreachable local endpo
 
 ## Phase F - Round Table + Meeting Manager
 
-Imports: Round Table launch, Meeting Room, Seat 1 Meeting Manager default, assignment artifacts.
+Status: started/completed as a shell-only Layer 4 pass in `public-release-layer-4-roundtable-static-flow`.
 
-Exclusions: per-turn meeting-note spam, private prompts, proprietary orchestration internals.
+Imports: Round Table launch setup shape, Seat 1 Meeting Manager default, seat/agent/model-seat assignment shell, first-pass ideas, manager assessment, assignment cards, second-pass response previews, wrap-up preview, and meeting notes preview/edit shell.
 
-Validation: launch a multi-seat meeting, per-seat model changes, assignment cards, manager checkpoint/wrap-up.
+Exclusions: backend runtime, real model/provider calls, Local AI calls, room runtime, meeting persistence, memory writes, per-turn meeting-note spam, connector sends, private prompts, proprietary orchestration internals, Guardian internals, and private LIMA/Arc/Office/IT wiring.
 
-Blockers: meeting launch depends on private jobs, credentials in meeting metadata, broken long-meeting scroll.
+Validation: frontend build, Round Table route smoke, launch setup local-state review, per-seat model-seat selector review, assignment cards, notes editor local save preview, runtime/persistence scan, source boundary check, and secret/private scan.
+
+Blockers before runtime import: public room contract, provider-call contract, notes persistence contract, memory/context adapter, redaction rules, and long-meeting UI QA.
 
 ## Phase G - Unified Memory/Context + Meeting Notes
+
+Status: recommended next layer.
 
 Imports: public memory/context adapter, meeting notes save/edit/recall, memory rollup contract.
 

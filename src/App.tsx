@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChatShell } from "./components/ChatShell";
 import { ModelConfigShell } from "./components/ModelConfigShell";
+import { RoundTableFlowShell } from "./components/RoundTableFlowShell";
 import { TaskGuardianPreview } from "./components/TaskGuardianPreview";
 import { WorkstationShell } from "./components/WorkstationShell";
 import { demoShellState } from "./data/demoShellState";
@@ -55,7 +56,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 3 workstation shell</span>
+            <span>Layer 4 Round Table shell</span>
           </span>
         </a>
 
@@ -90,6 +91,14 @@ export function App() {
 
         {activePage === "docs" ? <DocsPage /> : null}
         {activePage === "workstation" ? <WorkstationShell shellState={shellState} /> : null}
+        {activePage === "roundtable" ? (
+          <RoundTableFlowShell
+            roundTable={shellState.roundTable}
+            modelSeats={shellState.modelSeats}
+            specialtyAgents={shellState.specialtyAgents}
+            onRoundTableChange={(roundTable) => setShellState((current) => ({ ...current, roundTable }))}
+          />
+        ) : null}
         {activePage === "chat" ? (
           <ChatShell
             session={shellState.chatSession}
@@ -141,6 +150,7 @@ export function App() {
         ) : null}
         {activePage !== "docs" &&
         activePage !== "workstation" &&
+        activePage !== "roundtable" &&
         activePage !== "chat" &&
         activePage !== "command-center" &&
         activePage !== "task-guardian" ? (

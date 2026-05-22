@@ -669,6 +669,117 @@ textarea {
   font-weight: 800;
 }
 
+.roundtable-shell {
+  gap: 18px;
+}
+
+.phase-nav,
+.seat-assignment-grid,
+.phase-card-grid,
+.notes-list-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.phase-nav {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.phase-button {
+  display: grid;
+  gap: 5px;
+  min-height: 94px;
+  padding: 11px;
+  color: #244534;
+  background: #f7fbfa;
+  border-color: #c8ddd4;
+  text-align: left;
+}
+
+.phase-button small {
+  color: #5f736d;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.phase-button.active,
+.phase-button:hover {
+  color: #f8fffc;
+  background: #25523f;
+  border-color: #25523f;
+}
+
+.phase-button.active small,
+.phase-button:hover small {
+  color: #d7eee4;
+}
+
+.seat-assignment-grid,
+.phase-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.roundtable-seat-card,
+.flow-card,
+.notes-editor {
+  display: grid;
+  gap: 13px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(24, 34, 32, 0.06);
+}
+
+.roundtable-seat-card p,
+.flow-card p,
+.notes-editor p {
+  margin-bottom: 0;
+}
+
+.form-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.manager-card {
+  border-left: 4px solid #68b28f;
+}
+
+.notes-list-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.notes-list-grid h3 {
+  margin-bottom: 6px;
+}
+
+.notes-editor {
+  box-shadow: none;
+}
+
+.meeting-participant-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meeting-participant-strip span {
+  padding: 4px 8px;
+  color: #2c463c;
+  background: #e5f3ed;
+  border: 1px solid #c4ddd2;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
 @media (max-width: 920px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -719,7 +830,11 @@ textarea {
   .seat-overview-grid,
   .mini-card-grid,
   .agent-grid,
-  .delivery-grid {
+  .delivery-grid,
+  .phase-nav,
+  .seat-assignment-grid,
+  .phase-card-grid,
+  .notes-list-grid {
     grid-template-columns: 1fr;
   }
 }

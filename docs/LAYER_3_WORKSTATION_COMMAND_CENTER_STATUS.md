@@ -64,12 +64,14 @@ Layer 3 validation completed for this branch:
 - Targeted high-risk secret/private-path scan: no live secrets or private paths found.
 - Broader private-term scan: matches are intentional boundary/planning references in docs and public no-go copy.
 
-## Next Layer Recommendation
+## Layer 4 Follow-Up
 
-Layer 4 should add a Round Table static flow:
+Layer 4 was completed in `public-release-layer-4-roundtable-static-flow` as a shell-only Round Table static flow:
 
 - Meeting launch shape.
 - Meeting Manager as default Seat 1.
 - First pass, assignments, second pass, wrap-up flow.
 - Static meeting notes and assignment previews.
 - No room runtime, model calls, memory rollups, connector sends, scheduler, or Guardian internals.
+
+Next recommended layer after Layer 4 is the public memory/context adapter shape.

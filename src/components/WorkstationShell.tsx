@@ -18,8 +18,8 @@ const workstationPanels = [
   {
     title: "Round Table",
     route: "#/roundtable",
-    summary: "Meeting room for AI-agent first pass, assignments, second pass, and wrap-up later.",
-    status: "Layer 4 planned",
+    summary: "Meeting room for AI-agent first pass, assignments, second pass, wrap-up, and notes preview.",
+    status: "Layer 4 shell",
   },
   {
     title: "Command Center",

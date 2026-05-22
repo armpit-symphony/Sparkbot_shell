@@ -72,6 +72,88 @@ export type MeetingNotePreview = {
   source: string;
 };
 
+export type RoundTablePhase =
+  | "setup"
+  | "first_pass"
+  | "manager_assessment"
+  | "assignments"
+  | "second_pass"
+  | "wrap_up"
+  | "notes";
+
+export type RoundTableSeat = {
+  id: string;
+  seatNumber: number;
+  agentId: string;
+  modelSeatId: string;
+  roleLabel: string;
+  locked?: boolean;
+};
+
+export type RoundTableFirstPassIdea = {
+  id: string;
+  seatId: string;
+  idea: string;
+};
+
+export type RoundTableAssignment = {
+  id: string;
+  assigneeSeatId: string;
+  title: string;
+  prompt: string;
+  status: "draft" | "assigned" | "reviewed";
+};
+
+export type RoundTableSecondPassResponse = {
+  id: string;
+  assignmentId: string;
+  seatId: string;
+  response: string;
+};
+
+export type MeetingDecision = {
+  id: string;
+  text: string;
+};
+
+export type MeetingActionItem = {
+  id: string;
+  owner: string;
+  text: string;
+  dueLabel: string;
+};
+
+export type MeetingOpenQuestion = {
+  id: string;
+  text: string;
+};
+
+export type MeetingWrapUpPreview = {
+  summary: string;
+  decisions: MeetingDecision[];
+  actionItems: MeetingActionItem[];
+  nextSteps: string[];
+  openQuestions: MeetingOpenQuestion[];
+};
+
+export type MeetingNoteDraft = MeetingWrapUpPreview & {
+  status: "draft" | "saved_preview";
+  memoryRollupLabel: string;
+};
+
+export type RoundTableShellState = {
+  title: string;
+  problem: string;
+  currentPhase: RoundTablePhase;
+  seats: RoundTableSeat[];
+  firstPassIdeas: RoundTableFirstPassIdea[];
+  managerAssessment: string;
+  assignments: RoundTableAssignment[];
+  secondPassResponses: RoundTableSecondPassResponse[];
+  wrapUp: MeetingWrapUpPreview;
+  notes: MeetingNoteDraft;
+};
+
 export type ModelSeat = {
   id: string;
   label: string;
@@ -118,6 +200,7 @@ export type ShellState = {
   taskGuardianTemplates: TaskGuardianTemplate[];
   deliveryChannels: DeliveryChannelPreview[];
   meetingNotePreviews: MeetingNotePreview[];
+  roundTable: RoundTableShellState;
   chatSession: ChatSession;
   guardrailProfile: GuardrailProfileName;
 };
