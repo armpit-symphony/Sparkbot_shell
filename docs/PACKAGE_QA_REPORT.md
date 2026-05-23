@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-preview-signoff`
+Branch: `public-release-shell-mobile-qa-gate`
 
 ## Locked Preview Package
 
@@ -99,3 +99,4 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Physical/mobile 390px browser QA is still required.
 - Live connector QA remains UNKNOWN for external delivery/private recall claims.
 - Do not tag, publish to npm, or upload the preview artifact without explicit Phil approval.
+- Current readiness remains YELLOW until Phil approval and physical/mobile QA completion.

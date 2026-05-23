@@ -73,6 +73,8 @@ It is not a final public release, npm publication, release tag, or uploaded arti
 - Re-run package QA from the final announcement branch/environment.
 - Get explicit Phil approval before any public release tag, npm publish, or artifact upload.
 
+See [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](RELEASE_DECISION_GATE.md) for the current QA gate package and Phil decision options.
+
 ## Recommended Next Technical Phase
 
 After static preview signoff and announcement gates, begin a runtime contract layer. Do not jump directly into runtime implementation.

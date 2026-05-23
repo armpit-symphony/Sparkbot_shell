@@ -58,3 +58,5 @@ The boundary decision has been applied as a controlling repo document. The previ
 This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA remains required before public announcement, and final repo migration remains a later release operation.
 
 Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and likely future public repo `sparkpit-labs/Sparkbot`.
+
+Current readiness color is YELLOW: internal/staging preview only until physical/mobile QA is complete and Phil explicitly approves any public action.

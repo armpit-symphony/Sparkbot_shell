@@ -58,3 +58,4 @@ This checklist governs the static preview package and future public artifact rev
 - [ ] Physical/mobile 390px browser QA.
 - [ ] Keep connector delivery/private recall YELLOW/UNKNOWN unless live connector QA passes with test-only credentials/channels.
 - [ ] Re-run package QA from the final announcement branch/environment.
+- [ ] Phil chooses a release decision gate option before any tag, npm publish, upload, or public announcement.

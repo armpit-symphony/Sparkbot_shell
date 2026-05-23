@@ -2,25 +2,31 @@
 
 Updated: 2026-05-23
 
-## Ready For Internal/Staging Preview Review
+## Current Preview
+
+- Current status color: YELLOW.
+- Current branch: `public-release-shell-mobile-qa-gate`.
+- Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
+- Current preview version: `0.8.0-layer8-preview`.
+- Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
+- Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
+- License: MIT.
+- Current repo: `armpit-symphony/Sparkbot_shell` staging workspace.
+- Likely future public repo: `sparkpit-labs/Sparkbot`.
+
+YELLOW means the package may be used for internal/staging review, but public announcement is not approved until Phil explicitly approves and physical/mobile QA is complete.
+
+## Included
 
 - Static Vite/React/TypeScript shell.
 - Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Robo Preview, and Docs routes.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
-- Locked artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
-- Locked package/version label: `0.8.0-layer8-preview`.
-- Preview artifact inspection.
-- Raw npm pack dry-run allowlist.
-- Runtime/persistence scan with no source runtime calls.
-- Source boundary with no backend, Tauri, `.github`, or `.agents` directories.
+- Built static preview artifact.
+- Public-safe package metadata.
 
-## Shell Only
-
-The current preview is local UI and static/demo state only. It does not run backend services, call providers, check Local AI endpoints, send connector messages, schedule jobs, persist memory, enforce guardrails, execute terminal/browser actions, or control robotics/IoT.
-
-## Not Included
+## Intentionally Excluded
 
 - Backend runtime.
 - Model/provider calls.
@@ -32,31 +38,56 @@ The current preview is local UI and static/demo state only. It does not run back
 - Guardian internals.
 - Terminal/browser execution.
 - Robotics/IoT control.
+- LIMA AI OS, Arc Bot, LIMA Office, or LIMA IT wiring.
+- Sparkbot R&D source code.
 
-## Decisions Locked
+## Validation Already Passed
 
-- License: MIT unless a legal blocker is discovered.
-- Copyright holder: `SparkPit Labs / Phil Lima`.
-- Current staging repo: `armpit-symphony/Sparkbot_shell`.
-- Likely future public repo: `sparkpit-labs/Sparkbot`.
-- Preview artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
-- Package/version label: `0.8.0-layer8-preview`.
-- Public artifact source: this branch may generate an internal/staging static preview artifact only.
+- `git diff --check`.
+- `npm run build`.
+- `npm run package:preview`.
+- `npm pack --dry-run --json`.
+- `node --check scripts/package-preview.mjs`.
+- Markdown link check.
+- Runtime/persistence scan over `src`.
+- Source boundary check: no `backend/`, `src-tauri/`, `.github/`, or `.agents`.
+- Preview artifact high-risk scan.
+- Secret/private scan.
 
-## Still Required Before Public Announcement
+`npm run lint` is not configured.
 
-- Complete physical/mobile 390px QA on a real phone browser or trusted responsive browser.
-- Keep external connector recall/delivery YELLOW/UNKNOWN unless live test credentials/channels are configured and tested.
-- Re-run package QA from the final announcement branch/environment.
-- Do not tag, publish to npm, or upload a public release artifact unless Phil explicitly approves that operation.
+## Remaining Blockers
 
-## Required Before Final Public Release
+- Physical/mobile 390px browser QA.
+- Connector delivery/private recall remains YELLOW/UNKNOWN until live test credentials/channels are configured and tested.
+- Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
 
-- Decide and perform final public repo migration/import if moving to `sparkpit-labs/Sparkbot`.
-- Repeat package QA from a clean clone and target release environment.
-- Confirm license posture with any required legal review.
-- Keep runtime work separate from static preview claims.
+## Risk Table
 
-## Recommended Next Technical Phase
+| Risk | Current state | Color | Required action |
+|---|---|---|---|
+| Mobile QA | 390px physical/mobile browser QA is NOT_RUN. | YELLOW | Run the checklist in [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md). |
+| Connector/private recall unknown | External delivery/private recall is shell-only and live-QA UNKNOWN. | YELLOW | Keep YELLOW/UNKNOWN until test-only live connector QA passes. |
+| License | MIT license added and package metadata says MIT. | GREEN | Keep LICENSE in artifact and package allowlists. |
+| Artifact contents | Preview artifact inspection passed against the public-safe allowlist. | GREEN | Re-run artifact inspection before any upload. |
+| Public messaging | Docs say internal/staging preview only and no announcement without Phil approval. | YELLOW | Phil must choose the next decision option. |
+| No runtime | Runtime/persistence scans passed; shell is static/demo state only. | GREEN | Do not add runtime in this gate. |
+| No proprietary leakage | Artifact high-risk scan passed; repo-only staging docs remain excluded. | GREEN | Keep generated-artifact scans mandatory. |
 
-After static preview signoff, the next technical phase should be a runtime contract layer, not direct runtime implementation. Start with contracts for backend/model calls, memory persistence, guardrail enforcement, and connector identity/delivery boundaries.
+## Decision States
+
+| Color | Meaning |
+|---|---|
+| RED | Cannot preview. A release-boundary, private-leakage, build, artifact, or runtime-overclaim blocker exists. |
+| YELLOW | Internal/staging preview only. Public announcement, tag, npm publish, and upload are blocked. |
+| GREEN | Approved for public preview after Phil approval, physical/mobile QA completion, and final validation. |
+
+## Current Decision
+
+Current status remains YELLOW.
+
+The static preview package is valid for internal/staging review. It is not approved for public announcement, tag, npm publish, upload, or final release.
+
+## Recommended Next Step
+
+Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md). The safest default is Option A: continue internal preview only until physical/mobile QA is complete.
