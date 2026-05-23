@@ -17,7 +17,7 @@ type ConnectorIdentityShellProps = {
 
 const setupLabels: Record<ConnectorSetupStatus, string> = {
   not_configured: "Not configured",
-  configured: "Configured",
+  configured: "Configured preview",
   setup_needed: "Setup needed",
   live_qa_unknown: "Live QA unknown",
   unsupported: "Unsupported",

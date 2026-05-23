@@ -446,6 +446,21 @@ textarea {
   border: 1px solid #c4ddd2;
   font-size: 0.76rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.model-seat-meta {
+  display: grid;
+  gap: 3px;
+  margin-top: 4px;
+  color: #52645f;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.model-seat-meta span {
+  overflow-wrap: anywhere;
 }
 
 .status-badge.configured {
@@ -557,6 +572,14 @@ textarea {
   gap: 14px;
 }
 
+.workstation-grid.primary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.workstation-grid.secondary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .workstation-card,
 .agent-card,
 .template-card,
@@ -574,6 +597,11 @@ textarea {
   gap: 10px;
   min-height: 164px;
   padding: 18px;
+}
+
+.workstation-card.compact {
+  min-height: 132px;
+  padding: 16px;
 }
 
 .workstation-card:hover {
@@ -598,6 +626,39 @@ textarea {
 .delivery-card p,
 .seat-overview p,
 .profile-detail p {
+  margin-bottom: 0;
+}
+
+.preview-map {
+  display: block;
+  max-width: 100%;
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  color: #244534;
+  background: #e8f5ee;
+  border: 1px solid #c6ded3;
+  border-radius: 8px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.command-center-map {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.command-center-map article {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(24, 34, 32, 0.05);
+}
+
+.command-center-map p {
   margin-bottom: 0;
 }
 
@@ -684,6 +745,8 @@ textarea {
   border-radius: 999px;
   font-size: 0.74rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .task-guardian-panel,
@@ -764,6 +827,7 @@ textarea {
 
 .health-report-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
@@ -906,6 +970,8 @@ textarea {
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .connector-status.setup_needed,
@@ -1267,6 +1333,9 @@ textarea {
   }
 
   .workstation-grid,
+  .workstation-grid.primary,
+  .workstation-grid.secondary,
+  .command-center-map,
   .floor-status-grid,
   .seat-overview-grid,
   .mini-card-grid,
@@ -1323,8 +1392,16 @@ textarea {
 
   p,
   small,
-  strong {
-    overflow-wrap: break-word;
+  strong,
+  h1,
+  h2,
+  h3,
+  a,
+  button,
+  .status-pill,
+  .text-button {
+    overflow-wrap: anywhere;
+    white-space: normal;
   }
 
   .chat-message {
@@ -1333,5 +1410,9 @@ textarea {
 
   .runtime-options {
     grid-template-columns: 1fr;
+  }
+
+  .card-heading {
+    flex-wrap: wrap;
   }
 }

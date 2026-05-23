@@ -54,6 +54,9 @@ const workstationPanels = [
   },
 ];
 
+const primaryWorkstationPanels = workstationPanels.slice(0, 3);
+const secondaryWorkstationPanels = workstationPanels.slice(3);
+
 export function WorkstationShell({ shellState }: WorkstationShellProps) {
   const activeSeats = shellState.modelSeats.filter((seat) => seat.enabled);
   const manager = shellState.specialtyAgents.find((agent) => agent.id === "agent-meeting-manager");
@@ -82,6 +85,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
             model seats power Chat, Round Table, Specialty Wing, Task Guardian health previews, and connector gates.
           </p>
+          <p className="preview-map">Start with the three core rooms, then use the setup and status panels below.</p>
         </div>
         <aside className="status-card">
           <span>Runtime boundary</span>
@@ -89,9 +93,19 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
         </aside>
       </div>
 
-      <div className="workstation-grid">
-        {workstationPanels.map((panel) => (
+      <div className="workstation-grid primary">
+        {primaryWorkstationPanels.map((panel) => (
           <a className="workstation-card" href={panel.route} key={panel.title}>
+            <span>{panel.status}</span>
+            <h3>{panel.title}</h3>
+            <p>{panel.summary}</p>
+          </a>
+        ))}
+      </div>
+
+      <div className="workstation-grid secondary" aria-label="Workstation setup and preview links">
+        {secondaryWorkstationPanels.map((panel) => (
+          <a className="workstation-card compact" href={panel.route} key={panel.title}>
             <span>{panel.status}</span>
             <h3>{panel.title}</h3>
             <p>{panel.summary}</p>
@@ -131,7 +145,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <div>
             <p className="section-label">Model seats</p>
             <h2>Chat, Round Table, Specialty Wing</h2>
-            <p>These are public-safe setup badges only. No provider is called.</p>
+            <p>Seats are named setup slots with model ID labels. No provider is called and no credential is stored.</p>
           </div>
         </div>
         <div className="seat-overview-grid">

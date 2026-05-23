@@ -30,7 +30,7 @@ export function GuardrailProfileShell({
         <div>
           <p className="section-label">Guardrails / Security</p>
           <h2>Profile shell</h2>
-          <p>Shell preview only. Enforcement arrives in a later runtime layer.</p>
+          <p>Profile labels are easier to scan here, but no guardrail enforcement runs in the shell preview.</p>
         </div>
       </div>
 
@@ -56,12 +56,13 @@ export function GuardrailProfileShell({
 
       {selectedProfile === "Custom" ? (
         <label>
-          <span>Custom blocker text shell</span>
+          <span>Custom blocker text draft</span>
           <textarea
             value={selected.customBlockerText ?? ""}
             onChange={(event) => updateCustomBlockerText(event.currentTarget.value)}
             rows={3}
           />
+          <small>Draft text is not enforced and is not saved outside local component state.</small>
         </label>
       ) : null}
     </section>

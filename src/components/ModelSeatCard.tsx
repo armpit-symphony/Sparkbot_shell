@@ -13,7 +13,10 @@ export function ModelSeatCard({ seat, selected = false, onSelect }: ModelSeatCar
       <div className="card-heading">
         <div>
           <h3>{seat.label}</h3>
-          <p>{seat.provider} / {seat.modelId}</p>
+          <div className="model-seat-meta" aria-label="Model seat provider and model ID">
+            <span>Provider: {seat.provider}</span>
+            <span>Model ID: {seat.modelId}</span>
+          </div>
         </div>
         <StatusBadge status={seat.setupStatus} />
       </div>
@@ -30,7 +33,7 @@ export function ModelSeatCard({ seat, selected = false, onSelect }: ModelSeatCar
 
       {onSelect ? (
         <button className="text-button" type="button" onClick={() => onSelect(seat.id)}>
-          {selected ? "Selected" : "Edit shell state"}
+          {selected ? "Selected" : "Edit seat preview"}
         </button>
       ) : null}
     </article>

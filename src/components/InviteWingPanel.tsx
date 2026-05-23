@@ -16,8 +16,8 @@ export function InviteWingPanel({ modelSeats, onSelectSeat }: InviteWingPanelPro
           <p className="section-label">Invite Wing</p>
           <h2>Customizable model seats</h2>
           <p>
-            Bring-your-own model seats can power Chat, Round Table, and Specialty Wing later. This layer shows shape and
-            setup state only.
+            Model seats are named provider/runtime slots for Chat, Round Table, and Specialty Wing. They store labels,
+            model IDs, and setup state only; no credentials are accepted.
           </p>
         </div>
       </div>
@@ -32,7 +32,7 @@ export function InviteWingPanel({ modelSeats, onSelectSeat }: InviteWingPanelPro
         <strong>No credential capture</strong>
         <p>
           No subscription login, browser session, API key, or provider credential field is accepted by the public shell
-          in Layer 3.
+          preview.
         </p>
       </div>
     </section>

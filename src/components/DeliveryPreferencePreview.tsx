@@ -22,7 +22,7 @@ const channelLabels: Record<DeliveryChannelKind, string> = {
 
 const statusLabels: Record<DeliveryChannelStatus, string> = {
   default: "Default",
-  configured: "Configured",
+  configured: "Configured preview",
   setup_needed: "Setup needed",
   unsupported: "Unsupported",
   live_qa_unknown: "Live QA unknown",

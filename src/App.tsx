@@ -22,7 +22,7 @@ const navItems: NavItem[] = [
   { key: "chat", label: "Chat", eyebrow: "Command channel" },
   { key: "roundtable", label: "Round Table", eyebrow: "Agent meetings" },
   { key: "command-center", label: "Command Center", eyebrow: "Setup and safety" },
-  { key: "task-guardian", label: "Task Guardian", eyebrow: "Scheduled work" },
+  { key: "task-guardian", label: "Task Guardian", eyebrow: "Health previews" },
   { key: "connectors", label: "Connectors", eyebrow: "Identity gates" },
   { key: "robo-preview", label: "Robo Preview", eyebrow: "Teaser only" },
   { key: "docs", label: "Docs", eyebrow: "Planning links" },

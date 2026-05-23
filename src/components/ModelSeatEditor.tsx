@@ -84,7 +84,7 @@ export function ModelSeatEditor({ seat, onChange }: ModelSeatEditorProps) {
           />
         </label>
         <label>
-          <span>Local runtime</span>
+          <span>Local runtime label</span>
           <select
             value={seat.localRuntime ?? "custom"}
             onChange={(event) => updateField("localRuntime", event.currentTarget.value as LocalRuntimeKind)}
@@ -97,7 +97,7 @@ export function ModelSeatEditor({ seat, onChange }: ModelSeatEditorProps) {
           </select>
         </label>
         <label>
-          <span>Base URL</span>
+          <span>Base URL label</span>
           <input
             value={seat.baseUrl ?? ""}
             placeholder="http://localhost:11434"

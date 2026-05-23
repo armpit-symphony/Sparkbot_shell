@@ -22,7 +22,10 @@ export function SpecialtyWingPanel({ agents, modelSeats, onAgentsChange }: Speci
         <div>
           <p className="section-label">Specialty Wing</p>
           <h2>Specialty agents</h2>
-          <p>Built-in agents are locked shell cards. The custom card is a placeholder and does not persist prompts.</p>
+          <p>
+            Specialty Wing cards are configurable role/skill-agent previews that can be assigned to Round Table seats
+            later. Built-ins are locked defaults; custom agents are editable only in this local shell state.
+          </p>
         </div>
       </div>
 
@@ -62,6 +65,14 @@ export function SpecialtyWingPanel({ agents, modelSeats, onAgentsChange }: Speci
             <small>Assigned to {seatLabel(modelSeats, agent.modelSeatId)}. No live model call is made.</small>
           </article>
         ))}
+      </div>
+
+      <div className="runtime-boundary compact">
+        <strong>Agent boundary</strong>
+        <p>
+          No proprietary prompts, tasks, Arc/LIMA Office behavior, provider calls, or agent runtime is active in this
+          preview.
+        </p>
       </div>
     </section>
   );

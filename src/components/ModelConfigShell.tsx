@@ -16,6 +16,16 @@ import { SetupNotice } from "./SetupNotice";
 import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
 
+const commandCenterMap = [
+  ["AI Setup / Model Seats", "Named seats, model IDs, and setup badges only."],
+  ["Local AI", "Runtime labels for Ollama, LM Studio, llama.cpp, and compatible endpoints."],
+  ["Specialty Wing", "Role/skill-agent cards assigned to model seats later."],
+  ["Guardrails", "Profile labels and custom draft text; no enforcement yet."],
+  ["Task Guardian", "Read-only health-check report and delivery previews."],
+  ["Connectors", "Identity/PIN gates and live-QA caveats for optional channels."],
+  ["Shell Status", "Static-only runtime boundary and no-credential reminders."],
+] as const;
+
 type ModelConfigShellProps = {
   modelSeats: ModelSeat[];
   specialtyAgents: SpecialtyAgent[];
@@ -61,11 +71,11 @@ export function ModelConfigShell({
     <section className="page-section">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 2</p>
-          <h2>Command Center model config shell</h2>
+          <p className="section-label">Command Center shell</p>
+          <h2>Setup, model seats, and guardrails</h2>
           <p>
-            Model stack, model-seat, Local AI, and guardrail profile shape for the public shell. All state is local demo
-            state only.
+            Command Center groups the static setup surfaces for model seats, Local AI labels, Specialty Wing agents,
+            guardrails, Task Guardian previews, and connector caveats. All state is local demo state only.
           </p>
         </div>
         <aside className="status-card">
@@ -76,19 +86,29 @@ export function ModelConfigShell({
 
       <SetupNotice
         notice={{
-          title: "Backend/Vault storage arrives later",
+          title: "No credential storage in this preview",
           message:
-            "Save actions update local React state only. Provider keys and endpoint credential values are not accepted.",
+            "Save actions update local React state only. Do not paste provider keys, endpoint credentials, connector secrets, or PIN values.",
           severity: "info",
         }}
       />
+
+      <section className="command-center-map" aria-label="Command Center setup sections">
+        {commandCenterMap.map(([title, detail]) => (
+          <article key={title}>
+            <strong>{title}</strong>
+            <p>{detail}</p>
+          </article>
+        ))}
+      </section>
 
       <section className="model-config-grid">
         <div className="model-seat-list">
           <div className="card-heading">
             <div>
               <p className="section-label">Model seats</p>
-              <h2>Shell state</h2>
+              <h2>Named seat previews</h2>
+              <p>A seat is the named slot; a model ID is the provider/runtime target label inside that slot.</p>
             </div>
           </div>
           {modelSeats.map((seat) => (
@@ -107,7 +127,7 @@ export function ModelConfigShell({
               <div>
                 <p className="section-label">Editor shell</p>
                 <h2>{selectedSeat.label}</h2>
-                <p>Save updates local demo state only.</p>
+                <p>Edit labels and setup state only. This form does not accept credentials or call providers.</p>
               </div>
             </div>
             <ModelSeatEditor seat={selectedSeat} onChange={updateSeat} />
@@ -150,12 +170,12 @@ export function ModelConfigShell({
         <div className="card-heading">
           <div>
             <p className="section-label">System / Shell status</p>
-            <h2>Layer 3 boundary</h2>
+            <h2>Shell boundary</h2>
             <p>No backend runtime, credential storage, live connector sends, scheduler, or Guardian enforcement is active.</p>
           </div>
         </div>
         <div className="seat-flags">
-          <span>Layer 3 shell only</span>
+          <span>Static shell only</span>
           <span>No credentials stored</span>
           <span>No live connector sends</span>
           <span>No runtime enforcement</span>

@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 8 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, and public artifact boundary docs. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 8 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, public artifact boundary docs, and visual/mobile QA polish. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -83,8 +83,8 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 8 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
+- Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended Layer 8 is a small public packaging/download QA shell or browser/live QA checklist layer governed by the [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md). Keep live connector QA marked UNKNOWN until test-only channels pass.
+Recommended next work is public docs completion and package artifact QA governed by the [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md), plus license/final repo naming before public package signoff. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.

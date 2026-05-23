@@ -6,6 +6,8 @@ This is the user-facing docs index for future public release artifacts. It is se
 
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
+Current static shell preview status: ready for staging preview review after visual/mobile polish. Public package signoff still needs the allowlisted docs below, license/final repo naming, package artifact dry run, and physical/mobile browser review.
+
 ## Public Artifact Docs
 
 | Public doc | Status | Notes |

@@ -21,7 +21,7 @@ const docs = [
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-visual-qa-assessment/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-visual-polish-mobile-qa/docs";
 
 export function DocsPage() {
   return (
