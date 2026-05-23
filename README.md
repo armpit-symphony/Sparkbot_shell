@@ -1,6 +1,6 @@
 # Sparkbot Shell
 
-Sparkbot Shell is the public staging repo for an open-source, self-hosted AI workstation shell. Its hook is simple: Round Table meetings for your AI agents.
+Sparkbot Shell is the public staging repo for a planned open-source, self-hosted AI workstation shell. Its hook is simple: Round Table meetings for your AI agents.
 
 The public product model is a local-first workstation for agent work, model routing, model seats, Local AI providers, Round Table meetings, shared memory/context, Task Guardian utility automations, connectors, and user-owned guardrails.
 
@@ -73,19 +73,22 @@ npm run package:preview
 
 The generated preview artifact is written under `preview-artifacts/` and includes only the built app, README, allowlisted public docs, and package metadata.
 
+Release decision support docs remain in the staging repo and are not included in generated preview artifacts.
+
 ## Current Caveats
 
 - Live Telegram, Discord, Slack, and WhatsApp connector QA is still UNKNOWN because no safe test-only credentials/channels were configured.
-- External private recall is code-gated and fail-closed, but not live-verified.
+- External private recall is preview-gated and shown fail-closed in shell copy, but it is not implemented or live-verified.
 - External health-report delivery is setup-needed/live-QA-unknown and not implemented.
 - Connector identity/PIN sessions are contract previews only; no real verification or session storage exists.
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- License choice, final public repo/name, and public artifact naming are still open release decisions.
+- MIT is the recommended license for easiest hobbyist/open-source adoption, but Phil has not chosen a license yet.
+- Final public repo/name, public artifact naming, and version naming are still open release decisions.
 - Physical/mobile 390px browser QA remains open because the local headless runner cropped the right edge on several routes.
 - Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended next work is release decision signoff: choose license, final public repo/name, and public artifact naming, then repeat physical/mobile browser QA. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.
+Recommended next work is release decision signoff: choose license, final public repo/name, preview artifact name/version, and complete physical/mobile browser QA. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.

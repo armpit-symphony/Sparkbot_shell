@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-This document tracks decisions that must be resolved before a public release artifact is signed off.
+This document tracks decisions that must be resolved before a public release artifact is signed off. See [Release decision gate](RELEASE_DECISION_GATE.md) for the decision matrix.
 
 ## Open Decisions
 
@@ -19,3 +19,22 @@ This document tracks decisions that must be resolved before a public release art
 ## Recommendation
 
 Choose the license, public repo name, and artifact naming before publishing any package. Keep the current artifact as a preview package until those decisions are made.
+
+## License Options
+
+| Option | Fit | Notes |
+|---|---|---|
+| MIT | Recommended for easiest hobbyist/open-source adoption. | Short, permissive, familiar to small projects and community contributors. |
+| Apache-2.0 | Strong option if explicit patent grant language is desired. | More formal; still permissive. |
+| No license yet | Acceptable only while this remains private/staging. | Do not ship a final public release without a license. |
+
+No `LICENSE` file is added in this branch because Phil has not explicitly approved a license.
+
+## Artifact Naming Options
+
+Recommended preview names:
+
+- `sparkbot-shell-preview-0.8.0-layer8`
+- `sparkbot-public-preview-0.8.0`
+
+The current package metadata remains `sparkbot-shell@0.8.0-layer8` until Phil chooses the final preview artifact name/version.

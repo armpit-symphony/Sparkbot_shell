@@ -40,6 +40,8 @@ npm run package:preview
 
 The preview package is generated under `preview-artifacts/`. It contains the built app, this public docs bundle, README, and package metadata only.
 
+The current generated folder name remains `sparkbot-shell-0.8.0-layer8-preview` until Phil chooses a final preview artifact name/version.
+
 ## Current Boundaries
 
 - No live model/provider calls.

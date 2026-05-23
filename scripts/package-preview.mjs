@@ -35,6 +35,9 @@ const excludedDocs = [
   "PUBLIC_DOCS_INDEX.md",
   "RELEASE_ARTIFACT_CHECKLIST.md",
   "RELEASE_DECISIONS.md",
+  "RELEASE_DECISION_GATE.md",
+  "PHYSICAL_MOBILE_QA_CHECKLIST.md",
+  "PUBLIC_PREVIEW_READINESS_SUMMARY.md",
   "PACKAGE_QA_REPORT.md",
 ];
 
@@ -159,6 +162,9 @@ async function main() {
       "Static shell preview only.",
       "No backend runtime, provider calls, connector sends, scheduler, memory persistence, or robotics control.",
       "License and final public repo naming remain open decisions.",
+      "Final preview artifact name/version remains an open decision.",
+      "Physical/mobile 390px browser QA remains NOT_RUN until completed on a real or credible mobile browser.",
+      "External connector recall/delivery remains live-QA UNKNOWN.",
     ],
   };
   await writeFile(path.join(artifactDir, "package-metadata.json"), `${JSON.stringify(metadata, null, 2)}\n`);

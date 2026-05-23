@@ -72,7 +72,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 8 packaging boundary shell</span>
+            <span>Public preview decision gate shell</span>
           </span>
         </a>
 

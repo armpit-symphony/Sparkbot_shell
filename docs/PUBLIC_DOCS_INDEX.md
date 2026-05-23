@@ -24,6 +24,16 @@ Current static shell preview status: ready for staging preview review after publ
 | `docs/ROBO_PREVIEW.md` | READY FOR STAGING REVIEW | Explains teaser-only status and no hardware control. |
 | `docs/BETA_LIMITATIONS.md` | READY FOR STAGING REVIEW | Lists current preview limits and release blockers. |
 
+## Decision / QA Docs
+
+These are repo-staging docs for preview signoff and should not ship in the public artifact:
+
+- [Release decision gate](RELEASE_DECISION_GATE.md)
+- [Release decisions](RELEASE_DECISIONS.md)
+- [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md)
+- [Public preview readiness summary](PUBLIC_PREVIEW_READINESS_SUMMARY.md)
+- [Package QA report](PACKAGE_QA_REPORT.md)
+
 ## Repo-Only Staging Docs
 
 Keep these in the repo for auditability, but exclude them from public release artifacts:

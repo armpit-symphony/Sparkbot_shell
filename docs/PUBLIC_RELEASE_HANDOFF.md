@@ -50,7 +50,7 @@ The public system model:
 ## Current Caveats
 
 - Live Telegram, Discord, Slack, and WhatsApp connector QA remains UNKNOWN because no safe test-only credentials/channels were configured.
-- External private recall is code-gated, PIN/session-gated where required, and fail-closed, but not live-verified.
+- External private recall is preview-gated in shell copy, PIN/session-gated where required in the contract preview, and fail-closed by policy, but it is not implemented or live-verified.
 - SMS/text remains future/unsupported and must not be presented as operational.
 - Scheduler leader locking remains future work for multi-worker installs. Public Docker/server defaults should stay single-worker until recurring jobs have a leader lock or singleton scheduler.
 - `Sparkbot_shell` is still staging/planning until code import begins.

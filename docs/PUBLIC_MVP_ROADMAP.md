@@ -126,7 +126,7 @@ Blockers: live robotics endpoint exposure, private bridge source import, LIMA ru
 
 ## Phase K - Browser/Live QA + Package QA
 
-Status: completed as public docs/package QA in `public-release-shell-docs-package-qa`, with release signoff blockers still open.
+Status: completed as public docs/package QA in `public-release-shell-docs-package-qa`; release decision gate documented in `public-release-shell-release-decision-gate`, with release signoff blockers still open.
 
 Imports: public docs bundle, QA docs, preview package script, release artifact inspection instructions, release decision tracker.
 

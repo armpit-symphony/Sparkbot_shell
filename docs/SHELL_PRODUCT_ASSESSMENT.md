@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-docs-package-qa`
+Branch: `public-release-shell-release-decision-gate`
 
 Rating scale:
 
@@ -28,7 +28,7 @@ Rating scale:
 
 ## Summary
 
-The shell is good enough as a static public-release staging preview branch. The user-facing docs bundle and preview package dry run are complete. It is not ready for public release signoff because license/final repo naming, final artifact naming, and physical/mobile browser review are still open.
+The shell is good enough as a static public-release staging preview branch. The user-facing docs bundle, preview package dry run, and release decision gate docs are complete. It is not ready for public release signoff because license/final repo naming, final artifact naming, and physical/mobile browser review are still open.
 
 ## Blockers
 

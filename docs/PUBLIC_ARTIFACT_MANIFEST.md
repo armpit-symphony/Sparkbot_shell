@@ -53,6 +53,8 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 ## Current Status
 
-The boundary decision has been applied as a controlling repo document. The preview package script now builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. The dry run passed on this branch.
+The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture license, repo/name, artifact naming, mobile QA, connector QA, and runtime sequencing decisions still needed.
 
 This does not add runtime behavior, connector sends, private recall, or production-readiness claims. License choice, final public repo/name, final artifact naming, and physical/mobile 390px QA remain open.
+
+Current recommendation: MIT for easiest hobbyist/open-source adoption unless Phil chooses otherwise. Suggested preview artifact names are `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.

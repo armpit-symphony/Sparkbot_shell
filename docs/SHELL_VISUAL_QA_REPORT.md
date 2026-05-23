@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-docs-package-qa`
+Branch: `public-release-shell-release-decision-gate`
 
 Base: `public-release-layer-8-packaging-boundary-shell` at `d98f3ff7b5783581fb21856cb6e2f680bdd9fdb2`
 
@@ -45,7 +45,7 @@ No backend runtime, provider/model calls, Local AI calls, connector sends, sched
 
 ## Manual 390px Mobile QA Steps
 
-Do not mark the 390px result fully GREEN until this check is run outside the headless screenshot runner.
+Status: NOT_RUN. Do not mark the 390px result fully GREEN until this check is run outside the headless screenshot runner.
 
 1. Run `npm run dev -- --host 0.0.0.0 --port 5179`.
 2. Open the Vite LAN URL on a real phone browser, or use a reliable browser device toolbar set to 390px width.
@@ -53,6 +53,8 @@ Do not mark the 390px result fully GREEN until this check is run outside the hea
 4. Confirm there is no horizontal scroll, clipped heading text, clipped status badge text, or hidden route content.
 5. Confirm the sidebar/nav remains usable and docs links are readable.
 6. Record device, browser, viewport, date, and any screenshots in the next QA report.
+
+See [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md) for the route-by-route checklist.
 
 ## Tiny Fixes Made
 

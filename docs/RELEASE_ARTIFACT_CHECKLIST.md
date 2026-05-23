@@ -44,7 +44,10 @@ This checklist governs preview package and future public artifact review.
 ## Signoff Blockers
 
 - License decision is still open.
+  - Recommendation: MIT for easiest hobbyist/open-source adoption unless Phil chooses otherwise.
 - Final public repo/org/name is still open.
+  - Likely future public home: `sparkpit-labs/Sparkbot`.
 - Final public artifact name/version is still open.
+  - Suggested names: `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
 - Physical/mobile 390px QA is still open.
 - Live connector QA remains UNKNOWN for external delivery/private recall claims.

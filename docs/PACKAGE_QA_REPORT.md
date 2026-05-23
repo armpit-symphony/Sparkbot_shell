@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-docs-package-qa`
+Branch: `public-release-shell-release-decision-gate`
 
 ## Package Dry Run
 
@@ -62,7 +62,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Repo-only staging docs.
 - Extraction maps and readiness docs.
 - Layer status docs.
-- Release checklist, release decisions, and package QA report.
+- Release checklist, release decisions, release decision gate, physical/mobile QA checklist, readiness summary, and package QA report.
 - Source files.
 - `node_modules/`.
 - `.git`, `.github`, `.agents`.
@@ -80,7 +80,9 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 ## Remaining Blockers
 
 - License choice is still open.
+- MIT is recommended for easiest hobbyist/open-source adoption unless Phil chooses otherwise.
 - Final public repo/org/name is still open.
 - Final public artifact name/version is still open.
+  - Suggested names: `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
 - Physical/mobile 390px browser QA is still open.
 - Live connector QA remains UNKNOWN for external delivery/private recall claims.

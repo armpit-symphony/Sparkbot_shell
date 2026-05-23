@@ -22,6 +22,7 @@ Sparkbot Shell is not production-ready. It is a static public preview of product
 - Live connector QA remains unknown for Telegram, Discord, Slack, and WhatsApp.
 - Local AI live QA has not been run from this shell.
 - Package artifact QA is preview-only until license and final repo naming are decided.
+- Physical/mobile QA remains NOT_RUN until checked on a real phone browser or trusted responsive browser.
 
 ## Release Blockers
 
@@ -30,3 +31,7 @@ Sparkbot Shell is not production-ready. It is a static public preview of product
 - Public artifact name/version decision.
 - Physical/mobile browser QA.
 - Connector live QA if public docs ever claim external delivery or private recall is complete.
+
+## Recommendation
+
+MIT is recommended for easiest hobbyist/open-source adoption unless Phil chooses otherwise. Do not ship a final public release without an explicit license.
