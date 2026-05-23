@@ -1,8 +1,8 @@
 # Public Artifact Manifest
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
-This manifest records Phil's controlling rule for Layer 8 public artifact boundaries. It governs package/download QA before any public release bundle is produced.
+This manifest records Phil's controlling rule for public artifact boundaries. It governs package/download QA before any public release bundle is produced.
 
 `Sparkbot_shell` remains a public-release staging workspace, so repo docs can preserve extraction planning and readiness evidence. Public release artifacts must be cleaner than the staging repo and should contain only docs that help users install, understand, and safely use Sparkbot Shell.
 
@@ -29,14 +29,17 @@ Exclude these from user-facing release bundles:
 Ship only clean public docs that help users install, understand, and safely use Sparkbot Shell:
 
 - `README.md`.
-- Install/setup docs.
-- Capabilities docs.
-- User-facing architecture overview.
-- Security/guardrail overview.
-- Local AI setup overview.
-- Round Table overview.
-- Task Guardian overview.
-- Connector setup caveats.
+- `docs/INSTALL.md`.
+- `docs/CAPABILITIES.md`.
+- `docs/ARCHITECTURE_OVERVIEW.md`.
+- `docs/SECURITY_AND_GUARDRAILS.md`.
+- `docs/LOCAL_AI_SETUP.md`.
+- `docs/ROUND_TABLE_OVERVIEW.md`.
+- `docs/TASK_GUARDIAN_OVERVIEW.md`.
+- `docs/CONNECTORS_OVERVIEW.md`.
+- `docs/ROBO_PREVIEW.md`.
+- `docs/BETA_LIMITATIONS.md`.
+- License file once Phil chooses a license.
 
 ## Layer 8 Application
 
@@ -50,4 +53,6 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 ## Current Status
 
-The Layer 8 boundary decision has been applied as a controlling repo document, and the static shell now has a visual/mobile QA polish follow-up. This does not add packaging scripts, runtime behavior, connector sends, private recall, or production-readiness claims.
+The boundary decision has been applied as a controlling repo document. The preview package script now builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. The dry run passed on this branch.
+
+This does not add runtime behavior, connector sends, private recall, or production-readiness claims. License choice, final public repo/name, final artifact naming, and physical/mobile 390px QA remain open.

@@ -1,12 +1,12 @@
 # Extraction Readiness Assessment
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
 
 ## Current Readiness
 
-Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, Layer 5, Layer 6, and Layer 7 shell-only work. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
+Sparkbot Shell has completed Layer 1, Layer 2, Layer 3, Layer 4, Layer 5, Layer 6, Layer 7 shell-only work, Layer 8 artifact-boundary docs, visual/mobile polish, and public docs/package QA. Sparkbot R&D is still not ready for blind source import into `Sparkbot_shell`.
 
 The public product architecture is now represented in the shell scaffold: Workstation operating floor, Main Chat command channel, Round Table meeting room flow, Meeting Manager secretary concept, Invite Wing, Specialty Wing, shared memory/context contract direction, model seats, Local AI setup shape, Task Guardian health-check report shell, app/in-room delivery default, connector identity/PIN gate previews, fail-closed private recall previews, connector channel setup warnings, and Robo Preview teaser.
 
@@ -102,7 +102,6 @@ No connector runtime, real Telegram/Discord/Slack/WhatsApp sends, WhatsApp webho
 
 These are candidates after Layer 7 validation and targeted review:
 
-- Public docs and package/download planning.
 - Public-safe model config contracts.
 - Evidence/redaction checklist for runtime health report collection.
 - Browser/live QA checklist for public shell routes.
@@ -171,21 +170,20 @@ Not allowed until live QA passes:
 - Import connector behavior without fail-closed tests.
 - Enable public external delivery by default.
 
-## Recommended Next Import Layer
+## Recommended Next Step
 
-Layer 8 - public packaging/download QA shell or browser/live QA checklist layer.
+Public release decision signoff before runtime work.
 
 Controlling boundary: [Public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.md).
 
 Recommended scope:
 
-- Public route QA checklist.
-- Release artifact exclusion checklist.
-- Non-secret evidence expectations.
-- Package dry-run instructions.
-- No runtime connectors, sends, private recall, or production-readiness claims.
-- Repo-only staging doc retention for extraction maps, readiness docs, staging docs, and no-go gates.
-- Public artifact docs limited to README, install/setup, capabilities, user-facing architecture, security/guardrails, Local AI setup, Round Table, Task Guardian, and connector setup caveats.
+- Choose license.
+- Choose final public repo/org/name.
+- Choose final public artifact name/version.
+- Run physical/mobile 390px browser QA.
+- Keep live connector QA UNKNOWN unless test-only channels pass.
+- Do not start runtime connectors, sends, private recall, or production-readiness claims.
 
 Then proceed in order:
 

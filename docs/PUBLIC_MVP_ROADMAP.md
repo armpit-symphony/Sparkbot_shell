@@ -1,6 +1,6 @@
 # Public MVP Roadmap
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 This roadmap sequences `Sparkbot_shell` extraction. It is deliberately layered so public import can stop safely if QA exposes a blocker.
 
@@ -126,9 +126,9 @@ Blockers: live robotics endpoint exposure, private bridge source import, LIMA ru
 
 ## Phase K - Browser/Live QA + Package QA
 
-Status: recommended Layer 8 contract/docs/QA work.
+Status: completed as public docs/package QA in `public-release-shell-docs-package-qa`, with release signoff blockers still open.
 
-Imports: QA docs, package script, release artifact inspection instructions.
+Imports: public docs bundle, QA docs, preview package script, release artifact inspection instructions, release decision tracker.
 
 Controlling boundary: [Public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.md).
 
@@ -138,9 +138,9 @@ Public artifact docs: README, install/setup docs, capabilities docs, user-facing
 
 Repo-only staging docs: extraction maps, readiness docs, staging docs, and no-go gates.
 
-Validation: browser checklist, live local AI QA, live connector QA, package dry-run on Windows/Git Bash and Linux clean clone, checksum inspection.
+Validation: browser checklist, preview package dry-run, artifact inspection, markdown link check, build, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers: connector QA UNKNOWN for private recall claims, package contains private docs/secrets, Docker context leaks.
+Blockers: license/final repo naming open, final artifact naming open, physical/mobile 390px QA open, connector QA UNKNOWN for private recall claims, and future package checks on Linux/clean clone still pending.
 
 ## Phase L - v1.0.0 Public Release Candidate
 

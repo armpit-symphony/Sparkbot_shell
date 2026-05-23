@@ -65,7 +65,7 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
   "task-guardian": {
     title: "Useful scheduled work without runtime execution",
     summary:
-      "Task Guardian is the scheduled work manager direction for PC/server health checks and app-first delivery preferences.",
+      "Task Guardian is the scheduled work manager direction for PC/server health-check previews and app-first delivery preference shapes.",
     status: "Static placeholder. No scheduler, worker, connector, or health collector is active.",
     panels: [
       { title: "PC Health Check", body: "Planned read-only local workstation health report." },
@@ -95,15 +95,15 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
   "robo-preview": {
     title: "Robo Preview teaser",
     summary:
-      "Robo Preview shows the public teaser boundary for future robotics/IoT ideas while keeping full control private.",
-    status: "Teaser only. No live robotics, IoT, MCP bridge, or emergency control path is present.",
+      "Robo Preview shows the public teaser boundary for future hardware-adjacent ideas without including a control surface.",
+    status: "Teaser only. No live robotics, IoT, bridge, or emergency control path is present.",
     panels: [
       { title: "Preview Surface", body: "Static public teaser for future controlled integrations." },
       { title: "No Hardware Control", body: "Public Shell Layer 1 cannot command robots, drones, devices, or IoT systems." },
-      { title: "Private Boundary", body: "Private Robo/LIMA bridge implementations remain outside this repo." },
+      { title: "Public Boundary", body: "No hardware bridge implementation is included in this preview." },
     ],
     boundary:
-      "No private Robo bridge, LIMA AI OS wiring, Arc Bot, LIMA Office, or LIMA IT runtime is included.",
+      "No private platform wiring, hardware adapter, or live device runtime is included.",
   },
 };
 

@@ -1,8 +1,8 @@
 # Shell Visual QA Report
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
-Branch: `public-release-shell-visual-polish-mobile-qa`
+Branch: `public-release-shell-docs-package-qa`
 
 Base: `public-release-layer-8-packaging-boundary-shell` at `d98f3ff7b5783581fb21856cb6e2f680bdd9fdb2`
 
@@ -43,6 +43,17 @@ No backend runtime, provider/model calls, Local AI calls, connector sends, sched
 | 500px | PASS | All requested routes rendered nonblank and readable. Sidebar, badges, cards, and docs links wrapped cleanly. | No immediate shell fix needed. |
 | Desktop | PASS | All requested routes rendered nonblank and readable. Command Center and Workstation hierarchy improved after polish. | No immediate shell fix needed. |
 
+## Manual 390px Mobile QA Steps
+
+Do not mark the 390px result fully GREEN until this check is run outside the headless screenshot runner.
+
+1. Run `npm run dev -- --host 0.0.0.0 --port 5179`.
+2. Open the Vite LAN URL on a real phone browser, or use a reliable browser device toolbar set to 390px width.
+3. Check `/`, `/workstation`, `/chat`, `/roundtable`, `/command-center`, `/task-guardian`, `/connectors`, `/robo`, and `/docs`.
+4. Confirm there is no horizontal scroll, clipped heading text, clipped status badge text, or hidden route content.
+5. Confirm the sidebar/nav remains usable and docs links are readable.
+6. Record device, browser, viewport, date, and any screenshots in the next QA report.
+
 ## Tiny Fixes Made
 
 - Changed Task Guardian nav eyebrow from scheduled-work language to health-preview language.
@@ -58,8 +69,7 @@ No backend runtime, provider/model calls, Local AI calls, connector sends, sched
 ## Remaining Visual / UX Items
 
 - YELLOW: Physical-device/mobile browser QA should still be repeated outside the headless runner before public artifact signoff.
-- YELLOW: Docs route is correct for staging, but public artifacts need a separate allowlisted public docs bundle.
-- YELLOW: Public package signoff still needs license/final repo naming, public docs completion, and artifact dry run.
+- YELLOW: Public package signoff still needs license/final repo naming and final artifact naming decisions.
 
 ## Boundary Result
 

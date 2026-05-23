@@ -1,8 +1,8 @@
 # Shell Product Assessment
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
-Branch: `public-release-shell-visual-polish-mobile-qa`
+Branch: `public-release-shell-docs-package-qa`
 
 Rating scale:
 
@@ -23,12 +23,12 @@ Rating scale:
 | Task Guardian health report clarity | GREEN | PC/server health shell, report renderer, app-first delivery, and no-scheduler boundary are clear. | Keep external delivery caveat visible. |
 | Connector/PIN fail-closed clarity | GREEN | Setup-needed/live-QA-unknown statuses, PIN as step-up, private recall fail-closed, and SMS unsupported are clear. | Keep live connector QA UNKNOWN until test-only channels pass. |
 | Robo Preview boundary clarity | GREEN | Robo is teaser-only with no control surface. | Do not add controls without explicit later approval. |
-| Docs/public artifact boundary clarity | YELLOW | The repo now has a clear artifact manifest, but dedicated public docs are not all present yet. | Create the allowlisted public docs before packaging. |
+| Docs/public artifact boundary clarity | GREEN | The repo now has public docs, a manifest, a checklist, release decisions, and a passing preview package dry run. | Keep license/final repo naming open until Phil decides. |
 | Overall visual polish | YELLOW | Desktop and 500px headless route screenshots are readable after the polish pass. The 390px headless runner still cropped the right edge, so physical/mobile review remains required before package signoff. | Complete public docs and package artifact QA before runtime contracts. |
 
 ## Summary
 
-The shell is good enough as a static public-release staging preview branch. It is not ready to be called a public release artifact because the user-facing docs bundle, license/final repo naming decision, artifact dry run, and physical/mobile browser review are still open.
+The shell is good enough as a static public-release staging preview branch. The user-facing docs bundle and preview package dry run are complete. It is not ready for public release signoff because license/final repo naming, final artifact naming, and physical/mobile browser review are still open.
 
 ## Blockers
 
@@ -36,4 +36,4 @@ The shell is good enough as a static public-release staging preview branch. It i
 
 ## Recommended Next Step
 
-Finish public docs and package artifact QA before starting any runtime contract layer. Keep live connector QA UNKNOWN unless external recall/delivery claims are backed by test-only channel validation.
+Resolve release decisions and run physical/mobile browser QA before starting any runtime contract layer. Keep live connector QA UNKNOWN unless external recall/delivery claims are backed by test-only channel validation.

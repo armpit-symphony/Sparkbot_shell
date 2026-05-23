@@ -3,9 +3,24 @@
   "version": "0.8.0-layer8",
   "private": true,
   "type": "module",
+  "files": [
+    "dist/",
+    "README.md",
+    "docs/INSTALL.md",
+    "docs/CAPABILITIES.md",
+    "docs/ARCHITECTURE_OVERVIEW.md",
+    "docs/SECURITY_AND_GUARDRAILS.md",
+    "docs/LOCAL_AI_SETUP.md",
+    "docs/ROUND_TABLE_OVERVIEW.md",
+    "docs/TASK_GUARDIAN_OVERVIEW.md",
+    "docs/CONNECTORS_OVERVIEW.md",
+    "docs/ROBO_PREVIEW.md",
+    "docs/BETA_LIMITATIONS.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "package:preview": "npm run build && node scripts/package-preview.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

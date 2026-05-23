@@ -6,9 +6,9 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 8 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, public artifact boundary docs, and visual/mobile QA polish. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. The current shell contains a Vite + React + TypeScript preview with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, public artifact boundary docs, visual/mobile QA polish, and preview package QA. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 
-Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
+Public users should wait for approved Sparkbot Shell release artifacts before treating this as an install path.
 
 ## Public MVP Highlights
 
@@ -17,42 +17,33 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - Round Table as the agent meeting room.
 - Meeting Manager as the coordinator and secretary.
 - Invite Wing model seats and Specialty Wing custom agents.
-- Local AI providers through Ollama, LM Studio, llama.cpp / llama-server, and OpenAI-compatible endpoints.
-- Command Center AI Setup and public security guardrails.
-- Unified memory/context interface and meeting notes save/edit/recall.
-- Task Guardian PC/server health checks and app-first delivery preferences.
-- Connector patterns for Telegram, Discord, Slack, and WhatsApp where configured.
+- Local AI setup shapes for Ollama, LM Studio, llama.cpp / llama-server, and OpenAI-compatible endpoints.
+- Command Center AI Setup and public guardrail profile previews.
+- Unified memory/context contract preview and meeting-note labels.
+- Task Guardian PC/server health-check previews and app-first delivery preference shell.
+- Optional connector setup patterns for Telegram, Discord, Slack, and WhatsApp.
 - Robo Preview teaser only, with no real robotics or IoT control in public core.
 
-## Repo Planning Docs
+## Public Docs
 
-These planning docs are kept in the staging repo for auditability. They are not the public release artifact allowlist.
+These docs are safe to ship in the preview artifact:
 
-- [Public release handoff](docs/PUBLIC_RELEASE_HANDOFF.md)
-- [Feature classification](docs/FEATURE_CLASSIFICATION.md)
-- [Extraction map](docs/EXTRACTION_MAP.md)
-- [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md)
-- [Public docs index](docs/PUBLIC_DOCS_INDEX.md)
-- [Sanitization checklist](docs/SANITIZATION_CHECKLIST.md)
-- [Public MVP roadmap](docs/PUBLIC_MVP_ROADMAP.md)
-- [Repo separation rules](docs/REPO_SEPARATION_RULES.md)
-- [Extraction readiness assessment](docs/EXTRACTION_READINESS_ASSESSMENT.md)
-- [Shell visual QA report](docs/SHELL_VISUAL_QA_REPORT.md)
-- [Shell product assessment](docs/SHELL_PRODUCT_ASSESSMENT.md)
-- [Shell layer readiness scorecard](docs/SHELL_LAYER_READINESS_SCORECARD.md)
-- [Layer 1 app frame status](docs/LAYER_1_APP_FRAME_STATUS.md)
-- [Layer 2 chat/model config status](docs/LAYER_2_CHAT_MODEL_CONFIG_STATUS.md)
-- [Layer 3 workstation and command center status](docs/LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md)
-- [Layer 4 Round Table static flow status](docs/LAYER_4_ROUNDTABLE_STATIC_FLOW_STATUS.md)
-- [Layer 5 memory/context adapter status](docs/LAYER_5_MEMORY_CONTEXT_ADAPTER_STATUS.md)
-- [Layer 6 Task Guardian health status](docs/LAYER_6_TASK_GUARDIAN_HEALTH_STATUS.md)
-- [Layer 7 connector PIN status](docs/LAYER_7_CONNECTOR_PIN_STATUS.md)
+- [Install and setup](docs/INSTALL.md)
+- [Capabilities](docs/CAPABILITIES.md)
+- [Architecture overview](docs/ARCHITECTURE_OVERVIEW.md)
+- [Security and guardrails](docs/SECURITY_AND_GUARDRAILS.md)
+- [Local AI setup overview](docs/LOCAL_AI_SETUP.md)
+- [Round Table overview](docs/ROUND_TABLE_OVERVIEW.md)
+- [Task Guardian overview](docs/TASK_GUARDIAN_OVERVIEW.md)
+- [Connectors overview](docs/CONNECTORS_OVERVIEW.md)
+- [Robo Preview](docs/ROBO_PREVIEW.md)
+- [Beta limitations](docs/BETA_LIMITATIONS.md)
 
-## Public Artifact Boundary
+Repo-only staging docs are still kept in git for auditability, but they are excluded from preview release artifacts.
 
-Phil's Layer 8 rule is now the controlling public artifact policy: `Sparkbot_shell` may keep extraction maps, readiness docs, staging docs, and no-go gates in the repo, but generated public release artifacts must exclude R&D path maps, internal extraction planning, private/source-boundary notes, and no-go/internal readiness docs.
+## Preview Artifact Boundary
 
-Public artifacts should ship only clean user-facing docs: README, install/setup, capabilities, architecture overview, security/guardrail overview, Local AI setup, Round Table overview, Task Guardian overview, and connector setup caveats. See [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md).
+Generated preview artifacts include only the built static app, README, user-facing docs, and package metadata. Repo-only staging docs can remain in git for auditability, but they are excluded from generated preview artifacts.
 
 ## Development
 
@@ -74,6 +65,14 @@ Build the static shell:
 npm run build
 ```
 
+Create a public-safe preview artifact:
+
+```bash
+npm run package:preview
+```
+
+The generated preview artifact is written under `preview-artifacts/` and includes only the built app, README, allowlisted public docs, and package metadata.
+
 ## Current Caveats
 
 - Live Telegram, Discord, Slack, and WhatsApp connector QA is still UNKNOWN because no safe test-only credentials/channels were configured.
@@ -83,8 +82,10 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
+- License choice, final public repo/name, and public artifact naming are still open release decisions.
+- Physical/mobile 390px browser QA remains open because the local headless runner cropped the right edge on several routes.
 - Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended next work is public docs completion and package artifact QA governed by the [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md), plus license/final repo naming before public package signoff. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.
+Recommended next work is release decision signoff: choose license, final public repo/name, and public artifact naming, then repeat physical/mobile browser QA. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.

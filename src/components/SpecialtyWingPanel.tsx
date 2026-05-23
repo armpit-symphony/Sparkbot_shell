@@ -70,8 +70,7 @@ export function SpecialtyWingPanel({ agents, modelSeats, onAgentsChange }: Speci
       <div className="runtime-boundary compact">
         <strong>Agent boundary</strong>
         <p>
-          No proprietary prompts, tasks, Arc/LIMA Office behavior, provider calls, or agent runtime is active in this
-          preview.
+          No proprietary prompts, private workflow behavior, provider calls, or agent runtime is active in this preview.
         </p>
       </div>
     </section>
