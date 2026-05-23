@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-mobile-qa-gate`
+Branch: `public-release-mobile-qa-fixes`
 
 ## Locked Preview Package
 
@@ -23,6 +23,8 @@ npm run package:preview
 ```
 
 Result: PASS.
+
+Re-run after Option B mobile QA docs updates: PASS.
 
 Generated artifact:
 
@@ -96,7 +98,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 ## Remaining Blockers Before Public Announcement
 
-- Physical/mobile 390px browser QA is still required.
+- Physical-device 390px browser QA is still required. Edge emulated 375px/390px viewport QA passed, but true physical QA remains NOT_RUN.
 - Live connector QA remains UNKNOWN for external delivery/private recall claims.
 - Do not tag, publish to npm, or upload the preview artifact without explicit Phil approval.
 - Current readiness remains YELLOW until Phil approval and physical/mobile QA completion.

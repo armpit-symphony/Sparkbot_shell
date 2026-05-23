@@ -5,7 +5,7 @@ Updated: 2026-05-23
 ## Current Preview
 
 - Current status color: YELLOW.
-- Current branch: `public-release-shell-mobile-qa-gate`.
+- Current branch: `public-release-mobile-qa-fixes`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -14,7 +14,7 @@ Updated: 2026-05-23
 - Current repo: `armpit-symphony/Sparkbot_shell` staging workspace.
 - Likely future public repo: `sparkpit-labs/Sparkbot`.
 
-YELLOW means the package may be used for internal/staging review, but public announcement is not approved until Phil explicitly approves and physical/mobile QA is complete.
+YELLOW means the package may be used for internal/staging review, but public announcement is not approved until Phil explicitly approves and physical-device mobile QA is complete.
 
 ## Included
 
@@ -53,12 +53,14 @@ YELLOW means the package may be used for internal/staging review, but public ann
 - Source boundary check: no `backend/`, `src-tauri/`, `.github/`, or `.agents`.
 - Preview artifact high-risk scan.
 - Secret/private scan.
+- Edge headless 375px, 390px, 768px, and 1365px viewport screenshots.
+- Edge DevTools layout metrics for `/`, `/workstation`, `/chat`, `/roundtable`, `/command-center`, `/task-guardian`, `/connectors`, `/robo`, and `/docs`.
 
 `npm run lint` is not configured.
 
 ## Remaining Blockers
 
-- Physical/mobile 390px browser QA.
+- Physical-device 390px browser QA.
 - Connector delivery/private recall remains YELLOW/UNKNOWN until live test credentials/channels are configured and tested.
 - Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
 
@@ -66,7 +68,7 @@ YELLOW means the package may be used for internal/staging review, but public ann
 
 | Risk | Current state | Color | Required action |
 |---|---|---|---|
-| Mobile QA | 390px physical/mobile browser QA is NOT_RUN. | YELLOW | Run the checklist in [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md). |
+| Mobile QA | Edge emulated 375px/390px/768px/desktop QA passed; true physical-device QA is NOT_RUN. | YELLOW | Complete physical-device QA or get Phil-provided physical confirmation before GREEN. |
 | Connector/private recall unknown | External delivery/private recall is shell-only and live-QA UNKNOWN. | YELLOW | Keep YELLOW/UNKNOWN until test-only live connector QA passes. |
 | License | MIT license added and package metadata says MIT. | GREEN | Keep LICENSE in artifact and package allowlists. |
 | Artifact contents | Preview artifact inspection passed against the public-safe allowlist. | GREEN | Re-run artifact inspection before any upload. |
@@ -87,6 +89,8 @@ YELLOW means the package may be used for internal/staging review, but public ann
 Current status remains YELLOW.
 
 The static preview package is valid for internal/staging review. It is not approved for public announcement, tag, npm publish, upload, or final release.
+
+Option B status: Edge emulation QA passed without required UI fixes. Physical-device QA remains manual/unverified, so readiness remains YELLOW.
 
 ## Recommended Next Step
 

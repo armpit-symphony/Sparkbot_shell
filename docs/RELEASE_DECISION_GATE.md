@@ -19,6 +19,7 @@ No tag, npm publish, public upload, release artifact upload, or public announcem
 | Runtime boundary | Static shell only; no runtime/backend/provider/connector/scheduler/memory/robotics behavior. |
 | Connector claims | External delivery/private recall remains YELLOW/UNKNOWN. |
 | Current readiness color | YELLOW. |
+| Option B status | Approved; Edge emulated mobile QA passed; physical-device QA remains manual/unverified. |
 
 ## Decision Options
 
@@ -34,7 +35,7 @@ No tag, npm publish, public upload, release artifact upload, or public announcem
 
 Option A is the safe default until physical/mobile QA is complete.
 
-Option B should be chosen if Phil wants to close the public-preview visual gate before any artifact handoff.
+Option B has been run with Edge emulation. Choose another Option B pass only if Phil wants true physical-device QA results recorded or if a manual tester finds a mobile defect to fix.
 
 Option D should not be chosen until physical/mobile QA is complete and the final artifact destination/announcement wording are explicitly approved.
 

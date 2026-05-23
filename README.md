@@ -13,7 +13,7 @@ Public users should wait for approved Sparkbot Shell release artifacts before tr
 Static preview artifact: `sparkbot-shell-preview-0.8.0-layer8`.
 Package/version label: `0.8.0-layer8-preview`.
 
-Preview status is YELLOW: internal/staging preview only until Phil approves the next release decision and physical/mobile QA is complete. See [Static preview signoff](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-mobile-qa-gate/docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-mobile-qa-gate/docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-mobile-qa-gate/docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-mobile-qa-gate/docs/RELEASE_DECISION_GATE.md).
+Preview status is YELLOW: internal/staging preview only until Phil approves the next release decision and physical/mobile QA is complete. See [Static preview signoff](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-mobile-qa-fixes/docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-mobile-qa-fixes/docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-mobile-qa-fixes/docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-mobile-qa-fixes/docs/RELEASE_DECISION_GATE.md).
 
 ## Public MVP Highlights
 
