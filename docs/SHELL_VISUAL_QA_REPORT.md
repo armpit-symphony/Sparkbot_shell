@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-release-decision-gate`
+Branch: `public-release-shell-preview-signoff`
 
 Base: `public-release-layer-8-packaging-boundary-shell` at `d98f3ff7b5783581fb21856cb6e2f680bdd9fdb2`
 
@@ -71,7 +71,7 @@ See [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md) for the rout
 ## Remaining Visual / UX Items
 
 - YELLOW: Physical-device/mobile browser QA should still be repeated outside the headless runner before public artifact signoff.
-- YELLOW: Public package signoff still needs license/final repo naming and final artifact naming decisions.
+- YELLOW: Physical/mobile 390px browser QA remains required before public announcement.
 
 ## Boundary Result
 

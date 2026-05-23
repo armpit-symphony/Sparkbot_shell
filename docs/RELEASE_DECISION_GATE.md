@@ -2,29 +2,31 @@
 
 Updated: 2026-05-23
 
-This gate records the decisions needed before Sparkbot Shell moves from staging preview to public preview signoff.
+This gate records the decisions for the Sparkbot Shell static preview and what still blocks a public announcement or final public release.
 
 ## Decision Matrix
 
-| Decision | Recommendation | Alternatives | Risk | Phil decision needed |
+| Decision | Locked decision | Alternatives rejected/deferred | Risk controlled | Status |
 |---|---|---|---|---|
-| License | MIT for easiest hobbyist/open-source adoption. | Apache-2.0 for explicit patent grant; no license yet for private staging only. | Shipping without a license makes public use ambiguous. | Choose license before final public release. |
-| Final repo/org/name | Likely `sparkpit-labs/Sparkbot` later. | Keep `armpit-symphony/Sparkbot_shell` as staging; rename this repo; create a fresh public repo. | Wrong public home can confuse users and package links. | Choose final public home before public release. |
-| Package/artifact name | `sparkbot-shell-preview-0.8.0-layer8`. | `sparkbot-public-preview-0.8.0`. | Naming can overstate readiness if it looks like a final release. | Choose preview artifact name before publishing. |
-| Version naming | Keep `0.8.0-layer8` for staging preview metadata. | Use `0.8.0-preview` or `0.8.0`. | Removing preview/layer context can imply runtime readiness. | Decide final preview version string. |
-| `Sparkbot_shell` role | Keep as staging until final public repo/import decision. | Promote this repo directly to public package source. | Staging docs and repo history are intentionally broader than public artifacts. | Confirm staging role. |
-| Preview artifact source | Use `npm run package:preview` from this branch for staging review only. | Use raw npm package after `files` allowlist; create zip/tar later. | Publishing the wrong artifact path could leak staging docs. | Confirm approved artifact workflow. |
-| Live connector QA blocks preview | Do not block static preview; keep connector delivery/private recall YELLOW/UNKNOWN. | Block all preview until live connector QA; remove connector pages from preview. | Overclaiming connectors is the main risk, not showing setup caveats. | Confirm YELLOW/UNKNOWN connector status is acceptable. |
-| Runtime contract layer start | Start only after license/repo/artifact/mobile QA decisions close. | Start runtime contracts in parallel. | Runtime work can distract from public boundary signoff. | Decide when runtime contracts begin. |
+| License | MIT for the static public preview unless a legal blocker is discovered. | Apache-2.0; no-license staging-only mode. | Public use rights are no longer ambiguous for the preview. | DECIDED |
+| License holder | `Copyright (c) 2026 SparkPit Labs / Phil Lima`. | Company-only or person-only holder. | Makes ownership visible while preserving project identity. | DECIDED |
+| Current repo role | `armpit-symphony/Sparkbot_shell` remains staging. | Rename or migrate this repo now. | Avoids mixing staging docs/history with final public home decisions. | DECIDED |
+| Future repo/org/name | Likely future target is `sparkpit-labs/Sparkbot`. | Promote this staging repo directly; choose a different public home now. | Keeps public naming direction visible without doing migration in this phase. | DIRECTION SET |
+| Preview artifact name | `sparkbot-shell-preview-0.8.0-layer8`. | `sparkbot-public-preview-0.8.0`; generated formula name. | Prevents the artifact from looking like a final public release. | DECIDED |
+| Package/version label | `0.8.0-layer8-preview`. | `0.8.0-layer8`; `0.8.0`; `0.8.0-preview`. | Keeps preview/layer context in package metadata. | DECIDED |
+| Preview artifact source | `npm run package:preview` from this branch may produce an internal/staging review artifact. | Publish to npm; tag public release; upload package. | Keeps package generation separate from public distribution. | DECIDED |
+| Live connector QA blocks preview artifact | Does not block internal/staging artifact generation; connector delivery/private recall stays YELLOW/UNKNOWN. | Mark connectors GREEN; remove connector shell. | Allows preview review without overclaiming external delivery. | DECIDED |
+| Physical/mobile 390px QA | Required before public announcement, not a blocker for internal/staging preview artifact generation. | Treat as already complete; block all artifact generation. | Keeps visual gate honest without blocking package QA. | OPEN BEFORE ANNOUNCEMENT |
+| Runtime contract layer start | Recommended after static preview signoff; start with contracts, not runtime implementation. | Start direct runtime/backend implementation now. | Prevents runtime work from bypassing boundary review. | RECOMMENDED NEXT |
 
 ## Gate Result
 
-Current recommendation: the static shell is ready for staging preview review, but not final public release signoff.
+The static shell is approved for internal/staging preview artifact generation on this branch.
 
-Open blockers:
+It is not a final public release and should not be announced publicly until physical/mobile 390px QA is completed and any final publication checklist is re-run.
 
-- License decision.
-- Final public repo/org/name.
-- Final artifact name/version.
-- Physical/mobile 390px QA.
-- Live connector QA remains UNKNOWN for external delivery/private recall claims.
+## Still Blocked Before Public Announcement
+
+- Physical/mobile 390px browser QA.
+- Connector delivery/private recall must remain YELLOW/UNKNOWN unless live test credentials/channels are configured and tested.
+- No public release tag, npm publish, or upload should happen without explicit Phil approval.

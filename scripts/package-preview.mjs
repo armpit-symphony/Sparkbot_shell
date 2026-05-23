@@ -38,6 +38,7 @@ const excludedDocs = [
   "RELEASE_DECISION_GATE.md",
   "PHYSICAL_MOBILE_QA_CHECKLIST.md",
   "PUBLIC_PREVIEW_READINESS_SUMMARY.md",
+  "STATIC_PREVIEW_SIGNOFF.md",
   "PACKAGE_QA_REPORT.md",
 ];
 
@@ -72,8 +73,9 @@ const highRiskPatterns = [
 
 const distDir = path.join(root, "dist");
 const artifactRoot = path.join(root, "preview-artifacts");
-const artifactName = `${packageJson.name}-${packageJson.version}-preview`;
+const artifactName = "sparkbot-shell-preview-0.8.0-layer8";
 const artifactDir = path.join(artifactRoot, artifactName);
+const legacyArtifactNames = ["sparkbot-shell-0.8.0-layer8-preview"];
 
 async function ensureFile(filePath) {
   const fileStat = await stat(filePath).catch(() => null);
@@ -137,20 +139,28 @@ async function assertNoHighRiskContent(filePath) {
 
 async function main() {
   await ensureFile(path.join(distDir, "index.html"));
+  for (const legacyName of legacyArtifactNames) {
+    await rm(path.join(artifactRoot, legacyName), { recursive: true, force: true });
+  }
   await rm(artifactDir, { recursive: true, force: true });
   await mkdir(artifactDir, { recursive: true });
 
   await cp(distDir, path.join(artifactDir, "app"), { recursive: true });
   await cp(path.join(root, "README.md"), path.join(artifactDir, "README.md"));
+  await cp(path.join(root, "LICENSE"), path.join(artifactDir, "LICENSE"));
+  await cp(path.join(root, "package.json"), path.join(artifactDir, "package.json"));
   await copyPublicDocs();
 
   const metadata = {
     name: packageJson.name,
     version: packageJson.version,
+    license: packageJson.license,
     artifactName,
     generatedAt: new Date().toISOString(),
-    includes: ["app/", "README.md", "docs/", "package-metadata.json"],
+    includes: ["app/", "README.md", "LICENSE", "package.json", "docs/", "package-metadata.json"],
     publicDocs,
+    stagingRepo: "armpit-symphony/Sparkbot_shell",
+    likelyFuturePublicRepo: "sparkpit-labs/Sparkbot",
     excludedCategories: [
       "repo-only staging docs",
       "extraction maps",
@@ -161,9 +171,9 @@ async function main() {
     caveats: [
       "Static shell preview only.",
       "No backend runtime, provider calls, connector sends, scheduler, memory persistence, or robotics control.",
-      "License and final public repo naming remain open decisions.",
-      "Final preview artifact name/version remains an open decision.",
-      "Physical/mobile 390px browser QA remains NOT_RUN until completed on a real or credible mobile browser.",
+      "MIT license is selected for the static preview unless a legal blocker is discovered.",
+      "Current repo remains staging; final public repo migration is a later release operation.",
+      "Physical/mobile 390px browser QA remains required before public announcement.",
       "External connector recall/delivery remains live-QA UNKNOWN.",
     ],
   };

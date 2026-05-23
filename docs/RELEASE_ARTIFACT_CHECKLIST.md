@@ -2,10 +2,11 @@
 
 Updated: 2026-05-23
 
-This checklist governs preview package and future public artifact review.
+This checklist governs the static preview package and future public artifact review.
 
 ## Ship Public
 
+- [x] `LICENSE`
 - [x] `README.md`
 - [x] `docs/INSTALL.md`
 - [x] `docs/CAPABILITIES.md`
@@ -17,7 +18,6 @@ This checklist governs preview package and future public artifact review.
 - [x] `docs/CONNECTORS_OVERVIEW.md`
 - [x] `docs/ROBO_PREVIEW.md`
 - [x] `docs/BETA_LIMITATIONS.md`
-- [ ] License file once Phil chooses a license.
 
 ## Repo Only / Exclude From Public Artifact
 
@@ -28,7 +28,19 @@ This checklist governs preview package and future public artifact review.
 - [x] No-go/internal readiness docs.
 - [x] Public/private source-boundary planning docs.
 - [x] Internal extraction maps.
+- [x] Static preview signoff and release decision docs.
 - [x] `.git`, `.github`, `.agents`, `node_modules`, tests, logs, caches, env files, and secret material.
+
+## Locked Preview Decisions
+
+- [x] License: MIT.
+- [x] License holder: `Copyright (c) 2026 SparkPit Labs / Phil Lima`.
+- [x] Current repo remains staging: `armpit-symphony/Sparkbot_shell`.
+- [x] Future public repo target is likely `sparkpit-labs/Sparkbot`.
+- [x] Preview artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
+- [x] Package/version label: `0.8.0-layer8-preview`.
+- [x] This branch may produce an internal/staging static preview artifact.
+- [x] Do not tag, publish to npm, or upload without explicit Phil approval.
 
 ## Dry-Run Checks
 
@@ -36,18 +48,13 @@ This checklist governs preview package and future public artifact review.
 - [x] Run `npm run package:preview`.
 - [x] Run `npm pack --dry-run --json` and confirm raw npm packaging is constrained to public-safe files.
 - [x] Confirm preview artifact contains built static app.
-- [x] Confirm preview artifact contains README and allowlisted public docs only.
+- [x] Confirm preview artifact contains README, LICENSE, package metadata, and allowlisted public docs only.
 - [x] Confirm preview artifact does not contain repo-only staging docs.
 - [x] Confirm preview artifact does not contain env files, secrets, logs, caches, source-boundary notes, or R&D path maps.
 - [x] Confirm package report is updated with inspection results.
 
-## Signoff Blockers
+## Remaining Before Public Announcement
 
-- License decision is still open.
-  - Recommendation: MIT for easiest hobbyist/open-source adoption unless Phil chooses otherwise.
-- Final public repo/org/name is still open.
-  - Likely future public home: `sparkpit-labs/Sparkbot`.
-- Final public artifact name/version is still open.
-  - Suggested names: `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
-- Physical/mobile 390px QA is still open.
-- Live connector QA remains UNKNOWN for external delivery/private recall claims.
+- [ ] Physical/mobile 390px browser QA.
+- [ ] Keep connector delivery/private recall YELLOW/UNKNOWN unless live connector QA passes with test-only credentials/channels.
+- [ ] Re-run package QA from the final announcement branch/environment.

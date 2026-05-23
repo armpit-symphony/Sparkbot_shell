@@ -6,13 +6,14 @@ This is the user-facing docs index for future public release artifacts. It is se
 
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
-Current static shell preview status: ready for staging preview review after public docs/package QA. Public package signoff still needs license/final repo naming, final artifact naming, and physical/mobile browser review.
+Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review is still required before public announcement.
 
 ## Public Artifact Docs
 
 | Public doc | Status | Notes |
 |---|---|---|
 | `README.md` | READY FOR STAGING REVIEW | Current public overview, setup commands, caveats, and artifact boundary summary. |
+| `LICENSE` | READY FOR STAGING REVIEW | MIT license with SparkPit Labs / Phil Lima copyright. |
 | `docs/INSTALL.md` | READY FOR STAGING REVIEW | Covers install/build/dev/package-preview commands without private deployment notes. |
 | `docs/CAPABILITIES.md` | READY FOR STAGING REVIEW | Separates current static preview capabilities from runtime features. |
 | `docs/ARCHITECTURE_OVERVIEW.md` | READY FOR STAGING REVIEW | Explains Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Docs, and Robo Preview. |
@@ -33,6 +34,7 @@ These are repo-staging docs for preview signoff and should not ship in the publi
 - [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md)
 - [Public preview readiness summary](PUBLIC_PREVIEW_READINESS_SUMMARY.md)
 - [Package QA report](PACKAGE_QA_REPORT.md)
+- [Static preview signoff](STATIC_PREVIEW_SIGNOFF.md)
 
 ## Repo-Only Staging Docs
 

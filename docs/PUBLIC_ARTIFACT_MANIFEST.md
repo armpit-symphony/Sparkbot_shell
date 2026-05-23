@@ -39,7 +39,7 @@ Ship only clean public docs that help users install, understand, and safely use 
 - `docs/CONNECTORS_OVERVIEW.md`.
 - `docs/ROBO_PREVIEW.md`.
 - `docs/BETA_LIMITATIONS.md`.
-- License file once Phil chooses a license.
+- `LICENSE`.
 
 ## Layer 8 Application
 
@@ -53,8 +53,8 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 ## Current Status
 
-The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture license, repo/name, artifact naming, mobile QA, connector QA, and runtime sequencing decisions still needed.
+The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture the locked MIT license, staging repo role, likely future public repo target, artifact naming, mobile QA, connector QA, and runtime sequencing decisions.
 
-This does not add runtime behavior, connector sends, private recall, or production-readiness claims. License choice, final public repo/name, final artifact naming, and physical/mobile 390px QA remain open.
+This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA remains required before public announcement, and final repo migration remains a later release operation.
 
-Current recommendation: MIT for easiest hobbyist/open-source adoption unless Phil chooses otherwise. Suggested preview artifact names are `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
+Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and likely future public repo `sparkpit-labs/Sparkbot`.

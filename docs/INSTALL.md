@@ -38,9 +38,11 @@ The build output is written to `dist/`.
 npm run package:preview
 ```
 
-The preview package is generated under `preview-artifacts/`. It contains the built app, this public docs bundle, README, and package metadata only.
+The preview package is generated under `preview-artifacts/`. It contains the built app, this public docs bundle, README, LICENSE, package.json, and package metadata only.
 
-The current generated folder name remains `sparkbot-shell-0.8.0-layer8-preview` until Phil chooses a final preview artifact name/version.
+The generated folder is `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
+
+The package/version label is `0.8.0-layer8-preview`. This is an internal/staging static preview artifact, not a public release tag, npm publication, or uploaded release.
 
 ## Current Boundaries
 

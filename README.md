@@ -1,6 +1,6 @@
 # Sparkbot Shell
 
-Sparkbot Shell is the public staging repo for a planned open-source, self-hosted AI workstation shell. Its hook is simple: Round Table meetings for your AI agents.
+Sparkbot Shell is the MIT-licensed public staging repo for a self-hosted AI workstation shell preview. Its hook is simple: Round Table meetings for your AI agents.
 
 The public product model is a local-first workstation for agent work, model routing, model seats, Local AI providers, Round Table meetings, shared memory/context, Task Guardian utility automations, connectors, and user-owned guardrails.
 
@@ -9,6 +9,9 @@ The public product model is a local-first workstation for agent work, model rout
 This repo is in public-release staging. The current shell contains a Vite + React + TypeScript preview with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, public artifact boundary docs, visual/mobile QA polish, and preview package QA. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 
 Public users should wait for approved Sparkbot Shell release artifacts before treating this as an install path.
+
+Static preview artifact: `sparkbot-shell-preview-0.8.0-layer8`.
+Package/version label: `0.8.0-layer8-preview`.
 
 ## Public MVP Highlights
 
@@ -38,12 +41,15 @@ These docs are safe to ship in the preview artifact:
 - [Connectors overview](docs/CONNECTORS_OVERVIEW.md)
 - [Robo Preview](docs/ROBO_PREVIEW.md)
 - [Beta limitations](docs/BETA_LIMITATIONS.md)
+- [MIT license](LICENSE)
 
 Repo-only staging docs are still kept in git for auditability, but they are excluded from preview release artifacts.
 
 ## Preview Artifact Boundary
 
-Generated preview artifacts include only the built static app, README, user-facing docs, and package metadata. Repo-only staging docs can remain in git for auditability, but they are excluded from generated preview artifacts.
+Generated preview artifacts include only the built static app, README, LICENSE, package.json, user-facing docs, and package metadata. Repo-only staging docs can remain in git for auditability, but they are excluded from generated preview artifacts.
+
+The current repo, `armpit-symphony/Sparkbot_shell`, remains the staging workspace. The likely future public repo target is `sparkpit-labs/Sparkbot`, but repo migration is a later release operation.
 
 ## Development
 
@@ -71,7 +77,9 @@ Create a public-safe preview artifact:
 npm run package:preview
 ```
 
-The generated preview artifact is written under `preview-artifacts/` and includes only the built app, README, allowlisted public docs, and package metadata.
+The generated preview artifact is written under `preview-artifacts/` and includes only the built app, README, LICENSE, package.json, allowlisted public docs, and package metadata.
+
+The generated folder is `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
 
 Release decision support docs remain in the staging repo and are not included in generated preview artifacts.
 
@@ -84,11 +92,11 @@ Release decision support docs remain in the staging repo and are not included in
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- MIT is the recommended license for easiest hobbyist/open-source adoption, but Phil has not chosen a license yet.
-- Final public repo/name, public artifact naming, and version naming are still open release decisions.
-- Physical/mobile 390px browser QA remains open because the local headless runner cropped the right edge on several routes.
+- MIT is selected for this static public preview unless a legal blocker is discovered.
+- Final public repo migration remains a later release operation; this repo remains staging.
+- Physical/mobile 390px browser QA remains required before public announcement because the local headless runner cropped the right edge on several routes.
 - Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 
-Recommended next work is release decision signoff: choose license, final public repo/name, preview artifact name/version, and complete physical/mobile browser QA. Keep live connector QA marked UNKNOWN until test-only channels pass, and do not start runtime contract work until these public-preview gates are closed.
+Recommended next work is physical/mobile browser QA before public announcement, followed by a runtime contract layer after preview signoff. Keep live connector QA marked UNKNOWN until test-only channels pass.

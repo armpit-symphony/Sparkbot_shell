@@ -2,7 +2,17 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-release-decision-gate`
+Branch: `public-release-shell-preview-signoff`
+
+## Locked Preview Package
+
+- Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
+- Package/version label: `0.8.0-layer8-preview`.
+- License: MIT.
+- Current staging repo: `armpit-symphony/Sparkbot_shell`.
+- Likely future public repo: `sparkpit-labs/Sparkbot`.
+
+This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
 
 ## Package Dry Run
 
@@ -17,7 +27,7 @@ Result: PASS.
 Generated artifact:
 
 ```text
-preview-artifacts/sparkbot-shell-0.8.0-layer8-preview/
+preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/
 ```
 
 The generated artifact is gitignored and not committed.
@@ -34,6 +44,7 @@ Result: PASS.
 
 The raw npm pack file list is constrained by `package.json#files` and includes only:
 
+- `LICENSE`.
 - `README.md`.
 - Built `dist/` files.
 - Allowlisted public docs.
@@ -41,10 +52,12 @@ The raw npm pack file list is constrained by `package.json#files` and includes o
 
 No repo-only staging docs, source files, scripts, dependency folders, logs, env files, or workflow directories appeared in the dry-run file list.
 
-## Included
+## Included In Preview Artifact
 
 - Built static shell in `app/`.
 - `README.md`.
+- `LICENSE`.
+- `package.json`.
 - `package-metadata.json`.
 - `docs/INSTALL.md`.
 - `docs/CAPABILITIES.md`.
@@ -62,27 +75,27 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Repo-only staging docs.
 - Extraction maps and readiness docs.
 - Layer status docs.
-- Release checklist, release decisions, release decision gate, physical/mobile QA checklist, readiness summary, and package QA report.
+- Release checklist, release decisions, release decision gate, physical/mobile QA checklist, readiness summary, static preview signoff, and package QA report.
 - Source files.
 - `node_modules/`.
 - `.git`, `.github`, `.agents`.
 - Logs, caches, env files, tests, and workflow files.
+- Backend/runtime code.
+- Connector runtime.
+- Guardian runtime.
+- Robo bridge.
+- LIMA/Arc/Office/IT private internals.
 
 ## Inspection Evidence
 
-- The first dry run failed because built app copy still contained internal platform-boundary wording. The user-facing copy was replaced with generic public-safe boundary language.
-- Final package dry run passed.
-- Final artifact path inspection showed only `app/`, `docs/`, `README.md`, and `package-metadata.json`.
+- Package dry run passed with the locked artifact folder name.
+- Final artifact path inspection showed only `app/`, `docs/`, `LICENSE`, `README.md`, `package.json`, and `package-metadata.json`.
 - Final artifact docs list matched the public allowlist.
 - Final high-risk artifact scan found no matches for private domains, private paths, selected env variable names, or internal platform/private bridge terms.
 - `npm pack --dry-run --json` was run after adding a `files` allowlist and did not create a `.tgz` file.
 
-## Remaining Blockers
+## Remaining Blockers Before Public Announcement
 
-- License choice is still open.
-- MIT is recommended for easiest hobbyist/open-source adoption unless Phil chooses otherwise.
-- Final public repo/org/name is still open.
-- Final public artifact name/version is still open.
-  - Suggested names: `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
-- Physical/mobile 390px browser QA is still open.
+- Physical/mobile 390px browser QA is still required.
 - Live connector QA remains UNKNOWN for external delivery/private recall claims.
+- Do not tag, publish to npm, or upload the preview artifact without explicit Phil approval.

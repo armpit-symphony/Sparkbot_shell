@@ -4,7 +4,7 @@ Updated: 2026-05-23
 
 Status: NOT_RUN.
 
-This checklist is for the remaining 390px-ish physical/mobile browser QA gate. The prior headless runner produced nonblank screenshots but cropped the right edge on several routes, so a real phone browser or reliable responsive browser tool is still required.
+This checklist is for the remaining 390px-ish physical/mobile browser QA gate. The prior headless runner produced nonblank screenshots but cropped the right edge on several routes, so a real phone browser or reliable responsive browser tool is still required. This is required before public announcement, but it does not block internal/staging preview artifact generation.
 
 ## Setup
 

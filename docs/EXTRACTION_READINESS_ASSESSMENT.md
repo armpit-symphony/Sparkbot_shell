@@ -172,15 +172,15 @@ Not allowed until live QA passes:
 
 ## Recommended Next Step
 
-Public release decision signoff before runtime work.
+Static preview signoff before runtime work.
 
 Controlling boundary: [Public artifact manifest](PUBLIC_ARTIFACT_MANIFEST.md).
 
 Recommended scope:
 
-- Choose license.
-- Choose final public repo/org/name.
-- Choose final public artifact name/version.
+- Use MIT for the static preview unless a legal blocker is discovered.
+- Keep `armpit-symphony/Sparkbot_shell` as staging; likely future public target is `sparkpit-labs/Sparkbot`.
+- Use artifact name `sparkbot-shell-preview-0.8.0-layer8` and package/version label `0.8.0-layer8-preview`.
 - Run physical/mobile 390px browser QA.
 - Keep live connector QA UNKNOWN unless test-only channels pass.
 - Do not start runtime connectors, sends, private recall, or production-readiness claims.

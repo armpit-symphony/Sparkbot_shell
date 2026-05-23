@@ -126,7 +126,7 @@ Blockers: live robotics endpoint exposure, private bridge source import, LIMA ru
 
 ## Phase K - Browser/Live QA + Package QA
 
-Status: completed as public docs/package QA in `public-release-shell-docs-package-qa`; release decision gate documented in `public-release-shell-release-decision-gate`, with release signoff blockers still open.
+Status: completed as public docs/package QA in `public-release-shell-docs-package-qa`; release decision gate documented in `public-release-shell-release-decision-gate`; static preview signoff locked in `public-release-shell-preview-signoff`.
 
 Imports: public docs bundle, QA docs, preview package script, release artifact inspection instructions, release decision tracker.
 
@@ -140,7 +140,7 @@ Repo-only staging docs: extraction maps, readiness docs, staging docs, and no-go
 
 Validation: browser checklist, preview package dry-run, artifact inspection, markdown link check, build, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers: license/final repo naming open, final artifact naming open, physical/mobile 390px QA open, connector QA UNKNOWN for private recall claims, and future package checks on Linux/clean clone still pending.
+Blockers before public announcement: physical/mobile 390px QA open, connector QA UNKNOWN for private recall claims, no public tag/npm publish/upload approval, and future package checks on Linux/clean clone still pending.
 
 ## Phase L - v1.0.0 Public Release Candidate
 

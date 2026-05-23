@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-release-decision-gate`
+Branch: `public-release-shell-preview-signoff`
 
 Rating scale:
 
@@ -23,12 +23,12 @@ Rating scale:
 | Task Guardian health report clarity | GREEN | PC/server health shell, report renderer, app-first delivery, and no-scheduler boundary are clear. | Keep external delivery caveat visible. |
 | Connector/PIN fail-closed clarity | GREEN | Setup-needed/live-QA-unknown statuses, PIN as step-up, private recall fail-closed, and SMS unsupported are clear. | Keep live connector QA UNKNOWN until test-only channels pass. |
 | Robo Preview boundary clarity | GREEN | Robo is teaser-only with no control surface. | Do not add controls without explicit later approval. |
-| Docs/public artifact boundary clarity | GREEN | The repo now has public docs, a manifest, a checklist, release decisions, and a passing preview package dry run. | Keep license/final repo naming open until Phil decides. |
+| Docs/public artifact boundary clarity | GREEN | The repo now has public docs, a manifest, a checklist, release decisions, MIT license, locked artifact naming, and a passing preview package dry run. | Keep final repo migration as a later release operation. |
 | Overall visual polish | YELLOW | Desktop and 500px headless route screenshots are readable after the polish pass. The 390px headless runner still cropped the right edge, so physical/mobile review remains required before package signoff. | Complete public docs and package artifact QA before runtime contracts. |
 
 ## Summary
 
-The shell is good enough as a static public-release staging preview branch. The user-facing docs bundle, preview package dry run, and release decision gate docs are complete. It is not ready for public release signoff because license/final repo naming, final artifact naming, and physical/mobile browser review are still open.
+The shell is good enough as a static public-release staging preview branch. The user-facing docs bundle, MIT license, preview package dry run, release decision gate docs, and static preview signoff docs are complete. It is not ready for public announcement because physical/mobile browser review remains open and connector live QA is still UNKNOWN.
 
 ## Blockers
 
@@ -36,4 +36,4 @@ The shell is good enough as a static public-release staging preview branch. The 
 
 ## Recommended Next Step
 
-Resolve release decisions and run physical/mobile browser QA before starting any runtime contract layer. Keep live connector QA UNKNOWN unless external recall/delivery claims are backed by test-only channel validation.
+Run physical/mobile browser QA before public announcement. Keep live connector QA UNKNOWN unless external recall/delivery claims are backed by test-only channel validation, then start a runtime contract layer rather than direct runtime implementation.

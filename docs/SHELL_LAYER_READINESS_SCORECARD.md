@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-shell-release-decision-gate`
+Branch: `public-release-shell-preview-signoff`
 
 ## Scorecard
 
@@ -15,13 +15,13 @@ Branch: `public-release-shell-release-decision-gate`
 | 5. Memory/context adapter shell | GREEN | Public frontend-only context event shapes, meeting-note contract, retrieval preview, redaction labels. | Memory persistence, real retrieval, Guardian memory service, private recall runtime. | Current build, source scan, Workstation/Chat context previews. | Make redaction states easier for nontechnical users. | Memory identity/redaction contract. |
 | 6. Task Guardian health shell | GREEN | PC/server health templates, daily schedule preview, app-first delivery, fake report renderer, source labels. | Scheduler, health collector, system commands, remediation, external sends, memory writes. | Current build, Task Guardian screenshot, route smoke. | Future collector evidence/redaction rules need docs. | Health collector contract and evidence model. |
 | 7. Connector/PIN shell | GREEN | Telegram/Discord/Slack/WhatsApp/SMS cards, identity status, PIN preview, fail-closed private recall preview. | Connector runtime, sends, webhooks, PIN verification, sessions, private recall. | Current build, Connectors screenshot, runtime scan, live-QA caveats. | Keep shared-space identity copy prominent. | Test-only connector live QA plan. |
-| 8. Public artifact boundary | YELLOW | Public artifact manifest, public docs bundle, release decisions, release decision gate, package checklist, preview package script, package QA report, visual/mobile QA reports. | Public release signoff, production-readiness claims, runtime behavior, connector live QA completion. | Build, `npm run package:preview`, artifact inspection, markdown link check, source boundary scan. | License/final repo naming, final artifact naming, and physical/mobile 390px QA remain open. | Release decision signoff. |
+| 8. Public artifact boundary | GREEN FOR STAGING PREVIEW | Public artifact manifest, public docs bundle, MIT license, release decisions, release decision gate, static preview signoff, package checklist, preview package script, package QA report, visual/mobile QA reports. | Public announcement signoff, production-readiness claims, runtime behavior, connector live QA completion. | Build, `npm run package:preview`, `npm pack --dry-run --json`, artifact inspection, markdown link check, source boundary scan. | Physical/mobile 390px QA remains open before public announcement. | Runtime contract layer after preview signoff. |
 
 ## Overall Readiness
 
 Static shell preview readiness: GREEN.
 
-The shell is coherent and safe as a staging preview. The next risk is not runtime behavior; it is license/final repo naming, final artifact naming, and final physical/mobile browser review for the 390px crop warning.
+The shell is coherent and safe as a staging preview. The next risk is not runtime behavior; it is final physical/mobile browser review for the 390px crop warning and preserving connector live-QA UNKNOWN until test-only channels pass.
 
 ## Do Not Start Yet
 

@@ -2,12 +2,15 @@
 
 Updated: 2026-05-23
 
-## Ready For Staging Preview Review
+## Ready For Internal/Staging Preview Review
 
 - Static Vite/React/TypeScript shell.
 - Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Robo Preview, and Docs routes.
 - Public docs bundle.
+- MIT `LICENSE`.
 - Preview package script.
+- Locked artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
+- Locked package/version label: `0.8.0-layer8-preview`.
 - Preview artifact inspection.
 - Raw npm pack dry-run allowlist.
 - Runtime/persistence scan with no source runtime calls.
@@ -30,23 +33,30 @@ The current preview is local UI and static/demo state only. It does not run back
 - Terminal/browser execution.
 - Robotics/IoT control.
 
-## Required Before Public Preview Signoff
+## Decisions Locked
 
-- Choose preview artifact name/version. Suggested options: `sparkbot-shell-preview-0.8.0-layer8` or `sparkbot-public-preview-0.8.0`.
-- Confirm whether `Sparkbot_shell` remains staging for preview publication.
-- Complete physical/mobile 390px QA.
-- Confirm license posture for preview distribution.
+- License: MIT unless a legal blocker is discovered.
+- Copyright holder: `SparkPit Labs / Phil Lima`.
+- Current staging repo: `armpit-symphony/Sparkbot_shell`.
+- Likely future public repo: `sparkpit-labs/Sparkbot`.
+- Preview artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
+- Package/version label: `0.8.0-layer8-preview`.
+- Public artifact source: this branch may generate an internal/staging static preview artifact only.
+
+## Still Required Before Public Announcement
+
+- Complete physical/mobile 390px QA on a real phone browser or trusted responsive browser.
+- Keep external connector recall/delivery YELLOW/UNKNOWN unless live test credentials/channels are configured and tested.
+- Re-run package QA from the final announcement branch/environment.
+- Do not tag, publish to npm, or upload a public release artifact unless Phil explicitly approves that operation.
 
 ## Required Before Final Public Release
 
-- Choose final license and add license file.
-  - Recommendation: MIT for easiest hobbyist/open-source adoption unless Phil chooses otherwise.
-- Choose final public repo/org/name.
-  - Likely future public home: `sparkpit-labs/Sparkbot`.
-- Choose final artifact/version naming.
+- Decide and perform final public repo migration/import if moving to `sparkpit-labs/Sparkbot`.
 - Repeat package QA from a clean clone and target release environment.
-- Keep external connector recall/delivery YELLOW/UNKNOWN unless live test credentials/channels are configured and tested.
+- Confirm license posture with any required legal review.
+- Keep runtime work separate from static preview claims.
 
 ## Recommended Next Technical Phase
 
-After Phil closes the decision gates, the next technical phase should be a runtime contract layer, not direct runtime implementation. Start with contracts for backend/model calls, memory persistence, guardrail enforcement, and connector identity/delivery boundaries.
+After static preview signoff, the next technical phase should be a runtime contract layer, not direct runtime implementation. Start with contracts for backend/model calls, memory persistence, guardrail enforcement, and connector identity/delivery boundaries.

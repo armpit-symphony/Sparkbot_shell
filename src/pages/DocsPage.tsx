@@ -12,7 +12,7 @@ const docs = [
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-release-decision-gate/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-preview-signoff/docs";
 
 export function DocsPage() {
   return (

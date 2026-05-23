@@ -2,39 +2,48 @@
 
 Updated: 2026-05-23
 
-This document tracks decisions that must be resolved before a public release artifact is signed off. See [Release decision gate](RELEASE_DECISION_GATE.md) for the decision matrix.
+This document tracks release decisions for the Sparkbot Shell static preview. See [Release decision gate](RELEASE_DECISION_GATE.md) and [Static preview signoff](STATIC_PREVIEW_SIGNOFF.md) for the signoff summary.
 
-## Open Decisions
+## Locked For Static Preview
 
 | Decision | Status | Notes |
 |---|---|---|
-| Final public repo/org/name | OPEN | Decide whether the public home is this staging repo, a renamed repo, or a new org/repo. |
-| License choice | OPEN | A license must be chosen before public release. MIT and Apache-2.0 are common options, but Phil has not selected one here. |
-| Staging repo role | OPEN | Decide whether `Sparkbot_shell` remains a staging workspace or becomes the public package source. |
-| Public artifact name/version | OPEN | Current package metadata is `sparkbot-shell@0.8.0-layer8`; public artifact naming still needs signoff. |
-| Repo-only staging docs | DECIDED | Keep extraction maps, readiness docs, staging docs, and no-go gates in the repo. Exclude them from public release artifacts. |
-| Runtime import start | OPEN | Runtime work should begin only after public docs, package artifact QA, mobile QA, and license/repo decisions are closed. |
+| License choice | DECIDED | MIT is selected for the Sparkbot Shell static public preview unless a legal blocker is discovered. |
+| License copyright holder | DECIDED | `Copyright (c) 2026 SparkPit Labs / Phil Lima`. This captures both the SparkPit Labs project identity and Phil Lima ownership. |
+| Staging repo role | DECIDED | `armpit-symphony/Sparkbot_shell` remains the staging workspace for this phase. Do not rename or migrate repos here. |
+| Future public repo/org/name | DECIDED FOR DIRECTION | The likely future public release target is `sparkpit-labs/Sparkbot`; migration/final home is a later release operation. |
+| Preview artifact name | DECIDED | `sparkbot-shell-preview-0.8.0-layer8`. |
+| Package/version label | DECIDED | `0.8.0-layer8-preview`. |
+| Public artifact source | DECIDED FOR STAGING | This branch may produce a public-safe static preview artifact for internal/staging review. It is not a final public release. |
+| Repo-only staging docs | DECIDED | Keep extraction maps, readiness docs, staging docs, and no-go gates in the repo. Exclude them from public preview artifacts. |
 | Live connector claims | DECIDED | Keep external delivery/private recall live-QA UNKNOWN until test-only connector QA passes. |
 
-## Recommendation
+## Still Open
 
-Choose the license, public repo name, and artifact naming before publishing any package. Keep the current artifact as a preview package until those decisions are made.
-
-## License Options
-
-| Option | Fit | Notes |
+| Decision | Status | Notes |
 |---|---|---|
-| MIT | Recommended for easiest hobbyist/open-source adoption. | Short, permissive, familiar to small projects and community contributors. |
-| Apache-2.0 | Strong option if explicit patent grant language is desired. | More formal; still permissive. |
-| No license yet | Acceptable only while this remains private/staging. | Do not ship a final public release without a license. |
+| Final public release repo migration | LATER | Decide and perform final repo migration/import only in a later release operation. |
+| Public announcement readiness | OPEN | Physical/mobile 390px browser QA remains required before public announcement. |
+| Runtime import start | OPEN | Runtime work should begin only after static preview signoff and should start with contracts, not direct runtime behavior. |
 
-No `LICENSE` file is added in this branch because Phil has not explicitly approved a license.
+## License Decision
 
-## Artifact Naming Options
+MIT is selected for the static Sparkbot Shell preview because it is short, permissive, familiar to hobbyist/open-source users, and appropriate for a static shell preview unless a legal blocker is discovered.
 
-Recommended preview names:
+The `LICENSE` file is now included in the repo and public preview artifact. `package.json#license` is set to `MIT`.
 
-- `sparkbot-shell-preview-0.8.0-layer8`
-- `sparkbot-public-preview-0.8.0`
+## Artifact Naming
 
-The current package metadata remains `sparkbot-shell@0.8.0-layer8` until Phil chooses the final preview artifact name/version.
+Locked static preview artifact:
+
+```text
+sparkbot-shell-preview-0.8.0-layer8
+```
+
+Locked package/version label:
+
+```text
+0.8.0-layer8-preview
+```
+
+The generated preview artifact is for internal/staging review. Do not tag a public release, publish to npm, or upload the artifact unless Phil explicitly approves that release operation.
