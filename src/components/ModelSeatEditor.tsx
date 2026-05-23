@@ -76,8 +76,12 @@ export function ModelSeatEditor({ seat, onChange }: ModelSeatEditorProps) {
           </select>
         </label>
         <label>
-          <span>Auth mode label</span>
-          <input value={seat.authMode} onChange={(event) => updateField("authMode", event.currentTarget.value)} />
+          <span>Auth boundary label</span>
+          <input
+            value={seat.authMode}
+            placeholder="Label only - do not paste credentials"
+            onChange={(event) => updateField("authMode", event.currentTarget.value)}
+          />
         </label>
         <label>
           <span>Local runtime</span>
@@ -134,7 +138,8 @@ export function ModelSeatEditor({ seat, onChange }: ModelSeatEditorProps) {
       <div className="runtime-boundary compact">
         <strong>Credential boundary</strong>
         <p>
-          Credentials are not stored in this shell layer. Backend/Vault storage arrives in a later runtime layer.
+          Credentials are not stored in this shell layer. Do not paste API keys, tokens, passwords, or connector secrets
+          into demo fields. Backend/Vault storage arrives in a later runtime layer.
         </p>
       </div>
     </form>

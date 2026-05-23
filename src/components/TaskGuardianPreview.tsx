@@ -53,11 +53,11 @@ export function TaskGuardianPreview({
           <p className="section-label">Task Guardian</p>
           <h2>Health-check report shell</h2>
           <p>
-            Task Guardian is a scheduled work manager direction. Layer 7 keeps app/in-room delivery as the default and
+            Task Guardian is a scheduled work manager direction. This shell keeps app/in-room delivery as the default and
             previews external connector readiness without adding sends.
           </p>
         </div>
-        <span className="status-badge setup_needed">Layer 7 shell</span>
+        <span className="status-badge setup_needed">Static shell</span>
       </div>
 
       <div className="runtime-boundary compact">

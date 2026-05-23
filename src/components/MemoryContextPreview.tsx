@@ -57,7 +57,7 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
           <p className="section-label">Memory / context spine</p>
           <h2>Context adapter shell</h2>
           <p>
-            Layer 7 previews source-labeled context events for health reports, delivery warnings, and connector recall
+            This shell previews source-labeled context events for health reports, delivery warnings, and connector recall
             gates. It does not persist memory, retrieve context, or call a Guardian memory service.
           </p>
         </div>
@@ -142,7 +142,7 @@ export function MemoryContextPreview({ events, retrievalPreview, compact = false
             ))}
           </div>
         </div>
-        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in Layer 7.</small>
+        <small>{retrievalPreview.resultCount} demo results. No real retrieval runs in this shell.</small>
       </div>
     </section>
   );

@@ -30,13 +30,23 @@ const navItems: NavItem[] = [
 
 const pageKeys = new Set<PageKey>(navItems.map((item) => item.key));
 
-function getRouteFromHash(): PageKey {
-  const route = window.location.hash.replace(/^#\/?/, "") as PageKey;
-  return pageKeys.has(route) ? route : "workstation";
+const routeAliases: Record<string, PageKey> = {
+  "": "workstation",
+  robo: "robo-preview",
+};
+
+function getRouteFromLocation(): PageKey {
+  const hashRoute = window.location.hash.replace(/^#\/?/, "");
+  const pathRoute = window.location.pathname.replace(/^\/+/, "").split("/")[0];
+  const route = hashRoute || pathRoute;
+  const alias = routeAliases[route];
+
+  if (alias) return alias;
+  return pageKeys.has(route as PageKey) ? (route as PageKey) : "workstation";
 }
 
 export function App() {
-  const [activePage, setActivePage] = useState<PageKey>(() => getRouteFromHash());
+  const [activePage, setActivePage] = useState<PageKey>(() => getRouteFromLocation());
   const [shellState, setShellState] = useState<ShellState>(demoShellState);
   const activeNavItem = useMemo(
     () => navItems.find((item) => item.key === activePage) ?? navItems[0],
@@ -44,9 +54,13 @@ export function App() {
   );
 
   useEffect(() => {
-    const onHashChange = () => setActivePage(getRouteFromHash());
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
+    const onLocationChange = () => setActivePage(getRouteFromLocation());
+    window.addEventListener("hashchange", onLocationChange);
+    window.addEventListener("popstate", onLocationChange);
+    return () => {
+      window.removeEventListener("hashchange", onLocationChange);
+      window.removeEventListener("popstate", onLocationChange);
+    };
   }, []);
 
   return (
@@ -58,7 +72,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Layer 7 connector PIN shell</span>
+            <span>Layer 8 packaging boundary shell</span>
           </span>
         </a>
 
@@ -136,7 +150,7 @@ export function App() {
           <section className="page-section">
             <div className="intro-row">
               <div>
-                <p className="section-label">Public Layer 7</p>
+                <p className="section-label">Static public shell</p>
                 <h2>Task Guardian preview</h2>
                 <p>
                   Task Guardian is the scheduled work manager direction. This preview shows read-only PC/server health

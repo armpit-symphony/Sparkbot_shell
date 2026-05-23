@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. Layer 7 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, and connector identity/PIN fail-closed recall previews. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. Layer 8 now contains a Vite + React + TypeScript shell with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, and public artifact boundary docs. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 
 Public users should continue to use sanitized Sparkbot release bundles until Sparkbot Shell has approved imports, validation, and release artifacts. The raw Sparkbot R&D repo is not the casual public install path.
 
@@ -24,16 +24,22 @@ Public users should continue to use sanitized Sparkbot release bundles until Spa
 - Connector patterns for Telegram, Discord, Slack, and WhatsApp where configured.
 - Robo Preview teaser only, with no real robotics or IoT control in public core.
 
-## Planning Docs
+## Repo Planning Docs
+
+These planning docs are kept in the staging repo for auditability. They are not the public release artifact allowlist.
 
 - [Public release handoff](docs/PUBLIC_RELEASE_HANDOFF.md)
 - [Feature classification](docs/FEATURE_CLASSIFICATION.md)
 - [Extraction map](docs/EXTRACTION_MAP.md)
 - [Public artifact manifest](docs/PUBLIC_ARTIFACT_MANIFEST.md)
+- [Public docs index](docs/PUBLIC_DOCS_INDEX.md)
 - [Sanitization checklist](docs/SANITIZATION_CHECKLIST.md)
 - [Public MVP roadmap](docs/PUBLIC_MVP_ROADMAP.md)
 - [Repo separation rules](docs/REPO_SEPARATION_RULES.md)
 - [Extraction readiness assessment](docs/EXTRACTION_READINESS_ASSESSMENT.md)
+- [Shell visual QA report](docs/SHELL_VISUAL_QA_REPORT.md)
+- [Shell product assessment](docs/SHELL_PRODUCT_ASSESSMENT.md)
+- [Shell layer readiness scorecard](docs/SHELL_LAYER_READINESS_SCORECARD.md)
 - [Layer 1 app frame status](docs/LAYER_1_APP_FRAME_STATUS.md)
 - [Layer 2 chat/model config status](docs/LAYER_2_CHAT_MODEL_CONFIG_STATUS.md)
 - [Layer 3 workstation and command center status](docs/LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md)
@@ -77,7 +83,7 @@ npm run build
 - SMS/text remains future/unsupported.
 - Multi-worker scheduler leader locking remains future work.
 - Sparkbot Shell is not production-ready.
-- Layer 7 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
+- Layer 8 shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
 
 ## Next Step
 

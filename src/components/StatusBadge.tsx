@@ -5,7 +5,7 @@ type StatusBadgeProps = {
 };
 
 const labels: Record<ModelSeatSetupStatus, string> = {
-  configured: "Configured",
+  configured: "Configured preview",
   setup_needed: "Setup needed",
   disabled: "Disabled",
   unreachable: "Unreachable",

@@ -50,4 +50,4 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 ## Current Status
 
-Layer 8 has not started. This manifest is a controlling boundary doc for future Layer 8 work; it does not add packaging scripts, runtime behavior, connector sends, private recall, or production-readiness claims.
+The Layer 8 boundary decision has been applied as a controlling repo document. It does not add packaging scripts, runtime behavior, connector sends, private recall, or production-readiness claims.

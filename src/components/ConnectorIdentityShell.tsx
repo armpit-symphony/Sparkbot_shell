@@ -73,10 +73,10 @@ export function ConnectorIdentityShell({
     <section className={compact ? "connector-shell compact" : "connector-shell page-section"}>
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 7</p>
+          <p className="section-label">Static public shell</p>
           <h2>Connector identity / PIN shell</h2>
           <p>
-            Connectors are optional operator communication channels. Layer 7 previews setup status, identity gates,
+            Connectors are optional operator communication channels. This shell previews setup status, identity gates,
             PIN step-up, fail-closed private recall, and delivery caveats with static demo state only.
           </p>
         </div>

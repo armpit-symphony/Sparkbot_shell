@@ -1,6 +1,6 @@
 {
   "name": "sparkbot-shell",
-  "version": "0.7.0-layer7",
+  "version": "0.8.0-layer8",
   "private": true,
   "type": "module",
   "scripts": {

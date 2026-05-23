@@ -3,10 +3,14 @@ const docs = [
   ["Feature classification", "FEATURE_CLASSIFICATION.md"],
   ["Extraction map", "EXTRACTION_MAP.md"],
   ["Public artifact manifest", "PUBLIC_ARTIFACT_MANIFEST.md"],
+  ["Public docs index", "PUBLIC_DOCS_INDEX.md"],
   ["Sanitization checklist", "SANITIZATION_CHECKLIST.md"],
   ["Public MVP roadmap", "PUBLIC_MVP_ROADMAP.md"],
   ["Repo separation rules", "REPO_SEPARATION_RULES.md"],
   ["Extraction readiness assessment", "EXTRACTION_READINESS_ASSESSMENT.md"],
+  ["Shell visual QA report", "SHELL_VISUAL_QA_REPORT.md"],
+  ["Shell product assessment", "SHELL_PRODUCT_ASSESSMENT.md"],
+  ["Shell layer readiness scorecard", "SHELL_LAYER_READINESS_SCORECARD.md"],
   ["Layer 1 app frame status", "LAYER_1_APP_FRAME_STATUS.md"],
   ["Layer 2 chat/model config status", "LAYER_2_CHAT_MODEL_CONFIG_STATUS.md"],
   ["Layer 3 workstation and command center status", "LAYER_3_WORKSTATION_COMMAND_CENTER_STATUS.md"],
@@ -17,7 +21,7 @@ const docs = [
 ] as const;
 
 const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-layer-7-connector-pin-shell/docs";
+  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-visual-qa-assessment/docs";
 
 export function DocsPage() {
   return (

@@ -76,7 +76,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
     <section className="page-section">
       <div className="intro-row">
         <div>
-          <p className="section-label">Public Layer 7</p>
+          <p className="section-label">Static public shell</p>
           <h2>Workstation operating floor</h2>
           <p>
             The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
@@ -201,7 +201,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <p className="section-label">Shared company memory preview</p>
             <h2>Memory / context spine</h2>
             <p>
-              Company memory is contract-only in Layer 7. Saved meeting notes and safe health summaries can become
+              Company memory is contract-only in this shell. Saved meeting notes and safe health summaries can become
               future context; drafts, raw transcripts, credentials, and unverified connector recall stay excluded.
             </p>
           </div>
@@ -245,7 +245,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <article className="template-card">
             <strong>{shellState.memoryContext.retrievalPreview.resultCount}</strong>
             <p>demo context sources included in Main Chat handoff preview</p>
-            <small>Layer 7 contract only</small>
+            <small>Contract only</small>
           </article>
         </div>
       </section>
