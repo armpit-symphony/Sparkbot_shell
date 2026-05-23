@@ -17,34 +17,30 @@ No tag, npm publish, public upload, release artifact upload, or public announcem
 | Preview artifact name | `sparkbot-shell-preview-0.8.0-layer8`. |
 | Package/version label | `0.8.0-layer8-preview`. |
 | Runtime boundary | Static shell only; no runtime/backend/provider/connector/scheduler/memory/robotics behavior. |
-| Connector claims | External delivery/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for static shell preview; future runtime validation only. |
-| Current readiness color | YELLOW. |
-| Option B status | Approved; Edge emulated mobile QA passed; physical-device QA remains manual/unverified. |
+| Connector claims | External delivery/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for this static shell artifact; future runtime validation only. |
+| Current readiness color | GREEN_CANDIDATE (not public release). |
+| Option B status | Completed and passed by Phil manual physical-device QA. |
 
 ## Decision Options
 
 | Option | Decision | Effect | Risk |
 |---|---|---|---|
-| A | Continue internal preview only. | Keep artifact and docs available for internal/staging review. No public action. | Lowest risk; mobile QA and approval remain pending. |
-| B | Run true physical-device mobile QA, then repackage if fixes are needed. | Run 390px physical-mobile QA, patch confirmed issues only, regenerate package, and re-run validation. | Best if physical check finds clipping or nav usability issues. |
-| C | Approve public preview artifact generation but no public announcement. | Generate a public-safe artifact from staging after final validation, but do not tag, publish, upload, or announce. | Useful for private handoff; still not public. |
-| D | Approve public announcement/tag/upload. | Allows public-facing action only after Phil explicitly approves scope, destination, and wording. | Highest risk; should wait for physical/mobile QA and final package inspection. |
-| E | Pause and return to runtime contract layer. | Stop release-gate work and begin contract-only runtime planning. | Keeps engineering moving but does not close public preview gates. |
+| A | Continue internal preview only. | Keep artifact and docs available for internal/staging review. No public action. | Lowest risk; no announcement action taken. |
+| B | Run true physical-device mobile QA, then repackage if fixes are needed. | Run 390px physical-mobile QA, patch confirmed issues only, regenerate package, and re-run validation. | Already completed for this branch; use only if new UI/package changes appear. |
+| C | Approve public preview artifact generation but no public announcement. | Generate a public-safe artifact and share as preview-internal/staging without tag, publish, upload, or announcement. | Requires release messaging to avoid runtime claims. |
+| D | Approve public announcement/tag/upload. | Allows public-facing action only after Phil explicitly approves scope, destination, and wording. | Highest risk; requires final release decision. |
+| E | Pause and return to runtime contract layer. | Stop release-gate work and begin runtime contract-only planning. | Keeps engineering moving but does not close static-preview gates. |
 
 ## Current Recommendation
 
-Option A is the safe default until physical/mobile QA is complete.
+Option C may be considered next if Phil wants non-public staging handoff after this validated gate.
 
-Option B now includes a true physical-device mobile QA pass before the next packaging decision.
+Option D remains blocked without explicit Phil approval for the exact public action (tag/publish/upload/announcement).
 
-Option C can be considered after physical QA passes and required fixes are revalidated.
+## Required Before GREEN_CANDIDATE / Public Preview
 
-Option D still requires explicit Phil approval for scope, destination, and announcement wording.
-
-## Required Before GREEN
-
-- Physical/mobile 390px QA completed and documented (true-device pass required for `GREEN_CANDIDATE`).
+- Physical/mobile 390px QA completed and documented (true-device pass required).
 - Any mobile QA defects fixed and revalidated.
-- Connector delivery/private recall classified as `OUT_OF_SCOPE_STATIC_PREVIEW` for the static preview artifact; future runtime validation remains open.
+- Connector/private recall remains `OUT_OF_SCOPE_STATIC_PREVIEW` for this static shell.
 - Final package validation rerun from the selected branch.
-- Explicit Phil approval for the exact public action: tag, publish, upload, announcement, or none.
+- Explicit Phil approval for the public action: tag, publish, upload, announcement, or none.

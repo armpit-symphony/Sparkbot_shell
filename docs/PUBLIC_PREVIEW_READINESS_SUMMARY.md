@@ -4,8 +4,8 @@ Updated: 2026-05-23
 
 ## Current Preview
 
-- Current status color: YELLOW.
-- Current branch: `public-release-physical-qa-record`.
+- Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
+- Current branch: `public-release-record-physical-qa-pass`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -14,13 +14,13 @@ Updated: 2026-05-23
 - Current repo: `armpit-symphony/Sparkbot_shell` staging workspace.
 - Likely future public repo: `sparkpit-labs/Sparkbot`.
 
-YELLOW means the package may be used for internal/staging review, but public announcement is not approved until Phil explicitly approves and physical-device mobile QA is complete.
+`GREEN_CANDIDATE` means the current static preview artifact is ready to be considered for public preview; it is still not publicly released.
 
 Readiness rules:
 
 - Physical-device 390px QA is `REQUIRED_FOR_GREEN`.
-- Physical-device status is `MANUAL_REQUIRED` until a true physical run is completed.
-- Connector/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for this shell artifact and does not block static readiness unless runtime claims are added.
+- Physical-device status is `PASSED` by Phil manual verification.
+- Connector/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for this static artifact and does not block static readiness unless runtime claims are added.
 
 ## Included
 
@@ -56,30 +56,30 @@ Readiness rules:
 - `node --check scripts/package-preview.mjs`.
 - Markdown link check.
 - Runtime/persistence scan over `src`.
-- Source boundary check: no `backend/`, `src-tauri/`, `.github/`, or `.agents`.
+- Source boundary check: no `backend/`, `src-tauri/`, `.github/`, `.agents/`.
 - Preview artifact high-risk scan.
 - Secret/private scan.
 - Edge headless 375px, 390px, 768px, and 1365px viewport screenshots.
 - Edge DevTools layout metrics for `/`, `/workstation`, `/chat`, `/roundtable`, `/command-center`, `/task-guardian`, `/connectors`, `/robo`, and `/docs`.
+- Physical-device QA pass confirmed manually by Phil.
 
 `npm run lint` is not configured.
 
 ## Remaining Blockers
 
-- Physical-device 390px browser QA.
-- Connector/private recall: `OUT_OF_SCOPE_STATIC_PREVIEW` (future runtime-contract validation item).
 - Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
+- Final public release depends on release decision Option D.
 
 ## Risk Table
 
 | Risk | Current state | Color | Required action |
 |---|---|---|---|
-| Mobile QA | Edge emulated 375px/390px/768px/desktop QA passed; true physical-device QA is NOT_RUN. | YELLOW | Complete physical-device QA or get Phil-provided physical confirmation before GREEN. |
-| Connector/private recall | `OUT_OF_SCOPE_STATIC_PREVIEW` in the static shell artifact. | N/A | Validate in future runtime contract layer; not a static-preview blocker. |
+| Mobile QA | Edge emulated 375px/390px/768px/desktop QA passed; physical-device QA passed by Phil. | GREEN_CANDIDATE | Re-run physical-device checks if any UI or artifact layout changes are made. |
+| Connector/private recall | `OUT_OF_SCOPE_STATIC_PREVIEW` in the static shell artifact. | N/A | Validate live connector recall/delivery in future runtime-contract layers. |
 | License | MIT license added and package metadata says MIT. | GREEN | Keep LICENSE in artifact and package allowlists. |
 | Artifact contents | Preview artifact inspection passed against the public-safe allowlist. | GREEN | Re-run artifact inspection before any upload. |
-| Public messaging | Docs say internal/staging preview only and no announcement without Phil approval. | YELLOW | Phil must choose the next decision option. |
-| No runtime | Runtime/persistence scans passed; shell is static/demo state only. | GREEN | Do not add runtime in this gate. |
+| Public messaging | Docs now record static-only shell and explicit release-action approval requirement. | YELLOW | Phil must choose the next release option. |
+| No runtime | Runtime/persistence scans passed; shell is static/demo only. | GREEN | Do not add runtime in this gate. |
 | No proprietary leakage | Artifact high-risk scan passed; repo-only staging docs remain excluded. | GREEN | Keep generated-artifact scans mandatory. |
 
 ## Decision States
@@ -88,16 +88,20 @@ Readiness rules:
 |---|---|
 | RED | Cannot preview. A release-boundary, private-leakage, build, artifact, or runtime-overclaim blocker exists. |
 | YELLOW | Internal/staging preview only. Public announcement, tag, npm publish, and upload are blocked. |
-| GREEN | Approved for public preview after Phil approval, physical/mobile QA completion, and final validation. |
+| GREEN_CANDIDATE | Static preview artifact is complete and ready for final release decision; still not released. |
 
 ## Current Decision
 
-Current status remains YELLOW.
+Current status is `GREEN_CANDIDATE`.
 
-The static preview package is valid for internal/staging review. It is not approved for public announcement, tag, npm publish, upload, or final release.
+The static preview package is complete for internal/staging use and physical/mobile QA in this branch.
+It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
-Option B status: Edge emulation QA passed without required UI fixes. Physical-device QA remains manual/unverified, so readiness remains YELLOW.
+Option B status: completed and passed with Phil manual verification.
 
 ## Recommended Next Step
 
-Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md). The safest default is Option A: continue internal preview only until physical/mobile QA is complete.
+Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
+
+- Option C for internal/public-staging artifact generation (no public announcement, no publish/upload/tag).
+- Option D for public announcement/tag/upload after explicit Phil approval.

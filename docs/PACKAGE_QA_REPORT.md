@@ -2,7 +2,7 @@
 
 Updated: 2026-05-23
 
-Branch: `public-release-physical-qa-record`
+Branch: `public-release-record-physical-qa-pass`
 
 ## Locked Preview Package
 
@@ -24,17 +24,18 @@ npm run package:preview
 
 Result: PASS.
 
-Re-run after Option B mobile QA docs updates: PASS.
+## Physical QA status
 
-Physical QA status: `MANUAL_REQUIRED` (no true physical-device 390px QA run yet).
+- Physical 390px route verification: `PASSED` (Phil confirmed manual phone QA).
+- Emulated QA status: PASS at 375px, 390px, 768px, 1365px.
 
-Generated artifact:
+## Generated artifact
 
 ```text
 preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/
 ```
 
-The generated artifact is gitignored and not committed.
+The generated artifact is gitignored and not committed by default.
 
 ## Raw npm Pack Dry Run
 
@@ -46,7 +47,7 @@ npm pack --dry-run --json
 
 Result: PASS.
 
-The raw npm pack file list is constrained by `package.json#files` and includes only:
+The raw npm pack file list is constrained by `package.json#files` and includes:
 
 - `LICENSE`.
 - `README.md`.
@@ -78,8 +79,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 - Repo-only staging docs.
 - Extraction maps and readiness docs.
-- Layer status docs.
-- Release checklist, release decisions, release decision gate, physical/mobile QA checklist, readiness summary, static preview signoff, and package QA report.
+- Layer status and release checklist documents.
 - Source files.
 - `node_modules/`.
 - `.git`, `.github`, `.agents`.
@@ -94,13 +94,16 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 - Package dry run passed with the locked artifact folder name.
 - Final artifact path inspection showed only `app/`, `docs/`, `LICENSE`, `README.md`, `package.json`, and `package-metadata.json`.
-- Final artifact docs list matched the public allowlist.
+- Final docs list matched the public allowlist.
 - Final high-risk artifact scan found no matches for private domains, private paths, selected env variable names, or internal platform/private bridge terms.
 - `npm pack --dry-run --json` was run after adding a `files` allowlist and did not create a `.tgz` file.
 
+## Connector/private recall classification
+
+- `OUT_OF_SCOPE_STATIC_PREVIEW` for this static preview artifact.
+- Future runtime-contract and live-runtime validation item only; not a gating item for static artifact readiness when no runtime claims are present.
+
 ## Remaining Blockers Before Public Announcement
 
-- Physical-device 390px browser QA is still required and remains MANUAL_REQUIRED.
-- Connector delivery/private recall is classified as `OUT_OF_SCOPE_STATIC_PREVIEW` for this static artifact; future runtime-contract validation remains.
-- Do not tag, publish to npm, or upload the preview artifact without explicit Phil approval.
-- Current readiness remains YELLOW until Phil approval and physical/mobile QA completion.
+- Explicit Phil approval is required before any tag, publish, upload, or public announcement.
+- Future runtime contract and release-option decisions remain.

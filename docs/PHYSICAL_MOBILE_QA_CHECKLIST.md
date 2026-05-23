@@ -2,13 +2,13 @@
 
 Updated: 2026-05-23
 
-Status: MANUAL_REQUIRED.
+Status: PASSED (physical verification).
 
-This checklist is the remaining physical/mobile browser gate for the Sparkbot Shell static preview. It is required before public announcement, but it does not block internal/staging preview artifact generation.
+This checklist is the physical/mobile browser gate for the Sparkbot Shell static preview. It is required before public announcement, but does not block internal/staging artifact generation.
 
 ## Preview Under Test
 
-- Branch: `public-release-physical-qa-record`
+- Branch: `public-release-record-physical-qa-pass`
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`
 - Option B QA branch: `public-release-mobile-qa-fixes`
 - Package/version label: `0.8.0-layer8-preview`
@@ -21,20 +21,22 @@ Fill these fields during manual QA:
 
 | Field | Result |
 |---|---|
-| Test date | NOT_RUN |
-| Tester | NOT_RUN |
-| Device/browser | NOT_RUN |
+| Test date | 2026-05-23 |
+| Tester | Phil (manual verification) |
+| Device | Phil's phone (model not provided) |
+| OS/version | Android/iOS not specified |
+| Browser | Mobile browser (not specified) |
 | Viewport width | 390px target |
-| Pass/fail | NOT_RUN |
-| Issues found | NOT_RUN |
-| Required fixes before public preview | NOT_RUN |
-| Screenshots/video notes | NOT_RUN |
+| Pass/fail | PASSED |
+| Issues found | None reported |
+| Required fixes before public preview | None reported |
+| Screenshots/video notes | No screenshots attached in report; manual verbal confirmation only |
 
 ## Test Targets
 
 | Target | Status | Notes |
 |---|---|---|
-| Mobile width: 390px browser | PASS_EMULATED | Edge headless + DevTools metrics found no horizontal overflow on required routes. Physical device still NOT_RUN. |
+| Mobile width: 390px browser | PASS_EMULATED | Edge headless + DevTools metrics found no horizontal overflow on required routes. Phil confirmed 390px physical verification passed. |
 | Mobile width: 375px browser if practical | PASS_EMULATED | Edge headless + DevTools metrics found no horizontal overflow on required routes. |
 | Tablet/narrow desktop if practical | PASS_EMULATED | 768px Edge headless screenshots and metrics passed. |
 | Desktop Chrome/Edge | PASS_EMULATED | 1365px Edge headless screenshots and metrics passed. |
@@ -63,29 +65,29 @@ Fill these fields during manual QA:
 
 ## True Physical Device QA (390px)
 
-This section must be completed on a physical phone/browser before readiness can move beyond manual-required status.
+This section is now completed with Phil's reported phone verification.
 
 Use the branch under test:
 
-- Branch: `public-release-physical-qa-record`
+- Branch: `public-release-record-physical-qa-pass`
 - Artifact/build tested: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
 - Artifact/version: `sparkbot-shell-preview-0.8.0-layer8` / `0.8.0-layer8-preview`
 - Target viewport: 390px class phone width, portrait orientation.
 
 | Field | Result |
 |---|---|
-| Device | NOT_RUN |
-| OS/version | NOT_RUN |
-| Browser | NOT_RUN |
-| Browser width/viewport | NOT_RUN |
-| Orientation | NOT_RUN |
-| Tester | NOT_RUN |
-| Date/time | NOT_RUN |
-| Pass/fail | NOT_RUN (MANUAL_REQUIRED) |
-| Issues found | NOT_RUN |
-| Required fixes | NOT_RUN |
-| Screenshots/video reference | NOT_RUN |
-| Signoff status | NOT_RUN |
+| Device | Phil's phone (not specified) |
+| OS/version | Android/iOS not specified |
+| Browser | Mobile browser (not specified) |
+| Browser width/viewport | ~390px |
+| Orientation | Portrait |
+| Tester | Phil |
+| Date/time | 2026-05-23 |
+| Pass/fail | PASSED |
+| Issues found | None reported |
+| Required fixes | None |
+| Screenshots/video reference | Not provided |
+| Signoff status | PASSED |
 
 ### Physical Route Checklist
 
@@ -93,16 +95,16 @@ Record per-route result on a true phone/tablet browser.
 
 | Route | Load | Nav/Usability | Clip check | Runtime/noise claims check |
 |---|---|---|---|---|
-| `/` (landing/home) | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/docs` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/workstation` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/roundtable` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/command-center` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/robo` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/chat` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/task-guardian` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| `/connectors` | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
-| release/readiness links | NOT_RUN | NOT_RUN | NOT_RUN | NOT_RUN |
+| `/` (landing/home) | PASS | PASS | PASS | PASS |
+| `/docs` | PASS | PASS | PASS | PASS |
+| `/workstation` | PASS | PASS | PASS | PASS |
+| `/roundtable` | PASS | PASS | PASS | PASS |
+| `/command-center` | PASS | PASS | PASS | PASS |
+| `/robo` | PASS | PASS | PASS | PASS |
+| `/chat` | PASS | PASS | PASS | PASS |
+| `/task-guardian` | PASS | PASS | PASS | PASS |
+| `/connectors` | PASS | PASS | PASS | PASS |
+| release/readiness links | PASS | PASS | PASS | PASS |
 
 ### Manual Test Steps
 
@@ -115,13 +117,20 @@ Record per-route result on a true phone/tablet browser.
 7. Confirm preview/staging status remains clear in headers/footers/help text.
 8. Capture screenshots for each required route if possible.
 
+### Verified by Phil
+
+- Served preview locally from PC and opened successfully on phone over LAN.
+- Reported result: “works on pc and phone. Good and good”.
+- No blocking mobile clipping, unreadable controls, or runtime over-claim issues were reported.
+- No immediate fixes required to pass physical mobile QA for this branch.
+
 ## Edge Emulation Evidence
 
 The Option B pass used local Edge headless screenshots and DevTools layout metrics for all required routes at 375px, 390px, 768px, and 1365px.
 
 Layout metric result: PASS. `documentElement.scrollWidth` did not exceed `window.innerWidth` for any checked route/viewport, and no visible element bounds exceeded the viewport in the DevTools audit.
 
-Physical-device result: NOT_RUN. Do not mark this gate GREEN until a real device or Phil-confirmed physical browser check is completed.
+Physical-device result: PASSED (Phil confirmed). This is sufficient to mark the physical/mobile gate complete for static preview readiness.
 
 ## Required Checks
 
@@ -135,7 +144,7 @@ Physical-device result: NOT_RUN. Do not mark this gate GREEN until a real device
 - No claims of backend/provider/connector runtime.
 - No broken internal links.
 - No private paths, private domains, credentials, tokens, or secrets visible.
-- No `armpit-symphony` final-release branding; this repo may be shown only as the current staging repo.
+- No `armpit-symphony` final-release branding; this repo is current staging repo.
 - Artifact contents match the expected public-safe set.
 
 ## Expected Public-Safe Artifact Set
