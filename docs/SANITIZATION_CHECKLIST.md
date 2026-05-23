@@ -1,6 +1,6 @@
 # Sanitization Checklist
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 Use this checklist before any Sparkbot R&D source is imported into `Sparkbot_shell` or packaged as public source.
 
@@ -22,6 +22,41 @@ Use this checklist before any Sparkbot R&D source is imported into `Sparkbot_she
 - [ ] Confirm private Robo bridge source is excluded and only the Robo Preview stub is included.
 - [ ] Inspect package outputs: `.tar.gz`, `.zip`, release notes, checksums, and staged tree.
 - [ ] Run Docker context hygiene scan for env files, DBs, logs, keys/certs, caches, package outputs, tests, CI metadata, and private docs.
+- [ ] Run `armpit-symphony` branding scan before final public release naming.
+- [ ] Run SparkPit Labs branding scan for public ownership, attribution, trademarks, screenshots, and package metadata.
+- [ ] Review public screenshots, demo prompts, sample data, third-party logos, and visible URLs before packaging.
+
+## Required Search Terms
+
+Run these terms against source, docs, generated artifacts, screenshots where searchable, package staging directories, and release notes before public publication:
+
+```text
+armpit-symphony
+remote.sparkpitlabs.com
+/home/sparky
+/home/ubuntu
+104.236
+token
+secret
+password
+passphrase
+private
+internal
+proprietary
+client
+LIMA Office
+Arc Bot
+LIMA IT
+Robo OS
+robotics
+MCP
+Vault
+breakglass
+production
+DigitalOcean
+AWS
+sparkpitlabs internal paths
+```
 
 ## Secret And Credential Scans
 
@@ -54,6 +89,14 @@ Use this checklist before any Sparkbot R&D source is imported into `Sparkbot_she
 - [ ] SMS/text is marked future/unsupported and does not fake sends.
 - [ ] Live connector QA uses test-only identities/channels and records non-secret evidence only.
 - [ ] Live connector QA remains UNKNOWN until Telegram, Discord, Slack, and WhatsApp are actually tested.
+
+## Legal, License, And Public Asset Review
+
+- [ ] Confirm final license selection and dependency license compatibility.
+- [ ] Confirm public vulnerability reporting path and security policy.
+- [ ] Review connector terms and platform policy requirements for Telegram, Discord, Slack, WhatsApp, GitHub, Google, Microsoft, Notion, Jira, Linear, and similar providers.
+- [ ] Review Tauri/desktop signing posture before any desktop artifact claim.
+- [ ] Review trademarks, third-party logos, public screenshots, demo prompts, sample data, and generated assets before publication.
 
 ## Import Gate
 

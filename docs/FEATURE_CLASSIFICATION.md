@@ -1,6 +1,6 @@
 # Feature Classification
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
 
@@ -111,3 +111,26 @@ These remain review gates before public claims or code import beyond planning:
 - WhatsApp production hardening.
 - Scheduler leadership/locking.
 - Browser/live local AI QA.
+
+## Long-Tail Review Gates
+
+These feature groups should stay explicit in review notes so public Sparkbot does not accidentally absorb private runtime or commercial control-plane behavior:
+
+| Feature group | Classification | Public handling |
+|---|---|---|
+| Policy simulation | `NEEDS_REVIEW` | Keep as simplified safety explanation only until UI and threat model are approved. |
+| Persistent approvals | `NEEDS_REVIEW` | Do not add broad or hidden persistence; require explicit bounded UX and security review. |
+| Audit timeline | `SIMPLIFY_PUBLIC` | Keep public action history only; do not expose Guardian Spine commercial internals. |
+| Connector health | `SIMPLIFY_PUBLIC` | Keep setup/readiness status; no private target IDs, tokens, or internal connector state. |
+| Token Guardian | `PRIVATE_PROPRIETARY` | Do not import advanced routing/cost internals; public may later show simple model status only. |
+| Task Guardian advanced scheduler | `NEEDS_REVIEW` | Keep health shell and app-first delivery preview until leader locking and runtime contracts are approved. |
+| Shell execution | `NEEDS_REVIEW` | Disabled by default; any future diagnostics/write commands require local operator controls. |
+| Browser automation | `NEEDS_REVIEW` | Read-only or guarded future capability; no hidden clicks, forms, private-network browsing, or external sends. |
+| Live terminal | `NEEDS_REVIEW` | Setup-required future capability; no raw PTY in public preview. |
+| Code execution | `NEEDS_REVIEW` | Requires sandboxing and security review before any public runtime claim. |
+| Email/calendar/drive connectors | `NEEDS_REVIEW` | Opt-in after connector terms, OAuth, scopes, and write-confirmation UX are reviewed. |
+| Notion/Confluence/Jira/Linear connectors | `NEEDS_REVIEW` | Defer or ship as scoped examples only; avoid business-suite positioning. |
+| GitHub tools | `SIMPLIFY_PUBLIC` | Reads first; writes require repo allowlists and confirmation. |
+| Installer/Tauri app | `NEEDS_REVIEW` | Requires metadata, signing, update, and package review before desktop distribution. |
+| Docker/server install | `KEEP_PUBLIC` | Keep safe local/server path; avoid private deployment defaults and multi-worker scheduler claims. |
+| Branding assets/screenshots | `NEEDS_REVIEW` | Review armpit-symphony, SparkPit Labs, trademarks, third-party logos, screenshots, and sample data. |

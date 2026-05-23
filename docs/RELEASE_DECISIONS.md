@@ -30,6 +30,17 @@ Choose the license, public repo name, and artifact naming before publishing any 
 
 No `LICENSE` file is added in this branch because Phil has not explicitly approved a license.
 
+## Legal, License, And Security Review Gates
+
+Before any public release artifact is signed off, review:
+
+- Final license text and dependency license compatibility.
+- Public security policy and vulnerability reporting path.
+- Connector terms and platform policy requirements for Telegram, Discord, Slack, WhatsApp, GitHub, Google, Microsoft, Notion, Jira, Linear, and similar providers.
+- Tauri/desktop signing posture if desktop artifacts are planned.
+- Public package metadata, artifact names, and installer identifiers.
+- armpit-symphony and SparkPit Labs branding, trademarks, third-party logos, screenshots, sample data, demo prompts, and generated assets.
+
 ## Artifact Naming Options
 
 Recommended preview names:

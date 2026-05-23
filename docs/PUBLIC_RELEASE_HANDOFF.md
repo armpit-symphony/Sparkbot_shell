@@ -1,6 +1,6 @@
 # Public Release Handoff
 
-Updated: 2026-05-22
+Updated: 2026-05-23
 
 Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
 
@@ -9,6 +9,18 @@ This handoff is for planning and classification in `Sparkbot_shell`. No Sparkbot
 ## Public MVP Identity
 
 Sparkbot Shell is the public open-source self-hosted AI workstation shell for local-first agent work. The main hook is Round Table meetings for your AI agents.
+
+## Target Users
+
+Sparkbot Shell is aimed at:
+
+- Hobbyists who want a self-hosted AI workstation they can inspect and shape.
+- Local AI builders running Ollama, LM Studio, llama.cpp / llama-server, or OpenAI-compatible local endpoints.
+- Model tinkerers comparing local, subscription, and bring-your-own provider seats.
+- Agent experimenters who want Round Table meetings and configurable specialty roles.
+- Self-hosters who prefer local-first desktop/server ownership over hosted SaaS agents.
+- Open-source automation enthusiasts who want clear setup, safe controls, and extensible shells before runtime power.
+- Users who want local control and explicit confirmations instead of hidden autonomy or surprise external sends.
 
 The public system model:
 

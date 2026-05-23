@@ -59,7 +59,7 @@ The newer layered line already contains and expands the handoff document set:
 
 No blocking content needs to be cherry-picked from `public-release-decoupling-handoff` into the current shell baseline.
 
-Non-blocking carry-forward candidates, if Phil wants extra detail preserved:
+Folded into active docs in the follow-up reconciliation commit:
 
 - The original target-user list: hobbyists, self-hosters, model tinkerers, agent experimenters, open-source automation users, and users avoiding hosted SaaS agents.
 - The exact original scan-term block, including `remote.sparkpitlabs.com`, `/home/sparky`, `/home/ubuntu`, `104.236`, `DigitalOcean`, `AWS`, `Robo OS`, `MCP`, `Vault`, and `breakglass`.
@@ -67,7 +67,7 @@ Non-blocking carry-forward candidates, if Phil wants extra detail preserved:
 - More granular long-tail feature classification rows for policy simulation, persistent approvals, audit timeline, connector health, Token Guardian, terminal/browser/code execution, email/calendar/drive connectors, Jira/Linear/Notion/Confluence, GitHub tools, installer/Tauri, Docker/server install, and branding assets.
 - The older legal/license/security review specifics: connector terms, vulnerability reporting, Tauri signing posture, trademarks, third-party logos, screenshots, and sample data.
 
-The only older baseline detail that should remain historical, not current, is the R&D reference note `v1.6.81` / `1cd250fb29daaf3bdf6534627ec1b689ad37561c`. The layered shell docs now cite the later reference source branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
+The remaining older baseline detail that should stay historical, not current, is the R&D reference note `v1.6.81` / `1cd250fb29daaf3bdf6534627ec1b689ad37561c`. The layered shell docs now cite the later reference source branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
 
 ## Merge / Cherry-Pick Recommendation
 
