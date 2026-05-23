@@ -5,7 +5,7 @@ Updated: 2026-05-23
 ## Current Preview
 
 - Current status color: YELLOW.
-- Current branch: `public-release-mobile-qa-fixes`.
+- Current branch: `public-release-physical-qa-record`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -15,6 +15,12 @@ Updated: 2026-05-23
 - Likely future public repo: `sparkpit-labs/Sparkbot`.
 
 YELLOW means the package may be used for internal/staging review, but public announcement is not approved until Phil explicitly approves and physical-device mobile QA is complete.
+
+Readiness rules:
+
+- Physical-device 390px QA is `REQUIRED_FOR_GREEN`.
+- Physical-device status is `MANUAL_REQUIRED` until a true physical run is completed.
+- Connector/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for this shell artifact and does not block static readiness unless runtime claims are added.
 
 ## Included
 
@@ -61,7 +67,7 @@ YELLOW means the package may be used for internal/staging review, but public ann
 ## Remaining Blockers
 
 - Physical-device 390px browser QA.
-- Connector delivery/private recall remains YELLOW/UNKNOWN until live test credentials/channels are configured and tested.
+- Connector/private recall: `OUT_OF_SCOPE_STATIC_PREVIEW` (future runtime-contract validation item).
 - Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
 
 ## Risk Table
@@ -69,7 +75,7 @@ YELLOW means the package may be used for internal/staging review, but public ann
 | Risk | Current state | Color | Required action |
 |---|---|---|---|
 | Mobile QA | Edge emulated 375px/390px/768px/desktop QA passed; true physical-device QA is NOT_RUN. | YELLOW | Complete physical-device QA or get Phil-provided physical confirmation before GREEN. |
-| Connector/private recall unknown | External delivery/private recall is shell-only and live-QA UNKNOWN. | YELLOW | Keep YELLOW/UNKNOWN until test-only live connector QA passes. |
+| Connector/private recall | `OUT_OF_SCOPE_STATIC_PREVIEW` in the static shell artifact. | N/A | Validate in future runtime contract layer; not a static-preview blocker. |
 | License | MIT license added and package metadata says MIT. | GREEN | Keep LICENSE in artifact and package allowlists. |
 | Artifact contents | Preview artifact inspection passed against the public-safe allowlist. | GREEN | Re-run artifact inspection before any upload. |
 | Public messaging | Docs say internal/staging preview only and no announcement without Phil approval. | YELLOW | Phil must choose the next decision option. |
