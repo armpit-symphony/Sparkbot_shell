@@ -7,7 +7,10 @@
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Readiness: `GREEN_CANDIDATE`
 - Public release status: `NOT_RELEASED`
-- Tag/publish/upload/announcement: `NOT_DONE`
+- NO_TAG: `NOT_DONE`
+- NO_UPLOAD: `NOT_DONE`
+- NO_ANNOUNCEMENT: `NOT_DONE`
+- Option D status: `BLOCKED`
 
 ## What Passed
 
@@ -40,4 +43,4 @@
 ## Release Approval State
 
 - Candidate remains internal/staging static readiness only.
-- `Option D` remains blocked pending Phil approval for repo home, tag, and versioning execution.
+- `Option D` remains blocked pending Phil approval for repo home, version/tag, artifact destination, and announcement policy.

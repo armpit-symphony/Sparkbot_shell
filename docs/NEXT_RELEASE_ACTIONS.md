@@ -4,51 +4,76 @@ Updated: 2026-05-24
 
 ## Decision Options
 
-### Option A — Keep GREEN_CANDIDATE Internal Only
+### Option A - Keep GREEN_CANDIDATE Internal Only
 
-Hold current state as internal/staging only. No public tag/publish/upload/announcement.
+Keep current static-preview posture and continue internal reconciliation only.
 
-### Option B — Merge/Reconcile Release-Candidate Branch
+- No public tag/publish/upload/announcement.
+- No repo move decisions applied to this phase.
 
-Use `public-release-record-physical-qa-pass` as the current release-candidate base and reconcile any remaining doc/status drift into one canonical branch.
+### Option B - Merge/Reconcile Release-Candidate Branch
 
-### Option C — Prepare Official Public Repo Move To `sparkpit-labs/Sparkbot`
+Use the `public-release-rc-consolidation-decision-packet` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
 
-Prepare migration package, ownership naming, and version alignment for the eventual public home without executing public announcement actions yet.
+- Validate all prior RC facts are preserved.
+- Reconcile any status drift.
+- Prepare the official Option-D decision packet.
 
-### Option D — Approve Public Preview Tag/Upload/Announcement
+### Option C - Prepare Official Public Repo Move
 
-Execute public-facing release operations only after explicit Phil approval for scope, destination, and wording.
+Prepare official movement plan without executing Option D.
 
-### Option E — Begin Frontend-Only MVP Source Import From Approved Classification
+- Package naming and link/path audit.
+- Optional copy path to the final public repo.
+- Ownership and branding alignment.
 
-Continue static-shell scope by importing only approved public-safe frontend layers with no runtime/backend behavior.
+### Option D - Approve Public Preview Tag/Upload/Announcement
 
-### Option F — Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
+Run public-facing release actions only after Phil approval.
 
-Start contracts-first integration prep: docs, types, and fixtures only. No live runtime wiring.
+- repo home
+- version/tag
+- artifact destination
+- release note/changelog approach
+- announcement channel
 
-### Option G — Pause Sparkbot And Return To LIMA AI OS Universal Contract Work
+### Option E - Begin Frontend-Only MVP Source Import From Approved Classification
 
-Shift effort to broader LIMA contracts and return to shell release actions later.
+Continue static-shell scope with safe UI-only imports only.
+
+- No backend/runtime behavior in this phase.
+
+### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
+
+Add contract-first install docs/fixtures only.
+
+- No live runtime wiring.
+
+### Option G - Pause Sparkbot and Return to LIMA AI OS Universal Contract Work
+
+Suspend release actions and continue architecture-level contract cleanup elsewhere.
 
 ## Recommendation
 
-Do not take Option D until Phil decides final public repo home and versioning.
+Do not run Option D now.
 
-Recommended next technical action:
+### Immediate Recommended Path
 
-1. Reconcile/merge the best release-candidate branch.
-2. Then choose between:
-   - official public repo move prep (Option C), or
-   - frontend-only MVP source import planning (Option E).
-
-Parallel-ready planning action:
-
-- Run Option F docs/fixtures work in a separate branch if desired, but keep runtime behavior out of `Sparkbot_shell`.
+1. Keep `public-release-rc-consolidation-decision-packet` as canonical pre-Option-D branch.
+2. Publish one final Option-D decision packet for Phil approval.
+3. Execute remaining approval steps only after Phil confirms:
+   - final repo home
+   - final version/tag
+   - artifact destination
+   - announcement policy
 
 ## Operational Guardrails
 
-- No backend/runtime additions in this decision phase.
-- No tag/publish/upload/announcement without explicit Phil approval.
-- Preserve connector/private-recall `UNKNOWN/OUT_OF_SCOPE_STATIC_PREVIEW` messaging for static shell.
+- Current state remains `GREEN_CANDIDATE`.
+- Current status is `NOT_RELEASED`.
+- Do not perform `Option D` until Phil confirms:
+  - repo home
+  - version/tag
+  - announcement policy
+  - destination for artifact upload
+- `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.

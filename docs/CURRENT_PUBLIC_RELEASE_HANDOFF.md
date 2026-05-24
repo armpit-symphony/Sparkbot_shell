@@ -15,8 +15,9 @@ Fresh docs-first audit of `Sparkbot_shell` as the clean public shell staging rep
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Readiness color: `GREEN_CANDIDATE` (internal/staging only, not public release)
+- MIT license status: selected and present.
 
-## Current Best Release-Candidate Branch
+## Current Best Release-Candidate Branch and Consolidation Status
 
 Best branch: `public-release-record-physical-qa-pass`
 
@@ -47,6 +48,29 @@ Branches not found in local/origin listing during audit:
 - Confirmed source line: `public-release-shell-current-audit-handoff` is cleanly based on `public-release-record-physical-qa-pass`.
 - Confirmed physical QA pass and `GREEN_CANDIDATE` status are present and unchanged after handoff updates.
 - No additional RC branch content was required to reconcile before continuing docs-only work.
+- Current branch consolidates candidate state from the prior check:
+  - Physical-device QA pass preserved.
+  - `GREEN_CANDIDATE` preserved.
+  - Missing planning docs remain present.
+  - `DocsPage.tsx` branch-pinned URL is fixed to local docs paths.
+  - Static preview artifact doc boundary and metadata are preserved.
+  - MIT package/license posture is preserved.
+
+## Candidate Integrity Check (Current Branch)
+
+- Includes physical-device QA pass: yes (`2026-05-23` recorded by Phil).
+- Includes `GREEN_CANDIDATE`: yes.
+- Includes release-candidate docs: yes.
+- Includes missing planning docs: yes.
+- Includes DocsPage URL fix: yes (`src/pages/DocsPage.tsx` uses `./docs`).
+- Includes static preview artifact docs allowlist: yes.
+- Includes MIT license status: yes.
+- Package/version/artifact naming preserved:
+  - package/version `0.8.0-layer8-preview`
+  - candidate `sparkbot-shell-preview-0.8.0-layer8`
+  - path `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
+- Important older branch work status:
+  - listed legacy branches remain valid ancestors and contain partial stage artifacts, no new pending source/runtime work.
 
 ## Source Boundary Audit
 

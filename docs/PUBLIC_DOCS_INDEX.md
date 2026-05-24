@@ -6,6 +6,9 @@ This is the user-facing docs index for future public release artifacts. It is se
 
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
+Current release posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
+Option D is blocked until Phil approves final repo home, final version/tag, artifact destination, and announcement policy.
+
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 
 ## Public Artifact Docs
@@ -59,6 +62,10 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Public preview release candidate](PUBLIC_PREVIEW_RELEASE_CANDIDATE.md)
 - [Public preview launch checklist](PUBLIC_PREVIEW_LAUNCH_CHECKLIST.md)
 - [Public preview messaging draft](PUBLIC_PREVIEW_MESSAGING_DRAFT.md)
+- [Final public release decision packet](FINAL_PUBLIC_RELEASE_DECISION_PACKET.md)
+- [Official repo move plan](OFFICIAL_REPO_MOVE_PLAN.md)
+- [Version/tag decision](VERSION_TAG_DECISION.md)
+- [Public release action checklist](PUBLIC_RELEASE_ACTION_CHECKLIST.md)
 
 ## Release Artifact Rule
 
