@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-product-demo-polish`.
+- Current branch: `frontend-only-workstation-static-adaptation`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -30,6 +30,7 @@ Readiness rules:
 - Polished public-preview UX for Workstation, Round Table, model-stack seats, Guardian basics, and Robo teaser.
 - Static fixture previews for Files/Knowledge, Memory, Tasks/Reminders, and a unified Demo Room context.
 - Final product-demo storyline polish across Workstation, Round Table, and demo fixtures.
+- Wave 1 candidate #1 complete: Workstation visual layout refinement as manual static adaptation only.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
@@ -50,6 +51,7 @@ Readiness rules:
 - Robotics/IoT control.
 - LIMA AI OS, Arc Bot, LIMA Office, or LIMA IT wiring.
 - Sparkbot R&D source code.
+- Direct R&D source-file copy.
 
 ## Validation Already Passed
 
@@ -103,12 +105,13 @@ It is not approved for public announcement, tag, npm publish, upload, or final p
 
 Option B status: completed and passed with Phil manual verification. Current work continues as frontend-only staging refinement.
 Current product-demo polish pass is complete and keeps the same static-only boundary.
+Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
 
 ## Recommended Next Step
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
 
 - Continue frontend-only MVP shell refinement and contract-readiness prep in staging.
-- Decide whether to keep static iteration or begin carefully scoped frontend-only import planning.
+- Continue Wave 1 candidate-by-candidate static adaptation under classification and stop gates.
 - Option C only when Phil approves a concrete official repo-home action.
 - Option D for public announcement/tag/upload after explicit Phil approval.

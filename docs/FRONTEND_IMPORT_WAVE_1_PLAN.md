@@ -1,8 +1,8 @@
 # Frontend Import Wave 1 Plan
 
-Updated: 2026-05-24  
-Branch: `frontend-only-import-planning`  
-Status: planning only, no source import approved yet
+Updated: 2026-05-24
+Branch: `frontend-only-workstation-static-adaptation`
+Status: candidate #1 executed (manual static adaptation only)
 
 ## Wave 1 Objective
 
@@ -30,6 +30,11 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 - Rewrite/stub: remove all terminal, MCP, API, storage, and env-gated paths.
 - Stop gates: any pull of `apiFetch`, websocket, terminal hooks, session/local storage.
 - Validation: visual regression check at desktop/mobile, forbidden API scan.
+- Execution status: COMPLETED in `frontend-only-workstation-static-adaptation`.
+- Execution notes:
+  - manual static adaptation only
+  - no direct source-file copy from R&D
+  - no runtime/API/storage additions
 
 ### Candidate 2: Round Table visual flow refinements
 
@@ -90,5 +95,5 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 
 ## Current State
 
-No R&D source code import has been executed in this branch.
-
+Wave 1 candidate #1 is complete as a static-only adaptation.
+Remaining Wave 1 candidates are still pending explicit approval.

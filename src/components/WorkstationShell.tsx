@@ -6,7 +6,7 @@ import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { StaticFixtureContentPreview } from "./StaticFixtureContentPreview";
 import { StatusBadge } from "./StatusBadge";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
-import { demoRoomFixture } from "../data/demoFixtureContent";
+import { demoFileCards, demoMemoryCards, demoRoomFixture, demoTaskCards } from "../data/demoFixtureContent";
 
 type WorkstationShellProps = {
   shellState: ShellState;
@@ -82,6 +82,13 @@ const demoStorySteps = [
   ["Artifact", "Meeting note artifact remains local demo content in this shell."],
 ] as const;
 
+const modelStackDeskPlan = [
+  { title: "Primary desk", match: "Primary", role: "Main operator seat" },
+  { title: "Backup 1 desk", match: "Backup 1", role: "Fallback cloud seat" },
+  { title: "Backup 2 desk", match: "Backup 2", role: "Optional alternate seat" },
+  { title: "Heavy Hitter desk", match: "Heavy Hitter", role: "High-load local seat" },
+] as const;
+
 export function WorkstationShell({ shellState }: WorkstationShellProps) {
   const activeSeats = shellState.modelSeats.filter((seat) => seat.enabled);
   const manager = shellState.specialtyAgents.find((agent) => agent.id === "agent-meeting-manager");
@@ -99,6 +106,13 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
     (connector) => connector.setupStatus === "live_qa_unknown",
   ).length;
   const unsupportedConnector = shellState.connectorCards.find((connector) => connector.kind === "sms");
+  const modelStackDesks = modelStackDeskPlan.map((lane) => ({
+    ...lane,
+    seat: shellState.modelSeats.find((seat) => seat.label.includes(lane.match)),
+  }));
+  const inviteSeat = shellState.modelSeats.find((seat) => seat.label.includes("BYO"));
+  const readyStackCount = modelStackDesks.filter((lane) => lane.seat?.setupStatus === "configured").length;
+  const demoFixtureCount = demoFileCards.length + demoMemoryCards.length + demoTaskCards.length;
 
   return (
     <section className="page-section">
@@ -134,6 +148,126 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <p>{detail}</p>
           </article>
         ))}
+      </section>
+
+      <section className="config-panel office-floor-panel" aria-label="Sparkbot Workstation office-floor preview">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">AI office floor preview</p>
+            <h2>Workstation map: desks, meeting hub, safety, and fixtures</h2>
+            <p>
+              Manual static adaptation inspired by R&D workstation layout concepts only. No runtime desks, terminal
+              sessions, provider calls, connector sends, or hardware controls are active.
+            </p>
+          </div>
+        </div>
+        <div className="office-floor-grid">
+          <article className="office-zone">
+            <span className="zone-tag">Main Desk</span>
+            <h3>Sparkbot desk</h3>
+            <p>Primary operator surface for chat, routing, and workspace flow.</p>
+            <small>Static preview. No live runtime channel.</small>
+            <a className="inline-link" href="#/chat">
+              Open Chat shell
+            </a>
+          </article>
+          <article className="office-zone">
+            <span className="zone-tag">Meeting Hub</span>
+            <h3>Round Table</h3>
+            <p>Hero room for framing, perspectives, synthesis, assignment, and recommendation artifact preview.</p>
+            <small>Demo fixture only. No live room API or agent calls.</small>
+            <a className="inline-link" href="#/roundtable">
+              Open Round Table shell
+            </a>
+          </article>
+          <article className="office-zone">
+            <span className="zone-tag">Safety Posture</span>
+            <h3>Guardian basics</h3>
+            <p>Risky actions are marked for future confirmation gates.</p>
+            <small>No approval enforcement runtime is implemented.</small>
+            <a className="inline-link" href="#/command-center">
+              Open Command Center shell
+            </a>
+          </article>
+          <article className="office-zone">
+            <span className="zone-tag">Fixture Context</span>
+            <h3>Files, memory, tasks</h3>
+            <p>{`${demoFixtureCount} demo fixtures are tied to ${demoRoomFixture.title}.`}</p>
+            <small>Static cards only. No persistence or scheduling.</small>
+          </article>
+          <article className="office-zone">
+            <span className="zone-tag">Robo Teaser</span>
+            <h3>Robo preview wing</h3>
+            <p>Future robotics and IoT direction remains a teaser surface only.</p>
+            <small>No hardware control, MCP calls, or runtime bridge.</small>
+            <a className="inline-link" href="#/robo-preview">
+              Open Robo teaser
+            </a>
+          </article>
+          <article className="office-zone">
+            <span className="zone-tag">LIMA Future Gate</span>
+            <h3>LIMA contract-ready layer</h3>
+            <p>Shell UX is staged for future contract/install integration phases.</p>
+            <small>No LIMA runtime bundled or wired in this preview.</small>
+          </article>
+        </div>
+      </section>
+
+      <section className="config-panel desk-lanes-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Model stack desks</p>
+            <h2>Primary, backups, heavy-hitter, and invite seat</h2>
+            <p>
+              Desk cards clarify who sits where on the workstation floor. Seat states are static labels from fixture
+              data and do not call providers.
+            </p>
+          </div>
+        </div>
+        <div className="desk-lane-grid">
+          {modelStackDesks.map((desk) => (
+            <article className="desk-lane-card" key={desk.title}>
+              <div className="card-heading">
+                <div>
+                  <span className="zone-tag">{desk.title}</span>
+                  <h3>{desk.seat?.label ?? "Unassigned desk"}</h3>
+                </div>
+                <StatusBadge status={desk.seat?.setupStatus ?? "setup_needed"} />
+              </div>
+              <p>{desk.role}</p>
+              <small>{desk.seat?.modelId ?? "No model assigned in this fixture."}</small>
+            </article>
+          ))}
+          <article className="desk-lane-card">
+            <div className="card-heading">
+              <div>
+                <span className="zone-tag">Invite seat</span>
+                <h3>{inviteSeat?.label ?? "BYO seat placeholder"}</h3>
+              </div>
+              <StatusBadge status={inviteSeat?.setupStatus ?? "setup_needed"} />
+            </div>
+            <p>Bring-your-own model seat concept for future user-defined setup.</p>
+            <small>No key entry or provider setup runtime exists in this shell.</small>
+          </article>
+        </div>
+        <div className="floor-status-grid">
+          <article>
+            <strong>{readyStackCount}</strong>
+            <span>configured stack desks</span>
+          </article>
+          <article>
+            <strong>{shellState.specialtyAgents.length}</strong>
+            <span>specialty wing agents</span>
+          </article>
+          <article>
+            <strong>{demoRoomFixture.files.length}</strong>
+            <span>demo room files</span>
+          </article>
+          <article>
+            <strong>{demoRoomFixture.tasks.length}</strong>
+            <span>demo room tasks</span>
+          </article>
+        </div>
       </section>
 
       <div className="workstation-grid primary">
@@ -317,6 +451,40 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
         retrievalPreview={shellState.memoryContext.retrievalPreview}
         compact
       />
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Station-to-fixture tie-in</p>
+            <h2>Demo room context for the office floor</h2>
+            <p>
+              Workstation desks, Round Table output, and Files/Memory/Tasks fixtures all point to the same demo room.
+            </p>
+          </div>
+        </div>
+        <div className="mini-card-grid">
+          <article className="template-card">
+            <strong>{demoRoomFixture.title}</strong>
+            <p>{demoRoomFixture.roundTableOutcome}</p>
+            <small>Round Table artifact preview</small>
+          </article>
+          <article className="template-card">
+            <strong>Safety boundary</strong>
+            <p>{demoRoomFixture.guardianPosture}</p>
+            <small>No runtime enforcement in shell preview</small>
+          </article>
+          <article className="template-card">
+            <strong>Contract-ready next step</strong>
+            <p>{demoRoomFixture.limaReadiness}</p>
+            <small>Future LIMA contract layer only</small>
+          </article>
+          <article className="template-card">
+            <strong>Runtime-disabled posture</strong>
+            <p>No provider calls, connector calls, scheduler jobs, persistence, or hardware control.</p>
+            <small>Static preview / demo fixture</small>
+          </article>
+        </div>
+      </section>
 
       <StaticFixtureContentPreview />
 

@@ -49,6 +49,7 @@ Continue static-shell scope with safe UI-only imports only.
   - `FRONTEND_IMPORT_WAVE_1_PLAN.md`
   - `FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
   - `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
+  - `WAVE_1_WORKSTATION_ADAPTATION_PLAN.md`
 
 ### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
 
@@ -72,15 +73,16 @@ Do not run Option D now.
    - Option C remains future,
    - no runtime behavior is added.
 3. Use classification output to pick exactly one Wave 1 candidate for manual static adaptation.
-4. Run full import validation checklist and stop for review before any second candidate.
-5. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
-6. Execute remaining approval steps only after Phil confirms:
+4. Wave 1 candidate #1 (Workstation visual refinement) is complete with static-only adaptation.
+5. Next recommended candidate is Wave 1 candidate #2 (Round Table visual refinement), then stop for review.
+6. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
+7. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
    - README/repo URLs are final-safe
-7. `Option D` remains blocked until explicit approvals for the above and release-note policy.
+8. `Option D` remains blocked until explicit approvals for the above and release-note policy.
 
 ## Operational Guardrails
 

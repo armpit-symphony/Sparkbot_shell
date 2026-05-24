@@ -1,12 +1,12 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24
-Branch: `frontend-only-import-planning`
+Branch: `frontend-only-workstation-static-adaptation`
 
 ## Summary
 
 Frontend-only product-demo polish remains in place.
-This pass adds classification-gated import planning only, with no source import executed.
+This pass executes Wave 1 candidate #1 as a manual static Workstation visual adaptation from R&D reference concepts.
 
 ## Surfaces Represented
 
@@ -64,12 +64,13 @@ This pass adds classification-gated import planning only, with no source import 
 - Public preview polish: stronger first-screen product framing, clearer Round Table hero flow, sharper static/runtime boundary language, and fuller fixture-driven product-shell coverage.
 - Public preview polish: improved copy density, stronger section rhythm, and better cross-surface demo flow discoverability.
 - Import-planning readiness: candidate classification, stub/rewrite rules, and Wave 1 validation checklist are now documented.
+- Wave 1 execution: Workstation now presents clearer AI-office floor grouping (main desk, model stack desks, invite seat, specialty wing, Round Table hub, fixture context, Guardian posture, Robo teaser, and LIMA-ready placement).
 
 ## Recommended Next Source Import Step
 
-Frontend-only continuation (still planning-gated):
+Frontend-only continuation (still classification-gated):
 
-1. Select a single Wave 1 candidate from `FRONTEND_IMPORT_WAVE_1_PLAN.md`.
-2. Execute a manual static adaptation only (no wholesale file copy).
+1. Select Wave 1 candidate #2 (Round Table visual refinement) for next pass.
+2. Execute manual static adaptation only (no wholesale file copy).
 3. Run `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`.
-4. Stop for review before any second candidate.
+4. Stop for review before any next candidate.

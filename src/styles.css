@@ -623,6 +623,60 @@ textarea {
   gap: 14px;
 }
 
+.office-floor-panel,
+.desk-lanes-panel {
+  gap: 16px;
+}
+
+.office-floor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.office-zone,
+.desk-lane-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(24, 34, 32, 0.06);
+}
+
+.office-zone small,
+.desk-lane-card small {
+  color: #60756f;
+  font-size: 0.78rem;
+}
+
+.zone-tag {
+  width: max-content;
+  max-width: 100%;
+  padding: 3px 8px;
+  color: #2c463c;
+  background: #e5f3ed;
+  border: 1px solid #c4ddd2;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.office-zone .inline-link {
+  margin-left: 0;
+  width: max-content;
+}
+
+.desk-lane-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .workstation-grid.primary {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1517,6 +1571,8 @@ textarea {
   .workstation-grid,
   .workstation-grid.primary,
   .workstation-grid.secondary,
+  .office-floor-grid,
+  .desk-lane-grid,
   .demo-story-grid,
   .product-snapshot-grid,
   .roundtable-overview-grid,

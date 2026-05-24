@@ -1,7 +1,7 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24
-Branch: `frontend-only-import-planning`
+Branch: `frontend-only-workstation-static-adaptation`
 
 ## Scope
 
@@ -56,6 +56,9 @@ This revision also establishes import-planning baseline context. No runtime beha
   - `docs/FRONTEND_IMPORT_WAVE_1_PLAN.md`
   - `docs/FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
   - `docs/FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
+  - `docs/WAVE_1_WORKSTATION_ADAPTATION_PLAN.md`
+- Current execution add-on:
+  - Workstation visual layout refinement completed as manual static adaptation from R&D reference concepts.
 
 ## Public MVP Surfaces Present
 
@@ -97,6 +100,7 @@ This revision also establishes import-planning baseline context. No runtime beha
 - No terminal/browser execution added.
 - No robotics/IoT controls added.
 - No file upload/read/write behavior added.
+- No direct R&D source file copy performed.
 
 ## Public Release Polish Notes
 
@@ -113,5 +117,5 @@ This revision also establishes import-planning baseline context. No runtime beha
 2. Keep Round Table as the hero demo sequence and recommendation artifact surface.
 3. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
 4. Keep LIMA-ready messaging contract-first and non-runtime.
-5. Use classification-gated Wave 1 planning docs before any import execution.
-6. Keep import execution blocked until explicit Phil approval for a selected candidate.
+5. Keep Wave 1 execution classification-gated and candidate-by-candidate.
+6. Candidate #2 (Round Table visual refinement) is the next recommended Wave 1 candidate.
