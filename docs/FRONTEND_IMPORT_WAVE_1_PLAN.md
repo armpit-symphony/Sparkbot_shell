@@ -1,8 +1,8 @@
 # Frontend Import Wave 1 Plan
 
 Updated: 2026-05-24
-Branch: `frontend-only-model-seat-static-adaptation`
-Status: candidates #1, #2, and #3 executed (manual static adaptation only)
+Branch: `frontend-only-docs-info-static-adaptation`
+Status: candidates #1 through #4 executed (manual static adaptation only)
 
 ## Wave 1 Objective
 
@@ -76,6 +76,12 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 - Rewrite/stub: keep copy tied to public static boundaries and release-state labels.
 - Stop gates: any runtime navigation/auth assumptions.
 - Validation: docs links remain public-safe and branch-unpinned.
+- Execution status: COMPLETED in `frontend-only-docs-info-static-adaptation`.
+- Execution notes:
+  - manual static adaptation only
+  - no direct source-file copy from R&D
+  - no runtime/API/storage additions
+- Added Wave 1 docs/info checkpoint language and explicit next-gate note.
 
 ### Candidate 5: Responsive layout helper
 
@@ -106,5 +112,5 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 
 ## Current State
 
-Wave 1 candidates #1, #2, and #3 are complete as static-only adaptations.
-Remaining Wave 1 candidates are still pending explicit approval.
+Wave 1 candidates #1 through #4 are complete as static-only adaptations.
+Recommended next step: run a Wave 1 checkpoint/audit over Workstation, Round Table, Model/Invite, and Docs/info before any deeper import or runtime planning.

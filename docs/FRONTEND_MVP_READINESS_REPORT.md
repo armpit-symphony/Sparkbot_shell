@@ -1,13 +1,13 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24
-Branch: `frontend-only-model-seat-static-adaptation`
+Branch: `frontend-only-docs-info-static-adaptation`
 
 ## Summary
 
 Frontend-only product-demo polish remains in place.
-This pass executes Wave 1 candidate #2 as a manual static Round Table visual adaptation from R&D reference concepts.
-This pass also executes Wave 1 candidate #3 as a manual static Model stack + Invite Wing visual adaptation from R&D reference concepts.
+This pass completes Wave 1 candidate #4 as a manual static Docs/info visual refinement from R&D reference concepts.
+Wave 1 candidate #2 and #3 refinements remain active from prior static passes.
 
 ## Surfaces Represented
 
@@ -68,12 +68,13 @@ This pass also executes Wave 1 candidate #3 as a manual static Model stack + Inv
 - Wave 1 execution: Workstation now presents clearer AI-office floor grouping (main desk, model stack desks, invite seat, specialty wing, Round Table hub, fixture context, Guardian posture, Robo teaser, and LIMA-ready placement).
 - Wave 1 execution: Round Table now presents clearer meeting mission, chair-led stage rail, owner interrupt concept, seat/model summary, and artifact/follow-up fixture tie-in.
 - Wave 1 execution: Model stack + Invite Wing now present a clearer role hierarchy, static setup-flow lane, Round Table/specialty coverage tie-ins, and explicit no-key/no-provider/no-runtime badges.
+- Wave 1 execution: Docs/info command center now presents explicit static-preview posture, included/excluded surface boundaries, and release-state guidance.
 
 ## Recommended Next Source Import Step
 
 Frontend-only continuation (still classification-gated):
 
-1. Select Wave 1 candidate #4 (docs/info visual refinement) for next pass.
-2. Execute manual static adaptation only (no wholesale file copy).
-3. Run `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`.
-4. Stop for review before any next candidate.
+1. Candidate #4 (docs/info visual refinement) is complete.
+2. Run a Wave 1 checkpoint/audit covering Workstation, Round Table, Model/Invite, and Docs/info adaptations.
+3. Use `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md` as the audit evidence baseline.
+4. Stop before any deeper import or runtime planning until explicit approval.

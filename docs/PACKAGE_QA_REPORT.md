@@ -2,7 +2,7 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-model-seat-static-adaptation`
+Branch: `frontend-only-docs-info-static-adaptation`
 
 ## Locked Preview Package
 
@@ -13,7 +13,7 @@ Branch: `frontend-only-model-seat-static-adaptation`
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
-This Model stack + Invite Wing adaptation pass updates static UI/copy/layout only and does not change the package allowlist.
+This Docs/info adaptation pass updates static UI/copy/layout only and does not change the package allowlist.
 
 ## Package Dry Run
 
@@ -101,6 +101,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Wave 1 Workstation adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 Round Table adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
+- Wave 1 Docs/info adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 
 ## Connector/private recall classification
 

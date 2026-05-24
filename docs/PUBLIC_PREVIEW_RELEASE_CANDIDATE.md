@@ -24,6 +24,7 @@
 - Wave 1 candidate #1 completed: Workstation visual layout refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
+- Wave 1 candidate #4 completed: Docs/info visual refinement completed via manual static adaptation from R&D + shell docs concepts.
 
 ## What is Included
 
@@ -77,3 +78,4 @@
 - No direct R&D source code copy was used for Wave 1 candidate #1.
 - No direct R&D source code copy was used for Wave 1 candidate #2.
 - No direct R&D source code copy was used for Wave 1 candidate #3.
+- No direct R&D source code copy was used for Wave 1 candidate #4.

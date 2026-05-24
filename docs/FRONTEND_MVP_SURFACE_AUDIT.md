@@ -1,7 +1,7 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24
-Branch: `frontend-only-model-seat-static-adaptation`
+Branch: `frontend-only-docs-info-static-adaptation`
 
 ## Scope
 
@@ -63,6 +63,7 @@ This revision also establishes import-planning baseline context. No runtime beha
   - Workstation visual layout refinement completed as manual static adaptation from R&D reference concepts.
   - Round Table visual flow refinement completed as manual static adaptation from R&D reference concepts.
   - Model stack + Invite Wing visual refinement completed as manual static adaptation from R&D reference concepts.
+  - Docs/info visual refinement completed as manual static adaptation from R&D + shell command-center design review.
 
 ## Public MVP Surfaces Present
 
@@ -122,4 +123,5 @@ This revision also establishes import-planning baseline context. No runtime beha
 3. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
 4. Keep LIMA-ready messaging contract-first and non-runtime.
 5. Keep Wave 1 execution classification-gated and candidate-by-candidate.
-6. Candidate #4 (docs/info visual refinement) is the next recommended Wave 1 candidate.
+6. Candidate #4 (docs/info visual refinement) is now complete.
+7. Stop for a Wave 1 checkpoint/audit before any deeper source import or runtime planning.

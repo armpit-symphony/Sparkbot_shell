@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-model-seat-static-adaptation`.
+- Current branch: `frontend-only-docs-info-static-adaptation`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -33,6 +33,7 @@ Readiness rules:
 - Wave 1 candidate #1 complete: Workstation visual layout refinement as manual static adaptation only.
 - Wave 1 candidate #2 complete: Round Table visual flow refinement as manual static adaptation only.
 - Wave 1 candidate #3 complete: Model stack + Invite Wing visual flow refinement as manual static adaptation only.
+- Wave 1 candidate #4 complete: Docs/info visual refinement as manual static adaptation only.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
@@ -106,16 +107,17 @@ The static preview package is complete for internal/staging use and physical/mob
 It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
 Option B status: completed and passed with Phil manual verification. Current work continues as frontend-only staging refinement.
-Current product-demo polish pass is complete and keeps the same static-only boundary.
+Current product-demo and docs/info polish pass is complete and keeps the same static-only boundary.
 Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #3 (Model stack + Invite Wing visual adaptation) is complete with no runtime/API/storage additions.
+Wave 1 candidate #4 (Docs/info visual refinement) is complete with no runtime/API/storage additions.
 
 ## Recommended Next Step
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
 
 - Continue frontend-only MVP shell refinement and contract-readiness prep in staging.
-- Continue Wave 1 candidate-by-candidate static adaptation under classification and stop gates.
+- Execute a Wave 1 checkpoint/audit covering Workstation, Round Table, Model/Invite, and Docs/info before any deeper source import or runtime planning.
 - Option C only when Phil approves a concrete official repo-home action.
 - Option D for public announcement/tag/upload after explicit Phil approval.

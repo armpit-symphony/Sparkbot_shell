@@ -61,6 +61,8 @@ Priority labels:
 - Wave 1 candidate #1 (Workstation visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - Wave 1 candidate #2 (Round Table visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
+- Wave 1 candidate #4 (Docs/info visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - No direct R&D source code copy was performed for Wave 1 candidate #1.
 - No direct R&D source code copy was performed for Wave 1 candidate #2.
 - No direct R&D source code copy was performed for Wave 1 candidate #3.
+- No direct R&D source code copy has been performed for Wave 1 candidate #4.

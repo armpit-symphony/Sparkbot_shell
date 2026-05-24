@@ -10,23 +10,24 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 - No public tag/publish/upload/announcement.
 - No repo move decisions applied to this phase.
+- Keep static-only boundaries in place until final approval.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use `frontend-only-model-seat-static-adaptation` as the current canonical staging branch for frontend MVP demo polish and Wave 1 static adaptations, and keep docs/charts/checks in one file set.
+Use Wave 1 checkpoint/audit results as the reconciliation basis before any deeper work.
 
-- Validate all prior RC facts are preserved.
-- Reconcile any status drift.
-- Prepare the official Option-D decision packet.
+- Confirm all prior Wave 1 execution claims are still true.
+- Confirm no runtime/proxy/protocol calls were introduced.
+- Confirm artifact and release-state boundary statements remain unchanged.
 
 ### Option C - Prepare Official Public Repo Move
 
 Prepare official movement plan without executing Option D.
 
-- This is currently a **future plan only**.
+- This remains a future plan only.
 - Keep repo move execution blocked while final repo home is TBD.
 - Maintain source-boundary and contract-readiness work in this staging repo.
-- Revisit this option only after Phil confirms a public repo target.
+- Revisit after checkpoint approval and explicit Phil decision.
 
 ### Option D - Approve Public Preview Tag/Upload/Announcement
 
@@ -43,21 +44,15 @@ Run public-facing release actions only after Phil approval.
 Continue static-shell scope with safe UI-only imports only.
 
 - No backend/runtime behavior in this phase.
-- This option is now planning-ready:
-  - `FRONTEND_IMPORT_PLANNING_BASELINE.md`
-  - `FRONTEND_IMPORT_CANDIDATE_MATRIX.md`
-  - `FRONTEND_IMPORT_WAVE_1_PLAN.md`
-  - `FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
-  - `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
-  - `WAVE_1_WORKSTATION_ADAPTATION_PLAN.md`
-  - `WAVE_1_ROUNDTABLE_ADAPTATION_PLAN.md`
-  - `WAVE_1_MODEL_SEAT_ADAPTATION_PLAN.md`
+- Import remains blocked until explicit Phil approval and explicit checkpoint closure.
+- Must follow source classification and stop gates.
 
 ### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
 
-Add contract-first install docs/fixtures only.
+Add contract-first docs/fixtures only.
 
 - No live runtime wiring.
+- No provider/model/connectors/terminal/robotics integration.
 
 ### Option G - Pause Sparkbot and Return to LIMA AI OS Universal Contract Work
 
@@ -69,32 +64,35 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-model-seat-static-adaptation` as the canonical current staging branch for this Wave 1 execution pass.
-2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
-   - release-routing docs are corrected for `repo home TBD`,
-   - Option C remains future,
-   - no runtime behavior is added.
-3. Use classification output to pick exactly one Wave 1 candidate for manual static adaptation.
-4. Wave 1 candidate #1 (Workstation visual refinement) is complete with static-only adaptation.
-5. Wave 1 candidate #2 (Round Table visual refinement) is complete with manual static adaptation only.
-6. Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is complete with manual static adaptation only.
-7. Next recommended candidate is Wave 1 candidate #4 (docs/info visual refinement), then stop for review.
-8. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
-9. Execute remaining approval steps only after Phil confirms:
-   - final repo home
-   - final version/tag
-   - artifact destination
-   - announcement policy
-   - README/repo URLs are final-safe
-10. `Option D` remains blocked until explicit approvals for the above and release-note policy.
+1. Keep `frontend-only-docs-info-static-adaptation` as the current Wave 1 completion branch.
+2. Keep `armpit-symphony/Sparkbot_shell` as the active staging repo.
+3. Confirm final public repo/home remains **TBD**.
+4. Run and record a Wave 1 checkpoint/audit covering:
+   - Workstation visual adaptation
+   - Round Table visual adaptation
+   - Model stack + Invite Wing adaptation
+   - Docs/info adaptation
+5. Wait for explicit Phil approval before any deeper Wave 2 import or runtime planning.
+6. If Phil approves: either
+   - proceed to a deeper candidate pass, or
+   - begin Option C prep execution.
+7. Keep all guardrails active:
+   - `GREEN_CANDIDATE`
+   - `NOT_RELEASED`
+   - `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
+   - no public announcement/public upload/no release action.
 
-## Operational Guardrails
+### Operational Guardrails
 
 - Current state remains `GREEN_CANDIDATE`.
 - Current status is `NOT_RELEASED`.
-- Do not perform `Option D` until Phil confirms:
-  - repo home
-  - version/tag
+- Option D is blocked until Phil approves:
+  - final repo home
+  - final version/tag
   - announcement policy
-  - destination for artifact upload
+  - artifact destination
 - `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
+
+## Exact Current Question to Phil
+
+Approve a **Wave 1 checkpoint/audit** over Workstation, Round Table, Model/Invite, and Docs/info adaptations before any deeper import or runtime planning?
