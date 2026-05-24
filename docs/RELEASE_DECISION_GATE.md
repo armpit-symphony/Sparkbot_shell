@@ -1,6 +1,6 @@
 # Release Decision Gate
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This gate records the exact decision options for Phil after static preview signoff and before any public-facing action.
 
@@ -37,10 +37,10 @@ Option C may be considered next if Phil wants non-public staging handoff after t
 
 Option D remains blocked without explicit Phil approval for the exact public action (tag/publish/upload/announcement).
 
-## Required Before GREEN_CANDIDATE / Public Preview
+## Required Before Option D Public Action
 
-- Physical/mobile 390px QA completed and documented (true-device pass required).
-- Any mobile QA defects fixed and revalidated.
+- Physical/mobile 390px QA is completed and documented for this branch (2026-05-23). Re-run if UI/layout/artifact content changes.
+- Any new mobile QA defects must be fixed and revalidated.
 - Connector/private recall remains `OUT_OF_SCOPE_STATIC_PREVIEW` for this static shell.
 - Final package validation rerun from the selected branch.
-- Explicit Phil approval for the public action: tag, publish, upload, announcement, or none.
+- Explicit Phil approval for the exact public action: tag, publish, upload, announcement, or none.

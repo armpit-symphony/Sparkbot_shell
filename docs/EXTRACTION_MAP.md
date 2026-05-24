@@ -1,8 +1,8 @@
 # Extraction Map
 
-Updated: 2026-05-22
+Updated: 2026-05-24
 
-Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
+Reference source: `armpit-symphony/Sparkbot` branch `public-release-final-cleanup-assessment` at `0f8d059fc5927e3466d269ca5479df4c56b3c06f`.
 
 This is a planning map with Layer 1 through Layer 7 shell-only work started. Do not copy additional code from Sparkbot R&D into `Sparkbot_shell` until the next import layer is explicitly approved.
 

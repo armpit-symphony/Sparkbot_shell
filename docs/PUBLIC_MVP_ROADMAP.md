@@ -1,6 +1,6 @@
 # Public MVP Roadmap
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This roadmap sequences `Sparkbot_shell` extraction. It is deliberately layered so public import can stop safely if QA exposes a blocker.
 
@@ -140,7 +140,7 @@ Repo-only staging docs: extraction maps, readiness docs, staging docs, and no-go
 
 Validation: browser checklist, preview package dry-run, artifact inspection, markdown link check, build, runtime/persistence scan, source boundary check, and secret/private scan.
 
-Blockers before public announcement: physical/mobile 390px QA open, connector QA UNKNOWN for private recall claims, no public tag/npm publish/upload approval, and future package checks on Linux/clean clone still pending.
+Blockers before public announcement: connector QA UNKNOWN for private recall claims, no public tag/npm publish/upload approval, and future package checks on Linux/clean clone still pending. Physical/mobile 390px QA passed on 2026-05-23 and should be re-run only if UI/layout/artifact content changes.
 
 ## Phase L - v1.0.0 Public Release Candidate
 

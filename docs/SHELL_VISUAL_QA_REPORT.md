@@ -1,6 +1,6 @@
 # Shell Visual QA Report
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 Branch: `public-release-shell-preview-signoff`
 
@@ -18,7 +18,7 @@ No backend runtime, provider/model calls, Local AI calls, connector sends, sched
 - Direct route HTTP smoke for `/`, `/workstation`, `/chat`, `/roundtable`, `/command-center`, `/task-guardian`, `/connectors`, `/robo`, and `/docs`: all returned HTTP 200.
 - Headless Edge screenshots captured for all requested routes at 390px, 500px, and desktop width after the polish pass.
 - The 500px and desktop captures were nonblank and readable after header, badge, and grid wrapping fixes.
-- The 390px captures were nonblank but the local headless runner still cropped the right edge of several pages. Treat 390px physical/mobile browser review as a remaining YELLOW item before release artifact signoff.
+- The 390px captures were nonblank but the local headless runner cropped the right edge of several pages; this was treated as a follow-up item and later closed by physical-phone verification (see `docs/PHYSICAL_MOBILE_QA_CHECKLIST.md`).
 - DevTools console inspection was not available from the current tool surface. Build validation covers compile-time crashes; browser screenshots verified nonblank rendered pages.
 
 ## Route Results
@@ -39,13 +39,13 @@ No backend runtime, provider/model calls, Local AI calls, connector sends, sched
 
 | Width | Status | Result | Follow-up |
 |---|---|---|---|
-| 390px | WARN | Headless captures were nonblank, but the local runner still cropped the right edge on several routes. CSS wrapping fixes were applied, but this width needs physical/mobile browser confirmation. | Repeat on a real mobile browser or reliable responsive browser tool before public package signoff. |
+| 390px | PASS_WITH_PHYSICAL_FOLLOWUP | Headless captures were nonblank but cropped in the local runner; physical-phone QA later passed on 2026-05-23. | Re-run physical checks if UI/layout/artifact content changes. |
 | 500px | PASS | All requested routes rendered nonblank and readable. Sidebar, badges, cards, and docs links wrapped cleanly. | No immediate shell fix needed. |
 | Desktop | PASS | All requested routes rendered nonblank and readable. Command Center and Workstation hierarchy improved after polish. | No immediate shell fix needed. |
 
 ## Manual 390px Mobile QA Steps
 
-Status: NOT_RUN. Do not mark the 390px result fully GREEN until this check is run outside the headless screenshot runner.
+Status: COMPLETED on 2026-05-23 (Phil manual physical verification). Keep this checklist for revalidation when UI/layout/artifact content changes.
 
 1. Run `npm run dev -- --host 0.0.0.0 --port 5179`.
 2. Open the Vite LAN URL on a real phone browser, or use a reliable browser device toolbar set to 390px width.
@@ -70,8 +70,8 @@ See [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md) for the rout
 
 ## Remaining Visual / UX Items
 
-- YELLOW: Physical-device/mobile browser QA should still be repeated outside the headless runner before public artifact signoff.
-- YELLOW: Physical/mobile 390px browser QA remains required before public announcement.
+- Re-run physical-device/mobile browser QA when UI/layout/artifact content changes.
+- Keep connector live-QA UNKNOWN and out-of-scope for static preview messaging until runtime contract layers are approved.
 
 ## Boundary Result
 

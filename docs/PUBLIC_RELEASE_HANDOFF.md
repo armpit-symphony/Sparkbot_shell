@@ -1,10 +1,10 @@
 # Public Release Handoff
 
-Updated: 2026-05-22
+Updated: 2026-05-24
 
-Reference source: `armpit-symphony/Sparkbot` branch `public-release-live-connector-qa` at `fe2a5ffc2bbbff7ef4fde9959d6b35206719f3e5`.
+Reference source: `armpit-symphony/Sparkbot` branch `public-release-final-cleanup-assessment` at `0f8d059fc5927e3466d269ca5479df4c56b3c06f`.
 
-This handoff is for planning and classification in `Sparkbot_shell`. No Sparkbot R&D code is imported by this document.
+This handoff is for planning and classification in `Sparkbot_shell`. No Sparkbot R&D code is imported by this document. Runtime behavior remains out-of-scope in this repo phase.
 
 ## Public MVP Identity
 

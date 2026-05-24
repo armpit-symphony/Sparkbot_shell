@@ -1,6 +1,6 @@
 # Release Decisions
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This document tracks release decisions for the Sparkbot Shell static preview. See [Release decision gate](RELEASE_DECISION_GATE.md) and [Static preview signoff](STATIC_PREVIEW_SIGNOFF.md) for the signoff summary.
 
@@ -23,7 +23,7 @@ This document tracks release decisions for the Sparkbot Shell static preview. Se
 | Decision | Status | Notes |
 |---|---|---|
 | Final public release repo migration | LATER | Decide and perform final repo migration/import only in a later release operation. |
-| Public announcement readiness | OPEN | Physical/mobile 390px browser QA remains required before public announcement. |
+| Public announcement readiness | OPEN | Physical/mobile 390px browser QA passed on 2026-05-23; Phil approval for Option D remains required before any public announcement/tag/upload/publish. |
 | Runtime import start | OPEN | Runtime work should begin only after static preview signoff and should start with contracts, not direct runtime behavior. |
 | Phil release gate option | OPEN | Choose Option A, B, C, D, or E in [Release decision gate](RELEASE_DECISION_GATE.md). |
 

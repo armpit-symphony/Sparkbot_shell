@@ -1,6 +1,6 @@
 # Public Artifact Manifest
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This manifest records Phil's controlling rule for public artifact boundaries. It governs package/download QA before any public release bundle is produced.
 
@@ -55,8 +55,8 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture the locked MIT license, staging repo role, likely future public repo target, artifact naming, mobile QA, connector QA, and runtime sequencing decisions.
 
-This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA remains required before public announcement, and final repo migration remains a later release operation.
+This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA passed for this branch on 2026-05-23 and should be re-run if UI/layout/artifact content changes. Final repo migration remains a later release operation.
 
 Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and likely future public repo `sparkpit-labs/Sparkbot`.
 
-Current readiness color is YELLOW: internal/staging preview only until physical-device mobile QA is complete and Phil explicitly approves any public action. Edge emulated mobile QA passed in `public-release-mobile-qa-fixes`, but physical-device QA remains manual/unverified.
+Current readiness color is GREEN_CANDIDATE: static preview readiness milestone reached for internal/staging use. Public action is still blocked until Phil explicitly approves the exact release operation (tag/publish/upload/announcement).

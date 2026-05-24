@@ -13,7 +13,7 @@ Public users should wait for approved Sparkbot Shell release artifacts before tr
 Static preview artifact: `sparkbot-shell-preview-0.8.0-layer8`.
 Package/version label: `0.8.0-layer8-preview`.
 
-Preview status is GREEN_CANDIDATE for static-preview readiness: internal/staging preview only until Phil approves the next release decision. See [Static preview signoff](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-record-physical-qa-pass/docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-record-physical-qa-pass/docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-record-physical-qa-pass/docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-record-physical-qa-pass/docs/RELEASE_DECISION_GATE.md).
+Preview status is GREEN_CANDIDATE for static-preview readiness: internal/staging preview only until Phil approves the next release decision. See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](docs/RELEASE_DECISION_GATE.md).
 
 ## Public MVP Highlights
 
@@ -101,4 +101,4 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is physical/mobile browser QA before public announcement, followed by a runtime contract layer after preview signoff. Keep live connector QA marked UNKNOWN until test-only channels pass.
+Recommended next work is release-branch reconciliation and current handoff docs, followed by runtime contract/install layer planning. Re-run physical/mobile QA if UI or artifact layout changes. Keep live connector QA marked UNKNOWN until test-only channels pass.

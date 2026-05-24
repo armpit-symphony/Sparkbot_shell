@@ -1,12 +1,12 @@
 # Public Docs Index
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This is the user-facing docs index for future public release artifacts. It is separate from repo-only staging docs.
 
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
-Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review is still required before public announcement.
+Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 
 ## Public Artifact Docs
 

@@ -1,6 +1,6 @@
 # Release Artifact Checklist
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 This checklist governs the static preview package and future public artifact review.
 
@@ -55,7 +55,7 @@ This checklist governs the static preview package and future public artifact rev
 
 ## Remaining Before Public Announcement
 
-- [ ] Physical/mobile 390px browser QA.
+- [x] Physical/mobile 390px browser QA completed on 2026-05-23 (Phil manual pass). Re-run if UI/layout/artifact content changes.
 - [x] Edge emulated 375px/390px/768px/desktop QA completed without required UI fixes.
 - [ ] Keep connector delivery/private recall YELLOW/UNKNOWN unless live connector QA passes with test-only credentials/channels.
 - [ ] Re-run package QA from the final announcement branch/environment.

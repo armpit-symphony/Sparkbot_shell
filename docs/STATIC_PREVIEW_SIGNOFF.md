@@ -1,6 +1,6 @@
 # Static Preview Signoff
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 ## Signoff Scope
 
@@ -68,11 +68,10 @@ It is not a final public release, npm publication, release tag, or uploaded arti
 
 ## Remaining Before Public Announcement
 
-- Complete physical/mobile 390px browser QA.
+- Physical/mobile 390px browser QA is completed for this branch (Phil manual pass on 2026-05-23). Re-run only if UI/layout/artifact content changes.
 - Keep external connector delivery/private recall YELLOW/UNKNOWN unless test-only live connector QA passes.
 - Re-run package QA from the final announcement branch/environment.
 - Get explicit Phil approval before any public release tag, npm publish, or artifact upload.
-- Option B Edge emulation QA has passed, but physical-device mobile QA remains NOT_RUN.
 
 See [Physical mobile QA checklist](PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](RELEASE_DECISION_GATE.md) for the current QA gate package and Phil decision options.
 
