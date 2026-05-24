@@ -60,6 +60,7 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 ## Current Status
 
 The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture the locked MIT license, staging repo role, final repo-home TBD status, artifact naming, mobile QA, connector QA, and runtime sequencing decisions.
+The current staging baseline lock is tracked as `active-staging-baseline-lock` (`1f4ff3b`) and remains internal/staging review only.
 
 This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA passed for this branch on 2026-05-23 and should be re-run if UI/layout/artifact content changes. Final repo migration remains a later release operation.
 The frontend product-demo polish pass changes static shell copy/layout/demo fixtures only; public artifact contents remain governed by the same allowlist.
@@ -67,7 +68,7 @@ Wave 1 candidate #1 Workstation adaptation also changes static shell layout only
 Wave 1 candidate #2 Round Table adaptation also changes static shell layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
 Wave 1 candidate #3 Model stack + Invite Wing adaptation also changes static shell layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
 Wave 1 candidate #4 Docs/info adaptation also changes docs surface copy/layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
-Wave 1 checkpoint/audit is now captured and consolidated on `static-shell-mock-contract-baseline`.
+Wave 1 checkpoint/audit is now captured and consolidated on `active-staging-baseline-lock` (`1f4ff3b`), including `static-shell-mock-contract-baseline` lineage.
 
 Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and final public repo/home TBD.
 

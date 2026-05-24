@@ -1,8 +1,8 @@
 # Wave 1 Static Demo Baseline
 
 Updated: 2026-05-24
-Branch: `static-shell-mock-contract-baseline`
-Commit: `d6a528f`
+Branch: `active-staging-baseline-lock`
+Commit: `1f4ff3b`
 
 ## What the Shell Shows Now
 

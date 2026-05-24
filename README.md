@@ -15,8 +15,8 @@ The public product model is a local-first, static-preview-oriented AI office she
 ## Current Status
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
-Current checkpoint branch: `static-shell-mock-contract-baseline`.
-Current commit: `d6a528f`.
+Current checkpoint branch: `active-staging-baseline-lock` (from `static-shell-mock-contract-baseline`).
+Current commit: `1f4ff3b` on `active-staging-baseline-lock`.
 Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
@@ -40,9 +40,9 @@ Official public repo move is pending Phil approval. Public repo/home is currentl
 
 Current next options:
 
-- continue static-only baseline consolidation,
-- continue mock LIMA contract UI planning,
-- or begin release-candidate branch consolidation prep.
+- Preferred: continue mock LIMA contract UI display planning (frontend/static only).
+- Alternative: pause on static baseline and return to LIMA AI OS universal contract work.
+- Or finalize release-candidate branch consolidation prep when desired.
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md), [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md), and [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md).
 
 Current planning phase also includes LIMA contract fixture/docs planning:
@@ -133,6 +133,8 @@ Planned reconciliation and import-planning docs (repo-only):
 - [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
 - [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md)
 - [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md)
+- [Active staging baseline lock](docs/ACTIVE_STAGING_BASELINE.md)
+- [Baseline lock audit](docs/BASELINE_LOCK_AUDIT.md)
 - [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md)
 
 ## Preview Artifact Boundary
@@ -190,5 +192,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is final Option C contract-planning checkpoint validation plus final release-path decision checkpoint.
+Recommended next work is active-staging baseline lock completion and Option B mock LIMA contract UI planning.
 Continue to treat release actions as deferred while repo/home/version/tag are pending.

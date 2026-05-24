@@ -2,8 +2,8 @@
 
 Updated: 2026-05-24
 
-Branch: `static-shell-mock-contract-baseline`
-Base commit: `d6a528f`
+Branch: `active-staging-baseline-lock`
+Base commit: `1f4ff3b`
 
 ## Locked Preview Package
 
@@ -47,7 +47,7 @@ Command:
 npm pack --dry-run --json
 ```
 
-Result: PASS.
+Result: PASS from repository root. `npm pack --dry-run --json` succeeded and produced allowlisted package contents.
 
 The raw npm pack file list is constrained by `package.json#files` and includes:
 
@@ -101,7 +101,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Final artifact path inspection showed only `app/`, `docs/`, `LICENSE`, `README.md`, `package.json`, and `package-metadata.json`.
 - Final docs list matched the public allowlist.
 - Final high-risk artifact scan found no matches for private domains, private paths, selected env variable names, or internal platform/private bridge terms.
-- `npm pack --dry-run --json` was run after adding a `files` allowlist and did not create a `.tgz` file.
+- `npm pack --dry-run --json` was executed from the package root and passed. No `.tgz` file was persisted by default in this run, and output remained within the allowlist.
 - Wave 1 Workstation adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 Round Table adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
@@ -112,7 +112,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 ## Checkpoint Baseline
 
-- Current checkpoint branch: `static-shell-mock-contract-baseline`.
+- Current checkpoint branch: `active-staging-baseline-lock`.
 - Release posture remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 ## Connector/private recall classification

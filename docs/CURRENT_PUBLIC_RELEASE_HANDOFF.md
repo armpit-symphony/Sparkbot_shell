@@ -11,7 +11,7 @@ Wave 1 frontend refinements and mock LIMA contract planning, with no runtime int
 ## Latest Consolidation Baseline
 
 - Baseline branch: `static-shell-mock-contract-baseline`
-- Baseline commit: `d6a528f`
+- Baseline commit: `1f4ff3b` (active lock branch `active-staging-baseline-lock`)
 - Latest source/workflow pass included:
   - Wave 1 source-adaptation checkpoints for Workstation, Round Table, model/Invite Wing, and Docs/info
   - Wave 1 checkpoint/audit closure
@@ -62,7 +62,8 @@ Wave 1 frontend refinements and mock LIMA contract planning, with no runtime int
 - The historical branch reconciliation context is preserved:
   - `public-release-record-physical-qa-pass` was used as the stable physical-QA base before Wave 1 work.
   - `mock-lima-contract-planning` and this branch are clean descendants.
-- The current branch is now the active consolidated checkpoint for continued static-shell decisions.
+- This branch now locks `static-shell-mock-contract-baseline` as the active staging checkpoint.
+- `active-staging-baseline-lock` carries the same artifact, doc set, and status checks as the parent baseline lock.
 
 ## Candidate Integrity Check (Current Branch)
 
@@ -159,3 +160,9 @@ See:
 - Do not wire robotics/IoT controls.
 - Do not copy Sparkbot R&D runtime code into this repo.
 - Do not run Option D actions without explicit Phil approval.
+
+## Active Baseline Lock Status
+
+- Baseline lock branch: `active-staging-baseline-lock`
+- Baseline lock commit: `1f4ff3b`
+- Lock posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.

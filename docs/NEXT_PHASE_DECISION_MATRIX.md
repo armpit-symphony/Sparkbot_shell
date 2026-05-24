@@ -2,7 +2,7 @@
 
 Updated: 2026-05-24
 
-Context: static baseline consolidation is complete on `static-shell-mock-contract-baseline` (`d6a528f`).
+Context: active staging baseline lock is complete on `active-staging-baseline-lock` (`1f4ff3b`), based on `static-shell-mock-contract-baseline` (`d6a528f`).
 Release status: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.
 
 ## Decision Options
@@ -59,6 +59,7 @@ Release status: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.
 
 ## Recommended Default
 
-- **Default now:** **Option B** or **Option D**.
+- **Default now:** **Option B** (mock LIMA contract UI display, frontend/static only).
+- **Alternative:** **Option A** (pause and return to LIMA AI OS universal contract work).
 - Runtime implementation should remain off.
-- Option F remains blocked until explicit approval.
+- Option D remains blocked until explicit release approval.

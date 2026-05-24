@@ -9,7 +9,7 @@ This audit records the consolidated static-shell baseline for the current branch
 ## Audit Inputs
 
 - Baseline branch: `static-shell-mock-contract-baseline`
-- Baseline commit: `d6a528f`
+- Baseline commit: `1f4ff3b` (active lock branch `active-staging-baseline-lock`)
 - Parent branch: `frontend-only-wave1-checkpoint-audit` (`61a08b6`)
 - Source reference repo: `armpit-symphony/Sparkbot` (read-only only)
 - Artifacts examined: static preview artifact under `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
@@ -77,7 +77,7 @@ No runtime behavior was introduced in this consolidation pass:
 
 - `npm run build`: pass
 - `npm run package:preview`: pass
-- `npm pack --dry-run --json`: pass
+- `npm pack --dry-run --json`: pass.
 - `node --check scripts/package-preview.mjs`: pass
 - Source files for public preview remain on allowlist in package output
 - `public artifact scan` confirms static docs/shell output only

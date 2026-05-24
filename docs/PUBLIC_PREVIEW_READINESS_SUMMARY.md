@@ -5,8 +5,8 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `static-shell-mock-contract-baseline`.
-- Base signoff commit: `d6a528f`.
+- Current branch: `active-staging-baseline-lock`.
+- Base signoff commit: `1f4ff3b` on `active-staging-baseline-lock`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
@@ -106,8 +106,7 @@ Current status is `GREEN_CANDIDATE`.
 The static preview package is complete for internal/staging use and physical/mobile QA in this branch.
 It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
-Option B status: completed and passed with Phil manual verification.
-Current work continues as static-only Wave 1 checkpoint/audit readiness.
+Current work continues as static-only Wave 1 checkpoint/audit readiness lock.
 Current product-demo and docs/info polish pass is complete and keeps the same static-only boundary.
 Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/API/storage additions.
@@ -131,10 +130,7 @@ Wave 1 checkpoint status: verified as static and release-safe for this branch, a
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
 
-- Continue frontend-only MVP shell refinement and contract-readiness prep in staging.
-- Perform Wave 1 checkpoint/audit closure actions documented in this branch and then choose either:
-  - Continue static-only refinement (Option B),
-  - Mock LIMA contract layer planning (docs/fixtures only), or
-  - Release-candidate branch consolidation.
-- Option C execution remains tied to explicit official repo-home approval.
+- Continue static-only MVP shell progression via **Option B** mock LIMA contract UI display prep,
+  unless Phil elects **Option A** pause and return to LIMA AI OS universal contract work.
+- Release-candidate branch consolidation remains available later, but no public release action is approved now.
 - Option D for public announcement/tag/upload after explicit Phil approval.

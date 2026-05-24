@@ -3,7 +3,7 @@
 Updated: 2026-05-24
 
 - Baseline branch: `static-shell-mock-contract-baseline`
-- Baseline commit: `d6a528f`
+- Baseline commit: `1f4ff3b`
 - Staging repo: `armpit-symphony/Sparkbot_shell`
 - Current public repo/home: `TBD`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
@@ -73,11 +73,11 @@ The branch now includes contract-first planning for future integration and remai
 
 ## Next Recommended Options
 
-This baseline is ready to support one of the following next paths:
+This baseline is now the active staging baseline and is ready to support one of the following next paths:
 
-- **Option B/C**: continue static-only demo readiness and mock contract UI display prep (no runtime)
-- **Option D** prep: release-candidate branch consolidation before any release action
-- **Option A**: hold as clean static baseline while LIMA integration planning advances
+- **Option B (preferred)**: continue mock LIMA contract UI display prep (frontend/static only).
+- **Option A (alternative)**: hold this clean static baseline while LIMA AI OS universal contract work advances.
+- **Option D prep**: release-candidate branch consolidation only (no release action).
 
 ### What it is not
 
