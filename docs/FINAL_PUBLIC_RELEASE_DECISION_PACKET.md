@@ -59,6 +59,20 @@ Continue docs polish and versioning edits in the staging branch, then rerun pack
 
 Prepare path to final hosting (copy/move tree, cleanup, and link rewrite) without executing tag/upload/announcement.
 
+## Option C Readiness Status (Current)
+
+- Status: **in progress / prepared**
+- Scope: docs-and-export planning created for official repo move.
+- Pending constraints: final repo home, version/tag, artifact destination, announcement policy.
+- This branch includes:
+  - official public repo readiness packet,
+  - sanitized export plan,
+  - repo home decision matrix,
+  - copy dry-run checklist,
+  - branding/link cleanup plan,
+  - versioning finalization plan.
+- No copy/push/release actions are permitted in this stage.
+
 ### Option D - Approve Tag/Upload/Announcement
 
 Proceed only after all open decisions above are approved.
@@ -77,4 +91,12 @@ Option D remains blocked until Phil approves:
 - announcement policy
 - release note policy
 
-Current branch to use for Option D packeting: `public-release-rc-consolidation-decision-packet`.
+Current execution gate:
+- Option C is prepared and documented.
+- Option D remains blocked until explicit Phil approval on:
+  - final repo home
+  - final version/tag
+  - artifact destination
+  - announcement channel
+
+Current branch to use for Option D packeting: `public-release-official-repo-move-readiness`.

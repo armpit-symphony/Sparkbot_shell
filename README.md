@@ -13,7 +13,10 @@ Public users should wait for approved Sparkbot Shell release artifacts before tr
 Static preview artifact: `sparkbot-shell-preview-0.8.0-layer8`.
 Package/version label: `0.8.0-layer8-preview`.
 
-Preview status is GREEN_CANDIDATE for static-preview readiness: NOT_RELEASED. No tag, no upload, and no announcement have been executed yet until Phil approval. See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), and [Release decision gate](docs/RELEASE_DECISION_GATE.md).
+Preview status is `GREEN_CANDIDATE` for static-preview readiness and remains `NOT_RELEASED`.
+No tag, no upload, and no announcement have been executed.
+Official public repo move is pending Phil approval.
+See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
 
 ## Public MVP Highlights
 
@@ -61,6 +64,12 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Official repo move plan](docs/OFFICIAL_REPO_MOVE_PLAN.md)
 - [Version/tag decision](docs/VERSION_TAG_DECISION.md)
 - [Public release action checklist](docs/PUBLIC_RELEASE_ACTION_CHECKLIST.md)
+- [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md)
+- [Repo home decision matrix](docs/REPO_HOME_DECISION_MATRIX.md)
+- [Sanitized tree export plan](docs/SANITIZED_TREE_EXPORT_PLAN.md)
+- [Public repo copy dry-run checklist](docs/PUBLIC_REPO_COPY_DRY_RUN_CHECKLIST.md)
+- [Branding and link cleanup plan](docs/BRANDING_AND_LINK_CLEANUP_PLAN.md)
+- [Versioning finalization plan](docs/VERSIONING_FINALIZATION_PLAN.md)
 
 ## Preview Artifact Boundary
 

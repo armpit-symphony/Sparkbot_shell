@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use the `public-release-rc-consolidation-decision-packet` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
+Use the `public-release-official-repo-move-readiness` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -59,13 +59,18 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `public-release-rc-consolidation-decision-packet` as canonical pre-Option-D branch.
-2. Publish one final Option-D decision packet for Phil approval.
+1. Keep `public-release-official-repo-move-readiness` as the canonical pre-Option-D branch.
+2. Complete Option C official repo move preparation docs and checks.
 3. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
+
+4. Option paths after Option C readiness:
+   - hold staging if Phil chooses the temporary staging path,
+   - create/copy to approved official repo if Phil approves Option C,
+   - proceed to Option D only after explicit final approvals.
 
 ## Operational Guardrails
 

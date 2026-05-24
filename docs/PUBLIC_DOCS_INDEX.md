@@ -66,6 +66,12 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Official repo move plan](OFFICIAL_REPO_MOVE_PLAN.md)
 - [Version/tag decision](VERSION_TAG_DECISION.md)
 - [Public release action checklist](PUBLIC_RELEASE_ACTION_CHECKLIST.md)
+- [Official public repo readiness](OFFICIAL_PUBLIC_REPO_READINESS.md)
+- [Repo home decision matrix](REPO_HOME_DECISION_MATRIX.md)
+- [Sanitized tree export plan](SANITIZED_TREE_EXPORT_PLAN.md)
+- [Public repo copy dry-run checklist](PUBLIC_REPO_COPY_DRY_RUN_CHECKLIST.md)
+- [Branding and link cleanup plan](BRANDING_AND_LINK_CLEANUP_PLAN.md)
+- [Versioning finalization plan](VERSIONING_FINALIZATION_PLAN.md)
 
 ## Release Artifact Rule
 
