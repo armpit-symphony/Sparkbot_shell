@@ -105,7 +105,7 @@ export function App() {
             <h1>{activeNavItem.label}</h1>
             <p className="topbar-summary">
               Sparkbot Shell is a local-first, open-source oriented AI workstation preview: Workstation floor,
-              Round Table meetings, model seats, safety posture, and future LIMA contract readiness.
+              Round Table meetings, model seats, files/memory/tasks fixtures, safety posture, and future LIMA contract readiness.
             </p>
           </div>
           <div className="status-pill">GREEN_CANDIDATE | NOT_RELEASED</div>

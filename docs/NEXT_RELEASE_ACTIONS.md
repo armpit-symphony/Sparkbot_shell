@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use `frontend-only-mvp-polish-pass` as the current canonical staging branch for frontend MVP polish and keep docs/charts/checks in one file set.
+Use `frontend-only-static-fixtures-pass` as the current canonical staging branch for frontend MVP fixture coverage and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -60,20 +60,23 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-mvp-polish-pass` as the canonical current staging branch.
+1. Keep `frontend-only-static-fixtures-pass` as the canonical current staging branch.
 2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
    - release-routing docs are corrected for `repo home TBD`,
    - Option C remains future,
    - no runtime behavior is added.
-3. Continue frontend-only MVP import/contract-readiness prep (docs, stubs, boundaries, and non-runtime readiness).
-4. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
-5. Execute remaining approval steps only after Phil confirms:
+3. Run one product-demo polish pass over the static shell (copy/readability/demo flow), then choose between:
+   - continued static iteration, or
+   - carefully scoped frontend-only import planning from approved classification.
+4. Continue frontend-only MVP import/contract-readiness prep (docs, stubs, boundaries, and non-runtime readiness).
+5. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
+6. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
    - README/repo URLs are final-safe
-6. `Option D` remains blocked until explicit approvals for the above and release-note policy.
+7. `Option D` remains blocked until explicit approvals for the above and release-note policy.
 
 ## Operational Guardrails
 

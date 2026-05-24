@@ -278,6 +278,12 @@ p {
   margin-bottom: 8px;
 }
 
+.inline-link {
+  color: #225036;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
 .docs-list {
   display: grid;
   gap: 10px;
@@ -596,6 +602,20 @@ textarea {
   gap: 12px;
 }
 
+.fixture-grid,
+.demo-room-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.fixture-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.demo-room-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .product-snapshot-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -617,6 +637,7 @@ textarea {
 .template-card,
 .delivery-card,
 .seat-overview,
+.fixture-card,
 .product-snapshot-grid article,
 .roundtable-overview-grid article,
 .guardian-basics-grid article,
@@ -746,6 +767,7 @@ textarea {
 .template-card,
 .delivery-card,
 .seat-overview,
+.fixture-card,
 .product-snapshot-grid article,
 .roundtable-overview-grid article,
 .guardian-basics-grid article,
@@ -759,6 +781,39 @@ textarea {
 .roundtable-overview-grid article p,
 .guardian-basics-grid article p {
   margin-bottom: 0;
+}
+
+.fixture-card p {
+  margin-bottom: 0;
+}
+
+.fixture-type {
+  padding: 3px 8px;
+  border: 1px solid #cde2d8;
+  border-radius: 999px;
+  color: #2c463c;
+  background: #eef7f3;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.fixture-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fixture-badges small {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 7px;
+  color: #2c463c;
+  background: #eef7f3;
+  border: 1px solid #cde2d8;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
 .roundtable-overview-grid article span {
@@ -1418,6 +1473,8 @@ textarea {
   .roundtable-overview-grid,
   .model-stack-grid,
   .guardian-basics-grid,
+  .fixture-grid,
+  .demo-room-grid,
   .lima-sequence-grid,
   .command-center-map,
   .floor-status-grid,

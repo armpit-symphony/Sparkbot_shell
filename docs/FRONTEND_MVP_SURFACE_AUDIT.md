@@ -1,7 +1,7 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24  
-Branch: `frontend-only-mvp-polish-pass`
+Branch: `frontend-only-static-fixtures-pass`
 
 ## Scope
 
@@ -50,14 +50,12 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
   - `src/components/DeliveryPreferencePreview.tsx`
   - `src/components/ConnectorIdentityShell.tsx`
 - New in this pass:
-  - `src/components/LimaReadyLayerPanel.tsx`
+  - `src/components/StaticFixtureContentPreview.tsx`
+  - `src/data/demoFixtureContent.ts`
 - Polished in this pass:
-  - first-screen product copy and release-gate status
-  - Workstation snapshot cards
-  - Round Table stage labels and output preview framing
-  - model-stack role cards
-  - Guardian basics preview
-  - Robo teaser copy
+  - top-level copy now explicitly includes files/memory/tasks fixture coverage
+  - Workstation secondary navigation includes fixture shelf entry
+  - Docs route points users to Workstation for fixture coverage
 
 ## Public MVP Surfaces Present
 
@@ -69,18 +67,20 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 - Invite Wing / model seats shell: present.
 - Basic Guardian posture shell: present (Guardrail profile shell).
 - Robo teaser tab: present (`#/robo-preview`).
-- LIMA AI OS future contract/install readiness note: now present in static UI via `LimaReadyLayerPanel`.
+- LIMA AI OS future contract/install readiness note: present in static UI via `LimaReadyLayerPanel`.
+- Files/Knowledge preview: present via static fixture cards.
+- Memory preview: present via static fixture cards and context previews.
+- Tasks/reminders preview: present via static task fixture cards.
+- Demo room/context fixture: present as a unified static room surface.
 
 ## Missing or Thin Surfaces
 
 - No separate marketing-style landing page (intentional).
-- File management shell is still implied in copy but not represented as a distinct UI route.
+- No separate route was added for Files/Memory/Tasks; surfaces are intentionally grouped in Workstation to avoid route sprawl in this pass.
 
 ## Stale Labels or Copy Issues Found
 
-- Prior status copy was generic (`Planning shell`) and did not clearly show release gate state.
-- Prior nav label did not explicitly signal home route.
-- Some readiness docs still referenced older branch context and a likely future repo target as if active.
+- No stale branch-pinned docs links were found in this pass after prior DocsPage cleanup.
 
 ## Mobile and Readability Notes
 
@@ -96,6 +96,7 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 - No connector/provider live calls added.
 - No terminal/browser execution added.
 - No robotics/IoT controls added.
+- No file upload/read/write behavior added.
 
 ## Public Release Polish Notes
 
@@ -108,7 +109,8 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 
 ## Recommendations
 
-1. Keep Workstation as the default home route for MVP staging.
-2. Keep Round Table framing as hero feature in top-level copy and Workstation panels.
-3. Keep LIMA-ready messaging contract-first and non-runtime.
-4. Continue frontend-only import/readiness work; defer runtime integrations to explicit future approvals.
+1. Keep Workstation as the default home route and central shell preview floor.
+2. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
+3. Keep Round Table framing as hero feature in top-level copy and Workstation panels.
+4. Keep LIMA-ready messaging contract-first and non-runtime.
+5. Continue frontend-only import/readiness work; defer runtime integrations to explicit future approvals.

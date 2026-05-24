@@ -3,6 +3,7 @@ import { InviteWingPanel } from "./InviteWingPanel";
 import { LimaReadyLayerPanel } from "./LimaReadyLayerPanel";
 import { MemoryContextPreview } from "./MemoryContextPreview";
 import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
+import { StaticFixtureContentPreview } from "./StaticFixtureContentPreview";
 import { StatusBadge } from "./StatusBadge";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
 
@@ -34,6 +35,12 @@ const workstationPanels = [
     route: "#/task-guardian",
     summary: "Scheduled work manager direction for useful read-only health checks.",
     status: "Preview only",
+  },
+  {
+    title: "Files / Memory / Tasks",
+    route: "#/workstation",
+    summary: "Fixture shelves for documents, memory context, reminders, and demo room state.",
+    status: "Fixture preview",
   },
   {
     title: "Connectors",
@@ -287,6 +294,8 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
         retrievalPreview={shellState.memoryContext.retrievalPreview}
         compact
       />
+
+      <StaticFixtureContentPreview />
 
       <LimaReadyLayerPanel />
     </section>

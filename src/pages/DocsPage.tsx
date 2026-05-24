@@ -49,6 +49,10 @@ export function DocsPage() {
           Current release state remains GREEN_CANDIDATE and NOT_RELEASED. This shell is also staged as ready for a
           future LIMA AI OS contract/install layer with no live runtime wiring in this branch.
         </p>
+        <p>
+          For static fixture coverage of files, memory, tasks, and demo room context, open
+          <a className="inline-link" href="#/workstation"> Home / Workstation</a>.
+        </p>
       </div>
     </section>
   );

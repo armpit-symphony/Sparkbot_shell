@@ -19,6 +19,7 @@
 - Static package preview packaging and allowlist checks completed.
 - Source-boundary checks completed for `backend/`, `src-tauri/`, `.github/`, `.agents/`.
 - No runtime wiring introduced by this branch.
+- Static fixture-content pass completed for Files, Memory, Tasks, and Demo Room preview surfaces.
 
 ## What is Included
 
@@ -27,6 +28,7 @@
 - Polished Workstation, Round Table, model-stack, Guardian basics, Robo teaser, and LIMA readiness copy.
 - Documentation boundary and release staging docs.
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
+- Static fixture previews for file/document workspace, memory shelf, task/reminder board, and demo room context.
 - Static `LIMA AI OS ready layer` panel and phased contract-install messaging.
 - MIT licensing and artifact lock metadata.
 - Public-facing caveats around static-only behavior.
