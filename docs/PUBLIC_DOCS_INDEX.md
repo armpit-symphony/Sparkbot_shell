@@ -13,7 +13,7 @@ Option D is blocked until Phil approves final repo home, final version/tag, arti
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 Latest staging pass adds final product-demo polish for storyline clarity, fixture cohesion, and visual consistency.
 Latest planning pass adds classification-gated frontend-only import planning docs. No source import executed yet.
-Current Wave 1 pass completes Workstation visual adaptation as manual static refinement only (no runtime/API/storage additions).
+Current Wave 1 pass completes Workstation and Round Table visual adaptations as manual static refinement only (no runtime/API/storage additions).
 
 ## Public Artifact Docs
 
@@ -92,6 +92,7 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Frontend import stub/rewrite rules](FRONTEND_IMPORT_STUB_REWRITE_RULES.md)
 - [Frontend import validation checklist](FRONTEND_IMPORT_VALIDATION_CHECKLIST.md)
 - [Wave 1 Workstation adaptation plan](WAVE_1_WORKSTATION_ADAPTATION_PLAN.md)
+- [Wave 1 Round Table adaptation plan](WAVE_1_ROUNDTABLE_ADAPTATION_PLAN.md)
 
 ## Release Artifact Rule
 

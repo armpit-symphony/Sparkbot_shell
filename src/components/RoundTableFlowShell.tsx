@@ -10,6 +10,7 @@ import type {
   SpecialtyAgent,
 } from "../types/shell";
 import { StatusBadge } from "./StatusBadge";
+import { demoFileCards, demoMemoryCards, demoRoomFixture, demoTaskCards } from "../data/demoFixtureContent";
 
 type RoundTableFlowShellProps = {
   roundTable: RoundTableShellState;
@@ -28,6 +29,16 @@ const phases: Array<{ id: RoundTablePhase; label: string; description: string }>
   { id: "wrap_up", label: "Recommendation", description: "Meeting Manager produces recommendation and next steps." },
   { id: "notes", label: "Artifact", description: "Editable output preview for later memory/context rollup." },
 ];
+
+const roundTableStageRail = [
+  { key: "task_intake", label: "Task intake", description: "Owner defines mission and constraints." },
+  { key: "framing", label: "Framing", description: "Seats frame context and assumptions." },
+  { key: "perspectives", label: "Specialist perspectives", description: "Each seat contributes focused analysis." },
+  { key: "synthesis", label: "Synthesis", description: "Chair combines viewpoints and tradeoffs." },
+  { key: "assignments", label: "Assignments", description: "Follow-up work is assigned per seat." },
+  { key: "recommendation", label: "Recommendation", description: "Chair proposes a decision path." },
+  { key: "artifact", label: "Artifact / notes", description: "Recommendation note preview is edited." },
+] as const;
 
 function linesToDecisions(value: string): MeetingDecision[] {
   return value
@@ -75,6 +86,9 @@ export function RoundTableFlowShell({
 }: RoundTableFlowShellProps) {
   const roundTableModelSeats = modelSeats.filter((seat) => seat.showInRoundTable);
   const managerSeat = roundTable.seats.find((seat) => seat.seatNumber === 1);
+  const enabledRoundTableModelSeats = roundTableModelSeats.filter((seat) => seat.enabled);
+  const assignmentCount = roundTable.assignments.length;
+  const followUpPreview = demoTaskCards.slice(0, 3);
 
   function updateRoundTable(patch: Partial<RoundTableShellState>) {
     onRoundTableChange({ ...roundTable, ...patch });
@@ -178,6 +192,41 @@ export function RoundTableFlowShell({
         </aside>
       </div>
 
+      <section className="config-panel roundtable-command-deck">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Round Table command deck</p>
+            <h2>Chair-led meeting flow for decisions and follow-up</h2>
+            <p>
+              Manual static adaptation from R&D meeting layout concepts only. The room does not run a heartbeat,
+              stream, or backend scheduler.
+            </p>
+          </div>
+          <a className="text-button" href="#/workstation">
+            Back to Workstation floor
+          </a>
+        </div>
+        <div className="roundtable-stage-rail">
+          {roundTableStageRail.map((stage, index) => (
+            <article key={stage.key}>
+              <span>{index + 1}</span>
+              <strong>{stage.label}</strong>
+              <p>{stage.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="roundtable-runtime-badges">
+          <span>Static preview</span>
+          <span>Demo fixture</span>
+          <span>No live agent calls</span>
+          <span>No model/provider calls</span>
+          <span>No meeting heartbeat runtime</span>
+          <span>No task scheduling</span>
+          <span>No persistence</span>
+          <span>No backend runtime</span>
+        </div>
+      </section>
+
       <section className="demo-story-grid" aria-label="Round Table stage storyline">
         <article>
           <strong>Framing</strong>
@@ -207,12 +256,12 @@ export function RoundTableFlowShell({
 
       <section className="roundtable-overview-grid" aria-label="Round Table meeting summary">
         <article>
-          <span>Meeting topic</span>
+          <span>Meeting mission</span>
           <strong>{roundTable.title}</strong>
           <p>{roundTable.problem}</p>
         </article>
         <article>
-          <span>Chair</span>
+          <span>Chair / meeting manager</span>
           <strong>{managerSeat ? assignmentSeatLabel(managerSeat.id) : "Meeting Manager"}</strong>
           <p>Seat 1 coordinates framing, synthesis, assignments, recommendation, and notes.</p>
         </article>
@@ -221,6 +270,36 @@ export function RoundTableFlowShell({
           <strong>Recommendation artifact</strong>
           <p>Wrap-up, decisions, action items, and open questions stay local until a future runtime exists.</p>
         </article>
+      </section>
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Owner interrupt posture</p>
+            <h2>Owner can redirect meeting direction</h2>
+            <p>
+              This preview shows where owner interruptions would land in a live room. No message stream, websocket,
+              or runtime loop exists here.
+            </p>
+          </div>
+        </div>
+        <div className="owner-interrupt-grid">
+          <article className="flow-card">
+            <strong>Interrupt concept</strong>
+            <p>Owner can pause and redirect scope before recommendation finalization.</p>
+            <small>Demo-only marker. No live interrupt handling.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Current stage</strong>
+            <p>{phases.find((phase) => phase.id === roundTable.currentPhase)?.label}</p>
+            <small>Local state only.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Follow-up cards</strong>
+            <p>{assignmentCount} assignment previews are staged in this meeting shell.</p>
+            <small>No task runtime writes or scheduling.</small>
+          </article>
+        </div>
       </section>
 
       <div className="phase-nav" aria-label="Round Table phases">
@@ -356,6 +435,38 @@ export function RoundTableFlowShell({
       <section className="config-panel">
         <div className="card-heading">
           <div>
+            <p className="section-label">Seats and models</p>
+            <h2>Agent chairs and model stack alignment</h2>
+            <p>
+              Seat cards show who is participating and which model seats are in scope. This is visual planning only,
+              not runtime model execution.
+            </p>
+          </div>
+        </div>
+        <div className="roundtable-seat-summary-grid">
+          {roundTable.seats.map((seat) => {
+            const seatAgent = specialtyAgents.find((agent) => agent.id === seat.agentId);
+            const seatModel = modelSeats.find((modelSeat) => modelSeat.id === seat.modelSeatId);
+            return (
+              <article className="flow-card" key={`summary-${seat.id}`}>
+                <strong>{`Seat ${seat.seatNumber}: ${seatAgent?.name ?? "Unassigned"}`}</strong>
+                <p>{seat.roleLabel}</p>
+                {seatModel ? <StatusBadge status={seatModel.setupStatus} /> : null}
+                <small>{seatModel?.label ?? "No model seat selected"}</small>
+              </article>
+            );
+          })}
+          <article className="flow-card">
+            <strong>Model seats in meeting</strong>
+            <p>{enabledRoundTableModelSeats.length} enabled model seats are visible in this preview.</p>
+            <small>No provider routing or calls are executed.</small>
+          </article>
+        </div>
+      </section>
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
             <p className="section-label">Meeting flow</p>
             <h2>{phases.find((phase) => phase.id === roundTable.currentPhase)?.label}</h2>
           </div>
@@ -455,6 +566,51 @@ export function RoundTableFlowShell({
             onSave={saveNotesPreview}
           />
         ) : null}
+      </section>
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Recommendation artifact + follow-up</p>
+            <h2>Round Table output package (demo fixture)</h2>
+            <p>
+              The recommendation preview, follow-up tasks, and context sources are tied to the same demo room
+              storyline.
+            </p>
+          </div>
+        </div>
+        <div className="roundtable-output-grid">
+          <article className="flow-card">
+            <strong>Recommendation artifact</strong>
+            <p>{roundTable.wrapUp.summary}</p>
+            <small>Draft artifact only. No persistence.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Follow-up tasks</strong>
+            <p>{followUpPreview.map((task) => task.title).join(" | ")}</p>
+            <small>No scheduler or task API.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Demo files</strong>
+            <p>{demoFileCards.slice(0, 2).map((file) => file.title).join(" | ")}</p>
+            <small>Files are static cards only.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Demo memories</strong>
+            <p>{demoMemoryCards.slice(0, 2).map((memory) => memory.title).join(" | ")}</p>
+            <small>No live memory writes.</small>
+          </article>
+          <article className="flow-card">
+            <strong>Room context</strong>
+            <p>{demoRoomFixture.title}</p>
+            <small>{demoRoomFixture.roundTableOutcome}</small>
+          </article>
+          <article className="flow-card">
+            <strong>Safety boundary</strong>
+            <p>{demoRoomFixture.guardianPosture}</p>
+            <small>No backend runtime active.</small>
+          </article>
+        </div>
       </section>
 
       <div className="runtime-boundary">

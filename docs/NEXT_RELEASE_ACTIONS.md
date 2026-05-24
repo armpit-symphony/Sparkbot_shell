@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use `frontend-only-product-demo-polish` as the current canonical staging branch for frontend MVP demo polish and keep docs/charts/checks in one file set.
+Use `frontend-only-roundtable-static-adaptation` as the current canonical staging branch for frontend MVP demo polish and Wave 1 static adaptations, and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -50,6 +50,7 @@ Continue static-shell scope with safe UI-only imports only.
   - `FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
   - `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
   - `WAVE_1_WORKSTATION_ADAPTATION_PLAN.md`
+  - `WAVE_1_ROUNDTABLE_ADAPTATION_PLAN.md`
 
 ### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
 
@@ -67,22 +68,23 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-import-planning` as the canonical current staging branch for this planning pass.
+1. Keep `frontend-only-roundtable-static-adaptation` as the canonical current staging branch for this Wave 1 execution pass.
 2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
    - release-routing docs are corrected for `repo home TBD`,
    - Option C remains future,
    - no runtime behavior is added.
 3. Use classification output to pick exactly one Wave 1 candidate for manual static adaptation.
 4. Wave 1 candidate #1 (Workstation visual refinement) is complete with static-only adaptation.
-5. Next recommended candidate is Wave 1 candidate #2 (Round Table visual refinement), then stop for review.
-6. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
-7. Execute remaining approval steps only after Phil confirms:
+5. Wave 1 candidate #2 (Round Table visual refinement) is complete with manual static adaptation only.
+6. Next recommended candidate is Wave 1 candidate #3 (model seat/invite-seat visual refinement), then stop for review.
+7. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
+8. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
    - README/repo URLs are final-safe
-8. `Option D` remains blocked until explicit approvals for the above and release-note policy.
+9. `Option D` remains blocked until explicit approvals for the above and release-note policy.
 
 ## Operational Guardrails
 

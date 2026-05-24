@@ -22,12 +22,20 @@
 - Static fixture-content pass completed for Files, Memory, Tasks, and Demo Room preview surfaces.
 - Final frontend-only product-demo polish pass completed for storyline, copy density, and visual consistency.
 - Wave 1 candidate #1 completed: Workstation visual layout refined via manual static adaptation from R&D reference concepts.
+- Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
 
 ## What is Included
 
 - Static shell UI and public demo surfaces.
 - Frontend-only MVP status/copy polish for `GREEN_CANDIDATE` and `NOT_RELEASED` visibility.
 - Polished Workstation, Round Table, model-stack, Guardian basics, Robo teaser, and LIMA readiness copy.
+- Round Table visual refinement:
+  - meeting mission and chair/manager emphasis
+  - stage rail from intake through artifact/notes
+  - owner interrupt posture panel
+  - seat/model summary cards
+  - recommendation artifact and follow-up fixture package
+  - explicit static/runtime boundary badges
 - Workstation AI-office floor grouping refinement:
   - Sparkbot main desk
   - model stack desks (Primary, Backup 1, Backup 2, Heavy Hitter)
@@ -61,3 +69,4 @@
 - Candidate remains internal/staging static readiness only.
 - `Option D` remains blocked pending Phil approval for final repo home (TBD), version/tag, artifact destination, and announcement policy.
 - No direct R&D source code copy was used for Wave 1 candidate #1.
+- No direct R&D source code copy was used for Wave 1 candidate #2.

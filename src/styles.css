@@ -1248,12 +1248,91 @@ textarea {
   gap: 18px;
 }
 
+.roundtable-command-deck {
+  gap: 16px;
+}
+
+.roundtable-stage-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.roundtable-stage-rail article {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  min-height: 130px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(24, 34, 32, 0.06);
+}
+
+.roundtable-stage-rail article span {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  color: #f8fffc;
+  background: #25523f;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.roundtable-stage-rail article p {
+  margin-bottom: 0;
+  font-size: 0.82rem;
+}
+
+.roundtable-runtime-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.roundtable-runtime-badges span {
+  width: max-content;
+  max-width: 100%;
+  min-height: 26px;
+  padding: 4px 8px;
+  color: #2c463c;
+  background: #e5f3ed;
+  border: 1px solid #c4ddd2;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
 .phase-nav,
 .seat-assignment-grid,
 .phase-card-grid,
 .notes-list-grid {
   display: grid;
   gap: 12px;
+}
+
+.owner-interrupt-grid,
+.roundtable-seat-summary-grid,
+.roundtable-output-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.owner-interrupt-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.roundtable-seat-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.roundtable-output-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .phase-nav {
@@ -1576,6 +1655,10 @@ textarea {
   .demo-story-grid,
   .product-snapshot-grid,
   .roundtable-overview-grid,
+  .roundtable-stage-rail,
+  .owner-interrupt-grid,
+  .roundtable-seat-summary-grid,
+  .roundtable-output-grid,
   .model-stack-grid,
   .guardian-basics-grid,
   .fixture-grid,

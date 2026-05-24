@@ -1,8 +1,8 @@
 # Frontend Import Wave 1 Plan
 
 Updated: 2026-05-24
-Branch: `frontend-only-workstation-static-adaptation`
-Status: candidate #1 executed (manual static adaptation only)
+Branch: `frontend-only-roundtable-static-adaptation`
+Status: candidates #1 and #2 executed (manual static adaptation only)
 
 ## Wave 1 Objective
 
@@ -45,6 +45,11 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 - Rewrite/stub: convert room/message/task calls to fixture-backed local constants only.
 - Stop gates: any `apiFetch` room/task/artifact endpoints.
 - Validation: stage flow still local-only; no network/storage usage.
+- Execution status: COMPLETED in `frontend-only-roundtable-static-adaptation`.
+- Execution notes:
+  - manual static adaptation only
+  - no direct source-file copy from R&D
+  - no runtime/API/storage additions
 
 ### Candidate 3: Model seat and invite-seat visual refinements
 
@@ -95,5 +100,5 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 
 ## Current State
 
-Wave 1 candidate #1 is complete as a static-only adaptation.
+Wave 1 candidates #1 and #2 are complete as static-only adaptations.
 Remaining Wave 1 candidates are still pending explicit approval.

@@ -1,7 +1,7 @@
 # Frontend Import Candidate Matrix
 
 Updated: 2026-05-24
-Branch: `frontend-only-workstation-static-adaptation`
+Branch: `frontend-only-roundtable-static-adaptation`
 Reference repo (read-only): `armpit-symphony/Sparkbot`
 
 Classification labels:
@@ -59,4 +59,6 @@ Priority labels:
 - This matrix is planning-only and does not approve code import by itself.
 - Any import execution requires a separate explicit Phil approval pass after this planning stage.
 - Wave 1 candidate #1 (Workstation visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
+- Wave 1 candidate #2 (Round Table visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - No direct R&D source code copy was performed for Wave 1 candidate #1.
+- No direct R&D source code copy was performed for Wave 1 candidate #2.

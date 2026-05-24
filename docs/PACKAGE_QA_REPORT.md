@@ -2,7 +2,7 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-workstation-static-adaptation`
+Branch: `frontend-only-roundtable-static-adaptation`
 
 ## Locked Preview Package
 
@@ -13,7 +13,7 @@ Branch: `frontend-only-workstation-static-adaptation`
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
-This Workstation adaptation pass updates static UI/copy/layout only and does not change the package allowlist.
+This Round Table adaptation pass updates static UI/copy/layout only and does not change the package allowlist.
 
 ## Package Dry Run
 
@@ -99,6 +99,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Final high-risk artifact scan found no matches for private domains, private paths, selected env variable names, or internal platform/private bridge terms.
 - `npm pack --dry-run --json` was run after adding a `files` allowlist and did not create a `.tgz` file.
 - Wave 1 Workstation adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
+- Wave 1 Round Table adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 
 ## Connector/private recall classification
 
