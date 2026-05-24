@@ -1,7 +1,10 @@
-# Official Repo Creation Checklist (Phil/Manual Action)
+# Official Repo Creation Checklist (Future Use)
 
-- Repo name: **Sparkbot**
-- Owner/org: **sparkpit-labs**
+> This is a future-use checklist only. Current active work remains in
+> `armpit-symphony/Sparkbot_shell` and the public repo home is still `TBD`.
+
+- Repo name: **Sparkbot** (or approved substitute)
+- Owner/org: **sparkpit-labs** (or approved substitute)
 - Recommended description:
   - `Open-source self-hosted AI workstation shell with Workstation and Round Table multi-agent meetings.`
 - Suggested topics:
@@ -11,7 +14,7 @@
 ## GitHub Setup Checklist
 
 - [ ] Confirm target org exists and is active.
-- [ ] Create repository `sparkpit-labs/Sparkbot` with clean baseline.
+- [ ] (Future only) Create repository `sparkpit-labs/Sparkbot` with clean baseline once target is approved.
 - [ ] Confirm visibility:
   - public only when Phil and release policy approve.
 - [ ] Set `main` as default branch.
@@ -34,8 +37,9 @@
 
 ## Hand-off Data for Phil
 
-- This checklist is for manual GitHub setup only.
-- Execution still requires:
+- This checklist is for future manual GitHub setup only.
+- Execution is deferred until official repo home is approved.
+- When/if a repo is approved, execution still requires:
   - target repo creation/access grant,
   - Codex preflight revalidation,
   - then Option C dry-run export/copy sequence.

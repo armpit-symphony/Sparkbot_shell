@@ -23,11 +23,10 @@ Use the `public-release-official-repo-preflight` branch as the canonical pre-Opt
 
 Prepare official movement plan without executing Option D.
 
-- Perform preflight validation on `sparkpit-labs/Sparkbot` (this includes existence/access verification).
-- Keep repo move execution blocked until target repo is confirmed accessible.
-- Package naming and link/path audit.
-- Optional copy path to the final public repo (execution-ready only).
-- Ownership and branding alignment.
+- This is currently a **future plan only**.
+- Keep repo move execution blocked while final repo home is TBD.
+- Maintain source-boundary and contract-readiness work in this staging repo.
+- Revisit this option only after Phil confirms a public repo target.
 
 ### Option D - Approve Public Preview Tag/Upload/Announcement
 
@@ -62,19 +61,19 @@ Do not run Option D now.
 ### Immediate Recommended Path
 
 1. Keep `public-release-official-repo-preflight` as the canonical pre-Option-D branch.
-2. Re-run Option C preflight when repo setup/access changes and maintain blocker reports.
-3. Do not execute copy/Option C until Phil confirms official repo exists/access and `OFFICIAL_REPO_PREFLIGHT_REPORT.md` is updated to clear.
-4. Execute remaining approval steps only after Phil confirms:
+2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
+   - release-routing docs are corrected for `repo home TBD`,
+   - Option C remains future,
+   - no runtime behavior is added.
+3. Continue frontend-only MVP import/contract-readiness prep (docs, stubs, boundaries, and non-runtime readiness).
+4. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
+5. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
    - README/repo URLs are final-safe
-
-5. Option paths after Option C readiness:
-   - hold staging if Phil chooses the temporary staging path,
-   - create/copy to approved official repo if Phil approves Option C,
-   - proceed to Option D only after explicit final approvals.
+6. `Option D` remains blocked until explicit approvals for the above and release-note policy.
 
 ## Operational Guardrails
 

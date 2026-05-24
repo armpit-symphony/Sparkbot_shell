@@ -4,16 +4,16 @@ This is the future execution sequence for official repo move readiness. It is pl
 
 ## Execution Preconditions
 
-- `sparkpit-labs/Sparkbot` exists.
-- Official target access is confirmed for Codex.
-- Preflight report status is updated to success (not found/blocked).
+- Official public repo home is approved (TBD today).
+- Approved target exists and official access is confirmed for Codex.
+- Preflight report status is updated to success for the approved target.
 
 ## Planned Steps
 
-1. **Phil confirms official repo exists/access is granted**  
+1. **Phil confirms official repo exists/access is granted**
    - Phil provides explicit approval to proceed from staging.
 
-2. **Codex re-checks target repo**  
+2. **Codex re-checks target repo**
    - Re-run preflight checks:
      - `git ls-remote`
      - API visibility checks
@@ -48,5 +48,5 @@ This is the future execution sequence for official repo move readiness. It is pl
 
 ## Current Execution Gate
 
-- **Blocked.**  
-  Target repo `sparkpit-labs/Sparkbot` preflight was re-run after access approval and remains `404/Not Found`.
+- **Deferred.**
+  This execution plan is held until Phil confirms the official repo home.

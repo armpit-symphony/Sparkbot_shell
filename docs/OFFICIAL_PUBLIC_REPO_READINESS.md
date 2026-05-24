@@ -1,84 +1,51 @@
-# Official Public Repo Readiness Packet
+# Official Public Repo Readiness Packet (Routing Correction)
 
 ## Current Status Snapshot
 
-- Current staging repo: `armpit-symphony/Sparkbot_shell`
-- Current candidate branch: `public-release-official-repo-preflight`
-- Current candidate commit: `e3d2cb5`
+- Active staging repo: `armpit-symphony/Sparkbot_shell`
+- Current candidate branch: `public-release-routing-tbd-correction`
+- Current candidate commit: latest commit on this branch
 - Preview artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Current package/version: `0.8.0-layer8-preview`
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
 - Readiness: `GREEN_CANDIDATE`, `NOT_RELEASED`
+- Final official repo/home: **TBD**
 - Option D status: blocked pending Phil approvals.
 
-## Recommended Official Public Repo Home
+## Current Public Routing Decision
 
-Recommended: `sparkpit-labs/Sparkbot` as the eventual official public release repo.
+- `sparkpit-labs/Sparkbot` was used for an earlier preflight. It is currently a
+  **possible future candidate only**, not the active target.
+- Public repo/home has not been finalized and is deferred.
+- Official repo move/creation is not approved yet and is not the next active step.
+- Staging and release-preflight work should continue in this repository.
 
-Reason:
-- Stronger organizational ownership signaling.
-- Aligns public shell work with expected Sparkbot lineage.
-- Reduces long-term confusion versus staging under `armpit-symphony`.
+## What Remains in This Pass
 
-## Why Final Public Stay in `armpit-symphony` Is Not Preferred
+- Keep the current staging shell stable and documented as:
+  - static preview only,
+  - no runtime/proprietary wiring,
+  - no backend or desktop runtime, and
+  - no release actions (tag/upload/announcement).
+- Continue refinement of docs/UX and boundary clarifications in `Sparkbot_shell`.
+- Prepare for future LIMA AI OS install/contract work after contract direction is clear.
+- Revisit official repo home once Phil gives explicit direction.
 
-The staging repo is valuable for consolidation and auditability, but should not be the final public release home unless Phil explicitly approves a temporary preview.
+## What Must Not Move (when/if future move happens)
 
-Reasons final release should move:
-- Internal/staging repo naming is ambiguous for external consumers.
-- Future release infrastructure needs a clear public source-of-truth.
-- Mixed staging artifacts and docs are better isolated before public distribution.
-- Risk of accidentally exposing branch artifacts and planning material rises without an explicit “temporary preview” framing.
+- `backend/` and any runtime backend services.
+- `src-tauri/` and desktop runtime packages.
+- `.github/` workflow artifacts.
+- `.agents/` and private agent workflows.
+- Sparkbot R&D runtime/runtime-only code.
+- LIMA/Arc/Office/IT internal execution code.
+- Advanced Guardian internals.
+- Robotics/IoT control surfaces.
+- Private path/domain references, secrets, or branch-ephemeral links.
+- Client-specific or environment-specific staging workflows.
 
-## What Must Be Changed Before an Official Move
+## Routing Correction Note
 
-- Finalize Phil’s repo-home approval.
-- Confirm Option C sequencing (dry-run, then copy window).
-- Align final public links (README/docs/release artifacts).
-- Confirm final version/tag and artifact destination.
-- Verify release artifact policy and checksum/export expectations.
-- Confirm announcement and release-note policy.
-- Run official-repo move dry run checklist to green across checks.
-
-## What Must Not Be Moved
-
-- No backend runtime tree.
-- No provider runtime, connector runtime, persistence, or scheduler execution.
-- No connector sends or external dispatch code.
-- No terminal/browser execution code.
-- No Guardian internals or privileged control engines.
-- No proprietary LIMA/Arc/Office/IT/Robotics source.
-- No private paths/domains, secrets, or branch-ephemeral references.
-- No client-specific/temporary staging workflow artifacts.
-
-## Exact No-Go Items (Do not move)
-
-- `backend/`
-- `src-tauri/`
-- `.github/workflows`
-- `.agents/`
-- Sparkbot R&D runtime and private branches that are not already sanitized by earlier planning docs.
-- `LIMA` internals, `Arc` runtime, `LIMA Office`, and `LIMA IT` execution code.
-- Advanced `Guardian` internals and enforcement engines.
-- Robotics/IoT control surfaces and adapters.
-- Private domains, localhost-only runtime endpoints, internal server paths, or deployment credentials.
-- Client-specific staging workflows, private operational notes, and internal branch references that are not final-safe.
-
-## Current Move Readiness
-
-Readiness for Option C is **blocked** pending destination repo verification.
-
-Preflight target status:
-
-- Target: `sparkpit-labs/Sparkbot`
-- Status: `OPTION_C_BLOCKED_REPO_NOT_FOUND_OR_INACCESSIBLE`
-- Recheck after access approval: still `404 / Not Found`.
-
-Until this is resolved:
-
-- final repo home confirmation is blocked,
-- final version/tag confirmation cannot be actioned,
-- artifact destination confirmation is blocked,
-- announcement policy confirmation remains pending.
-
-See `docs/OFFICIAL_REPO_PREFLIGHT_REPORT.md` for the blocker details and exact Phil action required.
+- The immediate preflight blocker is now recorded as `FUTURE_REPO_HOME_TBD`
+  rather than a fatal execution blocker.
+- The next release decision remains in `GREEN_CANDIDATE` staging posture.

@@ -15,7 +15,7 @@ Package/version label: `0.8.0-layer8-preview`.
 
 Preview status is `GREEN_CANDIDATE` for static-preview readiness and remains `NOT_RELEASED`.
 No tag, no upload, and no announcement have been executed.
-Official public repo move is pending Phil approval. Target preflight to `sparkpit-labs/Sparkbot` was re-run after access approval and remains blocked (`404/Not Found`).
+Official public repo move is pending Phil approval. Public repo/home is currently `TBD`; this repo continues as the active staging shell.
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
 
 ## Public MVP Highlights
@@ -74,12 +74,14 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Sanitized export dry-run manifest](docs/SANITIZED_EXPORT_DRY_RUN_MANIFEST.md)
 - [Official repo creation checklist](docs/OFFICIAL_REPO_CREATION_CHECKLIST.md)
 - [Option C execution plan](docs/OPTION_C_EXECUTION_PLAN.md)
+- [Release routing correction](docs/RELEASE_ROUTING_CORRECTION.md)
 
 ## Preview Artifact Boundary
 
 Generated preview artifacts include only the built static app, README, LICENSE, package.json, user-facing docs, and package metadata. Repo-only staging docs can remain in git for auditability, but they are excluded from generated preview artifacts.
 
-The current repo, `armpit-symphony/Sparkbot_shell`, remains the staging workspace. The likely future public repo target is `sparkpit-labs/Sparkbot`, but repo migration is a later release operation.
+The current repo, `armpit-symphony/Sparkbot_shell`, remains the active staging workspace.
+`sparkpit-labs/Sparkbot` is a possible future candidate but is **not** the active target today; final public repo home is **TBD**.
 
 ## Development
 
@@ -129,4 +131,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is release-branch reconciliation and current handoff docs, followed by runtime contract/install layer planning. Re-run physical/mobile QA if UI or artifact layout changes. Keep live connector QA marked UNKNOWN until test-only channels pass.
+Recommended next work is release-branch stabilization and release routing docs, followed by frontend-only MVP import/contract readiness work and future AI OS contract-layer planning.
+Continue to treat release actions as deferred while repo/home/version/tag are pending.

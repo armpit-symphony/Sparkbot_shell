@@ -36,7 +36,7 @@ This document is the pre-Option-D decision packet for Phil.
 
 ## Open Decisions
 
-1. Final public repo home.
+1. Final public repo home (**TBD**).
 2. Final public version/tag.
 3. Artifact upload destination.
 4. Keep `0.8.0-layer8-preview` or rename to a `v1.0.0`-based public preview version.
@@ -57,12 +57,12 @@ Continue docs polish and versioning edits in the staging branch, then rerun pack
 
 ### Option C - Prepare Official Repo Move/Copy, No Announcement
 
-Prepare path to final hosting (copy/move tree, cleanup, and link rewrite) without executing tag/upload/announcement.
+Prepare path to final hosting without executing tag/upload/announcement.
 
 ## Option C Readiness Status (Current)
 
-- Status: **blocked (preflight target revalidated; still `404/Not Found`)**
-- Scope: docs-and-export planning created for official repo move.
+- Status: **deferred pending repo-home decision**.
+- Scope: routing/state correction for staging and future move planning.
 - Pending constraints: final repo home, version/tag, artifact destination, announcement policy.
 - This branch includes:
   - official public repo readiness packet,
@@ -72,7 +72,7 @@ Prepare path to final hosting (copy/move tree, cleanup, and link rewrite) withou
   - branding/link cleanup plan,
   - versioning finalization plan.
 - No copy/push/release actions are permitted in this stage.
-- Preflight was re-run after access approval; target remains unavailable, so Option C stays blocked.
+- Preflight was re-run after access approval; target remains a future candidate and this pass is now explicitly deferred.
 
 ### Option D - Approve Tag/Upload/Announcement
 
@@ -93,7 +93,8 @@ Option D remains blocked until Phil approves:
 - release note policy
 
 Current execution gate:
-- Option C execution is **blocked** due target repo preflight failure (`OPTION_C_BLOCKED_REPO_NOT_FOUND_OR_INACCESSIBLE`).
+- Option C execution is **deferred** with routing correction applied (`FUTURE_REPO_HOME_TBD`).
+- Active staging repo is `armpit-symphony/Sparkbot_shell`.
 - No copy/push/release actions are permitted in this stage.
 - Option D remains blocked until explicit Phil approval on:
   - final repo home
@@ -101,4 +102,4 @@ Current execution gate:
   - artifact destination
   - announcement channel
 
-Current branch to use for Option D packeting: `public-release-official-repo-preflight`.
+Current branch to use for staging and pre-Option-D packeting: `public-release-official-repo-preflight`.

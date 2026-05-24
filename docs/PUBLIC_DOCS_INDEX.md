@@ -7,7 +7,7 @@ This is the user-facing docs index for future public release artifacts. It is se
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
 Current release posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
-Option C execution is currently blocked by target repo preflight (`sparkpit-labs/Sparkbot` rechecked after access approval and still `404/Not Found`).
+Option C execution is deferred while the official repo home remains `TBD`.
 Option D is blocked until Phil approves final repo home, final version/tag, artifact destination, and announcement policy.
 
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
@@ -77,6 +77,7 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Sanitized export dry-run manifest](SANITIZED_EXPORT_DRY_RUN_MANIFEST.md)
 - [Official repo creation checklist](OFFICIAL_REPO_CREATION_CHECKLIST.md)
 - [Option C execution plan](OPTION_C_EXECUTION_PLAN.md)
+- [Release routing correction](RELEASE_ROUTING_CORRECTION.md)
 
 ## Release Artifact Rule
 
