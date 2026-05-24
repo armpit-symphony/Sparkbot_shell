@@ -23,6 +23,7 @@
 - Final frontend-only product-demo polish pass completed for storyline, copy density, and visual consistency.
 - Wave 1 candidate #1 completed: Workstation visual layout refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
+- Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
 
 ## What is Included
 
@@ -36,6 +37,11 @@
   - seat/model summary cards
   - recommendation artifact and follow-up fixture package
   - explicit static/runtime boundary badges
+- Model stack + Invite Wing visual refinement:
+  - clearer seat-role hierarchy for Primary, Backup 1, Backup 2, Heavy Hitter, and BYO Invite Wing
+  - static setup-flow lane for future provider onboarding posture
+  - explicit no-key/no-provider/no-routing-runtime labels
+  - stronger tie-in counters for Round Table seat visibility and specialty coverage
 - Workstation AI-office floor grouping refinement:
   - Sparkbot main desk
   - model stack desks (Primary, Backup 1, Backup 2, Heavy Hitter)
@@ -70,3 +76,4 @@
 - `Option D` remains blocked pending Phil approval for final repo home (TBD), version/tag, artifact destination, and announcement policy.
 - No direct R&D source code copy was used for Wave 1 candidate #1.
 - No direct R&D source code copy was used for Wave 1 candidate #2.
+- No direct R&D source code copy was used for Wave 1 candidate #3.

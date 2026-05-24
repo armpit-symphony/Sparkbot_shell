@@ -34,6 +34,41 @@ const stackRoles = [
   ["Bring-your-own", "seat-local-openai-compatible"],
 ] as const;
 
+const seatRoleBlueprint = [
+  {
+    role: "Primary",
+    seatId: "seat-codex-openai",
+    mission: "Main operator desk for Chat and default Round Table flow.",
+  },
+  {
+    role: "Backup 1",
+    seatId: "seat-claude-anthropic",
+    mission: "Cloud fallback desk for review and research perspectives.",
+  },
+  {
+    role: "Backup 2",
+    seatId: "seat-grok-xai",
+    mission: "Alternate desk for optional specialist coverage.",
+  },
+  {
+    role: "Heavy Hitter",
+    seatId: "seat-local-ollama",
+    mission: "Local high-load desk for deeper planning passes.",
+  },
+  {
+    role: "Invite Wing (BYO)",
+    seatId: "seat-local-openai-compatible",
+    mission: "Bring-your-own seat for future user-managed model routing.",
+  },
+] as const;
+
+const futureSetupFlow = [
+  "Choose seat role and provider label.",
+  "Set model id and local runtime labels.",
+  "Mark Round Table / Specialty Wing participation.",
+  "Runtime key/provider setup later via approved backend contracts.",
+] as const;
+
 type ModelConfigShellProps = {
   modelSeats: ModelSeat[];
   specialtyAgents: SpecialtyAgent[];
@@ -70,6 +105,12 @@ export function ModelConfigShell({
     [modelSeats],
   );
   const selectedLocalSeat = localSeats.find((seat) => seat.id === selectedSeatId) ?? localSeats[0] ?? selectedSeat;
+  const configuredSeats = modelSeats.filter((seat) => seat.setupStatus === "configured");
+  const roundTableSeatCount = modelSeats.filter((seat) => seat.showInRoundTable).length;
+  const inviteSeat = modelSeats.find((seat) => seat.id === "seat-local-openai-compatible");
+  const specialtyCoverageCount = specialtyAgents.filter((agent) =>
+    modelSeats.some((seat) => seat.id === agent.modelSeatId && seat.showInSpecialtyWing),
+  ).length;
 
   function updateSeat(nextSeat: ModelSeat) {
     onModelSeatsChange(modelSeats.map((seat) => (seat.id === nextSeat.id ? nextSeat : seat)));
@@ -110,6 +151,62 @@ export function ModelConfigShell({
         ))}
       </section>
 
+      <section className="config-panel model-seat-command-deck" aria-label="Model seat command deck">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Model seat command deck</p>
+            <h2>Model stack + Invite Wing in one static preview lane</h2>
+            <p>
+              Manual static adaptation from R&D visual concepts only. Seats are fixture labels and status markers with
+              no provider login, key storage, or route-save runtime.
+            </p>
+          </div>
+        </div>
+        <div className="model-seat-runtime-badges">
+          <span>Static preview</span>
+          <span>Demo fixture</span>
+          <span>No API keys stored</span>
+          <span>No provider calls</span>
+          <span>No model routing runtime</span>
+          <span>No live Codex/Claude/Grok/OpenRouter/Ollama calls</span>
+          <span>Future setup flow only</span>
+          <span>Future LIMA contract layer separate</span>
+        </div>
+        <div className="model-seat-role-grid">
+          {seatRoleBlueprint.map((entry) => {
+            const seat = modelSeats.find((candidate) => candidate.id === entry.seatId);
+            if (!seat) return null;
+            return (
+              <article className="template-card" key={entry.role}>
+                <span className="seat-marker">{entry.role}</span>
+                <strong>{seat.label}</strong>
+                <p>{entry.mission}</p>
+                <small>{seat.modelId}</small>
+                <StatusLine seat={seat} />
+              </article>
+            );
+          })}
+        </div>
+        <div className="floor-status-grid">
+          <article>
+            <strong>{configuredSeats.length}</strong>
+            <span>configured seat fixtures</span>
+          </article>
+          <article>
+            <strong>{roundTableSeatCount}</strong>
+            <span>seats visible in Round Table demo</span>
+          </article>
+          <article>
+            <strong>{specialtyCoverageCount}</strong>
+            <span>specialty agents with seat coverage</span>
+          </article>
+          <article>
+            <strong>{inviteSeat?.setupStatus ?? "setup_needed"}</strong>
+            <span>Invite Wing BYO seat state</span>
+          </article>
+        </div>
+      </section>
+
       <section className="config-panel">
         <div className="card-heading">
           <div>
@@ -130,6 +227,7 @@ export function ModelConfigShell({
                 <strong>{seat.label}</strong>
                 <p>{seat.modelId}</p>
                 <small>{seat.setupMessage}</small>
+                <StatusLine seat={seat} />
               </article>
             );
           })}
@@ -180,6 +278,27 @@ export function ModelConfigShell({
 
       <InviteWingPanel modelSeats={modelSeats} onSelectSeat={setSelectedSeatId} />
 
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Invite Wing + model stack handoff</p>
+            <h2>Future setup flow (no key handling in shell preview)</h2>
+            <p>
+              This shell shows where users would eventually bring their own model/provider setup. Key entry, token
+              storage, and provider auth are intentionally excluded in this layer.
+            </p>
+          </div>
+        </div>
+        <div className="invite-flow-grid">
+          {futureSetupFlow.map((step, index) => (
+            <article className="flow-card" key={step}>
+              <span className="seat-marker">{`Step ${index + 1}`}</span>
+              <p>{step}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <SpecialtyWingPanel
         agents={specialtyAgents}
         modelSeats={modelSeats}
@@ -225,5 +344,19 @@ export function ModelConfigShell({
         </p>
       </div>
     </section>
+  );
+}
+
+type StatusLineProps = {
+  seat: ModelSeat;
+};
+
+function StatusLine({ seat }: StatusLineProps) {
+  return (
+    <div className="seat-flags">
+      <span>{seat.enabled ? "Seat active" : "Seat disabled"}</span>
+      <span>{seat.showInRoundTable ? "Round Table visible" : "Round Table hidden"}</span>
+      <span>{seat.showInSpecialtyWing ? "Specialty Wing visible" : "Specialty Wing hidden"}</span>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-roundtable-static-adaptation`.
+- Current branch: `frontend-only-model-seat-static-adaptation`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -32,6 +32,7 @@ Readiness rules:
 - Final product-demo storyline polish across Workstation, Round Table, and demo fixtures.
 - Wave 1 candidate #1 complete: Workstation visual layout refinement as manual static adaptation only.
 - Wave 1 candidate #2 complete: Round Table visual flow refinement as manual static adaptation only.
+- Wave 1 candidate #3 complete: Model stack + Invite Wing visual flow refinement as manual static adaptation only.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
@@ -108,6 +109,7 @@ Option B status: completed and passed with Phil manual verification. Current wor
 Current product-demo polish pass is complete and keeps the same static-only boundary.
 Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/API/storage additions.
+Wave 1 candidate #3 (Model stack + Invite Wing visual adaptation) is complete with no runtime/API/storage additions.
 
 ## Recommended Next Step
 

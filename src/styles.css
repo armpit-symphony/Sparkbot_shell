@@ -720,6 +720,45 @@ textarea {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.model-seat-command-deck {
+  gap: 16px;
+}
+
+.model-seat-runtime-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.model-seat-runtime-badges span {
+  width: max-content;
+  max-width: 100%;
+  min-height: 26px;
+  padding: 4px 8px;
+  color: #2c463c;
+  background: #e5f3ed;
+  border: 1px solid #c4ddd2;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.model-seat-role-grid,
+.invite-flow-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.model-seat-role-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.invite-flow-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .guardian-basics-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1659,6 +1698,8 @@ textarea {
   .owner-interrupt-grid,
   .roundtable-seat-summary-grid,
   .roundtable-output-grid,
+  .model-seat-role-grid,
+  .invite-flow-grid,
   .model-stack-grid,
   .guardian-basics-grid,
   .fixture-grid,

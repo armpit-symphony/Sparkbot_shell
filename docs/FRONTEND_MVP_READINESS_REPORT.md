@@ -1,12 +1,13 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24
-Branch: `frontend-only-roundtable-static-adaptation`
+Branch: `frontend-only-model-seat-static-adaptation`
 
 ## Summary
 
 Frontend-only product-demo polish remains in place.
 This pass executes Wave 1 candidate #2 as a manual static Round Table visual adaptation from R&D reference concepts.
+This pass also executes Wave 1 candidate #3 as a manual static Model stack + Invite Wing visual adaptation from R&D reference concepts.
 
 ## Surfaces Represented
 
@@ -66,12 +67,13 @@ This pass executes Wave 1 candidate #2 as a manual static Round Table visual ada
 - Import-planning readiness: candidate classification, stub/rewrite rules, and Wave 1 validation checklist are now documented.
 - Wave 1 execution: Workstation now presents clearer AI-office floor grouping (main desk, model stack desks, invite seat, specialty wing, Round Table hub, fixture context, Guardian posture, Robo teaser, and LIMA-ready placement).
 - Wave 1 execution: Round Table now presents clearer meeting mission, chair-led stage rail, owner interrupt concept, seat/model summary, and artifact/follow-up fixture tie-in.
+- Wave 1 execution: Model stack + Invite Wing now present a clearer role hierarchy, static setup-flow lane, Round Table/specialty coverage tie-ins, and explicit no-key/no-provider/no-runtime badges.
 
 ## Recommended Next Source Import Step
 
 Frontend-only continuation (still classification-gated):
 
-1. Select Wave 1 candidate #3 (model seat + invite-seat visual refinement) for next pass.
+1. Select Wave 1 candidate #4 (docs/info visual refinement) for next pass.
 2. Execute manual static adaptation only (no wholesale file copy).
 3. Run `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`.
 4. Stop for review before any next candidate.

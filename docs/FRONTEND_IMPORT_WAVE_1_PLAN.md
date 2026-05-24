@@ -1,8 +1,8 @@
 # Frontend Import Wave 1 Plan
 
 Updated: 2026-05-24
-Branch: `frontend-only-roundtable-static-adaptation`
-Status: candidates #1 and #2 executed (manual static adaptation only)
+Branch: `frontend-only-model-seat-static-adaptation`
+Status: candidates #1, #2, and #3 executed (manual static adaptation only)
 
 ## Wave 1 Objective
 
@@ -60,6 +60,12 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 - Rewrite/stub: remove credential/provider setup logic, auth mode handling, and key/token prompts.
 - Stop gates: any key/token input fields or provider config writes.
 - Validation: static seat labels only, no persistence.
+- Execution status: COMPLETED in `frontend-only-model-seat-static-adaptation`.
+- Execution notes:
+  - manual static adaptation only
+  - no direct source-file copy from R&D
+  - no runtime/API/storage additions
+  - no key/token handling runtime added
 
 ### Candidate 4: Docs/info visual refinement
 
@@ -100,5 +106,5 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 
 ## Current State
 
-Wave 1 candidates #1 and #2 are complete as static-only adaptations.
+Wave 1 candidates #1, #2, and #3 are complete as static-only adaptations.
 Remaining Wave 1 candidates are still pending explicit approval.
