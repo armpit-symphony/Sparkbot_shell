@@ -47,6 +47,18 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - Internal extraction planning.
 - Private/source-boundary notes.
 - R&D path maps.
+- Public import/planning docs pending runtime gating.
+
+## Repo-Only Release-Reconciliation Planning Docs
+
+- [Public MVP import plan](PUBLIC_MVP_IMPORT_PLAN.md)
+- [Public source tree plan](PUBLIC_SOURCE_TREE_PLAN.md)
+- [Stub strategy](STUB_STRATEGY.md)
+- [Code import stop gates](CODE_IMPORT_STOP_GATES.md)
+- [Public MVP acceptance criteria](PUBLIC_MVP_ACCEPTANCE_CRITERIA.md)
+- [Public preview release candidate](PUBLIC_PREVIEW_RELEASE_CANDIDATE.md)
+- [Public preview launch checklist](PUBLIC_PREVIEW_LAUNCH_CHECKLIST.md)
+- [Public preview messaging draft](PUBLIC_PREVIEW_MESSAGING_DRAFT.md)
 
 ## Release Artifact Rule
 

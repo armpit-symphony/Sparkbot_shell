@@ -47,6 +47,17 @@ These docs are safe to ship in the preview artifact:
 
 Repo-only staging docs are still kept in git for auditability, but they are excluded from preview release artifacts.
 
+Planned reconciliation and import-planning docs (repo-only):
+
+- [Public MVP import plan](docs/PUBLIC_MVP_IMPORT_PLAN.md)
+- [Public source tree plan](docs/PUBLIC_SOURCE_TREE_PLAN.md)
+- [Stub strategy](docs/STUB_STRATEGY.md)
+- [Code import stop gates](docs/CODE_IMPORT_STOP_GATES.md)
+- [Public MVP acceptance criteria](docs/PUBLIC_MVP_ACCEPTANCE_CRITERIA.md)
+- [Public preview release candidate](docs/PUBLIC_PREVIEW_RELEASE_CANDIDATE.md)
+- [Public preview launch checklist](docs/PUBLIC_PREVIEW_LAUNCH_CHECKLIST.md)
+- [Public preview messaging draft](docs/PUBLIC_PREVIEW_MESSAGING_DRAFT.md)
+
 ## Preview Artifact Boundary
 
 Generated preview artifacts include only the built static app, README, LICENSE, package.json, user-facing docs, and package metadata. Repo-only staging docs can remain in git for auditability, but they are excluded from generated preview artifacts.

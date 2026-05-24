@@ -11,8 +11,7 @@ const docs = [
   ["Beta limitations", "BETA_LIMITATIONS.md"],
 ] as const;
 
-const repoDocsBase =
-  "https://github.com/armpit-symphony/Sparkbot_shell/blob/public-release-shell-preview-signoff/docs";
+const repoDocsBase = "./docs";
 
 export function DocsPage() {
   return (
