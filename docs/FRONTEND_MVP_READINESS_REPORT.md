@@ -57,6 +57,7 @@ Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations
 ## Still Needed Later (Functional MVP Path)
 
 - Runtime contract definitions and approved integration boundaries.
+- Mock LIMA contract/docs/fixture planning (Phase 2, no runtime).
 - Mock-to-runtime adapter implementation after contract approvals.
 - Optional local runtime detection and read-only endpoint wiring in later phase.
 - Functional backend/provider/connector/persistence/scheduler implementations in separate approved repositories or phases.
@@ -84,3 +85,11 @@ Wave 1 checkpoint complete (recommended closure):
    - Mock LIMA contract layer planning (docs/fixtures only), or
    - release-candidate branch consolidation.
 4. Stop before any deeper source import or runtime planning until explicit approval.
+
+## Current LIMA Contract Planning Additions
+
+- `docs/LIMA_CONTRACT_LAYER_PLAN.md` defines the contract-first boundary and planned mock surfaces.
+- `docs/LIMA_CONTRACT_MOCK_SCHEMA.md` defines six+ mock response shapes.
+- `docs/LIMA_CONTRACT_FIXTURES.md` provides static example payloads.
+- `docs/LIMA_CONTRACT_FRONTEND_READINESS.md` defines mock rendering safety.
+- `docs/LIMA_CONTRACT_STOP_GATES.md` defines hard gates before runtime work.

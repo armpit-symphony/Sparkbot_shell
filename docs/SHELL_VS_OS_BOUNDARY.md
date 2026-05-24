@@ -46,3 +46,28 @@ Updated: 2026-05-24
 ## Integration Rule
 
 When integration begins, Sparkbot_shell consumes approved contracts and capabilities. It does not import private runtime internals directly.
+
+## Mock Contract Planning Rule
+
+For the current static planning phase:
+
+- `lima_runtime_active` remains false.
+- All contract surfaces are placeholders and previews only.
+- No runtime data is authoritative.
+- No provider/model/connector calls occur.
+- No persistence, scheduler, terminal, or robotics paths are active.
+- No LIMA/Arc/Office/IT runtime code is consumed from shell source.
+
+## Contract Surface Expectations
+
+The following contract surfaces are defined as future display domains:
+
+- workstation state preview
+- round table meeting preview
+- model/seat preview
+- file/memory/task context preview
+- guardian posture preview
+- robo teaser preview
+- release readiness preview
+
+These are planning artifacts only and do not imply live runtime readiness.

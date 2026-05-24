@@ -133,6 +133,17 @@ This revision also establishes import-planning baseline context. No runtime beha
 - LIMA-ready direction is visible in UI as a contract-readiness path, not runtime wiring.
 - Robo Preview is more future-facing while retaining an explicit no-control boundary.
 
+## Contract Planning Follow-up
+
+- Option C (mock LIMA contracts, docs/fixtures only) is now planned with dedicated planning docs:
+  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
+  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
+  - `docs/LIMA_CONTRACT_FIXTURES.md`
+  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+  - `docs/LIMA_CONTRACT_STOP_GATES.md`
+
+No runtime APIs, persistence, or direct R&D imports were introduced during this planning pass.
+
 ## Recommendations
 
 1. Keep Workstation as the default home route and central shell preview floor.

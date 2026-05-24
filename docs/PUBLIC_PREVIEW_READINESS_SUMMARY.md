@@ -116,6 +116,17 @@ Wave 1 candidate #4 (Docs/info visual refinement) is complete with no runtime/AP
 
 Wave 1 checkpoint status: verified as static and release-safe for this branch, no deeper source import yet.
 
+## Mock LIMA Contract Planning Status
+
+- Option C is now in-progress-complete for planning artifacts:
+  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
+  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
+  - `docs/LIMA_CONTRACT_FIXTURES.md`
+  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+  - `docs/LIMA_CONTRACT_STOP_GATES.md`
+- `Sparkbot_shell` continues to render these as docs/fixture-only references.
+- No runtime behavior or API calls added in this pass.
+
 ## Recommended Next Step
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):

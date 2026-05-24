@@ -29,6 +29,14 @@ No tag, no upload, and no announcement have been executed.
 Official public repo move is pending Phil approval. Public repo/home is currently `TBD`; this repo continues as the active staging shell.
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
 
+Current planning phase also includes LIMA contract fixture/docs planning:
+
+- [LIMA contract layer plan](docs/LIMA_CONTRACT_LAYER_PLAN.md)
+- [LIMA contract mock schema](docs/LIMA_CONTRACT_MOCK_SCHEMA.md)
+- [LIMA contract fixtures](docs/LIMA_CONTRACT_FIXTURES.md)
+- [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
+- [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
+
 ## Public MVP Highlights
 
 - Workstation as the operating floor.
@@ -102,6 +110,11 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Wave 1 Docs/info adaptation plan](docs/WAVE_1_DOCS_INFO_ADAPTATION_PLAN.md)
 - [Wave 1 checkpoint audit](docs/WAVE_1_CHECKPOINT_AUDIT.md)
 - [Wave 1 static demo baseline](docs/WAVE_1_STATIC_DEMO_BASELINE.md)
+- [LIMA contract layer plan](docs/LIMA_CONTRACT_LAYER_PLAN.md)
+- [LIMA contract mock schema](docs/LIMA_CONTRACT_MOCK_SCHEMA.md)
+- [LIMA contract fixtures](docs/LIMA_CONTRACT_FIXTURES.md)
+- [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
+- [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
 
 ## Preview Artifact Boundary
 
@@ -158,5 +171,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is a Wave 1 checkpoint/audit across candidates #1-#4 before any deeper import or runtime planning.
+Recommended next work is final Option C contract-planning checkpoint validation plus final release-path decision checkpoint.
 Continue to treat release actions as deferred while repo/home/version/tag are pending.

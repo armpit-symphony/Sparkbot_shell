@@ -49,10 +49,14 @@ Continue static-shell scope with safe UI-only imports only.
 
 ### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
 
-Add contract-first docs/fixtures only.
+Completed on `mock-lima-contract-planning`.
 
-- No live runtime wiring.
-- No provider/model/connectors/terminal/robotics integration.
+- contract-first docs completed,
+- mock schemas/fixtures drafted,
+- frontend readiness and stop-gate docs added.
+
+No live runtime wiring.
+No provider/model/connectors/terminal/robotics integration.
 
 ### Option G - Pause Sparkbot and Return to LIMA AI OS Universal Contract Work
 
@@ -82,6 +86,20 @@ Do not run Option D now.
    - `NOT_RELEASED`
    - `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
    - no public announcement/public upload/no release action.
+
+### Updated Immediate Path After This Pass
+
+Current pass status:
+
+- `Option F` (mock LIMA contract planning) is now complete at docs/fixtures level.
+- `Option C` remains deferred (official repo decision still `TBD`).
+- `Option D` remains blocked.
+
+Recommended next step:
+
+1. Keep static shell and boundary posture unchanged.
+2. Run final Option F checkpoint check for contract docs consistency.
+3. Before any runtime or deeper import, perform Phil approval decision at release branch/consolidation stage.
 
 ### Operational Guardrails
 

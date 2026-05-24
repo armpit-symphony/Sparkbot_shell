@@ -76,6 +76,9 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - `docs/CONNECTORS_OVERVIEW.md`.
 - `docs/ROBO_PREVIEW.md`.
 - `docs/BETA_LIMITATIONS.md`.
+- Contract planning docs are not included in preview artifacts: `LIMA_CONTRACT_LAYER_PLAN.md`,
+  `LIMA_CONTRACT_MOCK_SCHEMA.md`, `LIMA_CONTRACT_FIXTURES.md`, `LIMA_CONTRACT_FRONTEND_READINESS.md`,
+  `LIMA_CONTRACT_STOP_GATES.md`.
 
 ## Excluded
 
@@ -104,6 +107,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
 - Wave 1 Docs/info adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 checkpoint/audit documentation updates remain repo-stage docs and do not alter artifact packaging.
+- Option C contract planning docs were added as repo-only planning references and are intentionally excluded from this artifact package.
 
 ## Checkpoint Baseline
 

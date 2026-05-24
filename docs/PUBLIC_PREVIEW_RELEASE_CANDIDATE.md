@@ -26,6 +26,12 @@
 - Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #4 completed: Docs/info visual refinement completed via manual static adaptation from R&D + shell docs concepts.
 - Wave 1 checkpoint/audit baseline now in place on `frontend-only-wave1-checkpoint-audit`.
+- Mock LIMA contract planning docs/fixtures completed:
+  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
+  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
+  - `docs/LIMA_CONTRACT_FIXTURES.md`
+  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+  - `docs/LIMA_CONTRACT_STOP_GATES.md`
 
 ## What is Included
 
@@ -57,6 +63,7 @@
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
 - Static fixture previews for file/document workspace, memory shelf, task/reminder board, and demo room context.
 - Static `LIMA AI OS ready layer` panel and phased contract-install messaging.
+- Optional mock contract preview payload family (offline planning).
 - MIT licensing and artifact lock metadata.
 - Public-facing caveats around static-only behavior.
 

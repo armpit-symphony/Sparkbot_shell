@@ -82,6 +82,44 @@ Robo remains teaser-only in the public shell. Any robotics, drone, humanoid, dev
 5. Phase 5: read-only LIMA preview endpoint integration.
 6. Phase 6: only later approval/runtime integration if explicitly approved.
 
+## Mock Contract Planning (Current Phase)
+
+Current status is between Phase 1 and Phase 2:
+
+- contract-first docs are now planned,
+- mock contract schemas and fixture examples are being prepared,
+- runtime behavior is still disabled,
+- no package install, runtime endpoint, or dispatch path is active.
+
+Planned mock request/response families include:
+
+- workstation state preview
+- round table candidate meeting preview
+- model/seat preview
+- file/memory/task context preview
+- guardian posture preview
+- robo teaser readiness preview
+- release/readiness preview
+
+Required common preview invariants (applied to all mock responses):
+
+- `preview_only: true`
+- `non_authoritative: true`
+- `safe_by_default: true`
+- `execution_allowed: false`
+- `side_effects_allowed: false`
+- `approval_granted: false`
+- `dispatch_allowed: false`
+- `persistence_allowed: false`
+- `provider_calls_allowed: false`
+- `connector_calls_allowed: false`
+- `lima_runtime_active: false`
+- `humaninput_bridge_active: false`
+- `sparkbot_wiring_active: false`
+- `live_adapter_active: false`
+- `robotics_allowed: false`
+- `physical_world_allowed: false`
+
 ## Gate Reminder
 
 Contracts first. Guardian-gated runtime later. No direct runtime coupling in this shell phase.

@@ -23,6 +23,12 @@ Exclude these from user-facing release bundles:
 - Internal extraction planning.
 - Private/source-boundary notes.
 - No-go/internal readiness docs.
+- LIMA mock contract planning docs:
+  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
+  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
+  - `docs/LIMA_CONTRACT_FIXTURES.md`
+  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+  - `docs/LIMA_CONTRACT_STOP_GATES.md`
 
 ## Ship In Public Artifact
 
