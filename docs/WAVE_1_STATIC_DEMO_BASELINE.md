@@ -1,8 +1,8 @@
 # Wave 1 Static Demo Baseline
 
-Updated: 2026-05-24  
-Branch: `frontend-only-wave1-checkpoint-audit`  
-Commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
+Updated: 2026-05-24
+Branch: `static-shell-mock-contract-baseline`
+Commit: `d6a528f`
 
 ## What the Shell Shows Now
 
@@ -21,6 +21,7 @@ This file defines the current baseline static product shell after Wave 1.
 - **LIMA integration note**: static `LIMA AI OS ready layer` contract-prep panel.
 - **Docs command center**: `#/docs` explains included/excluded scope and release state.
 - **Navigation**: hash routes for all shell areas.
+- **Mock LIMA planning**: plan and schema docs exist as repository planning references for future contract-facing preview work.
 
 ## What Is Static and Mock
 
@@ -78,8 +79,7 @@ These files are the stable baseline for current release-candidate packaging and 
 
 After this checkpoint, next phases are expected to remain static planning:
 
-- Wave 1 checkpoint closure review.
-- Mock LIMA contract docs/fixtures planning.
-- Release-candidate branch consolidation.
-- Further import planning only after explicit Phil approval.
-
+- wave 2 static-frontend planning,
+- mock LIMA contract UI display planning,
+- release-candidate branch consolidation,
+- official repo-home decision.

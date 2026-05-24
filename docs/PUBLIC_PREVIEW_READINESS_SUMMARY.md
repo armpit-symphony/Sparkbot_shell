@@ -5,8 +5,8 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-wave1-checkpoint-audit`.
-- Base signoff commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`.
+- Current branch: `static-shell-mock-contract-baseline`.
+- Base signoff commit: `d6a528f`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
@@ -114,17 +114,17 @@ Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/
 Wave 1 candidate #3 (Model stack + Invite Wing visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #4 (Docs/info visual refinement) is complete with no runtime/API/storage additions.
 
-Wave 1 checkpoint status: verified as static and release-safe for this branch, no deeper source import yet.
+Wave 1 checkpoint status: verified as static and release-safe for this branch, and consolidated with mock LIMA contract planning docs.
 
 ## Mock LIMA Contract Planning Status
 
-- Option C is now in-progress-complete for planning artifacts:
+- Option C is complete for planning artifacts:
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
-- `Sparkbot_shell` continues to render these as docs/fixture-only references.
+- `Sparkbot_shell` keeps these as docs/fixture-only references.
 - No runtime behavior or API calls added in this pass.
 
 ## Recommended Next Step

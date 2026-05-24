@@ -2,8 +2,8 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-wave1-checkpoint-audit`
-Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
+Branch: `static-shell-mock-contract-baseline`
+Base commit: `d6a528f`
 
 ## Locked Preview Package
 
@@ -107,11 +107,12 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
 - Wave 1 Docs/info adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 checkpoint/audit documentation updates remain repo-stage docs and do not alter artifact packaging.
+- Mock LIMA contract planning docs are repo-stage planning references and intentionally excluded from preview artifact output.
 - Option C contract planning docs were added as repo-only planning references and are intentionally excluded from this artifact package.
 
 ## Checkpoint Baseline
 
-- Current checkpoint branch: `frontend-only-wave1-checkpoint-audit`.
+- Current checkpoint branch: `static-shell-mock-contract-baseline`.
 - Release posture remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 ## Connector/private recall classification

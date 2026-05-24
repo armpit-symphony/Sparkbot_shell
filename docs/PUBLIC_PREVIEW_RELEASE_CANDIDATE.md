@@ -25,7 +25,7 @@
 - Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #4 completed: Docs/info visual refinement completed via manual static adaptation from R&D + shell docs concepts.
-- Wave 1 checkpoint/audit baseline now in place on `frontend-only-wave1-checkpoint-audit`.
+- Wave 1 checkpoint/audit baseline is consolidated on `static-shell-mock-contract-baseline`.
 - Mock LIMA contract planning docs/fixtures completed:
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
@@ -87,6 +87,10 @@
 - No direct R&D source code copy was used for Wave 1 candidate #2.
 - No direct R&D source code copy was used for Wave 1 candidate #3.
 - No direct R&D source code copy was used for Wave 1 candidate #4.
-- No direct R&D source code copy in the new checkpoint/audit branch is present.
+- No direct R&D source code copy in this consolidated checkpoint/audit branch is present.
 
-Wave 1 source adaptation is intentionally closed at this checkpoint pending Phil decision.
+## Branch Baseline / Consolidation Status
+
+- This is the consolidated static baseline for current work.
+- Parent/lineage base: `mock-lima-contract-planning` (`61a08b6`) with this branch at `d6a528f`.
+- Wave 1 source adaptation is intentionally closed at this checkpoint pending Phil decision.

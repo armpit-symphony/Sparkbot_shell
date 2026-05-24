@@ -4,68 +4,65 @@ Updated: 2026-05-24
 
 ## Scope
 
-Fresh docs-first audit of `Sparkbot_shell` as the clean public shell staging repo, with `Sparkbot` read-only as reference. No runtime behavior was added. No Sparkbot R&D code was copied.
+Static-only release-candidate baseline handoff for `Sparkbot_shell` as the active staging repo with
+read-only `armpit-symphony/Sparkbot` as reference. This baseline includes physical QA-validated
+Wave 1 frontend refinements and mock LIMA contract planning, with no runtime integration in source.
 
-## Latest Frontend-Only MVP Pass
+## Latest Consolidation Baseline
 
-- Latest branch: `frontend-only-mvp-shell-readiness`
-- Latest pass type: static frontend shell readiness only
-- Added/updated in this pass:
-  - static UI status/copy polish for release-gate visibility
-  - static `LIMA AI OS ready layer` panel
-  - frontend surface audit and readiness report docs
+- Baseline branch: `static-shell-mock-contract-baseline`
+- Baseline commit: `d6a528f`
+- Latest source/workflow pass included:
+  - Wave 1 source-adaptation checkpoints for Workstation, Round Table, model/Invite Wing, and Docs/info
+  - Wave 1 checkpoint/audit closure
+  - Mock LIMA contract planning pass (docs/fixtures planning only)
+  - Static-shell baseline consolidation and readiness alignment
 - Runtime behavior added: no
-- Release state changed: no (`GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`)
+- Release posture unchanged: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
+- MIT license status: selected and present
 
 ## Snapshot
 
-- Current working branch at reconciliation start: `public-release-record-physical-qa-pass`
-- Audit handoff reconciliation branch source: `public-release-shell-current-audit-handoff`
-- Reconciled baseline commit: `d0dff6067b80eb3000d08e74d5f4347e29a9db87` (same commit as `public-release-record-physical-qa-pass`)
 - Package/version: `0.8.0-layer8-preview`
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
-- Readiness color: `GREEN_CANDIDATE` (internal/staging only, not public release)
-- MIT license status: selected and present.
+- Readiness color: `GREEN_CANDIDATE`
+- Current repo/home status: `TBD` (official public home not yet decided)
+- Active staging home: `armpit-symphony/Sparkbot_shell`
 
-## Current Best Release-Candidate Branch and Consolidation Status
+## Baseline Lineage and Inclusion Checks
 
-Best branch: `public-release-record-physical-qa-pass`
+- Starting reconciliation lineage begins at: `public-release-record-physical-qa-pass` and includes
+  physical mobile QA pass data through `mock-lima-contract-planning` and this baseline branch.
+- Checked/confirmed:
+  - physical mobile QA pass remains recorded.
+  - `GREEN_CANDIDATE` remains the active release candidate status.
+  - static preview artifact is still produced by allowlist script.
+  - Wave 1 Workstation, Round Table, Model/Invite, and Docs/info adaptations are all executed and closed.
+  - Wave 1 checkpoint/audit docs are present and consolidated.
+  - mock LIMA contract planning artifacts are present:
+    - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
+    - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
+    - `docs/LIMA_CONTRACT_FIXTURES.md`
+    - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+    - `docs/LIMA_CONTRACT_STOP_GATES.md`
+  - public/private boundary and release-routing correction docs remain in place:
+    - `docs/OFFICIAL_PUBLIC_REPO_READINESS.md`
+    - `docs/RELEASE_ROUTING_CORRECTION.md`
+- Source boundary checks remain clean:
+  - no `backend/`
+  - no `src-tauri/`
+  - no `.github/`
+  - no `.agents/`
+- Runtime/API/persistence/import restrictions remain active.
+- No R&D source was copied or imported in this branch.
 
-Why:
-- Descends from signoff, mobile QA, package QA, and release-decision branches.
-- Contains physical QA pass record commit.
-- Tracks `origin/public-release-record-physical-qa-pass` without ahead/behind drift at audit start.
+## Base vs Current Branch Re-check
 
-## Branch Reconciliation View
-
-Relevant branches reviewed:
-
-- `public-release-shell-preview-signoff`: ancestor of current candidate, superseded.
-- `public-release-shell-mobile-qa-gate`: ancestor of current candidate, superseded.
-- `public-release-mobile-qa-fixes`: ancestor of current candidate, superseded.
-- `public-release-physical-qa-record`: ancestor of current candidate, superseded by `public-release-record-physical-qa-pass`.
-- `public-release-record-physical-qa-pass`: active best candidate.
-
-Branches not found in local/origin listing during audit:
-
-- `public-preview-release-candidate-packet`
-- `public-release-branch-reconciliation-status`
-- `public-mvp-import-plan`
-- `public-release-decoupling-handoff`
-
-## Reconciliation Result
-
-- Confirmed source line: `public-release-shell-current-audit-handoff` is cleanly based on `public-release-record-physical-qa-pass`.
-- Confirmed physical QA pass and `GREEN_CANDIDATE` status are present and unchanged after handoff updates.
-- No additional RC branch content was required to reconcile before continuing docs-only work.
-- Current branch consolidates candidate state from the prior check:
-  - Physical-device QA pass preserved.
-  - `GREEN_CANDIDATE` preserved.
-  - Missing planning docs remain present.
-  - `DocsPage.tsx` branch-pinned URL is fixed to local docs paths.
-  - Static preview artifact doc boundary and metadata are preserved.
-  - MIT package/license posture is preserved.
+- The historical branch reconciliation context is preserved:
+  - `public-release-record-physical-qa-pass` was used as the stable physical-QA base before Wave 1 work.
+  - `mock-lima-contract-planning` and this branch are clean descendants.
+- The current branch is now the active consolidated checkpoint for continued static-shell decisions.
 
 ## Candidate Integrity Check (Current Branch)
 

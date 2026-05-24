@@ -1,9 +1,9 @@
 # Frontend Import Wave 1 Plan
 
 Updated: 2026-05-24
-Branch: `frontend-only-wave1-checkpoint-audit`
-Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
-Status: candidates #1 through #4 executed (manual static adaptation only); Wave 1 checkpoint audit initiated and baseline docs added.
+Branch: `static-shell-mock-contract-baseline`
+Base commit: `d6a528f`
+Status: candidates #1 through #4 executed (manual static adaptation only); Wave 1 checkpoint audit completed and consolidated; mock LIMA contract planning docs added.
 
 ## Wave 1 Objective
 
@@ -113,6 +113,6 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 
 ## Current State
 
-Wave 1 candidates #1 through #4 are complete as static-only adaptations.
-Recommended next step: complete Wave 1 checkpoint/audit artifacts and stop deep source adaptation.
+Wave 1 candidates #1 through #4 are complete as static-only adaptations and are consolidated here.
+Recommended next step: use this consolidated baseline for release-candidate consolidation decisions and mock LIMA contract UI planning.
 Current state is closed for Wave 1 source adaptation until explicit Phil approval.

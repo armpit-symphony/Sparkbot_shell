@@ -14,7 +14,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use Wave 1 checkpoint/audit results as the reconciliation basis before any deeper work.
+Use the consolidated static baseline as the current release-candidate checkpoint for this branch.
 
 - Confirm all prior Wave 1 execution claims are still true.
 - Confirm no runtime/proxy/protocol calls were introduced.
@@ -47,9 +47,9 @@ Continue static-shell scope with safe UI-only imports only.
 - Import remains blocked until explicit Phil approval and explicit checkpoint closure.
 - Must follow source classification and stop gates.
 
-### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
+### Option F - Begin Mock LIMA Contract UI Display (Docs/Fixtures + Static UI)
 
-Completed on `mock-lima-contract-planning`.
+Completed on `mock-lima-contract-planning` and consolidated on `static-shell-mock-contract-baseline`.
 
 - contract-first docs completed,
 - mock schemas/fixtures drafted,
@@ -68,15 +68,15 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-wave1-checkpoint-audit` as the current Wave 1 checkpoint baseline.
+1. Keep `static-shell-mock-contract-baseline` as the current consolidated checkpoint baseline.
 2. Keep `armpit-symphony/Sparkbot_shell` as the active staging repo.
 3. Confirm final public repo/home remains **TBD**.
-4. Run and record a Wave 1 checkpoint/audit covering:
+4. Record closure summary for:
    - Workstation visual adaptation
    - Round Table visual adaptation
    - Model stack + Invite Wing adaptation
    - Docs/info adaptation
-5. Continue static refinement only; do not begin Wave 2 source import without additional explicit approval.
+5. Continue static refinement only unless Phil approves a different next phase.
 6. If Phil approves: either
    - continue static-only refinement (Option B),
    - run mock LIMA contract readiness planning (docs/fixtures only),
@@ -91,15 +91,15 @@ Do not run Option D now.
 
 Current pass status:
 
-- `Option F` (mock LIMA contract planning) is now complete at docs/fixtures level.
-- `Option C` remains deferred (official repo decision still `TBD`).
+- `Option F` (mock LIMA contract UI planning/display docs) is now complete at docs/fixtures level.
+- `Option C` remains deferred for official repo-home execution (official decision still `TBD`).
 - `Option D` remains blocked.
 
 Recommended next step:
 
 1. Keep static shell and boundary posture unchanged.
-2. Run final Option F checkpoint check for contract docs consistency.
-3. Before any runtime or deeper import, perform Phil approval decision at release branch/consolidation stage.
+2. Run final consolidated baseline check for contract/docs consistency (already in progress on this branch).
+3. Before any runtime or deeper import, perform Phil decision at release branch/consolidation stage.
 
 ### Operational Guardrails
 
@@ -114,4 +114,8 @@ Recommended next step:
 
 ## Exact Current Question to Phil
 
-Approve a **Wave 1 checkpoint/audit** over Workstation, Round Table, Model/Invite, and Docs/info adaptations before any deeper import or runtime planning?
+Approve consolidation of the current static baseline (Wave 1 + mock LIMA contract planning) and next action:
+
+- continue static-only polish (Option B),
+- prepare mock LIMA contract UI display only (Option F),
+- or finalize release-candidate branch consolidation (Option D prep)?

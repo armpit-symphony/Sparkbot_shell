@@ -1,8 +1,8 @@
 # Frontend Import Candidate Matrix
 
 Updated: 2026-05-24
-Branch: `frontend-only-wave1-checkpoint-audit`
-Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694` (same Wave 1 completion state)
+Branch: `static-shell-mock-contract-baseline`
+Base commit: `d6a528f`
 Reference repo (read-only): `armpit-symphony/Sparkbot`
 
 Classification labels:
@@ -60,7 +60,7 @@ Priority labels:
 - This matrix is planning-only and does not approve code import by itself.
 - Any import execution requires a separate explicit Phil approval pass after this planning stage.
 - Wave 1 candidates are now officially checkpoint-validated on this branch.
-- `frontend-only-wave1-checkpoint-audit` should be treated as the post-candidate checkpoint baseline.
+- `static-shell-mock-contract-baseline` should be treated as the post-candidate checkpoint and consolidation baseline.
 - Wave 1 candidate #1 (Workstation visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - Wave 1 candidate #2 (Round Table visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.
 - Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is now executed as a manual static adaptation in Sparkbot Shell.

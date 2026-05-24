@@ -12,7 +12,7 @@ Option D is blocked until Phil approves final repo home, final version/tag, arti
 
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 Latest staging pass adds final product-demo polish for storyline clarity, fixture cohesion, and visual consistency.
-Latest planning pass adds classification-gated frontend-only import planning docs. No source import executed yet.
+Latest planning pass includes Wave 1 consolidation and mock LIMA contract planning docs. No source import executed yet.
 Current Wave 1 pass completes Workstation, Round Table, Model stack/Invite Wing, and Docs/info visual adaptations as manual static refinement only (no runtime/API/storage additions).
 Current pass also completes mock LIMA contract planning docs (fixtures-first), with no runtime integration.
 
@@ -98,6 +98,9 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Wave 1 Docs/info adaptation plan](WAVE_1_DOCS_INFO_ADAPTATION_PLAN.md)
 - [Wave 1 checkpoint audit](WAVE_1_CHECKPOINT_AUDIT.md)
 - [Wave 1 static demo baseline](WAVE_1_STATIC_DEMO_BASELINE.md)
+- [Static shell baseline handoff](STATIC_SHELL_BASELINE_HANDOFF.md)
+- [Static shell baseline audit](STATIC_SHELL_BASELINE_AUDIT.md)
+- [Next phase decision matrix](NEXT_PHASE_DECISION_MATRIX.md)
 - [LIMA contract layer plan](LIMA_CONTRACT_LAYER_PLAN.md)
 - [LIMA contract mock schema](LIMA_CONTRACT_MOCK_SCHEMA.md)
 - [LIMA contract fixtures](LIMA_CONTRACT_FIXTURES.md)

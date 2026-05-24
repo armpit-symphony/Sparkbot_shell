@@ -67,7 +67,7 @@ Wave 1 candidate #1 Workstation adaptation also changes static shell layout only
 Wave 1 candidate #2 Round Table adaptation also changes static shell layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
 Wave 1 candidate #3 Model stack + Invite Wing adaptation also changes static shell layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
 Wave 1 candidate #4 Docs/info adaptation also changes docs surface copy/layout only, with no direct R&D source-file copy and no runtime/API/storage additions.
-Wave 1 checkpoint/audit is now captured on `frontend-only-wave1-checkpoint-audit`.
+Wave 1 checkpoint/audit is now captured and consolidated on `static-shell-mock-contract-baseline`.
 
 Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and final public repo/home TBD.
 

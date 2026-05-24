@@ -59,7 +59,7 @@ LIMA may return:
 ## Current Wave 1 Connection
 
 Wave 1 completed static UX layers (Workstation, Round Table, model seats, docs/info, and fixture surfaces).  
-Mock LIMA contract planning is the **next safe planning stage**:
+Mock LIMA contract planning is now complete as docs/fixtures in this baseline:
 
 - define mock schema,
 - define fixture payloads,
@@ -93,4 +93,3 @@ For this phase, supported preview concepts are:
 - `No LIMA runtime is called` from Sparkbot_shell source in this phase.
 - `No execution`, `dispatch`, `persistence`, `provider`, `connector`, `approval-enforcement`,
   or `robotics` calls are present.
-

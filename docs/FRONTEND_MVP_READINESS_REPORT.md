@@ -1,17 +1,16 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24
-Branch: `frontend-only-wave1-checkpoint-audit`
-Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
+Branch: `static-shell-mock-contract-baseline`
+Base commit: `d6a528f`
 
 ## Summary
 
 Frontend-only product-demo polish remains in place.
-This pass completes Wave 1 candidate #4 as a manual static Docs/info visual refinement from R&D reference concepts.
-Wave 1 candidate #2 and #3 refinements remain active from prior static passes.
-`frontend-only-wave1-checkpoint-audit` records the Wave 1 checkpoint/audit result.
+This pass consolidates Wave 1 candidate #1-#4 and mock LIMA contract planning on top of the Wave 1 checkpoint.
+`static-shell-mock-contract-baseline` records this consolidated checkpoint baseline.
 
-Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations only; no deeper runtime imports or backend features were added.
+Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations only; no direct runtime imports or backend features were added.
 
 ## Surfaces Represented
 
@@ -57,7 +56,7 @@ Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations
 ## Still Needed Later (Functional MVP Path)
 
 - Runtime contract definitions and approved integration boundaries.
-- Mock LIMA contract/docs/fixture planning (Phase 2, no runtime).
+- Mock LIMA contract/docs/fixture planning is now complete as docs/fixtures-only planning.
 - Mock-to-runtime adapter implementation after contract approvals.
 - Optional local runtime detection and read-only endpoint wiring in later phase.
 - Functional backend/provider/connector/persistence/scheduler implementations in separate approved repositories or phases.
@@ -82,7 +81,7 @@ Wave 1 checkpoint complete (recommended closure):
 1. Use this checkpoint baseline for release-candidate consolidation or demo refinement planning.
 2. Continue with static-only polish only until Phil approves a new track.
 3. If requested, proceed with either:
-   - Mock LIMA contract layer planning (docs/fixtures only), or
+   - Mock LIMA contract UI display planning (docs/fixtures only), or
    - release-candidate branch consolidation.
 4. Stop before any deeper source import or runtime planning until explicit approval.
 

@@ -1,8 +1,8 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24
-Branch: `frontend-only-wave1-checkpoint-audit`
-Base checkpoint commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
+Branch: `static-shell-mock-contract-baseline`
+Base checkpoint commit: `d6a528f`
 
 ## Scope
 

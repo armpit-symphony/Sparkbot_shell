@@ -1,20 +1,29 @@
 # Sparkbot Shell
 
-Sparkbot Shell is the MIT-licensed public staging repo for a self-hosted AI workstation shell preview. Its hook is simple: Round Table meetings for your AI agents.
+Sparkbot Shell is the MIT-licensed static public-preview staging repo for a self-hosted AI workstation shell.
 
-The public product model is a local-first workstation for agent work, model routing, model seats, Local AI providers, Round Table meetings, shared memory/context, Task Guardian utility automations, connectors, and user-owned guardrails.
+The public product model is a local-first, static-preview-oriented AI office shell with:
+
+- Workstation floor preview
+- Round Table hero flow
+- model seats and Invite Wing placeholders
+- file/memory/task fixtures
+- basic guardian posture labels
+- Robo teaser
+- LIMA AI OS contract-readiness notes
 
 ## Current Status
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
-Current checkpoint branch: `frontend-only-wave1-checkpoint-audit`.
-Current release status remains GREEN_CANDIDATE, NOT_RELEASED, NO_TAG, NO_UPLOAD, NO_ANNOUNCEMENT.
+Current checkpoint branch: `static-shell-mock-contract-baseline`.
+Current commit: `d6a528f`.
+Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #2 (Round Table visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #4 (Docs/info visual refinement) is complete as a manual static adaptation from R&D + shell docs concepts only.
-Wave 1 checkpoint/audit docs are complete on this branch; deeper source adaptation remains paused.
+Wave 1 checkpoint/audit docs are complete and consolidated on this branch with mock LIMA contract planning pass.
 
 It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
@@ -27,7 +36,14 @@ Package/version label: `0.8.0-layer8-preview`.
 Preview status is `GREEN_CANDIDATE` for static-preview readiness and remains `NOT_RELEASED`.
 No tag, no upload, and no announcement have been executed.
 Official public repo move is pending Phil approval. Public repo/home is currently `TBD`; this repo continues as the active staging shell.
-See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
+`sparkpit-labs/Sparkbot` is a possible future target but not active.
+
+Current next options:
+
+- continue static-only baseline consolidation,
+- continue mock LIMA contract UI planning,
+- or begin release-candidate branch consolidation prep.
+See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md), [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md), and [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md).
 
 Current planning phase also includes LIMA contract fixture/docs planning:
 
@@ -115,6 +131,9 @@ Planned reconciliation and import-planning docs (repo-only):
 - [LIMA contract fixtures](docs/LIMA_CONTRACT_FIXTURES.md)
 - [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
 - [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
+- [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md)
+- [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md)
+- [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md)
 
 ## Preview Artifact Boundary
 

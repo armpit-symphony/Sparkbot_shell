@@ -84,10 +84,10 @@ Robo remains teaser-only in the public shell. Any robotics, drone, humanoid, dev
 
 ## Mock Contract Planning (Current Phase)
 
-Current status is between Phase 1 and Phase 2:
+Current status is at planned completion for Phases 1 and 2 on docs:
 
-- contract-first docs are now planned,
-- mock contract schemas and fixture examples are being prepared,
+- contract-first docs are now complete,
+- mock contract schemas and fixture examples are complete in repo planning docs,
 - runtime behavior is still disabled,
 - no package install, runtime endpoint, or dispatch path is active.
 
