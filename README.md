@@ -15,7 +15,7 @@ Package/version label: `0.8.0-layer8-preview`.
 
 Preview status is `GREEN_CANDIDATE` for static-preview readiness and remains `NOT_RELEASED`.
 No tag, no upload, and no announcement have been executed.
-Official public repo move is pending Phil approval.
+Official public repo move is pending Phil approval. Target preflight to `sparkpit-labs/Sparkbot` is currently blocked (repo not found/inaccessible).
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
 
 ## Public MVP Highlights
@@ -70,6 +70,10 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Public repo copy dry-run checklist](docs/PUBLIC_REPO_COPY_DRY_RUN_CHECKLIST.md)
 - [Branding and link cleanup plan](docs/BRANDING_AND_LINK_CLEANUP_PLAN.md)
 - [Versioning finalization plan](docs/VERSIONING_FINALIZATION_PLAN.md)
+- [Official repo preflight report](docs/OFFICIAL_REPO_PREFLIGHT_REPORT.md)
+- [Sanitized export dry-run manifest](docs/SANITIZED_EXPORT_DRY_RUN_MANIFEST.md)
+- [Official repo creation checklist](docs/OFFICIAL_REPO_CREATION_CHECKLIST.md)
+- [Option C execution plan](docs/OPTION_C_EXECUTION_PLAN.md)
 
 ## Preview Artifact Boundary
 

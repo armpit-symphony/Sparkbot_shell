@@ -2,6 +2,11 @@
 
 Status: Not for execution until Phil approval is recorded.
 
+Option C blocker reminder:
+
+- Option C execution is blocked until destination repo preflight clears (`OPTION_C_BLOCKED_REPO_NOT_FOUND_OR_INACCESSIBLE`).
+- Do not run copy/repo-move tasks before preflight is resolved.
+
 ## Exact Option-D Gate Checklist
 
 - Confirm repo home.

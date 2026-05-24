@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use the `public-release-official-repo-move-readiness` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
+Use the `public-release-official-repo-preflight` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -23,8 +23,10 @@ Use the `public-release-official-repo-move-readiness` branch as the canonical pr
 
 Prepare official movement plan without executing Option D.
 
+- Perform preflight validation on `sparkpit-labs/Sparkbot` (this includes existence/access verification).
+- Keep repo move execution blocked until target repo is confirmed accessible.
 - Package naming and link/path audit.
-- Optional copy path to the final public repo.
+- Optional copy path to the final public repo (execution-ready only).
 - Ownership and branding alignment.
 
 ### Option D - Approve Public Preview Tag/Upload/Announcement
@@ -59,15 +61,16 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `public-release-official-repo-move-readiness` as the canonical pre-Option-D branch.
-2. Complete Option C official repo move preparation docs and checks.
-3. Execute remaining approval steps only after Phil confirms:
+1. Keep `public-release-official-repo-preflight` as the canonical pre-Option-D branch.
+2. Complete Option C preflight and maintain blocker reports.
+3. Do not execute copy/Option C until Phil confirms official repo exists/access and `OFFICIAL_REPO_PREFLIGHT_REPORT.md` is updated to clear.
+4. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
 
-4. Option paths after Option C readiness:
+5. Option paths after Option C readiness:
    - hold staging if Phil chooses the temporary staging path,
    - create/copy to approved official repo if Phil approves Option C,
    - proceed to Option D only after explicit final approvals.

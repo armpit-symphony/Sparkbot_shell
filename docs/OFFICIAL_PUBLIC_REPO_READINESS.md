@@ -3,8 +3,8 @@
 ## Current Status Snapshot
 
 - Current staging repo: `armpit-symphony/Sparkbot_shell`
-- Current candidate branch: `public-release-official-repo-move-readiness`
-- Current candidate commit: `acc19a3385293042766fd470167676e42fe9f2cf`
+- Current candidate branch: `public-release-official-repo-preflight`
+- Current candidate commit: `634e8cc`
 - Preview artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Current package/version: `0.8.0-layer8-preview`
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
@@ -66,10 +66,18 @@ Reasons final release should move:
 
 ## Current Move Readiness
 
-Readiness for Option C is **preparing complete** for documentation and scan-based planning.
+Readiness for Option C is **blocked** pending destination repo verification.
 
-Pending only explicit external approvals:
-- final repo home confirmation
-- final version/tag confirmation
-- artifact upload destination confirmation
-- announcement policy confirmation
+Preflight target status:
+
+- Target: `sparkpit-labs/Sparkbot`
+- Status: `OPTION_C_BLOCKED_REPO_NOT_FOUND_OR_INACCESSIBLE`
+
+Until this is resolved:
+
+- final repo home confirmation is blocked,
+- final version/tag confirmation cannot be actioned,
+- artifact destination confirmation is blocked,
+- announcement policy confirmation remains pending.
+
+See `docs/OFFICIAL_REPO_PREFLIGHT_REPORT.md` for the blocker details and exact Phil action required.
