@@ -32,6 +32,12 @@
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
+  - `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
+- Option B mock LIMA contract UI display pass implemented in UI:
+  - `src/data/mockLimaContracts.ts`
+  - `src/components/MockLimaContractPanel.tsx`
+  - `src/components/WorkstationShell.tsx`
+  - `src/components/LimaReadyLayerPanel.tsx` placement context updated in `src/App.tsx` and `src/pages/DocsPage.tsx`.
 
 ## What is Included
 
@@ -63,7 +69,7 @@
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
 - Static fixture previews for file/document workspace, memory shelf, task/reminder board, and demo room context.
 - Static `LIMA AI OS ready layer` panel and phased contract-install messaging.
-- Optional mock contract preview payload family (offline planning).
+- Optional mock contract preview payload family (offline planning) plus static UI display implementation.
 - MIT licensing and artifact lock metadata.
 - Public-facing caveats around static-only behavior.
 
@@ -94,3 +100,4 @@
 - This is the consolidated static baseline for current work.
 - Parent/lineage base: `mock-lima-contract-planning` (`61a08b6`) with active lock at `1f4ff3b` on `active-staging-baseline-lock`.
 - Wave 1 source adaptation is intentionally closed at this checkpoint pending Phil decision.
+- Current branch `mock-lima-contract-ui-display` adds only Option B mock-contract UI-display refinements and does not advance release posture.

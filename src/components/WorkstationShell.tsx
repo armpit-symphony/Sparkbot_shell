@@ -1,6 +1,7 @@
 import type { ShellState } from "../types/shell";
 import { InviteWingPanel } from "./InviteWingPanel";
 import { LimaReadyLayerPanel } from "./LimaReadyLayerPanel";
+import { MockLimaContractPanel } from "./MockLimaContractPanel";
 import { MemoryContextPreview } from "./MemoryContextPreview";
 import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { StaticFixtureContentPreview } from "./StaticFixtureContentPreview";
@@ -489,6 +490,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
       <StaticFixtureContentPreview />
 
       <LimaReadyLayerPanel />
+      <MockLimaContractPanel />
     </section>
   );
 }

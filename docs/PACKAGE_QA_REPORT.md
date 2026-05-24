@@ -2,8 +2,8 @@
 
 Updated: 2026-05-24
 
-Branch: `active-staging-baseline-lock`
-Base commit: `1f4ff3b`
+Branch: `mock-lima-contract-ui-display`
+Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
 
 ## Locked Preview Package
 
@@ -14,7 +14,7 @@ Base commit: `1f4ff3b`
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
-This Docs/info adaptation pass updates static UI/copy/layout only and does not change the package allowlist.
+This mock LIMA contract UI-display pass adds static UI/data files and docs updates only, and does not change the package allowlist.
 
 ## Package Dry Run
 
@@ -78,7 +78,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - `docs/BETA_LIMITATIONS.md`.
 - Contract planning docs are not included in preview artifacts: `LIMA_CONTRACT_LAYER_PLAN.md`,
   `LIMA_CONTRACT_MOCK_SCHEMA.md`, `LIMA_CONTRACT_FIXTURES.md`, `LIMA_CONTRACT_FRONTEND_READINESS.md`,
-  `LIMA_CONTRACT_STOP_GATES.md`.
+  `LIMA_CONTRACT_STOP_GATES.md`, `MOCK_LIMA_CONTRACT_UI_PLAN.md`.
 
 ## Excluded
 
@@ -107,6 +107,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
 - Wave 1 Docs/info adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 checkpoint/audit documentation updates remain repo-stage docs and do not alter artifact packaging.
+- Mock LIMA contract UI-display source files are included in shell source and built into the preview artifact as expected, while planning docs remain excluded from artifact packaging.
 - Mock LIMA contract planning docs are repo-stage planning references and intentionally excluded from preview artifact output.
 - Option C contract planning docs were added as repo-only planning references and are intentionally excluded from this artifact package.
 

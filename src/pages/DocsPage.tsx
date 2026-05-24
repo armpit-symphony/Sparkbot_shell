@@ -16,6 +16,7 @@ const includedInStaticPreview = [
   "Model seats and Invite Wing static layouts",
   "Files/Knowledge, memory, and tasks fixture previews",
   "Guardian posture and safety framing",
+  "Mock LIMA contract UI display for contract-readiness demos",
   "Robo teaser + LIMA-ready install-path notes",
   "Static docs, copy, and install messaging",
   "MIT license and preview artifact metadata",
@@ -36,7 +37,18 @@ const wave1Progress = [
   "Round Table visual flow refinement complete",
   "Model stack + Invite Wing visual refinement complete",
   "Docs/info visual refinement complete",
+  "Mock LIMA contract UI display added",
   "No direct R&D code copy; no runtime behavior added in this pass",
+] as const;
+
+const limaContractItems = [
+  "Workstation state preview",
+  "Round Table meeting preview",
+  "Model/agent seat preview",
+  "File/memory/task context preview",
+  "Guardian posture preview",
+  "Robo teaser preview",
+  "Release/readiness preview",
 ] as const;
 
 const repoDocsBase = "./docs";
@@ -132,7 +144,46 @@ export function DocsPage() {
             <li>Stop Wave 1 source adaptation.</li>
             <li>Run a Wave 1 checkpoint/audit.</li>
             <li>Reassess deeper import and runtime planning only after approval.</li>
+            <li>Execute mock contract UI-display (docs/fixtures) as a static surface only.</li>
           </ul>
+        </article>
+      </div>
+
+      <div className="panel-grid">
+        <article className="info-panel">
+          <span>Mock LIMA contract UI</span>
+          <h3>Static contract surfaces now displayed</h3>
+          <ul>
+            {limaContractItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p>
+            This shell shows mock responses with explicit runtime-disabled invariants and no provider, connector, persistence,
+            or robotics actions.
+          </p>
+        </article>
+
+        <article className="info-panel">
+          <span>Boundary proof</span>
+          <h3>Static-only contract posture</h3>
+          <ul>
+            <li>lima_runtime_active: false</li>
+            <li>execution_allowed: false</li>
+            <li>persistence_allowed: false</li>
+            <li>provider_calls_allowed: false</li>
+            <li>connector_calls_allowed: false</li>
+            <li>robotics_allowed: false</li>
+          </ul>
+          <p>Contract views remain advisory fixtures and are not authoritative runtime output.</p>
+        </article>
+
+        <article className="info-panel">
+          <span>Navigation</span>
+          <h3>Where to find mock contract surfaces</h3>
+          <a href="#/workstation">Workstation (mock contract cards + demo room map)</a>
+          <a href="#/command-center">Command Center (LIMA readiness + mock contract panel)</a>
+          <a href="#/docs">Mock contract plan and boundary notes</a>
         </article>
       </div>
 

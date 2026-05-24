@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `active-staging-baseline-lock`.
+- Current branch: `mock-lima-contract-ui-display`.
 - Base signoff commit: `1f4ff3b` on `active-staging-baseline-lock`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -107,22 +107,25 @@ The static preview package is complete for internal/staging use and physical/mob
 It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
 Current work continues as static-only Wave 1 checkpoint/audit readiness lock.
-Current product-demo and docs/info polish pass is complete and keeps the same static-only boundary.
+Current product-demo and docs/info polish pass is complete and now includes static mock LIMA contract UI display in Workstation and Command Center.
 Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #3 (Model stack + Invite Wing visual adaptation) is complete with no runtime/API/storage additions.
 Wave 1 candidate #4 (Docs/info visual refinement) is complete with no runtime/API/storage additions.
 
-Wave 1 checkpoint status: verified as static and release-safe for this branch, and consolidated with mock LIMA contract planning docs.
+Wave 1 checkpoint status: verified as static and release-safe for this branch, consolidated with mock LIMA contract planning docs, and now includes UI-display render surfaces.
 
 ## Mock LIMA Contract Planning Status
 
-- Option C is complete for planning artifacts:
+- Option B is complete for static UI-display implementation from planning artifacts:
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
   - `docs/LIMA_CONTRACT_FIXTURES.md`
-  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
-  - `docs/LIMA_CONTRACT_STOP_GATES.md`
+- `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
+- `docs/LIMA_CONTRACT_STOP_GATES.md`
+- `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
+- `src/data/mockLimaContracts.ts`
+- `src/components/MockLimaContractPanel.tsx`
 - `Sparkbot_shell` keeps these as docs/fixture-only references.
 - No runtime behavior or API calls added in this pass.
 

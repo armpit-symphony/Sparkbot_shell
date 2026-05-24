@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChatShell } from "./components/ChatShell";
 import { ConnectorIdentityShell } from "./components/ConnectorIdentityShell";
+import { MockLimaContractPanel } from "./components/MockLimaContractPanel";
 import { LimaReadyLayerPanel } from "./components/LimaReadyLayerPanel";
 import { ModelConfigShell } from "./components/ModelConfigShell";
 import { RoundTableFlowShell } from "./components/RoundTableFlowShell";
@@ -168,6 +169,7 @@ export function App() {
             />
             <section className="page-section">
               <LimaReadyLayerPanel />
+              <MockLimaContractPanel />
             </section>
           </>
         ) : null}

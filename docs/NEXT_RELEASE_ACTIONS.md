@@ -92,14 +92,15 @@ Do not run Option D now.
 
 Current pass status:
 
-- `Option F` (mock LIMA contract UI planning/display docs) is complete as planning/facade docs.
+- `Option B` (mock LIMA contract UI display) is now implemented as static source/UI fixtures.
+- `Option F` remains archived as planning-only.
 - `Option C` remains deferred for official repo-home execution (official decision still `TBD`).
 - `Option D` remains blocked.
 
 Recommended next step:
 
 1. Keep static shell and boundary posture unchanged.
-2. Option B lock-in: if approved, add mock contract UI-display surface only in docs/fixtures-aligned form.
+2. Continue static-only polish as needed, then run a decision gate before runtime work.
 3. Before any runtime or deeper import, perform Phil decision at release branch/consolidation stage.
 
 ### Operational Guardrails
@@ -115,8 +116,8 @@ Recommended next step:
 
 ## Exact Current Question to Phil
 
-Approve consolidation of the current static baseline (Wave 1 + mock LIMA contract planning) and next action:
+Approve continuation of `mock-lima-contract-ui-display` / current static baseline or switch to:
 
 - continue Option A (pause and return to LIMA AI OS contract work), or
-- continue Option B (mock LIMA contract UI display as default), or
-- approve Option D prep after explicit release approval.
+- continue Option B (Option B remains active, keep static-only contract UI visibility), or
+- approve Option D after explicit repo home/version/tag/announcement approval.

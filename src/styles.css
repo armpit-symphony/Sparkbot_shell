@@ -1491,6 +1491,56 @@ textarea {
   gap: 10px;
 }
 
+.mock-lima-contract-panel .mock-contract-cards,
+.mock-lima-contract-panel .mock-contract-invariants,
+.mock-lima-contract-panel .mock-contract-inquiry-grid,
+.mock-lima-contract-panel .mock-contract-items,
+.mock-lima-contract-panel .lima-sequence-grid {
+  margin-top: 8px;
+}
+
+.mock-lima-contract-panel .mock-contract-inquiry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.mock-lima-contract-panel .mock-contract-example {
+  display: grid;
+  gap: 10px;
+}
+
+.mock-lima-contract-panel .mock-contract-item {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  background: #f8fbfa;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+}
+
+.mock-lima-contract-panel .mock-contract-item strong,
+.mock-lima-contract-panel .mock-contract-item small {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.mock-lima-contract-panel .mock-contract-item small {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #40514b;
+  font-size: 0.75rem;
+}
+
+.mock-lima-contract-panel .mock-contract-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mock-lima-contract-panel .mock-contract-invariants {
+  margin-top: 10px;
+}
+
 .lima-sequence-grid .flow-card {
   align-content: start;
   min-height: 122px;
@@ -1705,6 +1755,8 @@ textarea {
   .fixture-grid,
   .demo-room-grid,
   .lima-sequence-grid,
+  .mock-lima-contract-panel .mock-contract-cards,
+  .mock-lima-contract-panel .mock-contract-inquiry-grid,
   .command-center-map,
   .floor-status-grid,
   .seat-overview-grid,

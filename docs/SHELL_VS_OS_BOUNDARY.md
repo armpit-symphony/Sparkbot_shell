@@ -58,6 +58,19 @@ For the current static planning phase:
 - No persistence, scheduler, terminal, or robotics paths are active.
 - No LIMA/Arc/Office/IT runtime code is consumed from shell source.
 
+## Current Mock-UI Pass
+
+- Added a dedicated static contract panel to demonstrate expected contract payload families:
+  - workstation state
+  - roundtable meeting
+  - model/agent seats
+  - file/memory/task context
+  - guardian posture
+  - robo teaser
+  - release/readiness status
+- Shell consumes these as non-authoritative fixtures only.
+- This pass adds no additional boundary crossings; it only surfaces this contract-readiness information in existing UI routes.
+
 ## Contract Surface Expectations
 
 The following contract surfaces are defined as future display domains:

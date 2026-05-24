@@ -30,6 +30,10 @@ Updated: 2026-05-24
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
+- Option B mock-LIMA contract UI display is now implemented in `mock-lima-contract-ui-display`:
+  - `src/data/mockLimaContracts.ts`
+  - `src/components/MockLimaContractPanel.tsx`
+  - Workstation and command-center placement in shell routes
 - Release routing correction and baseline framing docs remain included:
   - `docs/OFFICIAL_PUBLIC_REPO_READINESS.md`
   - `docs/RELEASE_ROUTING_CORRECTION.md`
@@ -96,5 +100,12 @@ Updated: 2026-05-24
 
 ## Current Status
 
-This branch is now the **active staging baseline** for current Sparkbot Shell work.  
+This branch is the official staging baseline context for current Sparkbot Shell work, with the lock committed on
+`active-staging-baseline-lock`.
 It is not yet a public release and should not be treated as a final public candidate.
+
+## Current Pass Overlay
+
+- Current branch: `mock-lima-contract-ui-display` (extends `active-staging-baseline-lock`).
+- Added static mock LIMA contract display UI only.
+- No runtime changes; no boundary or release-state changes.

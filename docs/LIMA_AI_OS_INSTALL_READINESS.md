@@ -84,12 +84,13 @@ Robo remains teaser-only in the public shell. Any robotics, drone, humanoid, dev
 
 ## Mock Contract Planning (Current Phase)
 
-Current status is at planned completion for Phases 1 and 2 on docs:
+Current status is now at completion for Phases 1 through 3 for UI-readiness visibility:
 
 - contract-first docs are now complete,
 - mock contract schemas and fixture examples are complete in repo planning docs,
 - runtime behavior is still disabled,
 - no package install, runtime endpoint, or dispatch path is active.
+- static contract preview is now rendered in-shell via `MockLimaContractPanel` on Workstation and Command Center surfaces.
 
 Planned mock request/response families include:
 

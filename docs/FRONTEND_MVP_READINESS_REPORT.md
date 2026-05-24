@@ -1,16 +1,17 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24
-Branch: `static-shell-mock-contract-baseline`
-Base commit: `d6a528f`
+Branch: `mock-lima-contract-ui-display`
+Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
 
 ## Summary
 
-Frontend-only product-demo polish remains in place.
-This pass consolidates Wave 1 candidate #1-#4 and mock LIMA contract planning on top of the Wave 1 checkpoint.
-`static-shell-mock-contract-baseline` records this consolidated checkpoint baseline.
+Frontend-only product-demo polish and static contract-readiness UI are in place.
+This pass adds Option B mock LIMA contract display on top of Wave 1 and mock LIMA contract planning.
+`mock-lima-contract-ui-display` records this current checkpoint baseline with no runtime behavior.
 
-Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations only; no direct runtime imports or backend features were added.
+Wave 1 candidates #1-#4 are checkpointed as frontend-only static adaptations only.
+Option B mock LIMA contract UI display has been implemented as advisory fixture-only UI.
 
 ## Surfaces Represented
 
@@ -25,6 +26,7 @@ Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations
 - Robo teaser route.
 - Docs route.
 - LIMA AI OS ready layer panel (static, contract-readiness only).
+- Mock LIMA contract panel for contract examples and invariant badges.
 - Files / Knowledge preview fixture surface.
 - Memory preview fixture surface.
 - Tasks / Reminders preview fixture surface.
@@ -56,8 +58,9 @@ Wave 1 candidates #1-#4 are now checkpointed as frontend-only static adaptations
 ## Still Needed Later (Functional MVP Path)
 
 - Runtime contract definitions and approved integration boundaries.
-- Mock LIMA contract/docs/fixture planning is now complete as docs/fixtures-only planning.
-- Mock-to-runtime adapter implementation after contract approvals.
+- Mock LIMA contract/docs/fixture planning is complete as docs/fixtures-only planning.
+- Mock LIMA contract UI display is implemented as static `MockLimaContractPanel`.
+- Mock-to-runtime adapter implementation is still pending future runtime approvals.
 - Optional local runtime detection and read-only endpoint wiring in later phase.
 - Functional backend/provider/connector/persistence/scheduler implementations in separate approved repositories or phases.
 
@@ -81,7 +84,7 @@ Wave 1 checkpoint complete (recommended closure):
 1. Use this checkpoint baseline for release-candidate consolidation or demo refinement planning.
 2. Continue with static-only polish only until Phil approves a new track.
 3. If requested, proceed with either:
-   - Mock LIMA contract UI display planning (docs/fixtures only), or
+   - pause and return to LIMA AI OS universal contract work, or
    - release-candidate branch consolidation.
 4. Stop before any deeper source import or runtime planning until explicit approval.
 
@@ -90,5 +93,7 @@ Wave 1 checkpoint complete (recommended closure):
 - `docs/LIMA_CONTRACT_LAYER_PLAN.md` defines the contract-first boundary and planned mock surfaces.
 - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md` defines six+ mock response shapes.
 - `docs/LIMA_CONTRACT_FIXTURES.md` provides static example payloads.
+- `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md` defines this static UI-display implementation plan.
 - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md` defines mock rendering safety.
 - `docs/LIMA_CONTRACT_STOP_GATES.md` defines hard gates before runtime work.
+- `src/data/mockLimaContracts.ts` and `src/components/MockLimaContractPanel.tsx` now render those payloads in-shell for mock contract UI display.

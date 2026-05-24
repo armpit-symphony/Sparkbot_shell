@@ -56,6 +56,14 @@ LIMA may return:
 3. Any runtime behavior belongs behind approved boundaries with explicit consent and security posture.
 4. This avoids early lock-in to R&D internals and keeps public-safe preview artifacts clean.
 
+## Mock Contract UI Display Status (Current Pass)
+
+- `MockLimaContractPanel` was added as a static contract-readiness surface.
+- No runtime endpoint is used.
+- Contract examples are static fixtures only and render under advisory labels.
+- Workstation and Command Center surfaces now include the mock contract preview to make the future contract lane discoverable.
+- Current branch (`mock-lima-contract-ui-display`) adds this pass only as static contract UI visibility, with no runtime boundary changes.
+
 ## Current Wave 1 Connection
 
 Wave 1 completed static UX layers (Workstation, Round Table, model seats, docs/info, and fixture surfaces).  

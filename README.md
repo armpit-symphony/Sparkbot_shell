@@ -15,8 +15,9 @@ The public product model is a local-first, static-preview-oriented AI office she
 ## Current Status
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
-Current checkpoint branch: `active-staging-baseline-lock` (from `static-shell-mock-contract-baseline`).
-Current commit: `1f4ff3b` on `active-staging-baseline-lock`.
+Current checkpoint baseline is `active-staging-baseline-lock` (from `static-shell-mock-contract-baseline`).
+Current branch: `mock-lima-contract-ui-display` (implements Option B mock LIMA contract UI display on top of the locked baseline).
+Current commit: HEAD of `mock-lima-contract-ui-display`.
 Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
@@ -24,6 +25,7 @@ Wave 1 candidate #2 (Round Table visual refinement) is complete as a manual stat
 Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #4 (Docs/info visual refinement) is complete as a manual static adaptation from R&D + shell docs concepts only.
 Wave 1 checkpoint/audit docs are complete and consolidated on this branch with mock LIMA contract planning pass.
+Option B mock LIMA contract UI display now renders contract example cards and hard safety invariants in Workstation and Command Center preview surfaces.
 
 It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
@@ -52,6 +54,7 @@ Current planning phase also includes LIMA contract fixture/docs planning:
 - [LIMA contract fixtures](docs/LIMA_CONTRACT_FIXTURES.md)
 - [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
 - [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
+- [Mock LIMA contract UI plan](docs/MOCK_LIMA_CONTRACT_UI_PLAN.md)
 
 ## Public MVP Highlights
 
@@ -192,5 +195,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is active-staging baseline lock completion and Option B mock LIMA contract UI planning.
+Recommended next work is a second-layer Option B refinement decision only (UI-only) or a pause until Phil chooses release routing.
 Continue to treat release actions as deferred while repo/home/version/tag are pending.

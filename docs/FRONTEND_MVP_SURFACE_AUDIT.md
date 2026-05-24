@@ -1,8 +1,8 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24
-Branch: `static-shell-mock-contract-baseline`
-Base checkpoint commit: `d6a528f`
+Branch: `mock-lima-contract-ui-display`
+Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
 
 ## Scope
 
@@ -81,6 +81,7 @@ This revision also establishes import-planning baseline context. No runtime beha
 - Memory preview: present via static fixture cards and context previews.
 - Tasks/reminders preview: present via static task fixture cards.
 - Demo room/context fixture: present as a unified static room surface.
+- Mock LIMA contract UI: added as `MockLimaContractPanel` in Workstation and Command Center for static contract-readiness preview.
 
 ## Missing or Thin Surfaces
 
@@ -136,6 +137,7 @@ This revision also establishes import-planning baseline context. No runtime beha
 ## Contract Planning Follow-up
 
 - Option C (mock LIMA contracts, docs/fixtures only) is now planned with dedicated planning docs:
+  - `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
   - `docs/LIMA_CONTRACT_FIXTURES.md`

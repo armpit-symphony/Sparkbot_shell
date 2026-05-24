@@ -4,6 +4,11 @@ Updated: 2026-05-24
 
 This document defines what the frontend must guarantee when rendering mock LIMA contract responses.
 
+This frontend pass now includes a static mock display component in the shell:
+
+- `src/components/MockLimaContractPanel.tsx`
+- Workstation and command-center placement in static readiness surfaces
+
 ## Frontend Readiness Principles
 
 1. **Mock-first rendering**
@@ -39,13 +44,30 @@ This document defines what the frontend must guarantee when rendering mock LIMA 
    - Malformed payloads should degrade safely and show explicit reason text.
    - Missing fields should not crash UI.
 
+## UI Display Implementation (Current Static Pass)
+
+- Contract examples are rendered with static fixture cards for:
+  - workstation state
+  - roundtable preview
+  - model/seat preview
+  - context preview
+  - guardian posture
+  - robo teaser
+  - release/readiness status
+- Data source: `src/data/mockLimaContracts.ts`
+- Rendering component: `src/components/MockLimaContractPanel.tsx`
+- Placement:
+  - Workstation: LIMA readiness section
+  - Command Center: contract preview panel (alongside LIMA layer marker)
+  - Docs: contract-readiness summary copy and boundary links
+
 ## Frontend UI Checklist for Mock-Only Contract Use
 
 - Render `lima_runtime_active` and route state visibly.
 - If `lima_runtime_active` is `false`, show:
-  - install guidance placeholder state,
-  - `LIMA not installed` notice,
-  - clear next-step text for future install.
+  - install-readiness placeholder state,
+  - `LIMA not installed` concept text only,
+  - clear next-step text for future install planning.
 - For every contract response:
   - show preview-only indicators,
   - keep all action controls disabled,
