@@ -4,7 +4,7 @@
 
 - Current staging repo: `armpit-symphony/Sparkbot_shell`
 - Current candidate branch: `public-release-official-repo-preflight`
-- Current candidate commit: `634e8cc`
+- Current candidate commit: `e3d2cb5`
 - Preview artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Current package/version: `0.8.0-layer8-preview`
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
@@ -72,6 +72,7 @@ Preflight target status:
 
 - Target: `sparkpit-labs/Sparkbot`
 - Status: `OPTION_C_BLOCKED_REPO_NOT_FOUND_OR_INACCESSIBLE`
+- Recheck after access approval: still `404 / Not Found`.
 
 Until this is resolved:
 

@@ -62,13 +62,14 @@ Do not run Option D now.
 ### Immediate Recommended Path
 
 1. Keep `public-release-official-repo-preflight` as the canonical pre-Option-D branch.
-2. Complete Option C preflight and maintain blocker reports.
+2. Re-run Option C preflight when repo setup/access changes and maintain blocker reports.
 3. Do not execute copy/Option C until Phil confirms official repo exists/access and `OFFICIAL_REPO_PREFLIGHT_REPORT.md` is updated to clear.
 4. Execute remaining approval steps only after Phil confirms:
    - final repo home
    - final version/tag
    - artifact destination
    - announcement policy
+   - README/repo URLs are final-safe
 
 5. Option paths after Option C readiness:
    - hold staging if Phil chooses the temporary staging path,

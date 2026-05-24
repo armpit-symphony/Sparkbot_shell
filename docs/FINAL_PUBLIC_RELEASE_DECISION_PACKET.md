@@ -61,7 +61,7 @@ Prepare path to final hosting (copy/move tree, cleanup, and link rewrite) withou
 
 ## Option C Readiness Status (Current)
 
-- Status: **blocked (preflight target not accessible)**
+- Status: **blocked (preflight target revalidated; still `404/Not Found`)**
 - Scope: docs-and-export planning created for official repo move.
 - Pending constraints: final repo home, version/tag, artifact destination, announcement policy.
 - This branch includes:
@@ -72,6 +72,7 @@ Prepare path to final hosting (copy/move tree, cleanup, and link rewrite) withou
   - branding/link cleanup plan,
   - versioning finalization plan.
 - No copy/push/release actions are permitted in this stage.
+- Preflight was re-run after access approval; target remains unavailable, so Option C stays blocked.
 
 ### Option D - Approve Tag/Upload/Announcement
 

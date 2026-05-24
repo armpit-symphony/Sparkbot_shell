@@ -15,7 +15,7 @@ Package/version label: `0.8.0-layer8-preview`.
 
 Preview status is `GREEN_CANDIDATE` for static-preview readiness and remains `NOT_RELEASED`.
 No tag, no upload, and no announcement have been executed.
-Official public repo move is pending Phil approval. Target preflight to `sparkpit-labs/Sparkbot` is currently blocked (repo not found/inaccessible).
+Official public repo move is pending Phil approval. Target preflight to `sparkpit-labs/Sparkbot` was re-run after access approval and remains blocked (`404/Not Found`).
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), and [Official public repo readiness](docs/OFFICIAL_PUBLIC_REPO_READINESS.md).
 
 ## Public MVP Highlights
