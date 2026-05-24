@@ -64,7 +64,7 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-docs-info-static-adaptation` as the current Wave 1 completion branch.
+1. Keep `frontend-only-wave1-checkpoint-audit` as the current Wave 1 checkpoint baseline.
 2. Keep `armpit-symphony/Sparkbot_shell` as the active staging repo.
 3. Confirm final public repo/home remains **TBD**.
 4. Run and record a Wave 1 checkpoint/audit covering:
@@ -72,10 +72,11 @@ Do not run Option D now.
    - Round Table visual adaptation
    - Model stack + Invite Wing adaptation
    - Docs/info adaptation
-5. Wait for explicit Phil approval before any deeper Wave 2 import or runtime planning.
+5. Continue static refinement only; do not begin Wave 2 source import without additional explicit approval.
 6. If Phil approves: either
-   - proceed to a deeper candidate pass, or
-   - begin Option C prep execution.
+   - continue static-only refinement (Option B),
+   - run mock LIMA contract readiness planning (docs/fixtures only),
+   - or consolidate release-candidate branch for final decision.
 7. Keep all guardrails active:
    - `GREEN_CANDIDATE`
    - `NOT_RELEASED`

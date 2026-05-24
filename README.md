@@ -7,10 +7,14 @@ The public product model is a local-first workstation for agent work, model rout
 ## Current Status
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
+Current checkpoint branch: `frontend-only-wave1-checkpoint-audit`.
+Current release status remains GREEN_CANDIDATE, NOT_RELEASED, NO_TAG, NO_UPLOAD, NO_ANNOUNCEMENT.
+
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #2 (Round Table visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
 Wave 1 candidate #4 (Docs/info visual refinement) is complete as a manual static adaptation from R&D + shell docs concepts only.
+Wave 1 checkpoint/audit docs are complete on this branch; deeper source adaptation remains paused.
 
 It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
@@ -96,6 +100,8 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Wave 1 Round Table adaptation plan](docs/WAVE_1_ROUNDTABLE_ADAPTATION_PLAN.md)
 - [Wave 1 Model Seat adaptation plan](docs/WAVE_1_MODEL_SEAT_ADAPTATION_PLAN.md)
 - [Wave 1 Docs/info adaptation plan](docs/WAVE_1_DOCS_INFO_ADAPTATION_PLAN.md)
+- [Wave 1 checkpoint audit](docs/WAVE_1_CHECKPOINT_AUDIT.md)
+- [Wave 1 static demo baseline](docs/WAVE_1_STATIC_DEMO_BASELINE.md)
 
 ## Preview Artifact Boundary
 

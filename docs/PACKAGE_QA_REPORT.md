@@ -2,7 +2,8 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-docs-info-static-adaptation`
+Branch: `frontend-only-wave1-checkpoint-audit`
+Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
 
 ## Locked Preview Package
 
@@ -102,6 +103,12 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 - Wave 1 Round Table adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
 - Wave 1 Model stack + Invite Wing adaptation did not add runtime/API/storage behavior, key handling, or packaging boundary changes.
 - Wave 1 Docs/info adaptation did not add runtime/API/storage behavior and did not alter packaging boundaries.
+- Wave 1 checkpoint/audit documentation updates remain repo-stage docs and do not alter artifact packaging.
+
+## Checkpoint Baseline
+
+- Current checkpoint branch: `frontend-only-wave1-checkpoint-audit`.
+- Release posture remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 ## Connector/private recall classification
 

@@ -1,8 +1,9 @@
 # Frontend Import Wave 1 Plan
 
 Updated: 2026-05-24
-Branch: `frontend-only-docs-info-static-adaptation`
-Status: candidates #1 through #4 executed (manual static adaptation only)
+Branch: `frontend-only-wave1-checkpoint-audit`
+Base commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
+Status: candidates #1 through #4 executed (manual static adaptation only); Wave 1 checkpoint audit initiated and baseline docs added.
 
 ## Wave 1 Objective
 
@@ -113,4 +114,5 @@ Define the first safe, small, high-value frontend-only import wave from R&D refe
 ## Current State
 
 Wave 1 candidates #1 through #4 are complete as static-only adaptations.
-Recommended next step: run a Wave 1 checkpoint/audit over Workstation, Round Table, Model/Invite, and Docs/info before any deeper import or runtime planning.
+Recommended next step: complete Wave 1 checkpoint/audit artifacts and stop deep source adaptation.
+Current state is closed for Wave 1 source adaptation until explicit Phil approval.

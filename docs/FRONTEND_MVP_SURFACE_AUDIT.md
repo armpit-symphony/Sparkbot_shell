@@ -1,7 +1,8 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24
-Branch: `frontend-only-docs-info-static-adaptation`
+Branch: `frontend-only-wave1-checkpoint-audit`
+Base checkpoint commit: `8e0fba1d0d9445ff1449362d427e63616fb6b694`
 
 ## Scope
 
@@ -85,6 +86,22 @@ This revision also establishes import-planning baseline context. No runtime beha
 
 - No separate marketing-style landing page (intentional).
 - No separate route was added for Files/Memory/Tasks; surfaces are intentionally grouped in Workstation to avoid route sprawl in this pass.
+
+## Wave 1 Checkpoint Result
+
+- Status on each candidate:
+  - Candidate 1: Workstation visual refinement — static-only complete.
+  - Candidate 2: Round Table visual flow refinement — static-only complete.
+  - Candidate 3: Model stack + Invite Wing visual refinement — static-only complete.
+  - Candidate 4: Docs/info visual refinement — static-only complete.
+- No forbidden APIs or runtime imports were added in this checkpointed baseline.
+- No direct Sparkbot R&D file copy was performed.
+- The shell remains with release posture:
+  - `GREEN_CANDIDATE`
+  - `NOT_RELEASED`
+  - `NO_TAG`
+  - `NO_UPLOAD`
+  - `NO_ANNOUNCEMENT`
 
 ## Stale Labels or Copy Issues Found
 

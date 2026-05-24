@@ -95,6 +95,8 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Wave 1 Round Table adaptation plan](WAVE_1_ROUNDTABLE_ADAPTATION_PLAN.md)
 - [Wave 1 Model Seat adaptation plan](WAVE_1_MODEL_SEAT_ADAPTATION_PLAN.md)
 - [Wave 1 Docs/info adaptation plan](WAVE_1_DOCS_INFO_ADAPTATION_PLAN.md)
+- [Wave 1 checkpoint audit](WAVE_1_CHECKPOINT_AUDIT.md)
+- [Wave 1 static demo baseline](WAVE_1_STATIC_DEMO_BASELINE.md)
 
 ## Release Artifact Rule
 

@@ -25,6 +25,7 @@
 - Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
 - Wave 1 candidate #4 completed: Docs/info visual refinement completed via manual static adaptation from R&D + shell docs concepts.
+- Wave 1 checkpoint/audit baseline now in place on `frontend-only-wave1-checkpoint-audit`.
 
 ## What is Included
 
@@ -79,3 +80,6 @@
 - No direct R&D source code copy was used for Wave 1 candidate #2.
 - No direct R&D source code copy was used for Wave 1 candidate #3.
 - No direct R&D source code copy was used for Wave 1 candidate #4.
+- No direct R&D source code copy in the new checkpoint/audit branch is present.
+
+Wave 1 source adaptation is intentionally closed at this checkpoint pending Phil decision.
