@@ -93,17 +93,18 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
       "No connector runtime, webhook, secret input, target identifier, PIN verification, connector session, send, or private memory recall exists.",
   },
   "robo-preview": {
-    title: "Robo Preview teaser",
+    title: "Robo OS preview",
     summary:
-      "Robo Preview shows the public teaser boundary for future hardware-adjacent ideas without including a control surface.",
-    status: "Teaser only. No live robotics, IoT, bridge, or emergency control path is present.",
+      "Robo Preview shows the future-facing boundary for LIMA robotics and IoT systems without including a control surface.",
+    status: "Demo/teaser only. No live MCP, robotics, IoT, bridge, or emergency control path is present.",
     panels: [
-      { title: "Preview Surface", body: "Static public teaser for future controlled integrations." },
-      { title: "No Hardware Control", body: "Public Shell Layer 1 cannot command robots, drones, devices, or IoT systems." },
-      { title: "Public Boundary", body: "No hardware bridge implementation is included in this preview." },
+      { title: "Future LIMA robotics", body: "A visual promise that embodied systems belong behind a future runtime contract." },
+      { title: "No hardware control", body: "This public shell preview cannot command robots, drones, devices, or IoT systems." },
+      { title: "No live calls", body: "No MCP tool, hardware bridge, telemetry stream, or emergency-control path is included." },
+      { title: "Teaser only", body: "Robo stays exciting in the nav while remaining outside the static public MVP runtime." },
     ],
     boundary:
-      "No private platform wiring, hardware adapter, or live device runtime is included.",
+      "No private platform wiring, hardware adapter, robot-motion command, IoT action, or live device runtime is included.",
   },
 };
 

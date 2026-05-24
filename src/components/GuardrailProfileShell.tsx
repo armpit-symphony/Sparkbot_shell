@@ -54,6 +54,21 @@ export function GuardrailProfileShell({
         <small>{selected.shellBehavior}</small>
       </article>
 
+      <div className="guardian-basics-grid" aria-label="Guardian basics preview">
+        <article>
+          <strong>Confirm risky work</strong>
+          <p>Future writes, sends, tool use, file changes, and elevated actions should require confirmation.</p>
+        </article>
+        <article>
+          <strong>No execution today</strong>
+          <p>The preview cannot enforce policy because it has no runtime execution path.</p>
+        </article>
+        <article>
+          <strong>Contract-gated later</strong>
+          <p>Future Guardian/LIMA integration must arrive through approved contracts and audit envelopes.</p>
+        </article>
+      </div>
+
       {selectedProfile === "Custom" ? (
         <label>
           <span>Custom blocker text draft</span>

@@ -1,11 +1,11 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24  
-Branch: `frontend-only-mvp-shell-readiness`
+Branch: `frontend-only-mvp-polish-pass`
 
 ## Summary
 
-Frontend-only MVP shell readiness pass completed. The static shell now presents the public MVP surfaces clearly and includes a visible LIMA AI OS contract-readiness panel without adding runtime behavior.
+Frontend-only MVP polish pass completed. The static shell now reads more like a public open-source product preview while preserving local/mock-only behavior and the visible LIMA AI OS contract-readiness path.
 
 ## Surfaces Represented
 
@@ -20,6 +20,8 @@ Frontend-only MVP shell readiness pass completed. The static shell now presents 
 - Robo teaser route.
 - Docs route.
 - LIMA AI OS ready layer panel (static, contract-readiness only).
+- Polished Robo OS preview teaser with explicit no-hardware/no-MCP boundary.
+- Model stack cards for Primary, Backup 1, Backup 2, Heavy Hitter, and Bring-your-own seats.
 
 ## What Remains Static/Mock
 
@@ -52,6 +54,7 @@ Frontend-only MVP shell readiness pass completed. The static shell now presents 
 - Public preview readiness: `GREEN_CANDIDATE` static shell posture remains valid.
 - Public release state: `NOT_RELEASED` (`NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`).
 - Future LIMA contract/install readiness: represented and documented as a phased contract-first path.
+- Public preview polish: stronger first-screen product framing, clearer Round Table hero flow, and sharper static/runtime boundary language.
 
 ## Recommended Next Source Import Step
 

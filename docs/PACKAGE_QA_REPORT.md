@@ -2,7 +2,7 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-mvp-shell-readiness`
+Branch: `frontend-only-mvp-polish-pass`
 
 ## Locked Preview Package
 
@@ -13,6 +13,7 @@ Branch: `frontend-only-mvp-shell-readiness`
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
+This polish pass updates static UI/copy only and does not change the package allowlist.
 
 ## Package Dry Run
 

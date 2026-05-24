@@ -24,6 +24,7 @@
 
 - Static shell UI and public demo surfaces.
 - Frontend-only MVP status/copy polish for `GREEN_CANDIDATE` and `NOT_RELEASED` visibility.
+- Polished Workstation, Round Table, model-stack, Guardian basics, Robo teaser, and LIMA readiness copy.
 - Documentation boundary and release staging docs.
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
 - Static `LIMA AI OS ready layer` panel and phased contract-install messaging.

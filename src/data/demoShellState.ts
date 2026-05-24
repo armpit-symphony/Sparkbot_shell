@@ -18,7 +18,7 @@ import {
 export const demoModelSeats: ModelSeat[] = [
   {
     id: "seat-codex-openai",
-    label: "Codex / OpenAI",
+    label: "Primary - Codex / OpenAI",
     provider: "OpenAI",
     providerKind: "openai",
     modelId: "openai-codex/gpt-5.3-codex",
@@ -29,11 +29,11 @@ export const demoModelSeats: ModelSeat[] = [
     setupStatus: "configured",
     setupMessage: "Demo shell status only. Runtime credentials are not stored here.",
     authMode: "Backend credential storage later",
-    notes: "Primary example seat for Chat, Workstation, and Round Table planning.",
+    notes: "Primary model-seat example for Chat, Workstation, and Round Table planning.",
   },
   {
     id: "seat-claude-anthropic",
-    label: "Claude / Anthropic",
+    label: "Backup 1 - Claude / Anthropic",
     provider: "Anthropic",
     providerKind: "anthropic",
     modelId: "claude-sonnet-4-6",
@@ -48,7 +48,7 @@ export const demoModelSeats: ModelSeat[] = [
   },
   {
     id: "seat-grok-xai",
-    label: "Grok / xAI",
+    label: "Backup 2 - Grok / xAI",
     provider: "xAI",
     providerKind: "xai",
     modelId: "xai/grok-4",
@@ -63,7 +63,7 @@ export const demoModelSeats: ModelSeat[] = [
   },
   {
     id: "seat-local-ollama",
-    label: "Local AI / Ollama",
+    label: "Heavy Hitter - Local AI / Ollama",
     provider: "Local AI",
     providerKind: "local_ai",
     modelId: "local/llama3.1",
@@ -80,7 +80,7 @@ export const demoModelSeats: ModelSeat[] = [
   },
   {
     id: "seat-local-openai-compatible",
-    label: "OpenAI-compatible Local Endpoint",
+    label: "BYO Local Endpoint",
     provider: "Local AI",
     providerKind: "openai_compatible",
     modelId: "local/custom-model",
@@ -261,8 +261,8 @@ export const demoMeetingNotePreviews: MeetingNotePreview[] = [
 ];
 
 export const demoRoundTableState: RoundTableShellState = {
-  title: "Public release Layer 4 planning meeting",
-  problem: "Plan the next safe import layer without adding runtime behavior or private internals.",
+  title: "Launch plan for a self-hosted AI workstation shell",
+  problem: "Decide how a hobbyist/builder should evaluate Sparkbot Shell without any live runtime wiring.",
   currentPhase: "setup",
   seats: [
     {

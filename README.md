@@ -6,7 +6,7 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. The current shell contains a Vite + React + TypeScript preview with global navigation, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Workstation operating-floor panels, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, public artifact boundary docs, visual/mobile QA polish, and preview package QA. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. The current shell contains a Vite + React + TypeScript preview with global navigation, a polished Workstation home surface, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, Robo OS teaser copy, public artifact boundary docs, visual/mobile QA polish, and preview package QA. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
 
 Public users should wait for approved Sparkbot Shell release artifacts before treating this as an install path.
@@ -78,6 +78,7 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Release routing correction](docs/RELEASE_ROUTING_CORRECTION.md)
 - [Frontend MVP surface audit](docs/FRONTEND_MVP_SURFACE_AUDIT.md)
 - [Frontend MVP readiness report](docs/FRONTEND_MVP_READINESS_REPORT.md)
+- [Frontend polish plan](docs/FRONTEND_POLISH_PLAN.md)
 
 ## Preview Artifact Boundary
 

@@ -17,13 +17,21 @@ import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
 
 const commandCenterMap = [
-  ["AI Setup / Model Seats", "Named seats, model IDs, and setup badges only."],
+  ["AI Setup / Model Seats", "Primary, Backup 1, Backup 2, Heavy Hitter, and BYO local seats."],
   ["Local AI", "Runtime labels for Ollama, LM Studio, llama.cpp, and compatible endpoints."],
   ["Specialty Wing", "Role/skill-agent cards assigned to model seats later."],
   ["Guardrails", "Profile labels and custom draft text; no enforcement yet."],
   ["Task Guardian", "Read-only health-check report and delivery previews."],
   ["Connectors", "Identity/PIN gates and live-QA caveats for optional channels."],
   ["Shell Status", "Static-only runtime boundary and no-credential reminders."],
+] as const;
+
+const stackRoles = [
+  ["Primary", "seat-codex-openai"],
+  ["Backup 1", "seat-claude-anthropic"],
+  ["Backup 2", "seat-grok-xai"],
+  ["Heavy hitter", "seat-local-ollama"],
+  ["Bring-your-own", "seat-local-openai-compatible"],
 ] as const;
 
 type ModelConfigShellProps = {
@@ -74,8 +82,8 @@ export function ModelConfigShell({
           <p className="section-label">Command Center shell</p>
           <h2>Setup, model seats, and guardrails</h2>
           <p>
-            Command Center groups the static setup surfaces for model seats, Local AI labels, Specialty Wing agents,
-            guardrails, Task Guardian previews, and connector caveats. All state is local demo state only.
+            Command Center groups model seats, Local AI labels, Invite Wing slots, Specialty Wing agents, basic
+            confirmation posture, Task Guardian previews, and connector caveats. All state is local demo state only.
           </p>
         </div>
         <aside className="status-card">
@@ -100,6 +108,33 @@ export function ModelConfigShell({
             <p>{detail}</p>
           </article>
         ))}
+      </section>
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
+            <p className="section-label">Model stack preview</p>
+            <h2>Primary, backups, heavy hitter</h2>
+            <p>
+              This is the public setup shape only. Providers are not contacted, endpoint checks do not run, and API keys
+              are not accepted.
+            </p>
+          </div>
+        </div>
+        <div className="model-stack-grid">
+          {stackRoles.map(([role, seatId]) => {
+            const seat = modelSeats.find((candidate) => candidate.id === seatId);
+            if (!seat) return null;
+            return (
+              <article className="template-card" key={role}>
+                <span className="seat-marker">{role}</span>
+                <strong>{seat.label}</strong>
+                <p>{seat.modelId}</p>
+                <small>{seat.setupMessage}</small>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="model-config-grid">
@@ -179,6 +214,7 @@ export function ModelConfigShell({
           <span>No credentials stored</span>
           <span>No live connector sends</span>
           <span>No runtime enforcement</span>
+          <span>Future LIMA contracts only</span>
         </div>
       </section>
 

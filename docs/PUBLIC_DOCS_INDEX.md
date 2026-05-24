@@ -80,6 +80,7 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Release routing correction](RELEASE_ROUTING_CORRECTION.md)
 - [Frontend MVP surface audit](FRONTEND_MVP_SURFACE_AUDIT.md)
 - [Frontend MVP readiness report](FRONTEND_MVP_READINESS_REPORT.md)
+- [Frontend polish plan](FRONTEND_POLISH_PLAN.md)
 
 ## Release Artifact Rule
 

@@ -145,6 +145,12 @@ a {
   max-width: 1120px;
 }
 
+.topbar-summary {
+  max-width: 760px;
+  margin: 12px 0 0;
+  font-weight: 700;
+}
+
 .kicker,
 .section-label {
   margin: 0 0 8px;
@@ -188,6 +194,7 @@ p {
 
 .status-pill {
   flex: 0 0 auto;
+  max-width: 260px;
   padding: 8px 10px;
   color: #244534;
   background: #d6f4e2;
@@ -195,6 +202,7 @@ p {
   border-radius: 999px;
   font-size: 0.82rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .page-section {
@@ -580,11 +588,38 @@ textarea {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.product-snapshot-grid,
+.roundtable-overview-grid,
+.model-stack-grid,
+.guardian-basics-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.product-snapshot-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.roundtable-overview-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.model-stack-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.guardian-basics-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .workstation-card,
 .agent-card,
 .template-card,
 .delivery-card,
 .seat-overview,
+.product-snapshot-grid article,
+.roundtable-overview-grid article,
+.guardian-basics-grid article,
 .profile-detail {
   background: #ffffff;
   border: 1px solid #d8e1de;
@@ -711,10 +746,26 @@ textarea {
 .template-card,
 .delivery-card,
 .seat-overview,
+.product-snapshot-grid article,
+.roundtable-overview-grid article,
+.guardian-basics-grid article,
 .profile-detail {
   display: grid;
   gap: 12px;
   padding: 16px;
+}
+
+.product-snapshot-grid article p,
+.roundtable-overview-grid article p,
+.guardian-basics-grid article p {
+  margin-bottom: 0;
+}
+
+.roundtable-overview-grid article span {
+  color: #657873;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .seat-marker {
@@ -1363,6 +1414,10 @@ textarea {
   .workstation-grid,
   .workstation-grid.primary,
   .workstation-grid.secondary,
+  .product-snapshot-grid,
+  .roundtable-overview-grid,
+  .model-stack-grid,
+  .guardian-basics-grid,
   .lima-sequence-grid,
   .command-center-map,
   .floor-status-grid,

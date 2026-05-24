@@ -1,7 +1,7 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24  
-Branch: `frontend-only-mvp-shell-readiness`
+Branch: `frontend-only-mvp-polish-pass`
 
 ## Scope
 
@@ -51,6 +51,13 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
   - `src/components/ConnectorIdentityShell.tsx`
 - New in this pass:
   - `src/components/LimaReadyLayerPanel.tsx`
+- Polished in this pass:
+  - first-screen product copy and release-gate status
+  - Workstation snapshot cards
+  - Round Table stage labels and output preview framing
+  - model-stack role cards
+  - Guardian basics preview
+  - Robo teaser copy
 
 ## Public MVP Surfaces Present
 
@@ -67,7 +74,7 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 ## Missing or Thin Surfaces
 
 - No separate marketing-style landing page (intentional).
-- File management shell is implied in copy but not represented as a distinct UI route.
+- File management shell is still implied in copy but not represented as a distinct UI route.
 
 ## Stale Labels or Copy Issues Found
 
@@ -97,6 +104,7 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
   - `NOT_RELEASED`
   - `repo home TBD`
 - LIMA-ready direction is visible in UI as a contract-readiness path, not runtime wiring.
+- Robo Preview is more future-facing while retaining an explicit no-control boundary.
 
 ## Recommendations
 

@@ -20,13 +20,13 @@ type RoundTableFlowShellProps = {
 };
 
 const phases: Array<{ id: RoundTablePhase; label: string; description: string }> = [
-  { id: "setup", label: "Setup", description: "Choose the problem, seats, agents, and model-seat assignments." },
-  { id: "first_pass", label: "First Pass", description: "Participants give initial ideas and framing." },
-  { id: "manager_assessment", label: "Manager Assessment", description: "Seat 1 synthesizes and plans assignments." },
-  { id: "assignments", label: "Assignments", description: "Meeting Manager assigns focused follow-up cards." },
-  { id: "second_pass", label: "Second Pass", description: "Participants respond to their assignments." },
-  { id: "wrap_up", label: "Wrap-Up", description: "Meeting Manager summarizes decisions and next steps." },
-  { id: "notes", label: "Notes", description: "Editable notes preview for later memory/context rollup." },
+  { id: "setup", label: "Topic", description: "Choose task, chair, agents, and model-seat assignments." },
+  { id: "first_pass", label: "Framing", description: "Participants frame the task and surface first perspectives." },
+  { id: "manager_assessment", label: "Synthesis", description: "Meeting Manager groups signals and sets direction." },
+  { id: "assignments", label: "Assignments", description: "Specialists receive focused follow-up cards." },
+  { id: "second_pass", label: "Specialists", description: "Participants answer their assigned perspective." },
+  { id: "wrap_up", label: "Recommendation", description: "Meeting Manager produces recommendation and next steps." },
+  { id: "notes", label: "Artifact", description: "Editable output preview for later memory/context rollup." },
 ];
 
 function linesToDecisions(value: string): MeetingDecision[] {
@@ -166,17 +166,35 @@ export function RoundTableFlowShell({
       <div className="intro-row">
         <div>
           <p className="section-label">Public Layer 4</p>
-          <h2>Round Table meeting flow</h2>
+          <h2>Round Table agent meeting demo</h2>
           <p>
-            Round Table is the meeting room. Meeting Manager is Seat 1, coordinates the first pass,
-            assigns follow-up work, runs the second pass, and prepares one editable wrap-up note.
+            Round Table is Sparkbot Shell's hero flow: the Meeting Manager chairs the room, specialists bring
+            perspectives, and the shell previews a recommendation artifact without running agents or models.
           </p>
         </div>
         <aside className="status-card">
-          <span>Runtime boundary</span>
-          <strong>Layer 4 shell only - no live model calls or backend meeting persistence yet.</strong>
+          <span>Demo boundary</span>
+          <strong>Static meeting simulation only. No live agent calls, rooms API, or persistence.</strong>
         </aside>
       </div>
+
+      <section className="roundtable-overview-grid" aria-label="Round Table meeting summary">
+        <article>
+          <span>Meeting topic</span>
+          <strong>{roundTable.title}</strong>
+          <p>{roundTable.problem}</p>
+        </article>
+        <article>
+          <span>Chair</span>
+          <strong>{managerSeat ? assignmentSeatLabel(managerSeat.id) : "Meeting Manager"}</strong>
+          <p>Seat 1 coordinates framing, synthesis, assignments, recommendation, and notes.</p>
+        </article>
+        <article>
+          <span>Output preview</span>
+          <strong>Recommendation artifact</strong>
+          <p>Wrap-up, decisions, action items, and open questions stay local until a future runtime exists.</p>
+        </article>
+      </section>
 
       <div className="phase-nav" aria-label="Round Table phases">
         {phases.map((phase) => (
@@ -196,8 +214,8 @@ export function RoundTableFlowShell({
         <div className="card-heading">
           <div>
             <p className="section-label">Launch setup</p>
-            <h2>Meeting setup shape</h2>
-            <p>Local component state only. Launching moves through demo phases and does not create a room.</p>
+            <h2>Meeting topic and seats</h2>
+            <p>Local component state only. Launching moves through demo stages and does not create a room.</p>
           </div>
           <span className="status-badge setup_needed">No runtime</span>
         </div>
@@ -319,10 +337,10 @@ export function RoundTableFlowShell({
 
         {roundTable.currentPhase === "setup" ? (
           <div className="flow-card">
-            <strong>Ready to launch</strong>
+            <strong>Ready to preview</strong>
             <p>
-              Seat 1 is {managerSeat ? assignmentSeatLabel(managerSeat.id) : "Meeting Manager"}. The launch button only
-              advances local demo state and does not create a backend meeting.
+              Seat 1 is {managerSeat ? assignmentSeatLabel(managerSeat.id) : "Meeting Manager"}. The launch button
+              only advances local demo state and does not create a backend meeting.
             </p>
           </div>
         ) : null}
@@ -375,7 +393,7 @@ export function RoundTableFlowShell({
 
         {roundTable.currentPhase === "wrap_up" ? (
           <div className="flow-card manager-card">
-            <strong>Wrap-up preview</strong>
+            <strong>Recommendation preview</strong>
             <p>{roundTable.wrapUp.summary}</p>
             <div className="notes-list-grid">
               <div>
@@ -390,6 +408,12 @@ export function RoundTableFlowShell({
                   <p key={item.id}>
                     {item.owner}: {item.text} ({item.dueLabel})
                   </p>
+                ))}
+              </div>
+              <div>
+                <h3>Open questions</h3>
+                {roundTable.wrapUp.openQuestions.map((question) => (
+                  <p key={question.id}>{question.text}</p>
                 ))}
               </div>
             </div>

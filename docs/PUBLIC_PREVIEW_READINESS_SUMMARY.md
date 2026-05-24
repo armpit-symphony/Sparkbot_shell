@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-mvp-shell-readiness`.
+- Current branch: `frontend-only-mvp-polish-pass`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -27,6 +27,7 @@ Readiness rules:
 - Static Vite/React/TypeScript shell.
 - Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Robo Preview, and Docs routes.
 - Static `LIMA AI OS ready layer` panel with phased contract/install path messaging.
+- Polished public-preview UX for Workstation, Round Table, model-stack seats, Guardian basics, and Robo teaser.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.

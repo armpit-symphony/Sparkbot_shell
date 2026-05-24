@@ -6,8 +6,8 @@ export function LimaReadyLayerPanel() {
           <p className="section-label">Future Contract Layer</p>
           <h2>LIMA AI OS ready layer</h2>
           <p>
-            Sparkbot Shell is prepared for a future LIMA AI OS contract/install layer.
-            The current shell remains static preview only.
+            Sparkbot Shell is prepared for a future LIMA AI OS contract/install layer, but it is not LIMA AI OS and
+            does not bundle a LIMA runtime. The current shell remains static preview only.
           </p>
         </div>
       </div>
@@ -15,11 +15,19 @@ export function LimaReadyLayerPanel() {
       <div className="mini-card-grid">
         <article className="template-card">
           <strong>No bundled runtime</strong>
-          <p>No LIMA runtime is bundled in this shell branch.</p>
+          <p>No LIMA runtime, kernel, package detection, endpoint client, or MCP/robotics bridge is bundled here.</p>
         </article>
         <article className="template-card">
           <strong>No execution paths</strong>
           <p>No execution, dispatch, persistence, providers, connectors, robotics, or IoT controls are active.</p>
+        </article>
+        <article className="template-card">
+          <strong>Contract gate closed</strong>
+          <p>Future runtime integration requires explicit approval after docs, fixtures, and read-only previews.</p>
+        </article>
+        <article className="template-card">
+          <strong>Public shell owns UX</strong>
+          <p>The shell can display approved capability envelopes later without importing private OS internals.</p>
         </article>
       </div>
 

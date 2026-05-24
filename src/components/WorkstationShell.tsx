@@ -58,6 +58,13 @@ const workstationPanels = [
 const primaryWorkstationPanels = workstationPanels.slice(0, 3);
 const secondaryWorkstationPanels = workstationPanels.slice(3);
 
+const deskHighlights = [
+  ["Sparkbot desk", "One operator-facing floor for chat, meetings, setup, safety, and preview docs."],
+  ["Model stack", "Primary, backups, heavy-hitter, and bring-your-own local model seats are represented as labels only."],
+  ["Guardian posture", "Risky future actions are framed for confirmation, but no approval engine runs in this preview."],
+  ["Open-source preview", "Static, inspectable shell surfaces with public-safe docs and no proprietary runtime code."],
+] as const;
+
 export function WorkstationShell({ shellState }: WorkstationShellProps) {
   const activeSeats = shellState.modelSeats.filter((seat) => seat.enabled);
   const manager = shellState.specialtyAgents.find((agent) => agent.id === "agent-meeting-manager");
@@ -81,18 +88,27 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
       <div className="intro-row">
         <div>
           <p className="section-label">Static public shell</p>
-          <h2>Workstation operating floor</h2>
+          <h2>Sparkbot desk for agent work</h2>
           <p>
-            The Workstation is the company floor. Main Chat is the middle-person, Round Table is the meeting room, and
-            model seats power Chat, Round Table, Specialty Wing, Task Guardian health previews, and connector gates.
+            The Workstation is the self-hosted desk: Main Chat is the operator channel, Round Table is the agent
+            meeting room, and model seats organize local-first model setup without calling providers.
           </p>
-          <p className="preview-map">Start with the three core rooms, then use the setup and status panels below.</p>
+          <p className="preview-map">Static preview only. No backend, provider, connector, memory, scheduler, or hardware runtime is active.</p>
         </div>
         <aside className="status-card">
-          <span>Runtime boundary</span>
-          <strong>Shell preview only. No backend, scheduler, connector, model, memory, or Robo runtime.</strong>
+          <span>Public preview gate</span>
+          <strong>GREEN_CANDIDATE / NOT_RELEASED / final public home TBD.</strong>
         </aside>
       </div>
+
+      <section className="product-snapshot-grid" aria-label="Sparkbot Shell public preview summary">
+        {deskHighlights.map(([title, detail]) => (
+          <article key={title}>
+            <strong>{title}</strong>
+            <p>{detail}</p>
+          </article>
+        ))}
+      </section>
 
       <div className="workstation-grid primary">
         {primaryWorkstationPanels.map((panel) => (
@@ -119,6 +135,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <div>
             <p className="section-label">Operating floor status</p>
             <h2>Shared demo state</h2>
+            <p>These counters are fixture-backed and help show how the real public MVP will organize the shell.</p>
           </div>
         </div>
         <div className="floor-status-grid">
