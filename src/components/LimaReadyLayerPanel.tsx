@@ -6,8 +6,8 @@ export function LimaReadyLayerPanel() {
           <p className="section-label">Future Contract Layer</p>
           <h2>LIMA AI OS ready layer</h2>
           <p>
-            Sparkbot Shell is prepared for a future LIMA AI OS contract/install layer, but it is not LIMA AI OS and
-            does not bundle a LIMA runtime. The current shell remains static preview only.
+            Sparkbot Shell is prepared for a future LIMA AI OS contract/install layer, but this app is not LIMA AI OS.
+            No LIMA runtime is bundled; this remains a static preview.
           </p>
         </div>
       </div>
@@ -15,7 +15,7 @@ export function LimaReadyLayerPanel() {
       <div className="mini-card-grid">
         <article className="template-card">
           <strong>No bundled runtime</strong>
-          <p>No LIMA runtime, kernel, package detection, endpoint client, or MCP/robotics bridge is bundled here.</p>
+          <p>No LIMA runtime, install detector, endpoint client, or robotics bridge is bundled here.</p>
         </article>
         <article className="template-card">
           <strong>No execution paths</strong>

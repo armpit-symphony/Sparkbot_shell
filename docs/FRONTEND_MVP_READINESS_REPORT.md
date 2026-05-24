@@ -1,11 +1,11 @@
 # Frontend MVP Readiness Report
 
 Updated: 2026-05-24  
-Branch: `frontend-only-static-fixtures-pass`
+Branch: `frontend-only-product-demo-polish`
 
 ## Summary
 
-Frontend-only static fixture content pass completed. The static shell now presents Files, Memory, Tasks, and Demo Room context previews while preserving local/mock-only behavior and the visible LIMA AI OS contract-readiness path.
+Frontend-only product-demo polish pass completed. The static shell now presents a clearer public storyline across Workstation, Round Table, model/agent setup, fixtures, Guardian posture, Robo teaser, and LIMA contract readiness.
 
 ## Surfaces Represented
 
@@ -24,6 +24,8 @@ Frontend-only static fixture content pass completed. The static shell now presen
 - Memory preview fixture surface.
 - Tasks / Reminders preview fixture surface.
 - Demo Room context fixture surface.
+- Top-level product-demo storyline strip.
+- Workstation and Round Table storyline cards.
 
 ## What Remains Static/Mock
 
@@ -59,11 +61,12 @@ Frontend-only static fixture content pass completed. The static shell now presen
 - Public release state: `NOT_RELEASED` (`NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`).
 - Future LIMA contract/install readiness: represented and documented as a phased contract-first path.
 - Public preview polish: stronger first-screen product framing, clearer Round Table hero flow, sharper static/runtime boundary language, and fuller fixture-driven product-shell coverage.
+- Public preview polish: improved copy density, stronger section rhythm, and better cross-surface demo flow discoverability.
 
 ## Recommended Next Source Import Step
 
 Frontend-only continuation:
 
-1. Run one additional product-demo polish pass for copy density and visual consistency.
-2. Decide between further static-shell iteration vs carefully scoped frontend-only import candidates from R&D (classification-gated, no runtime).
+1. Decide between further static-shell iteration vs carefully scoped frontend-only import candidates from R&D (classification-gated, no runtime).
+2. If import planning is approved, start with UI-only candidate mapping and stop-gate enforcement.
 3. Keep contract docs and mock fixtures aligned for future LIMA adapter phases.

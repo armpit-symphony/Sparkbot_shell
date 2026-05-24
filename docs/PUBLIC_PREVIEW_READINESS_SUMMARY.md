@@ -5,7 +5,7 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `frontend-only-static-fixtures-pass`.
+- Current branch: `frontend-only-product-demo-polish`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
@@ -29,6 +29,7 @@ Readiness rules:
 - Static `LIMA AI OS ready layer` panel with phased contract/install path messaging.
 - Polished public-preview UX for Workstation, Round Table, model-stack seats, Guardian basics, and Robo teaser.
 - Static fixture previews for Files/Knowledge, Memory, Tasks/Reminders, and a unified Demo Room context.
+- Final product-demo storyline polish across Workstation, Round Table, and demo fixtures.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
@@ -101,12 +102,13 @@ The static preview package is complete for internal/staging use and physical/mob
 It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
 Option B status: completed and passed with Phil manual verification. Current work continues as frontend-only staging refinement.
+Current product-demo polish pass is complete and keeps the same static-only boundary.
 
 ## Recommended Next Step
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
 
 - Continue frontend-only MVP shell refinement and contract-readiness prep in staging.
-- Run one product-demo polish pass, then decide whether to keep static iteration or begin carefully scoped frontend-only import planning.
+- Decide whether to keep static iteration or begin carefully scoped frontend-only import planning.
 - Option C only when Phil approves a concrete official repo-home action.
 - Option D for public announcement/tag/upload after explicit Phil approval.

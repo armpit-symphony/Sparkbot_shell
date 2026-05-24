@@ -6,9 +6,36 @@ export function StaticFixtureContentPreview() {
       <section className="config-panel">
         <div className="card-heading">
           <div>
+            <p className="section-label">Demo Fixture Story</p>
+            <h2>Files, memory, and tasks support one room</h2>
+            <p>
+              These fixtures are tied to the same Round Table storyline. They show what users can inspect now and what
+              will require runtime contracts later.
+            </p>
+          </div>
+        </div>
+        <div className="demo-story-grid">
+          <article>
+            <strong>Input files</strong>
+            <p>Meeting source docs are shown as static cards.</p>
+          </article>
+          <article>
+            <strong>Memory context</strong>
+            <p>Preferences and caveats shape how recommendations are written.</p>
+          </article>
+          <article>
+            <strong>Task follow-up</strong>
+            <p>Post-meeting work is visible without scheduling or sends.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="config-panel">
+        <div className="card-heading">
+          <div>
             <p className="section-label">Files / Knowledge Preview</p>
             <h2>Document workspace fixtures</h2>
-            <p>Static cards only. No live upload, read/write behavior, backend indexing, or persistence.</p>
+            <p>Static cards only. No live upload, backend indexing, or persistence.</p>
           </div>
         </div>
         <div className="fixture-grid">
@@ -60,7 +87,7 @@ export function StaticFixtureContentPreview() {
           <div>
             <p className="section-label">Tasks / Reminders Preview</p>
             <h2>Task board fixtures</h2>
-            <p>No scheduler, background jobs, reminders runtime, or connector sends exist in this shell.</p>
+            <p>No scheduler, reminders runtime, or connector sends exist in this shell.</p>
           </div>
         </div>
         <div className="fixture-grid">
@@ -82,7 +109,7 @@ export function StaticFixtureContentPreview() {
           <div>
             <p className="section-label">Demo Room Context</p>
             <h2>{demoRoomFixture.title}</h2>
-            <p>One static room fixture tying files, memory, tasks, Round Table, Guardian posture, and LIMA readiness.</p>
+            <p>One static room ties files, memory, tasks, Round Table recommendation, and future-gated controls.</p>
           </div>
         </div>
         <div className="demo-room-grid">

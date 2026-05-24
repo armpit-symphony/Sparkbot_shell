@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use `frontend-only-static-fixtures-pass` as the current canonical staging branch for frontend MVP fixture coverage and keep docs/charts/checks in one file set.
+Use `frontend-only-product-demo-polish` as the current canonical staging branch for frontend MVP demo polish and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -60,12 +60,12 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-static-fixtures-pass` as the canonical current staging branch.
+1. Keep `frontend-only-product-demo-polish` as the canonical current staging branch.
 2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
    - release-routing docs are corrected for `repo home TBD`,
    - Option C remains future,
    - no runtime behavior is added.
-3. Run one product-demo polish pass over the static shell (copy/readability/demo flow), then choose between:
+3. Choose between:
    - continued static iteration, or
    - carefully scoped frontend-only import planning from approved classification.
 4. Continue frontend-only MVP import/contract-readiness prep (docs, stubs, boundaries, and non-runtime readiness).

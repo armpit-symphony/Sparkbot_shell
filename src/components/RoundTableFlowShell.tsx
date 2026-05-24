@@ -20,11 +20,11 @@ type RoundTableFlowShellProps = {
 };
 
 const phases: Array<{ id: RoundTablePhase; label: string; description: string }> = [
-  { id: "setup", label: "Topic", description: "Choose task, chair, agents, and model-seat assignments." },
-  { id: "first_pass", label: "Framing", description: "Participants frame the task and surface first perspectives." },
+  { id: "setup", label: "Launch", description: "Choose task, chair, agents, and model-seat assignments." },
+  { id: "first_pass", label: "Framing", description: "Participants frame the task and surface initial context." },
   { id: "manager_assessment", label: "Synthesis", description: "Meeting Manager groups signals and sets direction." },
   { id: "assignments", label: "Assignments", description: "Specialists receive focused follow-up cards." },
-  { id: "second_pass", label: "Specialists", description: "Participants answer their assigned perspective." },
+  { id: "second_pass", label: "Perspectives", description: "Participants answer their assigned perspectives." },
   { id: "wrap_up", label: "Recommendation", description: "Meeting Manager produces recommendation and next steps." },
   { id: "notes", label: "Artifact", description: "Editable output preview for later memory/context rollup." },
 ];
@@ -168,8 +168,8 @@ export function RoundTableFlowShell({
           <p className="section-label">Public Layer 4</p>
           <h2>Round Table agent meeting demo</h2>
           <p>
-            Round Table is Sparkbot Shell's hero flow: the Meeting Manager chairs the room, specialists bring
-            perspectives, and the shell previews a recommendation artifact without running agents or models.
+            Round Table is the hero feature: Meeting Manager chairs the room, specialist seats contribute
+            perspectives, and the shell previews a recommendation artifact without live runtime calls.
           </p>
         </div>
         <aside className="status-card">
@@ -177,6 +177,33 @@ export function RoundTableFlowShell({
           <strong>Static meeting simulation only. No live agent calls, rooms API, or persistence.</strong>
         </aside>
       </div>
+
+      <section className="demo-story-grid" aria-label="Round Table stage storyline">
+        <article>
+          <strong>Framing</strong>
+          <p>Define the task and shared context for all seats.</p>
+        </article>
+        <article>
+          <strong>Perspectives</strong>
+          <p>Specialist seats return focused viewpoints.</p>
+        </article>
+        <article>
+          <strong>Synthesis</strong>
+          <p>Meeting Manager combines findings into direction.</p>
+        </article>
+        <article>
+          <strong>Assignments</strong>
+          <p>Follow-up cards mark what needs deeper review.</p>
+        </article>
+        <article>
+          <strong>Recommendation</strong>
+          <p>Wrap-up includes decisions, actions, and open questions.</p>
+        </article>
+        <article>
+          <strong>Artifact</strong>
+          <p>Editable recommendation note remains local preview data.</p>
+        </article>
+      </section>
 
       <section className="roundtable-overview-grid" aria-label="Round Table meeting summary">
         <article>
@@ -215,9 +242,9 @@ export function RoundTableFlowShell({
           <div>
             <p className="section-label">Launch setup</p>
             <h2>Meeting topic and seats</h2>
-            <p>Local component state only. Launching moves through demo stages and does not create a room.</p>
+            <p>Local component state only. Launching advances stages and does not create a live room.</p>
           </div>
-          <span className="status-badge setup_needed">No runtime</span>
+          <span className="status-badge setup_needed">Static preview</span>
         </div>
 
         <div className="form-grid">

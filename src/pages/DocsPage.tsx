@@ -50,8 +50,11 @@ export function DocsPage() {
           future LIMA AI OS contract/install layer with no live runtime wiring in this branch.
         </p>
         <p>
-          For static fixture coverage of files, memory, tasks, and demo room context, open
-          <a className="inline-link" href="#/workstation"> Home / Workstation</a>.
+          Product demo flow:
+          <a className="inline-link" href="#/workstation"> Workstation</a>,
+          <a className="inline-link" href="#/roundtable"> Round Table</a>,
+          <a className="inline-link" href="#/command-center"> Command Center</a>,
+          <a className="inline-link" href="#/robo-preview"> Robo Preview</a>.
         </p>
       </div>
     </section>

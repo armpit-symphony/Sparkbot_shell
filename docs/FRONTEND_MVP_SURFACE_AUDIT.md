@@ -1,7 +1,7 @@
 # Frontend MVP Surface Audit
 
 Updated: 2026-05-24  
-Branch: `frontend-only-static-fixtures-pass`
+Branch: `frontend-only-product-demo-polish`
 
 ## Scope
 
@@ -50,12 +50,13 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
   - `src/components/DeliveryPreferencePreview.tsx`
   - `src/components/ConnectorIdentityShell.tsx`
 - New in this pass:
-  - `src/components/StaticFixtureContentPreview.tsx`
-  - `src/data/demoFixtureContent.ts`
+  - `docs/PRODUCT_DEMO_POLISH_PLAN.md`
 - Polished in this pass:
-  - top-level copy now explicitly includes files/memory/tasks fixture coverage
-  - Workstation secondary navigation includes fixture shelf entry
-  - Docs route points users to Workstation for fixture coverage
+  - top-level demo storyline with concise 3-step sequence
+  - Workstation storyline and section hierarchy
+  - Round Table stage narrative as hero flow
+  - fixture story cohesion across files/memory/tasks/demo room
+  - Docs route discoverability links for demo flow
 
 ## Public MVP Surfaces Present
 
@@ -110,7 +111,7 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 ## Recommendations
 
 1. Keep Workstation as the default home route and central shell preview floor.
-2. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
-3. Keep Round Table framing as hero feature in top-level copy and Workstation panels.
+2. Keep Round Table as the hero demo sequence and recommendation artifact surface.
+3. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
 4. Keep LIMA-ready messaging contract-first and non-runtime.
 5. Continue frontend-only import/readiness work; defer runtime integrations to explicit future approvals.

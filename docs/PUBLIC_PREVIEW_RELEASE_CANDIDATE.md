@@ -20,12 +20,14 @@
 - Source-boundary checks completed for `backend/`, `src-tauri/`, `.github/`, `.agents/`.
 - No runtime wiring introduced by this branch.
 - Static fixture-content pass completed for Files, Memory, Tasks, and Demo Room preview surfaces.
+- Final frontend-only product-demo polish pass completed for storyline, copy density, and visual consistency.
 
 ## What is Included
 
 - Static shell UI and public demo surfaces.
 - Frontend-only MVP status/copy polish for `GREEN_CANDIDATE` and `NOT_RELEASED` visibility.
 - Polished Workstation, Round Table, model-stack, Guardian basics, Robo teaser, and LIMA readiness copy.
+- Final product-demo storyline polish for top-level shell flow and cross-surface readability.
 - Documentation boundary and release staging docs.
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
 - Static fixture previews for file/document workspace, memory shelf, task/reminder board, and demo room context.

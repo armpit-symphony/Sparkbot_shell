@@ -30,7 +30,7 @@ export function GuardrailProfileShell({
         <div>
           <p className="section-label">Guardrails / Security</p>
           <h2>Profile shell</h2>
-          <p>Profile labels are easier to scan here, but no guardrail enforcement runs in the shell preview.</p>
+          <p>Profile labels are preview-only. No guardrail enforcement runs in this static shell.</p>
         </div>
       </div>
 

@@ -151,6 +151,42 @@ a {
   font-weight: 700;
 }
 
+.demo-story-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 860px;
+  margin-top: 14px;
+}
+
+.demo-story-strip article {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #d8e1de;
+  border-radius: 8px;
+}
+
+.demo-story-strip article span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: #f8fffc;
+  background: #25523f;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.demo-story-strip article p {
+  margin-bottom: 0;
+  color: #344742;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .kicker,
 .section-label {
   margin: 0 0 8px;
@@ -279,6 +315,7 @@ p {
 }
 
 .inline-link {
+  margin-left: 6px;
   color: #225036;
   font-weight: 800;
   text-decoration: underline;
@@ -597,7 +634,8 @@ textarea {
 .product-snapshot-grid,
 .roundtable-overview-grid,
 .model-stack-grid,
-.guardian-basics-grid {
+.guardian-basics-grid,
+.demo-story-grid {
   display: grid;
   gap: 12px;
 }
@@ -632,12 +670,17 @@ textarea {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.demo-story-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .workstation-card,
 .agent-card,
 .template-card,
 .delivery-card,
 .seat-overview,
 .fixture-card,
+.demo-story-grid article,
 .product-snapshot-grid article,
 .roundtable-overview-grid article,
 .guardian-basics-grid article,
@@ -768,6 +811,7 @@ textarea {
 .delivery-card,
 .seat-overview,
 .fixture-card,
+.demo-story-grid article,
 .product-snapshot-grid article,
 .roundtable-overview-grid article,
 .guardian-basics-grid article,
@@ -1452,6 +1496,10 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .demo-story-strip {
+    grid-template-columns: 1fr;
+  }
+
   .chat-layout,
   .model-config-grid {
     grid-template-columns: 1fr;
@@ -1469,6 +1517,7 @@ textarea {
   .workstation-grid,
   .workstation-grid.primary,
   .workstation-grid.secondary,
+  .demo-story-grid,
   .product-snapshot-grid,
   .roundtable-overview-grid,
   .model-stack-grid,

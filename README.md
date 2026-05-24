@@ -6,7 +6,9 @@ The public product model is a local-first workstation for agent work, model rout
 
 ## Current Status
 
-This repo is in public-release staging. The current shell contains a Vite + React + TypeScript preview with global navigation, a polished Workstation home surface, an interactive local-state Main Chat frame, model-seat/config forms, Local AI setup shape, Invite Wing and Specialty Wing previews, guardrail profile shell, Task Guardian health-check report previews, a Round Table static-to-interactive meeting flow, a public memory/context adapter contract preview, app-first delivery preference shells, connector identity/PIN fail-closed recall previews, Files/Memory/Tasks fixture shelves, a Demo Room context fixture, Robo OS teaser copy, public artifact boundary docs, visual/mobile QA polish, and preview package QA. It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
+
+It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
 
 Public users should wait for approved Sparkbot Shell release artifacts before treating this as an install path.
@@ -80,6 +82,7 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Frontend MVP readiness report](docs/FRONTEND_MVP_READINESS_REPORT.md)
 - [Frontend polish plan](docs/FRONTEND_POLISH_PLAN.md)
 - [Static fixture content plan](docs/STATIC_FIXTURE_CONTENT_PLAN.md)
+- [Product demo polish plan](docs/PRODUCT_DEMO_POLISH_PLAN.md)
 
 ## Preview Artifact Boundary
 
@@ -136,5 +139,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is one additional product-demo polish pass, then a decision between continued static-shell iteration or carefully scoped frontend-only import planning, while keeping contract-readiness and AI OS boundary docs aligned.
+Recommended next work is a decision between continued static-shell iteration or carefully scoped frontend-only import planning, while keeping contract-readiness and AI OS boundary docs aligned.
 Continue to treat release actions as deferred while repo/home/version/tag are pending.

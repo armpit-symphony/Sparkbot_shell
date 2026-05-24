@@ -2,7 +2,7 @@
 
 Updated: 2026-05-24
 
-Branch: `frontend-only-static-fixtures-pass`
+Branch: `frontend-only-product-demo-polish`
 
 ## Locked Preview Package
 
@@ -13,7 +13,7 @@ Branch: `frontend-only-static-fixtures-pass`
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
-This fixture-content pass updates static UI/copy/demo data only and does not change the package allowlist.
+This product-demo polish pass updates static UI/copy/demo data only and does not change the package allowlist.
 
 ## Package Dry Run
 

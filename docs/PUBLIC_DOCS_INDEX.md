@@ -11,7 +11,7 @@ Option C execution is deferred while the official repo home remains `TBD`.
 Option D is blocked until Phil approves final repo home, final version/tag, artifact destination, and announcement policy.
 
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
-Latest staging pass adds static fixture previews for Files/Knowledge, Memory, Tasks/Reminders, and Demo Room context.
+Latest staging pass adds final product-demo polish for storyline clarity, fixture cohesion, and visual consistency.
 
 ## Public Artifact Docs
 
@@ -83,6 +83,7 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Frontend MVP readiness report](FRONTEND_MVP_READINESS_REPORT.md)
 - [Frontend polish plan](FRONTEND_POLISH_PLAN.md)
 - [Static fixture content plan](STATIC_FIXTURE_CONTENT_PLAN.md)
+- [Product demo polish plan](PRODUCT_DEMO_POLISH_PLAN.md)
 
 ## Release Artifact Rule
 

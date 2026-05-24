@@ -6,6 +6,7 @@ import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { StaticFixtureContentPreview } from "./StaticFixtureContentPreview";
 import { StatusBadge } from "./StatusBadge";
 import { TaskGuardianPreview } from "./TaskGuardianPreview";
+import { demoRoomFixture } from "../data/demoFixtureContent";
 
 type WorkstationShellProps = {
   shellState: ShellState;
@@ -66,10 +67,19 @@ const primaryWorkstationPanels = workstationPanels.slice(0, 3);
 const secondaryWorkstationPanels = workstationPanels.slice(3);
 
 const deskHighlights = [
-  ["Sparkbot desk", "One operator-facing floor for chat, meetings, setup, safety, and preview docs."],
-  ["Model stack", "Primary, backups, heavy-hitter, and bring-your-own local model seats are represented as labels only."],
-  ["Guardian posture", "Risky future actions are framed for confirmation, but no approval engine runs in this preview."],
-  ["Open-source preview", "Static, inspectable shell surfaces with public-safe docs and no proprietary runtime code."],
+  ["Sparkbot desk", "One operator floor for chat, meetings, setup, safety, and docs."],
+  ["Model stack", "Primary, backups, heavy-hitter, and BYO seats are setup labels only."],
+  ["Guardian posture", "Risky future actions are marked for confirmation in later runtime layers."],
+  ["Open-source preview", "Inspectable static shell with public-safe docs and no proprietary runtime code."],
+] as const;
+
+const demoStorySteps = [
+  ["Framing", "Round Table starts with a clear task and shared context."],
+  ["Perspectives", "Specialist seats provide focused views from assigned roles."],
+  ["Synthesis", "Meeting Manager groups findings into a recommendation path."],
+  ["Assignments", "Follow-up cards show what needs approval or deeper validation."],
+  ["Recommendation", "Wrap-up includes decisions, action items, and open questions."],
+  ["Artifact", "Meeting note artifact remains local demo content in this shell."],
 ] as const;
 
 export function WorkstationShell({ shellState }: WorkstationShellProps) {
@@ -95,10 +105,10 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
       <div className="intro-row">
         <div>
           <p className="section-label">Static public shell</p>
-          <h2>Sparkbot desk for agent work</h2>
+          <h2>Sparkbot desk for AI office work</h2>
           <p>
-            The Workstation is the self-hosted desk: Main Chat is the operator channel, Round Table is the agent
-            meeting room, and model seats organize local-first model setup without calling providers.
+            The Workstation is the shell floor: Main Chat is the operator channel, Round Table is the hero meeting
+            room, and model seats organize local-first setup with no provider calls.
           </p>
           <p className="preview-map">Static preview only. No backend, provider, connector, memory, scheduler, or hardware runtime is active.</p>
         </div>
@@ -107,6 +117,15 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <strong>GREEN_CANDIDATE / NOT_RELEASED / final public home TBD.</strong>
         </aside>
       </div>
+
+      <section className="demo-story-grid" aria-label="Workstation demo storyline">
+        {demoStorySteps.map(([title, detail]) => (
+          <article key={title}>
+            <strong>{title}</strong>
+            <p>{detail}</p>
+          </article>
+        ))}
+      </section>
 
       <section className="product-snapshot-grid" aria-label="Sparkbot Shell public preview summary">
         {deskHighlights.map(([title, detail]) => (
@@ -142,7 +161,7 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
           <div>
             <p className="section-label">Operating floor status</p>
             <h2>Shared demo state</h2>
-            <p>These counters are fixture-backed and help show how the real public MVP will organize the shell.</p>
+            <p>Fixture-backed counters show how the product shell organizes seats, agents, and safety posture.</p>
           </div>
         </div>
         <div className="floor-status-grid">
@@ -162,6 +181,10 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <strong>{shellState.guardrailProfile}</strong>
             <span>selected guardrail profile</span>
           </article>
+        </div>
+        <div className="runtime-boundary compact">
+          <strong>Current demo room</strong>
+          <p>{demoRoomFixture.title}. Files, memory, and tasks below are tied to this same room context.</p>
         </div>
       </section>
 
@@ -240,8 +263,8 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
             <p className="section-label">Shared company memory preview</p>
             <h2>Memory / context spine</h2>
             <p>
-              Company memory is contract-only in this shell. Saved meeting notes and safe health summaries can become
-              future context; drafts, raw transcripts, credentials, and unverified connector recall stay excluded.
+              Company memory is contract-only in this shell. Saved meeting summaries and safe health notes can become
+              future context; drafts, credentials, and unverified connector recall stay excluded.
             </p>
           </div>
         </div>

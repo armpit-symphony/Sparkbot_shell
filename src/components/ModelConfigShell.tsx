@@ -82,8 +82,8 @@ export function ModelConfigShell({
           <p className="section-label">Command Center shell</p>
           <h2>Setup, model seats, and guardrails</h2>
           <p>
-            Command Center groups model seats, Local AI labels, Invite Wing slots, Specialty Wing agents, basic
-            confirmation posture, Task Guardian previews, and connector caveats. All state is local demo state only.
+            Command Center groups model seats, Invite/Specialty Wing setup, Guardian posture, and Task Guardian
+            previews. All state is local demo state only.
           </p>
         </div>
         <aside className="status-card">
@@ -116,8 +116,7 @@ export function ModelConfigShell({
             <p className="section-label">Model stack preview</p>
             <h2>Primary, backups, heavy hitter</h2>
             <p>
-              This is the public setup shape only. Providers are not contacted, endpoint checks do not run, and API keys
-              are not accepted.
+              Public setup shape only. No provider checks, endpoint probes, or key handling run in this shell.
             </p>
           </div>
         </div>

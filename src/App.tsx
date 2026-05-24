@@ -26,7 +26,7 @@ const navItems: NavItem[] = [
   { key: "task-guardian", label: "Task Guardian", eyebrow: "Health previews" },
   { key: "connectors", label: "Connectors", eyebrow: "Identity gates" },
   { key: "robo-preview", label: "Robo Preview", eyebrow: "Teaser only" },
-  { key: "docs", label: "Docs", eyebrow: "Planning links" },
+  { key: "docs", label: "Docs", eyebrow: "Public docs" },
 ];
 
 const pageKeys = new Set<PageKey>(navItems.map((item) => item.key));
@@ -101,14 +101,28 @@ export function App() {
       <main className="main-panel">
         <header className="topbar">
           <div>
-            <p className="kicker">Round Table meetings for your AI agents</p>
+            <p className="kicker">Self-hosted AI workstation shell preview</p>
             <h1>{activeNavItem.label}</h1>
             <p className="topbar-summary">
-              Sparkbot Shell is a local-first, open-source oriented AI workstation preview: Workstation floor,
-              Round Table meetings, model seats, files/memory/tasks fixtures, safety posture, and future LIMA contract readiness.
+              Sparkbot Shell is a frontend-only product demo: Workstation plus Round Table, model/agent seats, and
+              fixture-backed files, memory, tasks, safety posture, and Robo teaser surfaces.
             </p>
+            <div className="demo-story-strip" aria-label="Sparkbot Shell preview story">
+              <article>
+                <span>1</span>
+                <p>Workstation + Round Table are the hero surfaces.</p>
+              </article>
+              <article>
+                <span>2</span>
+                <p>Model seats, agents, and demo fixtures stay static.</p>
+              </article>
+              <article>
+                <span>3</span>
+                <p>Future LIMA contract layer is documented, not wired.</p>
+              </article>
+            </div>
           </div>
-          <div className="status-pill">GREEN_CANDIDATE | NOT_RELEASED</div>
+          <div className="status-pill">GREEN_CANDIDATE | NOT_RELEASED | STATIC PREVIEW</div>
         </header>
 
         {activePage === "docs" ? <DocsPage /> : null}
