@@ -83,6 +83,11 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Frontend polish plan](docs/FRONTEND_POLISH_PLAN.md)
 - [Static fixture content plan](docs/STATIC_FIXTURE_CONTENT_PLAN.md)
 - [Product demo polish plan](docs/PRODUCT_DEMO_POLISH_PLAN.md)
+- [Frontend import planning baseline](docs/FRONTEND_IMPORT_PLANNING_BASELINE.md)
+- [Frontend import candidate matrix](docs/FRONTEND_IMPORT_CANDIDATE_MATRIX.md)
+- [Frontend import Wave 1 plan](docs/FRONTEND_IMPORT_WAVE_1_PLAN.md)
+- [Frontend import stub/rewrite rules](docs/FRONTEND_IMPORT_STUB_REWRITE_RULES.md)
+- [Frontend import validation checklist](docs/FRONTEND_IMPORT_VALIDATION_CHECKLIST.md)
 
 ## Preview Artifact Boundary
 
@@ -139,5 +144,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is a decision between continued static-shell iteration or carefully scoped frontend-only import planning, while keeping contract-readiness and AI OS boundary docs aligned.
+Recommended next work is selection of one Wave 1 candidate from the classification-gated frontend import plan, followed by a manual static-only adaptation and full validation pass.
 Continue to treat release actions as deferred while repo/home/version/tag are pending.

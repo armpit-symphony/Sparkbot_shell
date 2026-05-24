@@ -1,11 +1,12 @@
 # Frontend MVP Surface Audit
 
-Updated: 2026-05-24  
-Branch: `frontend-only-product-demo-polish`
+Updated: 2026-05-24
+Branch: `frontend-only-import-planning`
 
 ## Scope
 
-Frontend-only audit of `src/` surfaces and public MVP representation. Static shell and docs only. No runtime behavior added.
+Frontend-only audit of `src/` surfaces and public MVP representation. Static shell and docs only.
+This revision also establishes import-planning baseline context. No runtime behavior added.
 
 ## Routes and Pages Found
 
@@ -49,14 +50,12 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
   - `src/components/HealthReportPreview.tsx`
   - `src/components/DeliveryPreferencePreview.tsx`
   - `src/components/ConnectorIdentityShell.tsx`
-- New in this pass:
-  - `docs/PRODUCT_DEMO_POLISH_PLAN.md`
-- Polished in this pass:
-  - top-level demo storyline with concise 3-step sequence
-  - Workstation storyline and section hierarchy
-  - Round Table stage narrative as hero flow
-  - fixture story cohesion across files/memory/tasks/demo room
-  - Docs route discoverability links for demo flow
+- Current planning add-ons:
+  - `docs/FRONTEND_IMPORT_PLANNING_BASELINE.md`
+  - `docs/FRONTEND_IMPORT_CANDIDATE_MATRIX.md`
+  - `docs/FRONTEND_IMPORT_WAVE_1_PLAN.md`
+  - `docs/FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
+  - `docs/FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
 
 ## Public MVP Surfaces Present
 
@@ -114,4 +113,5 @@ Frontend-only audit of `src/` surfaces and public MVP representation. Static she
 2. Keep Round Table as the hero demo sequence and recommendation artifact surface.
 3. Keep Files/Memory/Tasks fixture messaging explicit about static-only boundaries.
 4. Keep LIMA-ready messaging contract-first and non-runtime.
-5. Continue frontend-only import/readiness work; defer runtime integrations to explicit future approvals.
+5. Use classification-gated Wave 1 planning docs before any import execution.
+6. Keep import execution blocked until explicit Phil approval for a selected candidate.

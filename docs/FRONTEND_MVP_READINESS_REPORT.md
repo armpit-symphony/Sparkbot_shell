@@ -1,11 +1,12 @@
 # Frontend MVP Readiness Report
 
-Updated: 2026-05-24  
-Branch: `frontend-only-product-demo-polish`
+Updated: 2026-05-24
+Branch: `frontend-only-import-planning`
 
 ## Summary
 
-Frontend-only product-demo polish pass completed. The static shell now presents a clearer public storyline across Workstation, Round Table, model/agent setup, fixtures, Guardian posture, Robo teaser, and LIMA contract readiness.
+Frontend-only product-demo polish remains in place.
+This pass adds classification-gated import planning only, with no source import executed.
 
 ## Surfaces Represented
 
@@ -62,11 +63,13 @@ Frontend-only product-demo polish pass completed. The static shell now presents 
 - Future LIMA contract/install readiness: represented and documented as a phased contract-first path.
 - Public preview polish: stronger first-screen product framing, clearer Round Table hero flow, sharper static/runtime boundary language, and fuller fixture-driven product-shell coverage.
 - Public preview polish: improved copy density, stronger section rhythm, and better cross-surface demo flow discoverability.
+- Import-planning readiness: candidate classification, stub/rewrite rules, and Wave 1 validation checklist are now documented.
 
 ## Recommended Next Source Import Step
 
-Frontend-only continuation:
+Frontend-only continuation (still planning-gated):
 
-1. Decide between further static-shell iteration vs carefully scoped frontend-only import candidates from R&D (classification-gated, no runtime).
-2. If import planning is approved, start with UI-only candidate mapping and stop-gate enforcement.
-3. Keep contract docs and mock fixtures aligned for future LIMA adapter phases.
+1. Select a single Wave 1 candidate from `FRONTEND_IMPORT_WAVE_1_PLAN.md`.
+2. Execute a manual static adaptation only (no wholesale file copy).
+3. Run `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`.
+4. Stop for review before any second candidate.

@@ -43,6 +43,12 @@ Run public-facing release actions only after Phil approval.
 Continue static-shell scope with safe UI-only imports only.
 
 - No backend/runtime behavior in this phase.
+- This option is now planning-ready:
+  - `FRONTEND_IMPORT_PLANNING_BASELINE.md`
+  - `FRONTEND_IMPORT_CANDIDATE_MATRIX.md`
+  - `FRONTEND_IMPORT_WAVE_1_PLAN.md`
+  - `FRONTEND_IMPORT_STUB_REWRITE_RULES.md`
+  - `FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`
 
 ### Option F - Begin LIMA AI OS Contract-Readiness Layer (Docs/Fixtures Only)
 
@@ -60,15 +66,13 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `frontend-only-product-demo-polish` as the canonical current staging branch.
+1. Keep `frontend-only-import-planning` as the canonical current staging branch for this planning pass.
 2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
    - release-routing docs are corrected for `repo home TBD`,
    - Option C remains future,
    - no runtime behavior is added.
-3. Choose between:
-   - continued static iteration, or
-   - carefully scoped frontend-only import planning from approved classification.
-4. Continue frontend-only MVP import/contract-readiness prep (docs, stubs, boundaries, and non-runtime readiness).
+3. Use classification output to pick exactly one Wave 1 candidate for manual static adaptation.
+4. Run full import validation checklist and stop for review before any second candidate.
 5. Revisit public repo home decision only after LIMA AI OS integration direction stabilizes.
 6. Execute remaining approval steps only after Phil confirms:
    - final repo home

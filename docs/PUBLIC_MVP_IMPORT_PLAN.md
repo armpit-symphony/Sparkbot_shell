@@ -1,5 +1,8 @@
 # Public MVP Import Plan
 
+Updated: 2026-05-24
+Branch: `frontend-only-import-planning`
+
 ## Scope
 
 This plan defines the first import phase for Sparkbot Shell public MVP surface. It is planning-only, to be executed only after the current static-candidate alignment remains valid.
@@ -32,14 +35,15 @@ This plan defines the first import phase for Sparkbot Shell public MVP surface. 
 
 ## Approved Future Import Order
 
-1. Frontend shell baseline stability refresh (no runtime wiring).
-2. Public routing and docs-page navigation cleanup (docs-only).
-3. Frontend-only connector/presenter stubs in existing placeholders.
-4. Contract boundary docs for LIMA AI OS install/adapter previews.
-5. Preview UI fixtures and static mock datasets for demonstration.
-6. Optional local LIMA package detection only after a documented interface is frozen.
-7. Read-only preview endpoint integration when approved by contract and security review.
-8. Runtime execution imports only after explicit separate approval gates and green staging evidence.
+1. Classification-gated candidate mapping (`FRONTEND_IMPORT_CANDIDATE_MATRIX.md`).
+2. Wave-1 execution planning (`FRONTEND_IMPORT_WAVE_1_PLAN.md`).
+3. Stub/rewrite enforcement (`FRONTEND_IMPORT_STUB_REWRITE_RULES.md`).
+4. Single-candidate UI-only adaptation (future, if approved).
+5. Validation checklist pass (`FRONTEND_IMPORT_VALIDATION_CHECKLIST.md`).
+6. Repeat for next candidate only after explicit review approval.
+7. Optional local LIMA package detection only after a documented interface is frozen.
+8. Read-only preview endpoint integration only after contract/security approval.
+9. Runtime execution imports only after explicit separate approval gates and green staging evidence.
 
 ## Stop Gates (before any code import)
 
@@ -63,3 +67,4 @@ This plan defines the first import phase for Sparkbot Shell public MVP surface. 
 
 No code import is approved in this phase.
 Only documentation, planning, and link-boundary corrections are approved actions at this stage.
+No code was copied from Sparkbot R&D during this pass.

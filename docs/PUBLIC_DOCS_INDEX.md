@@ -12,6 +12,7 @@ Option D is blocked until Phil approves final repo home, final version/tag, arti
 
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 Latest staging pass adds final product-demo polish for storyline clarity, fixture cohesion, and visual consistency.
+Latest planning pass adds classification-gated frontend-only import planning docs. No source import executed yet.
 
 ## Public Artifact Docs
 
@@ -84,6 +85,11 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Frontend polish plan](FRONTEND_POLISH_PLAN.md)
 - [Static fixture content plan](STATIC_FIXTURE_CONTENT_PLAN.md)
 - [Product demo polish plan](PRODUCT_DEMO_POLISH_PLAN.md)
+- [Frontend import planning baseline](FRONTEND_IMPORT_PLANNING_BASELINE.md)
+- [Frontend import candidate matrix](FRONTEND_IMPORT_CANDIDATE_MATRIX.md)
+- [Frontend import Wave 1 plan](FRONTEND_IMPORT_WAVE_1_PLAN.md)
+- [Frontend import stub/rewrite rules](FRONTEND_IMPORT_STUB_REWRITE_RULES.md)
+- [Frontend import validation checklist](FRONTEND_IMPORT_VALIDATION_CHECKLIST.md)
 
 ## Release Artifact Rule
 
