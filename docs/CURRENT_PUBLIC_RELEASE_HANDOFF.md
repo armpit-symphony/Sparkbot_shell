@@ -6,6 +6,17 @@ Updated: 2026-05-24
 
 Fresh docs-first audit of `Sparkbot_shell` as the clean public shell staging repo, with `Sparkbot` read-only as reference. No runtime behavior was added. No Sparkbot R&D code was copied.
 
+## Latest Frontend-Only MVP Pass
+
+- Latest branch: `frontend-only-mvp-shell-readiness`
+- Latest pass type: static frontend shell readiness only
+- Added/updated in this pass:
+  - static UI status/copy polish for release-gate visibility
+  - static `LIMA AI OS ready layer` panel
+  - frontend surface audit and readiness report docs
+- Runtime behavior added: no
+- Release state changed: no (`GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`)
+
 ## Snapshot
 
 - Current working branch at reconciliation start: `public-release-record-physical-qa-pass`

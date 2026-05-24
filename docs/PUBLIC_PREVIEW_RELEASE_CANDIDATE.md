@@ -14,7 +14,7 @@
 
 ## What Passed
 
-- Branch lineage up to `public-release-record-physical-qa-pass`.
+- Branch lineage up to `public-release-record-physical-qa-pass`, plus staging corrections and frontend-only readiness passes.
 - Physical mobile QA pass recorded.
 - Static package preview packaging and allowlist checks completed.
 - Source-boundary checks completed for `backend/`, `src-tauri/`, `.github/`, `.agents/`.
@@ -23,8 +23,10 @@
 ## What is Included
 
 - Static shell UI and public demo surfaces.
+- Frontend-only MVP status/copy polish for `GREEN_CANDIDATE` and `NOT_RELEASED` visibility.
 - Documentation boundary and release staging docs.
 - Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
+- Static `LIMA AI OS ready layer` panel and phased contract-install messaging.
 - MIT licensing and artifact lock metadata.
 - Public-facing caveats around static-only behavior.
 
@@ -43,4 +45,4 @@
 ## Release Approval State
 
 - Candidate remains internal/staging static readiness only.
-- `Option D` remains blocked pending Phil approval for repo home, version/tag, artifact destination, and announcement policy.
+- `Option D` remains blocked pending Phil approval for final repo home (TBD), version/tag, artifact destination, and announcement policy.

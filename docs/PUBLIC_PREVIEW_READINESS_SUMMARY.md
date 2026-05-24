@@ -1,18 +1,18 @@
 # Public Preview Readiness Summary
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `public-release-record-physical-qa-pass`.
+- Current branch: `frontend-only-mvp-shell-readiness`.
 - Base signoff commit: `37f614fdf29c05140e2d290b1f05432b788cc084`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
 - License: MIT.
 - Current repo: `armpit-symphony/Sparkbot_shell` staging workspace.
-- Likely future public repo: `sparkpit-labs/Sparkbot`.
+- Final public repo/home: TBD.
 
 `GREEN_CANDIDATE` means the current static preview artifact is ready to be considered for public preview; it is still not publicly released.
 
@@ -26,6 +26,7 @@ Readiness rules:
 
 - Static Vite/React/TypeScript shell.
 - Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Robo Preview, and Docs routes.
+- Static `LIMA AI OS ready layer` panel with phased contract/install path messaging.
 - Public docs bundle.
 - MIT `LICENSE`.
 - Preview package script.
@@ -68,7 +69,7 @@ Readiness rules:
 ## Remaining Blockers
 
 - Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
-- Final public release depends on release decision Option D.
+- Final public release depends on release decision Option D and final repo-home/version/announcement decisions.
 
 ## Risk Table
 
@@ -97,11 +98,12 @@ Current status is `GREEN_CANDIDATE`.
 The static preview package is complete for internal/staging use and physical/mobile QA in this branch.
 It is not approved for public announcement, tag, npm publish, upload, or final public release.
 
-Option B status: completed and passed with Phil manual verification.
+Option B status: completed and passed with Phil manual verification. Current work continues as frontend-only staging refinement.
 
 ## Recommended Next Step
 
 Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
 
-- Option C for internal/public-staging artifact generation (no public announcement, no publish/upload/tag).
+- Continue frontend-only MVP shell refinement and contract-readiness prep in staging.
+- Option C only when Phil approves a concrete official repo-home action.
 - Option D for public announcement/tag/upload after explicit Phil approval.

@@ -53,10 +53,10 @@ Layer 8 package/download QA must use this manifest as the source of truth:
 
 ## Current Status
 
-The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture the locked MIT license, staging repo role, likely future public repo target, artifact naming, mobile QA, connector QA, and runtime sequencing decisions.
+The boundary decision has been applied as a controlling repo document. The preview package script builds a public-safe artifact from the allowlist above and excludes repo-only staging docs. Release decision gate docs now capture the locked MIT license, staging repo role, final repo-home TBD status, artifact naming, mobile QA, connector QA, and runtime sequencing decisions.
 
 This does not add runtime behavior, connector sends, private recall, or production-readiness claims. Physical/mobile 390px QA passed for this branch on 2026-05-23 and should be re-run if UI/layout/artifact content changes. Final repo migration remains a later release operation.
 
-Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and likely future public repo `sparkpit-labs/Sparkbot`.
+Current static preview lock-in: MIT license, artifact name `sparkbot-shell-preview-0.8.0-layer8`, package/version label `0.8.0-layer8-preview`, current staging repo `armpit-symphony/Sparkbot_shell`, and final public repo/home TBD.
 
 Current readiness color is GREEN_CANDIDATE: static preview readiness milestone reached for internal/staging use. Public action is still blocked until Phil explicitly approves the exact release operation (tag/publish/upload/announcement).

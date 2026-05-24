@@ -13,7 +13,7 @@ Keep current static-preview posture and continue internal reconciliation only.
 
 ### Option B - Merge/Reconcile Release-Candidate Branch
 
-Use the `public-release-official-repo-preflight` branch as the canonical pre-Option-D branch and keep docs/charts/checks in one file set.
+Use `frontend-only-mvp-shell-readiness` as the current canonical staging branch for frontend MVP readiness and keep docs/charts/checks in one file set.
 
 - Validate all prior RC facts are preserved.
 - Reconcile any status drift.
@@ -60,7 +60,7 @@ Do not run Option D now.
 
 ### Immediate Recommended Path
 
-1. Keep `public-release-official-repo-preflight` as the canonical pre-Option-D branch.
+1. Keep `frontend-only-mvp-shell-readiness` as the canonical current staging branch.
 2. Continue staging refinement in `armpit-symphony/Sparkbot_shell`:
    - release-routing docs are corrected for `repo home TBD`,
    - Option C remains future,

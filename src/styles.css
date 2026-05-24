@@ -1159,6 +1159,34 @@ textarea {
   gap: 13px;
 }
 
+.lima-ready-panel {
+  border-left: 4px solid #6d9fd7;
+}
+
+.lima-sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.lima-sequence-grid .flow-card {
+  align-content: start;
+  min-height: 122px;
+  box-shadow: none;
+  background: #f8fbfa;
+}
+
+.lima-sequence-grid .flow-card span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #f8fffc;
+  background: #25523f;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
 .context-filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -1335,6 +1363,7 @@ textarea {
   .workstation-grid,
   .workstation-grid.primary,
   .workstation-grid.secondary,
+  .lima-sequence-grid,
   .command-center-map,
   .floor-status-grid,
   .seat-overview-grid,

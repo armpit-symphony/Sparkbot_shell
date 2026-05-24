@@ -1,5 +1,6 @@
 import type { ShellState } from "../types/shell";
 import { InviteWingPanel } from "./InviteWingPanel";
+import { LimaReadyLayerPanel } from "./LimaReadyLayerPanel";
 import { MemoryContextPreview } from "./MemoryContextPreview";
 import { SpecialtyWingPanel } from "./SpecialtyWingPanel";
 import { StatusBadge } from "./StatusBadge";
@@ -269,6 +270,8 @@ export function WorkstationShell({ shellState }: WorkstationShellProps) {
         retrievalPreview={shellState.memoryContext.retrievalPreview}
         compact
       />
+
+      <LimaReadyLayerPanel />
     </section>
   );
 }

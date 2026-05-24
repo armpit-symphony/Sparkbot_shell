@@ -1,8 +1,8 @@
 # Package QA Report
 
-Updated: 2026-05-23
+Updated: 2026-05-24
 
-Branch: `public-release-record-physical-qa-pass`
+Branch: `frontend-only-mvp-shell-readiness`
 
 ## Locked Preview Package
 
@@ -10,7 +10,7 @@ Branch: `public-release-record-physical-qa-pass`
 - Package/version label: `0.8.0-layer8-preview`.
 - License: MIT.
 - Current staging repo: `armpit-symphony/Sparkbot_shell`.
-- Likely future public repo: `sparkpit-labs/Sparkbot`.
+- Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
 
@@ -106,4 +106,4 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 ## Remaining Blockers Before Public Announcement
 
 - Explicit Phil approval is required before any tag, publish, upload, or public announcement.
-- Future runtime contract and release-option decisions remain.
+- Final repo-home/version/tag/destination/announcement decisions remain.

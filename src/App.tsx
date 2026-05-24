@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChatShell } from "./components/ChatShell";
 import { ConnectorIdentityShell } from "./components/ConnectorIdentityShell";
+import { LimaReadyLayerPanel } from "./components/LimaReadyLayerPanel";
 import { ModelConfigShell } from "./components/ModelConfigShell";
 import { RoundTableFlowShell } from "./components/RoundTableFlowShell";
 import { TaskGuardianPreview } from "./components/TaskGuardianPreview";
@@ -18,7 +19,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { key: "workstation", label: "Workstation", eyebrow: "Operating floor" },
+  { key: "workstation", label: "Home / Workstation", eyebrow: "Operating floor" },
   { key: "chat", label: "Chat", eyebrow: "Command channel" },
   { key: "roundtable", label: "Round Table", eyebrow: "Agent meetings" },
   { key: "command-center", label: "Command Center", eyebrow: "Setup and safety" },
@@ -72,7 +73,7 @@ export function App() {
           </span>
           <span>
             <strong>Sparkbot Shell</strong>
-            <span>Public preview decision gate shell</span>
+            <span>Frontend-only MVP staging shell</span>
           </span>
         </a>
 
@@ -93,6 +94,7 @@ export function App() {
         <div className="boundary-note">
           <strong>Shell only.</strong>
           <span>No backend, connector runtime, live model calls, credential storage, scheduling, or robotics control.</span>
+          <span>Current gate: GREEN_CANDIDATE / NOT_RELEASED / repo home TBD.</span>
         </div>
       </aside>
 
@@ -102,7 +104,7 @@ export function App() {
             <p className="kicker">Round Table meetings for your AI agents</p>
             <h1>{activeNavItem.label}</h1>
           </div>
-          <div className="status-pill">Planning shell</div>
+          <div className="status-pill">GREEN_CANDIDATE | NOT_RELEASED</div>
         </header>
 
         {activePage === "docs" ? <DocsPage /> : null}
@@ -125,26 +127,31 @@ export function App() {
           />
         ) : null}
         {activePage === "command-center" ? (
-          <ModelConfigShell
-            modelSeats={shellState.modelSeats}
-            specialtyAgents={shellState.specialtyAgents}
-            guardrailProfiles={shellState.guardrailProfiles}
-            guardrailProfile={shellState.guardrailProfile}
-            taskGuardianTemplates={shellState.taskGuardianTemplates}
-            taskDeliveryPreferences={shellState.taskDeliveryPreferences}
-            healthReportPreviews={shellState.healthReportPreviews}
-            connectorCards={shellState.connectorCards}
-            onGuardrailProfileChange={(guardrailProfile) =>
-              setShellState((current) => ({ ...current, guardrailProfile }))
-            }
-            onGuardrailProfilesChange={(guardrailProfiles) =>
-              setShellState((current) => ({ ...current, guardrailProfiles }))
-            }
-            onSpecialtyAgentsChange={(specialtyAgents) =>
-              setShellState((current) => ({ ...current, specialtyAgents }))
-            }
-            onModelSeatsChange={(modelSeats) => setShellState((current) => ({ ...current, modelSeats }))}
-          />
+          <>
+            <ModelConfigShell
+              modelSeats={shellState.modelSeats}
+              specialtyAgents={shellState.specialtyAgents}
+              guardrailProfiles={shellState.guardrailProfiles}
+              guardrailProfile={shellState.guardrailProfile}
+              taskGuardianTemplates={shellState.taskGuardianTemplates}
+              taskDeliveryPreferences={shellState.taskDeliveryPreferences}
+              healthReportPreviews={shellState.healthReportPreviews}
+              connectorCards={shellState.connectorCards}
+              onGuardrailProfileChange={(guardrailProfile) =>
+                setShellState((current) => ({ ...current, guardrailProfile }))
+              }
+              onGuardrailProfilesChange={(guardrailProfiles) =>
+                setShellState((current) => ({ ...current, guardrailProfiles }))
+              }
+              onSpecialtyAgentsChange={(specialtyAgents) =>
+                setShellState((current) => ({ ...current, specialtyAgents }))
+              }
+              onModelSeatsChange={(modelSeats) => setShellState((current) => ({ ...current, modelSeats }))}
+            />
+            <section className="page-section">
+              <LimaReadyLayerPanel />
+            </section>
+          </>
         ) : null}
         {activePage === "task-guardian" ? (
           <section className="page-section">

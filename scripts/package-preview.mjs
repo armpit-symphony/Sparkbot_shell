@@ -65,7 +65,6 @@ const highRiskPatterns = [
   /SLACK_SIGNING_SECRET/i,
   /WHATSAPP_VERIFY_TOKEN/i,
   /Arc Bot/i,
-  /LIMA AI OS/i,
   /LIMA Office/i,
   /LIMA IT/i,
   /private Robo bridge/i,

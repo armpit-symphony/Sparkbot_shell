@@ -78,6 +78,8 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [Official repo creation checklist](OFFICIAL_REPO_CREATION_CHECKLIST.md)
 - [Option C execution plan](OPTION_C_EXECUTION_PLAN.md)
 - [Release routing correction](RELEASE_ROUTING_CORRECTION.md)
+- [Frontend MVP surface audit](FRONTEND_MVP_SURFACE_AUDIT.md)
+- [Frontend MVP readiness report](FRONTEND_MVP_READINESS_REPORT.md)
 
 ## Release Artifact Rule
 

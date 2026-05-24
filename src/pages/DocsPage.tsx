@@ -45,6 +45,10 @@ export function DocsPage() {
           Public release artifacts exclude extraction maps, R&D path maps, internal readiness/no-go docs,
           private/source-boundary notes, and staging implementation planning.
         </p>
+        <p>
+          Current release state remains GREEN_CANDIDATE and NOT_RELEASED. This shell is also staged as ready for a
+          future LIMA AI OS contract/install layer with no live runtime wiring in this branch.
+        </p>
       </div>
     </section>
   );
