@@ -1,46 +1,49 @@
 # Next Release Actions
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Recommendation State
 
 - Active staging baseline: `active-staging-baseline-mock-lima-ui-lock`
+- Active baseline commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Release posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
 - Final public repo/home: `TBD`
 
-## Option A — Keep GREEN_CANDIDATE Internal Static Baseline
+## Current Decision
 
-Maintain this lock as-is and pause for contract architecture review.
+Phil selected the pause path. Sparkbot Shell feature/static UI progression stops at the locked mock-LIMA UI baseline.
 
-## Option B — Mock LIMA Contract UI Review/Polish (Static)
+## Recommended Next Action
 
-Review mock contract UI layout copy and readability only.
-No feature additions and no runtime integrations.
+Pause Sparkbot Shell static work and return to LIMA AI OS contract planning.
 
-## Option C — Public Release Route Decision
+The next engineering lane should be LIMA AI OS Universal Runtime Contract / Sparkbot Shell Consumer Alignment. That work should define contracts and fixtures for future read-only Sparkbot Shell consumption without wiring runtime behavior.
 
-Decide final repo/home, version/tag, artifact destination, and announcement policy for Option D.
+## Deferred Sparkbot Shell Paths
 
-## Option D — Contract/UI Expansion
+### Static UI polish
 
-Add additional static mock contract examples or screens under the same no-runtime constraints.
+Deferred unless Phil explicitly requests a visual review/fix.
 
-## Option E — Begin Runtime Planning
+### Runtime implementation
 
-Begin explicit planning for functional contract/runtime integration only after Phil approval.
+Blocked. No backend, provider/model calls, connector calls, persistence, scheduler, Guardian execution, terminal/browser execution, robotics/IoT control, or LIMA runtime wiring is approved.
 
-## Option F — Public Release Action
+### Public release route decision
 
-Tag/upload/announce/release only if Phil approves final repo home/version/announcement policy.
+Deferred. Final public repo/home, version/tag, artifact destination, and announcement policy remain `TBD`.
 
-## Immediate Path (This Lock)
+### Public release action
 
-1. Keep `active-staging-baseline-mock-lima-ui-lock` as the current staging lock.
-2. Run no runtime work in this branch.
-3. Confirm docs/build/state remain aligned with GREEN_CANDIDATE and Option D block.
-4. Decide: continue Option A, or proceed with Option B review polish only.
+Blocked. No tag, upload, npm publish, public artifact upload, GitHub release, or announcement is approved.
+
+### Official repo move
+
+Deferred until Phil explicitly approves repo/home and copy/push operations.
 
 ## Current Gate
 
-- `Option D` remains blocked until explicit Phil approval.
-- No tag, no upload, no announcement in this phase.
+- Keep Sparkbot Shell as `GREEN_CANDIDATE` and `NOT_RELEASED`.
+- Preserve `active-staging-baseline-mock-lima-ui-lock` as the clean staging baseline.
+- Move active planning work back to LIMA AI OS contracts.

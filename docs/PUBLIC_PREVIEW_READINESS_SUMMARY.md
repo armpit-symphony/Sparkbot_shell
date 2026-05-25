@@ -1,12 +1,13 @@
 # Public Preview Readiness Summary
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
 - Current branch: `active-staging-baseline-mock-lima-ui-lock`.
-- Base lineage commit: `bbc4ebd` on `active-staging-baseline-lock` ancestry.
+- Base lineage commit: `3fab1e8` on `active-staging-baseline-lock` ancestry.
+- Pause/handoff branch: `pause-shell-return-lima-handoff`.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
@@ -44,10 +45,9 @@ Updated: 2026-05-24
 - Option D blocked.
 - Mock LIMA contract UI display is locked and static.
 - No runtime calls or persistence introduced in this branch.
+- Phil selected Option A: pause Sparkbot Shell feature/static UI progression and return to LIMA AI OS contract planning.
 
 ## Recommended Next Step
 
-- Choose between:
-  - Option A (pause/return to LIMA AI OS contract work), or
-  - Option B (review/refresh mock contract UI copy if needed).
-- Keep runtime implementation blocked until explicit Phil approval.
+- Pause Sparkbot Shell static work and return to LIMA AI OS universal runtime contract planning.
+- Keep additional static UI polish, runtime implementation, public release Option D, official repo move, provider/model calls, connector work, and LIMA runtime wiring blocked until explicit Phil approval.

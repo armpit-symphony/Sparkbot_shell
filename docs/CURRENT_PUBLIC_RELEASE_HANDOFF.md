@@ -1,6 +1,6 @@
 # Current Public Release Handoff
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Scope
 
@@ -11,7 +11,8 @@ This baseline includes physical QA-validated Wave 1 frontend refinements and moc
 ## Latest Consolidation Baseline
 
 - Baseline branch: `active-staging-baseline-mock-lima-ui-lock`
-- Baseline commit: `bbc4ebd`
+- Baseline commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Latest source/workflow pass included:
   - Wave 1 source-adaptation checkpoints for Workstation, Round Table, model/Invite Wing, and Docs/info
   - Wave 1 checkpoint/audit closure
@@ -104,5 +105,11 @@ Sparkbot_shell is positioned as a clean public shell waiting for a future instal
 ## Active Baseline Lock Status
 
 - Lock branch: `active-staging-baseline-mock-lima-ui-lock`
-- Lock commit: `bbc4ebd`
+- Lock commit: `3fab1e8`
 - Lock posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.
+
+## Pause Decision
+
+Phil selected Option A after the mock LIMA UI lock: pause Sparkbot Shell feature/static UI progression and return to LIMA AI OS universal runtime contract planning.
+
+Sparkbot Shell remains a clean static staging baseline, not a public release and not a functional runtime MVP.

@@ -1,48 +1,49 @@
 # Next Phase Decision Matrix
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
-Context: active staging baseline lock is `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`), based on `active-staging-baseline-lock` (`9142f71`).
+Context: active staging baseline lock is `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`), based on `active-staging-baseline-lock` (`9142f71`).
+
 Release status: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.
 
-## Option A — Pause / Preserve Static Baseline
+## Selected Option A - Pause / Preserve Static Baseline
 
-- keep `armpit-symphony/Sparkbot_shell` as a static staging shell
-- benefits: maximal safety, least risk, strongest source-boundary control
-- costs: slower demo-product momentum
-- cleanup: periodic doc/link refresh and boundary revalidation
+- Keep `armpit-symphony/Sparkbot_shell` as a static staging shell.
+- Preserve Wave 1 static adaptations and mock LIMA contract UI display.
+- Pause additional Sparkbot Shell feature/static UI progression.
+- Return active work to LIMA AI OS universal runtime contract planning.
 
-## Option B — Mock LIMA Contract UI Review/Polish Only
+Why: Sparkbot Shell is now strong enough as a staging shell. The next meaningful dependency is the LIMA OS/runtime contract target that the shell should later consume.
 
-- keep the current static UI-display and refresh copy/discoverability only
-- benefits: cleaner public-facing messaging without runtime risk
-- constraints: no runtime calls, no provider/model/connector integration
-- required: maintain current no-side-effect invariant labels
+## Deferred Option B - Mock LIMA Contract UI Review/Polish Only
 
-## Option C — Frontend-Only Mock Contract Response Expansion
+- Allowed only if Phil requests visual review changes.
+- No feature addition.
+- No runtime calls, provider/model calls, connector calls, or persistence.
 
-- add more static mock contract examples only (data + presentation)
-- benefits: richer contract-readiness discovery
-- constraints: still zero runtime, no actions, no fetch/network
+## Deferred Option C - Frontend-Only Mock Contract Response Expansion
 
-## Option D — Begin Functional Contract Runtime Planning
+- Deferred by default.
+- Would add more static examples only, still no runtime or network.
 
-- docs + architecture planning for future runtime contract integrations
-- explicitly requires Phil approval before implementation
-- must preserve no runtime behavior in this branch
+## Deferred Option D - Functional Contract Runtime Planning
 
-## Option E — Wave 2 Source Import Planning
+- Requires explicit Phil approval.
+- Should begin only after LIMA AI OS contract docs and Guardian posture semantics are ready.
+- No implementation by default.
 
-- classify more Sparkbot frontend surfaces for potential static import
-- keep no direct runtime import, no R&D source copy
+## Deferred Option E - Wave 2 Source Import Planning
 
-## Option F — Public Release Action
+- Deferred.
+- No further R&D frontend import planning should start from this pause state unless Phil reopens Sparkbot Shell work.
 
-- release actions only with explicit Phil approval
-- still requires repo home/version/tag/destination/announcement decisions
+## Blocked Option F - Public Release Action
+
+- Tag/upload/publish/announce path remains blocked.
+- Requires explicit Phil approval of repo home, version/tag, artifact destination, and announcement policy.
 
 ## Recommendation
 
-- **Preferred next**: Option A or B.
-- Option B should be a review-only cleanup pass if Phil wants immediate visual/clarity confirmation.
-- Runtime implementation is still blocked.
+Proceed next with LIMA AI OS Universal Runtime Contract / Sparkbot Shell Consumer Alignment.
+
+Do not recommend runtime implementation, public release action, official repo move, or additional Sparkbot Shell static UI work from this state.

@@ -1,6 +1,6 @@
 # Package QA Report
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 Branch: `active-staging-baseline-mock-lima-ui-lock`
 Base checkpoint commit: `9142f71` (`active-staging-baseline-lock`)
@@ -15,6 +15,7 @@ Base checkpoint commit: `9142f71` (`active-staging-baseline-lock`)
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
 This mock LIMA contract UI-display lock adds static UI/data files and docs updates only, and does not change the package allowlist.
+Pause handoff docs are repo-only planning references and do not change public artifact contents.
 
 ## Package Dry Run
 
@@ -114,6 +115,8 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 ## Checkpoint Baseline
 
 - Current checkpoint branch: `active-staging-baseline-mock-lima-ui-lock`.
+- Current checkpoint commit: `3fab1e8`.
+- Pause/handoff branch: `pause-shell-return-lima-handoff`.
 - Release posture remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 ## Connector/private recall classification
@@ -125,3 +128,4 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 - Explicit Phil approval is required before any tag, publish, upload, or public announcement.
 - Final repo-home/version/tag/destination/announcement decisions remain.
+- Sparkbot Shell feature/static UI progression is paused; next work returns to LIMA AI OS contract planning.

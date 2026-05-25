@@ -1,6 +1,6 @@
 # Baseline Lock Audit
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Audit Purpose
 
@@ -9,7 +9,8 @@ This document records the lock event for making `active-staging-baseline-mock-li
 ## Baseline/Branch Lineage
 
 - Locked branch: `active-staging-baseline-mock-lima-ui-lock`
-- Locked commit: `bbc4ebd`
+- Locked commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Parent baseline: `active-staging-baseline-lock` (`9142f71`)
 - Source reference: `armpit-symphony/Sparkbot` (read-only review only)
 
@@ -79,3 +80,9 @@ This document records the lock event for making `active-staging-baseline-mock-li
 - No public upload
 - No announcement
 - Option D remains blocked pending Phil explicit approval
+
+## Pause Result
+
+- Phil selected Option A after the lock.
+- Sparkbot Shell feature/static UI progression is paused.
+- Recommended next work moves to LIMA AI OS universal runtime contract planning.

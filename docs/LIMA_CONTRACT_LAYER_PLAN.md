@@ -1,11 +1,13 @@
 # LIMA Contract Layer Plan
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Purpose
 
 Sparkbot_shell is a static, open-source shell preview.  
 The next phase is to prepare the frontend for a future **LIMA AI OS install/contract layer** without adding any runtime behavior.
+
+Current pause state: Sparkbot Shell static work is paused at `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`). This plan now serves as the bridge back to LIMA AI OS universal runtime contract planning.
 
 This plan defines:
 
@@ -63,6 +65,7 @@ LIMA may return:
 - Contract examples are static fixtures only and render under advisory labels.
 - Workstation and Command Center surfaces now include the mock contract preview to make the future contract lane discoverable.
 - Current branch (`active-staging-baseline-mock-lima-ui-lock`) adds this pass only as static contract UI visibility, with no runtime boundary changes.
+- Next work should move to LIMA-side universal contract definition, not additional Sparkbot Shell UI expansion.
 
 ## Current Wave 1 Connection
 

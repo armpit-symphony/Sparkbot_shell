@@ -1,9 +1,10 @@
 # Static Shell Baseline Handoff
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 - Baseline branch: `active-staging-baseline-mock-lima-ui-lock`
-- Baseline commit: `bbc4ebd`
+- Baseline commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Staging repo: `armpit-symphony/Sparkbot_shell`
 - Current public repo/home: `TBD`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
@@ -86,9 +87,9 @@ Each example carries non-authoritative and explicit no-side-effect invariants:
 
 This baseline is now the active staging baseline and supports:
 
-- **Option B (implemented)**: continue with static mock LIMA contract UI visibility as already locked.
-- **Option A (alternative)**: hold this clean static baseline while LIMA AI OS universal contract work advances.
-- **Option D prep**: release-candidate branch consolidation only (no release action).
+- **Option A (selected)**: hold this clean static baseline while LIMA AI OS universal contract work advances.
+- Do not continue Sparkbot Shell feature/static UI work unless Phil explicitly reopens that lane.
+- Do not move into runtime implementation from this shell branch.
 
 ### What it is not
 

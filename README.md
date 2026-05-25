@@ -16,8 +16,8 @@ The public product model is a local-first, static-preview-oriented AI office she
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
 Current checkpoint baseline is `active-staging-baseline-mock-lima-ui-lock` (from `active-staging-baseline-lock`).
-Current branch: `active-staging-baseline-mock-lima-ui-lock` (implements Option B mock LIMA contract UI display lock).
-Current commit: HEAD of `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`).
+Current baseline commit: `3fab1e8`.
+Current pause/handoff branch: `pause-shell-return-lima-handoff`.
 Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
@@ -26,6 +26,7 @@ Wave 1 candidate #3 (Model stack + Invite Wing visual refinement) is complete as
 Wave 1 candidate #4 (Docs/info visual refinement) is complete as a manual static adaptation from R&D + shell docs concepts only.
 Wave 1 checkpoint/audit docs are complete and consolidated on this branch with mock LIMA contract planning pass.
 Option B mock LIMA contract UI display now renders contract example cards and hard safety invariants in Workstation and Command Center preview surfaces.
+Phil has paused Sparkbot Shell feature/static UI progression at this clean staging baseline. The recommended next work is LIMA AI OS universal runtime contract planning so Sparkbot Shell has a stronger future OS/runtime target.
 
 It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
@@ -40,12 +41,11 @@ No tag, no upload, and no announcement have been executed.
 Official public repo move is pending Phil approval. Public repo/home is currently `TBD`; this repo continues as the active staging shell.
 `sparkpit-labs/Sparkbot` is a possible future target but not active.
 
-Current next options:
+Current next action:
 
-- Option A (pause): return to LIMA AI OS universal contract planning.
-- Option B (implemented): mock LIMA contract UI display is locked as static preview; review-only refinements only if requested.
-- Alternative: pause on static baseline and return to LIMA AI OS universal contract work.
-- Or continue release-candidate branch planning/review when desired.
+- Pause Sparkbot Shell static work.
+- Return to LIMA AI OS universal contract planning.
+- Keep release actions, official repo move, runtime implementation, provider/connector work, and further shell feature work blocked until Phil explicitly reopens those lanes.
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md), [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md), and [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md).
 
 Current planning phase also includes LIMA contract fixture/docs planning:
@@ -58,6 +58,8 @@ Current planning phase also includes LIMA contract fixture/docs planning:
 - [Mock LIMA contract UI plan](docs/MOCK_LIMA_CONTRACT_UI_PLAN.md)
 - [Mock LIMA UI baseline lock](docs/MOCK_LIMA_UI_BASELINE_LOCK.md)
 - [Post mock-LIMA UI decision gate](docs/POST_MOCK_LIMA_UI_DECISION_GATE.md)
+- [Sparkbot Shell pause handoff](docs/SPARKBOT_SHELL_PAUSE_HANDOFF.md)
+- [Return to LIMA AI OS next lane](docs/RETURN_TO_LIMA_AI_OS_NEXT_LANE.md)
 
 ## Public MVP Highlights
 
@@ -142,6 +144,8 @@ Planned reconciliation and import-planning docs (repo-only):
 - [Active staging baseline lock](docs/ACTIVE_STAGING_BASELINE.md)
 - [Baseline lock audit](docs/BASELINE_LOCK_AUDIT.md)
 - [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md)
+- [Sparkbot Shell pause handoff](docs/SPARKBOT_SHELL_PAUSE_HANDOFF.md)
+- [Return to LIMA AI OS next lane](docs/RETURN_TO_LIMA_AI_OS_NEXT_LANE.md)
 
 ## Preview Artifact Boundary
 
@@ -198,5 +202,5 @@ Release decision support docs remain in the staging repo and are not included in
 
 ## Next Step
 
-Recommended next work is a second-layer Option B refinement decision only (UI-only) or a pause until Phil chooses release routing.
-Continue to treat release actions as deferred while repo/home/version/tag are pending.
+Recommended next work is to pause Sparkbot Shell static work and return to LIMA AI OS universal runtime contract planning.
+Continue to treat release actions, official repo/home movement, additional static feature polish, and runtime implementation as deferred until Phil explicitly reopens those lanes.

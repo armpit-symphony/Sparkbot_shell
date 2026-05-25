@@ -1,6 +1,6 @@
 # LIMA Contract Frontend Readiness
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 This document defines what the frontend must guarantee when rendering mock LIMA contract responses.
 
@@ -8,6 +8,8 @@ This frontend pass now includes a static mock display component in the shell:
 
 - `src/components/MockLimaContractPanel.tsx`
 - Workstation and command-center placement in static readiness surfaces
+
+Sparkbot Shell feature/static UI progression is now paused at the locked baseline. This document remains the frontend safety reference for later read-only/mock LIMA contract display, but no additional UI work is recommended until LIMA AI OS universal contracts mature or Phil explicitly reopens the shell lane.
 
 ## Frontend Readiness Principles
 
@@ -111,3 +113,7 @@ This planning pass does not add any of the following:
 
 - Existing static surfaces for Workstation, Round Table, model seats, files/memory/tasks, and Docs can consume these mock payloads as display-only fixtures.
 - No frontend code import or backend behavior is introduced in this phase.
+
+## Pause-State Rule
+
+Do not expand the frontend contract display from this state by default. The next work belongs in LIMA AI OS contract definitions, not Sparkbot Shell UI implementation.

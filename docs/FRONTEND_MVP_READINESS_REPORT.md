@@ -1,6 +1,6 @@
 # Frontend MVP Readiness Report
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 Branch: `mock-lima-contract-ui-display`
 Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
 
@@ -12,6 +12,7 @@ This pass adds Option B mock LIMA contract display on top of Wave 1 and mock LIM
 
 Wave 1 candidates #1-#4 are checkpointed as frontend-only static adaptations only.
 Option B mock LIMA contract UI display has been implemented as advisory fixture-only UI.
+Pause handoff is now recorded on `pause-shell-return-lima-handoff`; Sparkbot Shell static feature progression is paused after the active lock at `3fab1e8`.
 
 ## Surfaces Represented
 
@@ -79,14 +80,9 @@ Option B mock LIMA contract UI display has been implemented as advisory fixture-
 
 ## Recommended Next Step
 
-Wave 1 checkpoint complete (recommended closure):
+Pause Sparkbot Shell static work and return to LIMA AI OS universal runtime contract planning.
 
-1. Use this checkpoint baseline for release-candidate consolidation or demo refinement planning.
-2. Continue with static-only polish only until Phil approves a new track.
-3. If requested, proceed with either:
-   - pause and return to LIMA AI OS universal contract work, or
-   - release-candidate branch consolidation.
-4. Stop before any deeper source import or runtime planning until explicit approval.
+Do not continue static UI polish, source import, runtime implementation, release action, official repo move, provider/model calls, connector work, persistence, scheduler behavior, Guardian execution, terminal/browser execution, robotics/IoT control, or LIMA runtime wiring without explicit Phil approval.
 
 ## Current LIMA Contract Planning Additions
 

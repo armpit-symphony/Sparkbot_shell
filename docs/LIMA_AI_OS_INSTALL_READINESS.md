@@ -1,10 +1,12 @@
 # LIMA AI OS Install Readiness
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Current Shell Status: Static/Public Shell Only
 
 `Sparkbot_shell` is currently a static preview shell and docs boundary repo. It does not run backend runtime behavior and does not execute live model/provider/connector/task/robotics actions.
+
+Current pause state: Sparkbot Shell feature/static UI progression is paused at `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`). The next recommended work is LIMA AI OS universal runtime contract planning, not additional Sparkbot Shell features.
 
 ## Future LIMA AI OS Relationship
 
@@ -124,3 +126,21 @@ Required common preview invariants (applied to all mock responses):
 ## Gate Reminder
 
 Contracts first. Guardian-gated runtime later. No direct runtime coupling in this shell phase.
+
+## Return-To-LIMA Priority
+
+The next LIMA lane should define the universal runtime contracts Sparkbot Shell will later consume:
+
+- universal task/intent contract
+- candidate preview contract
+- runtime state contract
+- consumer profile contract
+- Sparkbot Shell consumer profile
+- model/agent seat profile
+- Round Table meeting preview contract
+- file/memory/task context preview contract
+- Guardian posture contract
+- Robo/IoT deferred posture contract
+- release/readiness/status contract
+
+Sparkbot Shell should only consume mock or read-only contract output until future explicit approval.

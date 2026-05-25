@@ -1,54 +1,63 @@
 # Post-Mock LIMA UI Decision Gate
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
-## Decision Options After Mock LIMA UI Lock
+## Decision Recorded
 
-### Option A — Pause Sparkbot Shell and return to LIMA AI OS universal contract work
+Phil selected Option A: pause Sparkbot Shell feature/static UI progression and return to LIMA AI OS universal contract planning.
 
-Keep the current staging baseline intact and pause release-path decisions.
+Sparkbot Shell stays locked as a static staging baseline on `active-staging-baseline-mock-lima-ui-lock` at `3fab1e8`. The pause handoff is recorded on `pause-shell-return-lima-handoff`.
 
-Pros: safety and architectural alignment stay strongest.  
-Cons: public-surface progress pauses.
+## Active State
 
-### Option B — Public release route decision
+- Release status: `GREEN_CANDIDATE`, `NOT_RELEASED`
+- Release actions: `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
+- Official public repo/home: `TBD`
+- Runtime behavior: absent
+- LIMA runtime wiring: absent
+- Sparkbot R&D code copy: none
 
-Choose final public repo/home, version/tag, artifact destination, and announcement policy.
+## Next Lane
 
-Pros: unblocks eventual release execution.  
-Cons: requires explicit Phil governance signoff.
+Return to LIMA AI OS Universal Runtime Contract / Sparkbot Shell Consumer Alignment.
 
-### Option C — Mock LIMA contract UI review/polish only
+That lane should define:
 
-Allow review-only UI clarifications in docs/labels/copy no feature addition.
+- universal task/intent contract
+- candidate preview contract
+- runtime state contract
+- consumer profile contract
+- Sparkbot Shell consumer profile
+- model/agent seat profile
+- Round Table meeting preview contract
+- file/memory/task context preview contract
+- Guardian posture contract
+- Robo/IoT deferred posture contract
+- release/readiness/status contract
+- hard safety invariants
 
-Pros: no risk.  
-Cons: no functional expansion.
+## Deferred Options
 
-### Option D — Frontend-only mock contract response display expansion
+### Public release route decision
 
-Add additional static mock responses or cards only, still no runtime, no network.
+Deferred until Phil explicitly reopens repo/home, version/tag, artifact destination, and announcement policy decisions.
 
-Pros: richer static demo.  
-Cons: still no runtime functionality.
+### Mock LIMA UI review/polish
 
-### Option E — Begin functional contract/runtime planning
+Deferred unless Phil visually reviews the shell and requests targeted copy/layout changes.
 
-Update runtime architecture/runbook plans only.
+### Frontend-only mock contract response expansion
 
-Requires explicit new approval and remains planning-only by default.
+Deferred. No additional static display expansion should start by default.
 
-### Option F — Public release action
+### Functional contract/runtime planning
 
-Tag/upload/publish/announce path.
+Deferred until LIMA contract docs, Guardian posture semantics, and explicit approval exist.
 
-Requires explicit Phil approval of repo home, version, destination, and announcement policy.
+### Public release action
 
-## Recommended Default
+Blocked. Tag/upload/publish/announce path requires explicit Phil approval.
 
-Either:
+## Recommendation
 
-- **Option A** if Phil wants to keep LIMA OS contract architecture first, or
-- **Option B** if Phil wants to freeze release routing now and finalize migration/release context.
-
-No runtime implementation is recommended from this state.
+Pause Sparkbot Shell work at this baseline and continue in the LIMA AI OS contract lane. No runtime implementation is recommended from this state.

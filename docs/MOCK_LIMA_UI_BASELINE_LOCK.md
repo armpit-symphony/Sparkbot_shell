@@ -1,6 +1,6 @@
 # Mock LIMA UI Baseline Lock
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Purpose of the Lock
 
@@ -9,24 +9,25 @@ Lock the mock LIMA contract UI-display state as the active Sparkbot Shell static
 ## Branch / Commit Locked
 
 - Branch: `active-staging-baseline-mock-lima-ui-lock`
-- Commit: `bbc4ebd`
-- Parent lock lock: `active-staging-baseline-lock` (`9142f71`)
+- Commit: `3fab1e8`
+- Parent lock: `active-staging-baseline-lock` (`9142f71`)
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 
 ## Included Surfaces
 
-- Static shell core surfaces from Wave 1 (Wave 1 static adaptations):
+- Static shell core surfaces from Wave 1:
   - Workstation shell
   - Round Table shell
   - Model/Invite seat shell
   - Docs/info surface
-- Mock LIMA contract planning docs
+- Mock LIMA contract planning docs.
 - Static mock contract UI surface and data:
   - `src/data/mockLimaContracts.ts`
   - `src/components/MockLimaContractPanel.tsx`
 
 ## Mock Contract UI Summary
 
-The UI now renders static contract preview cards for:
+The UI renders static contract preview cards for:
 
 - Workstation state
 - Round Table meeting candidate
@@ -78,8 +79,14 @@ Each payload family is presented with:
 - No official public repo migration executed.
 - No public release action.
 
+## Pause Decision
+
+Phil selected Option A after this lock: pause Sparkbot Shell feature/static UI progression and return to LIMA AI OS universal runtime contract planning.
+
 ## Next Recommended Paths
 
-1. Option A — continue as static staging baseline and return to LIMA AI OS contract planning.
-2. Option B — keep current mock LIMA UI-display lock and proceed to review.
-3. Option C — begin runtime planning only after Phil approval (no implementation in this phase).
+1. Preserve the current mock LIMA UI-display lock as the static staging baseline.
+2. Move next work to LIMA AI OS universal contract planning.
+3. Do not begin runtime planning, release action, official repo move, or further static feature work unless Phil explicitly reopens that lane.
+
+Sparkbot Shell remains `GREEN_CANDIDATE` and `NOT_RELEASED`, with no tag, upload, publish, announcement, runtime behavior, or LIMA runtime wiring.

@@ -1,11 +1,12 @@
 # Active Staging Baseline
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Active Baseline
 
 - Active branch: `active-staging-baseline-mock-lima-ui-lock`
-- Active commit: `bbc4ebd`
+- Active commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Base branch: `active-staging-baseline-lock`
 - Base commit: `9142f71`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
@@ -85,8 +86,8 @@ Updated: 2026-05-24
 
 - Maintain current static-only and boundary-safe posture.
 - Preserve this as the active staging baseline.
-- Run no runtime implementation in this consolidation phase.
-- Prepare release routing or planning only.
+- Pause Sparkbot Shell static feature work.
+- Return to LIMA AI OS universal runtime contract planning.
 
 ## Forbidden Paths Until Explicit Approval
 
@@ -103,9 +104,18 @@ Updated: 2026-05-24
 
 This branch is the active staging baseline for Sparkbot Shell work.
 It is not a public release and should not be treated as final.
+Feature/static UI progression is paused here by Phil decision.
 
 ## Current Pass Overlay
 
 - Current branch: `active-staging-baseline-mock-lima-ui-lock` (locks `mock-lima-contract-ui-display`).
 - Mock LIMA contract UI-display is static only.
 - No runtime behavior changes; no source-boundary or release-state changes.
+
+## Pause Handoff Overlay
+
+- Pause branch: `pause-shell-return-lima-handoff`
+- Handoff docs:
+  - `docs/SPARKBOT_SHELL_PAUSE_HANDOFF.md`
+  - `docs/RETURN_TO_LIMA_AI_OS_NEXT_LANE.md`
+- Recommended next action: stop Sparkbot Shell feature work and resume LIMA AI OS contract planning.

@@ -1,6 +1,6 @@
 # Static Shell Baseline Audit
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Purpose
 
@@ -9,7 +9,8 @@ This audit records the current static-shell staging baseline and confirms that s
 ## Audit Inputs
 
 - Baseline branch: `active-staging-baseline-mock-lima-ui-lock`
-- Baseline commit: `bbc4ebd`
+- Baseline commit: `3fab1e8`
+- Pause/handoff branch: `pause-shell-return-lima-handoff`
 - Parent branch: `active-staging-baseline-lock` (`9142f71`)
 - Parent baseline: `static-shell-mock-contract-baseline` (`1f4ff3b`)
 - Source reference repo: `armpit-symphony/Sparkbot` (read-only only)
@@ -120,3 +121,5 @@ No runtime behavior was introduced in this lock pass:
 
 - Doc-link hygiene should be rechecked on future merges.
 - No runtime planning or contract execution is approved in this lock state.
+- Sparkbot Shell feature/static UI work is paused until Phil explicitly reopens it.
+- The next recommended work is LIMA AI OS universal runtime contract planning.

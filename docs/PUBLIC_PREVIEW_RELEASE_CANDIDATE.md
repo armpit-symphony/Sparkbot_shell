@@ -22,7 +22,7 @@
 - Static fixture-content pass completed for Files, Memory, Tasks, and Demo Room preview surfaces.
 - Final frontend-only product-demo polish pass completed.
 - Wave 1 candidates 1-4 completed as manual static adaptations.
-- Wave 1 checkpoint/audit baseline is consolidated on `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`), including prior `static-shell-mock-contract-baseline` content.
+- Wave 1 checkpoint/audit baseline is consolidated on `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`), including prior `static-shell-mock-contract-baseline` content.
 - Mock LIMA contract planning completed:
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
@@ -67,6 +67,10 @@
 ## Branch Baseline / Consolidation Status
 
 - This is the consolidated static baseline lock for current work.
-- Parent lineage base: `active-staging-baseline-lock` (`9142f71`) with active lock at `bbc4ebd`.
+- Parent lineage base: `active-staging-baseline-lock` (`9142f71`) with active lock at `3fab1e8`.
 - This branch is `active-staging-baseline-mock-lima-ui-lock`.
+
+## Pause Overlay
+
+Phil selected Option A after the mock LIMA UI lock. Sparkbot Shell feature/static UI progression is paused here. The next recommended work is LIMA AI OS universal runtime contract planning, not public release action or runtime implementation.
 - Wave 1 source adaptation is intentionally closed pending next routing/decision approval.
