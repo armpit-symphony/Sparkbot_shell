@@ -1,83 +1,66 @@
 # LIMA Contract Integration Stop Gates
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
-No future LIMA runtime integration may proceed until these gates are fully closed.
+No LIMA runtime integration may proceed in Sparkbot Shell unless these gates are closed by explicit approval.
 
-## Hard Stop Gates
+## Hard Stop Conditions
 
-### 1) Package install dependency required
-- If a runtime contract requires shipping/installing packages in this shell, stop.
-- Reason: current phase is static/docs-only.
+1. Runtime package install is required.
+2. Backend endpoint is required.
+3. Network call is required.
+4. Provider/model call is required.
+5. Connector call is required.
+6. Persistence write is required.
+7. Dispatch/execution path is required.
+8. Approval enforcement is required.
+9. GuardianDecision creation is required.
+10. Adapter/tool/driver calls are required.
+11. Runtime test harness activation is required.
+12. Human input bridge is required.
+13. Robotics/IoT/drone/humanoid control is required.
+14. Secret/key handling is required.
+15. LIMA runtime code import is required.
+16. Sparkbot R&D runtime code copy is required.
 
-### 2) Backend endpoint required
-- If any candidate flow requires a new backend endpoint, stop.
-- Reason: source-bounded shell phase does not include backend/runtime.
+## Vocabulary Compliance Gate
 
-### 3) Network call required
-- If any component needs to issue live network requests, stop.
-- Reason: no provider/connector/network runtime behavior in this phase.
+Stop if contract data or docs regress to outdated invariant names:
 
-### 4) Persistence required
-- If contract data must be written/stored, stop.
-- Reason: no persistence/write behavior is allowed in static preview shell.
+- `side_effects_allowed`
+- `provider_calls_allowed`
+- `lima_runtime_active`
+- `humaninput_bridge_active`
 
-### 5) Approval enforcement required
-- If LIMA preview flow requests runtime enforcement or approval execution, stop.
-- Reason: approval posture is display-only and non-authoritative.
+Use aligned names instead:
 
-### 6) Execution/dispatch required
-- If runtime dispatch, run, execute, or send actions are introduced, stop.
-- Reason: execution is explicitly blocked.
+- `side_effects_permitted`
+- `model_provider_calls_allowed`
+- `runtime_active`
+- `human_input_bridge_active`
 
-### 7) Provider/connector calls required
-- If runtime or provider/connector operations are added, stop.
-- Reason: all calls are deferred to future runtime phases.
+## Ownership Gate
 
-### 8) Model key handling required
-- If any provider key capture/storage/validation appears, stop.
-- Reason: no secrets/key handling in shell docs/fixture planning.
+Stop if docs or UI imply:
 
-### 9) HumanInput bridge required
-- If HumanInput bridge becomes active in shell behavior, stop.
-- Reason: no live bridge is allowed in this phase.
+- LIMA owns real approval decisions in shell.
+- Sparkbot Shell creates real approval state.
 
-### 10) Live adapter required
-- If adapter logic moves from mock fixtures to live runtime adapters, stop.
-- Reason: must remain static/fixture consumption only.
+Required boundary:
 
-### 11) Robotics/IoT control required
-- If any robotics/IoT command/control path is added, stop.
-- Reason: Robo remains teaser-only.
+- LIMA describes posture.
+- Guardian owns real approval state.
+- Shell displays posture only.
 
-### 12) Secret handling required
-- If secrets/credentials/tokens flow through shell runtime path, stop.
-- Reason: no secret-handling behavior is allowed.
+## Current Phase Gate
 
-### 13) Runtime code import from LIMA required
-- If integration imports LIMA runtime code directly, stop.
-- Reason: contract-first handoff only; no runtime embedding.
+Sparkbot Shell remains static and non-runtime in this phase:
 
-### 14) Sparkbot R&D code copy required
-- If this planning pass starts copying implementation from Sparkbot R&D, stop.
-- Reason: no direct source copy is permitted in this phase.
-
-## Operating Rule
-
-Any new gate hit requires:
-
-- explicit Phil approval, and
-- an updated contract plan document before runtime work is resumed.
-
-## Current State Note
-
-All current Wave 1 and checkpoint work remains in a static-mode boundary:
-
-- no runtime behavior,
-- no provider/model calls,
-- no connector calls,
-- no persistence,
-- no scheduler,
-- no terminal/browser runtime,
-- no robotics/IoT control,
-- no LIMA/Arc/Office/IT runtime wiring.
+- `preview_only=true`
+- `non_authoritative=true`
+- `runtime_active=false`
+- `guardian_decision_created=false`
+- `adapter_calls_allowed=false`
+- `tool_calls_allowed=false`
+- `driver_calls_allowed=false`
+- `audit_storage_written=false`

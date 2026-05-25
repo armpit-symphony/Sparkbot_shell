@@ -1,85 +1,59 @@
 # Mock LIMA UI Baseline Lock
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
-## Purpose of the Lock
+## Lock Summary
 
-Lock the mock LIMA contract UI-display state as the active Sparkbot Shell static baseline after completion of Wave 1 and contract planning documentation.
+- Locked branch: `active-staging-baseline-mock-lima-ui-lock`
+- Locked commit: `3fab1e8`
+- Status: `GREEN_CANDIDATE`, `NOT_RELEASED`
+- Release actions: `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
 
-## Branch / Commit Locked
+## Mock Contract UI Scope
 
-- Branch: `active-staging-baseline-mock-lima-ui-lock`
-- Commit: `bbc4ebd`
-- Parent lock lock: `active-staging-baseline-lock` (`9142f71`)
+- Static contract examples only.
+- Non-authoritative preview shapes only.
+- No runtime objects.
 
-## Included Surfaces
-
-- Static shell core surfaces from Wave 1 (Wave 1 static adaptations):
-  - Workstation shell
-  - Round Table shell
-  - Model/Invite seat shell
-  - Docs/info surface
-- Mock LIMA contract planning docs
-- Static mock contract UI surface and data:
-  - `src/data/mockLimaContracts.ts`
-  - `src/components/MockLimaContractPanel.tsx`
-
-## Mock Contract UI Summary
-
-The UI now renders static contract preview cards for:
+Displayed examples:
 
 - Workstation state
-- Round Table meeting candidate
-- model/seat preview
-- context (files/memory/tasks)
+- Round Table meeting
+- model/seat
+- context
 - Guardian posture
-- Robo teaser readiness
-- release/readiness status
+- Robo teaser
+- release/readiness
 
-Data is static and non-authoritative.
+## Alignment Vocabulary
 
-## Safety Invariants Displayed
+Sequence:
 
-Each payload family is presented with:
+`ConsumerRequest -> TypedIntentEnvelope or TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
 
-- `preview_only`
-- `non_authoritative`
-- `safe_by_default`
-- `execution_allowed: false`
-- `dispatch_allowed: false`
-- `side_effects_allowed: false`
-- `approval_granted: false`
-- `persistence_allowed: false`
-- `provider_calls_allowed: false`
-- `connector_calls_allowed: false`
-- `lima_runtime_active: false`
-- `humaninput_bridge_active: false`
-- `sparkbot_wiring_active: false`
-- `live_adapter_active: false`
-- `robotics_allowed: false`
-- `physical_world_allowed: false`
-- explicit `No LIMA runtime bundled`
-- explicit `No runtime calls`
-- explicit `No execution / persistence / connectors`
+Required fields/refs in each example:
 
-## Validation Summary
+- `consumer_profile`
+- `embodiment_profile`
+- `approval_posture`
+- `evidence_ref`
 
-- `git diff --check`: PASS
-- `npm run build`: PASS
-- `npm run package:preview`: PASS
-- `npm pack --dry-run --json`: PASS
-- `node --check scripts/package-preview.mjs`: PASS
-- source-boundary and forbidden API checks remained clean
+Required invariant set includes renamed and added fields:
 
-## Remaining Gaps
+- `side_effects_permitted=false`
+- `model_provider_calls_allowed=false`
+- `runtime_active=false`
+- `human_input_bridge_active=false`
+- `runtime_test_harness_active=false`
+- `guardian_decision_created=false`
+- `adapter_calls_allowed=false`
+- `tool_calls_allowed=false`
+- `driver_calls_allowed=false`
+- `audit_storage_written=false`
 
-- No runtime contract transport layer yet.
-- No install detection or endpoint integration yet.
-- No official public repo migration executed.
-- No public release action.
+## Boundary
 
-## Next Recommended Paths
-
-1. Option A — continue as static staging baseline and return to LIMA AI OS contract planning.
-2. Option B — keep current mock LIMA UI-display lock and proceed to review.
-3. Option C — begin runtime planning only after Phil approval (no implementation in this phase).
+- LIMA describes posture only.
+- Guardian owns real approval state.
+- Shell displays posture only.
+- No dispatch/execution/persistence/adapters/tools/drivers/hardware control.

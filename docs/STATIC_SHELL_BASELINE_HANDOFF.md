@@ -79,8 +79,8 @@ The branch includes static contract previews for:
 - release readiness status
 
 Each example carries non-authoritative and explicit no-side-effect invariants:
-`execution_allowed: false`, `dispatch_allowed: false`, `provider_calls_allowed: false`,
-`connector_calls_allowed: false`, `lima_runtime_active: false`.
+`execution_allowed: false`, `dispatch_allowed: false`, `model_provider_calls_allowed: false`,
+`connector_calls_allowed: false`, `runtime_active: false`.
 
 ## Next Recommended Options
 

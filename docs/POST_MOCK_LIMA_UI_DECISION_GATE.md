@@ -1,54 +1,38 @@
-# Post-Mock LIMA UI Decision Gate
+# Post Mock LIMA UI Decision Gate
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
-## Decision Options After Mock LIMA UI Lock
+## Current Decision State
 
-### Option A — Pause Sparkbot Shell and return to LIMA AI OS universal contract work
+- Sparkbot Shell lock is preserved.
+- Public release Option D remains blocked.
+- Official repo move remains deferred.
+- Runtime work remains unapproved.
 
-Keep the current staging baseline intact and pause release-path decisions.
+## Alignment Clarification
 
-Pros: safety and architectural alignment stay strongest.  
-Cons: public-surface progress pauses.
+The mock contract lane now aligns to:
 
-### Option B — Public release route decision
+`ConsumerRequest -> TypedIntentEnvelope or TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
 
-Choose final public repo/home, version/tag, artifact destination, and announcement policy.
+Each preview carries:
 
-Pros: unblocks eventual release execution.  
-Cons: requires explicit Phil governance signoff.
+- structured `consumer_profile`
+- required `embodiment_profile`
+- descriptive `approval_posture`
+- non-authoritative `evidence_ref`
 
-### Option C — Mock LIMA contract UI review/polish only
+Guardian remains owner of real approval state.
 
-Allow review-only UI clarifications in docs/labels/copy no feature addition.
+## Immediate Next Lane
 
-Pros: no risk.  
-Cons: no functional expansion.
+Return to LIMA AI OS universal runtime contract planning.
 
-### Option D — Frontend-only mock contract response display expansion
+## Still Blocked
 
-Add additional static mock responses or cards only, still no runtime, no network.
-
-Pros: richer static demo.  
-Cons: still no runtime functionality.
-
-### Option E — Begin functional contract/runtime planning
-
-Update runtime architecture/runbook plans only.
-
-Requires explicit new approval and remains planning-only by default.
-
-### Option F — Public release action
-
-Tag/upload/publish/announce path.
-
-Requires explicit Phil approval of repo home, version, destination, and announcement policy.
-
-## Recommended Default
-
-Either:
-
-- **Option A** if Phil wants to keep LIMA OS contract architecture first, or
-- **Option B** if Phil wants to freeze release routing now and finalize migration/release context.
-
-No runtime implementation is recommended from this state.
+- Runtime implementation.
+- LIMA runtime wiring.
+- Provider/model/connector calls.
+- Dispatch/execution/persistence.
+- Robotics/IoT control.
+- Public tag/upload/publish/announcement.

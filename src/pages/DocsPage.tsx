@@ -168,11 +168,12 @@ export function DocsPage() {
           <span>Boundary proof</span>
           <h3>Static-only contract posture</h3>
           <ul>
-            <li>lima_runtime_active: false</li>
+            <li>runtime_active: false</li>
             <li>execution_allowed: false</li>
             <li>persistence_allowed: false</li>
-            <li>provider_calls_allowed: false</li>
+            <li>model_provider_calls_allowed: false</li>
             <li>connector_calls_allowed: false</li>
+            <li>guardian_decision_created: false</li>
             <li>robotics_allowed: false</li>
           </ul>
           <p>Contract views remain advisory fixtures and are not authoritative runtime output.</p>

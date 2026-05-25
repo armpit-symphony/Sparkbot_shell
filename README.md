@@ -17,7 +17,7 @@ The public product model is a local-first, static-preview-oriented AI office she
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
 Current checkpoint baseline is `active-staging-baseline-mock-lima-ui-lock` (from `active-staging-baseline-lock`).
 Current branch: `active-staging-baseline-mock-lima-ui-lock` (implements Option B mock LIMA contract UI display lock).
-Current commit: HEAD of `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`).
+Current commit: HEAD of `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`).
 Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
@@ -55,9 +55,17 @@ Current planning phase also includes LIMA contract fixture/docs planning:
 - [LIMA contract fixtures](docs/LIMA_CONTRACT_FIXTURES.md)
 - [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
 - [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
+- [LIMA alignment brief response](docs/LIMA_ALIGNMENT_BRIEF_RESPONSE.md)
 - [Mock LIMA contract UI plan](docs/MOCK_LIMA_CONTRACT_UI_PLAN.md)
 - [Mock LIMA UI baseline lock](docs/MOCK_LIMA_UI_BASELINE_LOCK.md)
 - [Post mock-LIMA UI decision gate](docs/POST_MOCK_LIMA_UI_DECISION_GATE.md)
+
+Current vocabulary alignment for mock contract examples:
+
+- Sequence: `ConsumerRequest -> TypedIntentEnvelope/TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
+- Required refs/fields: `consumer_profile`, `embodiment_profile`, `approval_posture`, `evidence_ref`
+- Renamed invariants: `side_effects_permitted`, `model_provider_calls_allowed`, `runtime_active`, `human_input_bridge_active`
+- Added invariants: `runtime_test_harness_active`, `guardian_decision_created`, `adapter_calls_allowed`, `tool_calls_allowed`, `driver_calls_allowed`, `audit_storage_written`
 
 ## Public MVP Highlights
 

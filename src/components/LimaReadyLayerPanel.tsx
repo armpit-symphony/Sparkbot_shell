@@ -22,6 +22,10 @@ export function LimaReadyLayerPanel() {
           <p>No execution, dispatch, persistence, providers, connectors, robotics, or IoT controls are active.</p>
         </article>
         <article className="template-card">
+          <strong>Approval posture only</strong>
+          <p>LIMA describes posture. Guardian owns real approval state. Shell displays non-authoritative posture labels only.</p>
+        </article>
+        <article className="template-card">
           <strong>Contract gate closed</strong>
           <p>Future runtime integration requires explicit approval after docs, fixtures, and read-only previews.</p>
         </article>
@@ -42,7 +46,7 @@ export function LimaReadyLayerPanel() {
         </article>
         <article className="flow-card">
           <span>3</span>
-          <p>Frontend preview UI against mock responses.</p>
+          <p>Frontend preview UI against mock responses and vocabulary ladder.</p>
         </article>
         <article className="flow-card">
           <span>4</span>

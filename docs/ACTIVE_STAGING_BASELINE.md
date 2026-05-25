@@ -1,111 +1,49 @@
 # Active Staging Baseline
 
-Updated: 2026-05-24
+Updated: 2026-05-25
 
 ## Active Baseline
 
-- Active branch: `active-staging-baseline-mock-lima-ui-lock`
-- Active commit: `bbc4ebd`
-- Base branch: `active-staging-baseline-lock`
-- Base commit: `9142f71`
-- Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
-- Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
-- Package/version label: `0.8.0-layer8-preview`
+- Branch: `active-staging-baseline-mock-lima-ui-lock`
+- Commit: `3fab1e8`
 - Release posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`
+- Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Active staging repo: `armpit-symphony/Sparkbot_shell`
 - Final public repo/home: `TBD`
-- Official repo move: not approved; deferred.
 
-## Scope and Completed Work
+## Included
 
-- Static Shell Wave 1 refinements are included and locked:
-  - Workstation visual layout refinement
-  - Round Table visual flow refinement
-  - Model stack + Invite Wing visual refinement
-  - Docs/info visual refinement
-- Wave 1 checkpoint/audit consolidation is included.
-- Mock LIMA contract planning is included:
-  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
-  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
-  - `docs/LIMA_CONTRACT_FIXTURES.md`
-  - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
-  - `docs/LIMA_CONTRACT_STOP_GATES.md`
-- Option B mock-LIMA contract UI display is locked in this branch:
-  - `src/data/mockLimaContracts.ts`
-  - `src/components/MockLimaContractPanel.tsx`
-  - Workstation and docs-ready placement in shell routes
-- Release routing correction and baseline framing docs remain included:
-  - `docs/OFFICIAL_PUBLIC_REPO_READINESS.md`
-  - `docs/RELEASE_ROUTING_CORRECTION.md`
-  - `docs/CURRENT_PUBLIC_RELEASE_HANDOFF.md`
-  - `docs/STATIC_SHELL_BASELINE_HANDOFF.md`
-  - `docs/STATIC_SHELL_BASELINE_AUDIT.md`
+- Wave 1 static adaptations and checkpoint.
+- Mock LIMA contract planning docs.
+- Mock LIMA contract UI display.
 
-## Intentionally Excluded
+## Vocabulary Alignment (Current Pass)
 
-- No backend runtime
-- No `src-tauri/`
-- No `.github/`
-- No `.agents/`
-- No provider/model/runtime/connector calls
-- No scheduler
-- No persistence
-- No terminal/browser execution
-- No robotics/IoT control
-- No LIMA runtime wiring
-- No Sparkbot R&D source imports/copy
+Mock vocabulary now aligns to the LIMA brief:
 
-## Validation Summary
+- Sequence: `ConsumerRequest -> TypedIntentEnvelope/TaskIntent -> CandidatePreview -> RuntimeStateSnapshot`
+- Required fields/refs: `consumer_profile`, `embodiment_profile`, `approval_posture`, `evidence_ref`
+- Updated invariant names:
+  - `side_effects_permitted`
+  - `model_provider_calls_allowed`
+  - `runtime_active`
+  - `human_input_bridge_active`
+- Added invariants:
+  - `runtime_test_harness_active=false`
+  - `guardian_decision_created=false`
+  - `adapter_calls_allowed=false`
+  - `tool_calls_allowed=false`
+  - `driver_calls_allowed=false`
+  - `audit_storage_written=false`
 
-- `git diff --check`: PASS
-- `npm run build`: PASS
-- `npm run package:preview`: PASS
-- `npm pack --dry-run --json`: PASS
-- `node --check scripts/package-preview.mjs`: PASS
-- source-boundary checks: no `backend/`, `src-tauri/`, `.github/`, `.agents/`
-- forbidden API scan: no disallowed patterns found
-- runtime/persistence scan: no runtime behavior added
-- secret/private scans: no private/domain leaks found
-- artifact/public-safe allowlist checks passed
+## Explicit Runtime Absence
 
-## Branch Lineage Check (Locked Baseline)
+- No runtime behavior.
+- No backend/runtime folders added.
+- No provider/model/connector calls.
+- No persistence/dispatch/execution.
+- No LIMA runtime wiring.
 
-- Confirmed ancestry through:
-  - `active-staging-baseline-lock` (`9142f71`)
-  - `static-shell-mock-contract-baseline` (`1f4ff3b`)
-  - `mock-lima-contract-planning` (`d6a528f`)
-  - `frontend-only-wave1-checkpoint-audit` (`61a08b6`)
-  - `frontend-only-docs-info-static-adaptation` (`8e0fba1`)
-  - `frontend-only-model-seat-static-adaptation` (`2d5e4f1`)
-  - `frontend-only-roundtable-static-adaptation` (`7ba0373`)
-  - `frontend-only-workstation-static-adaptation` (`c7d5f31`)
-- No required Wave 1 or mock-contract planning work is stranded on those branches.
+## Current Recommendation
 
-## Next Allowed Paths
-
-- Maintain current static-only and boundary-safe posture.
-- Preserve this as the active staging baseline.
-- Run no runtime implementation in this consolidation phase.
-- Prepare release routing or planning only.
-
-## Forbidden Paths Until Explicit Approval
-
-- Option D release actions
-- Any public tag/publish/upload/announcement
-- Backend/runtime import
-- Provider/model/connector integration
-- LIMA runtime install/call wiring
-- Scheduler execution/persistence/callbacks
-- Direct R&D runtime source copy
-- Proprietary Arc/LIMA Office/LIMA IT wiring
-
-## Current Status
-
-This branch is the active staging baseline for Sparkbot Shell work.
-It is not a public release and should not be treated as final.
-
-## Current Pass Overlay
-
-- Current branch: `active-staging-baseline-mock-lima-ui-lock` (locks `mock-lima-contract-ui-display`).
-- Mock LIMA contract UI-display is static only.
-- No runtime behavior changes; no source-boundary or release-state changes.
+Pause Sparkbot Shell feature progression and continue LIMA AI OS universal runtime contract planning.
