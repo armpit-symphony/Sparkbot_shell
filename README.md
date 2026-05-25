@@ -15,9 +15,9 @@ The public product model is a local-first, static-preview-oriented AI office she
 ## Current Status
 
 This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
-Current checkpoint baseline is `active-staging-baseline-lock` (from `static-shell-mock-contract-baseline`).
-Current branch: `mock-lima-contract-ui-display` (implements Option B mock LIMA contract UI display on top of the locked baseline).
-Current commit: HEAD of `mock-lima-contract-ui-display`.
+Current checkpoint baseline is `active-staging-baseline-mock-lima-ui-lock` (from `active-staging-baseline-lock`).
+Current branch: `active-staging-baseline-mock-lima-ui-lock` (implements Option B mock LIMA contract UI display lock).
+Current commit: HEAD of `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`).
 Current release status remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 Wave 1 candidate #1 (Workstation visual refinement) is complete as a manual static adaptation from R&D reference concepts only.
@@ -42,9 +42,10 @@ Official public repo move is pending Phil approval. Public repo/home is currentl
 
 Current next options:
 
-- Preferred: continue mock LIMA contract UI display planning (frontend/static only).
+- Option A (pause): return to LIMA AI OS universal contract planning.
+- Option B (implemented): mock LIMA contract UI display is locked as static preview; review-only refinements only if requested.
 - Alternative: pause on static baseline and return to LIMA AI OS universal contract work.
-- Or finalize release-candidate branch consolidation prep when desired.
+- Or continue release-candidate branch planning/review when desired.
 See [Static preview signoff](docs/STATIC_PREVIEW_SIGNOFF.md), [Physical mobile QA checklist](docs/PHYSICAL_MOBILE_QA_CHECKLIST.md), [Public preview readiness summary](docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md), [Release decision gate](docs/RELEASE_DECISION_GATE.md), [Static shell baseline handoff](docs/STATIC_SHELL_BASELINE_HANDOFF.md), [Static shell baseline audit](docs/STATIC_SHELL_BASELINE_AUDIT.md), and [Next phase decision matrix](docs/NEXT_PHASE_DECISION_MATRIX.md).
 
 Current planning phase also includes LIMA contract fixture/docs planning:
@@ -55,6 +56,8 @@ Current planning phase also includes LIMA contract fixture/docs planning:
 - [LIMA contract frontend readiness](docs/LIMA_CONTRACT_FRONTEND_READINESS.md)
 - [LIMA contract stop gates](docs/LIMA_CONTRACT_STOP_GATES.md)
 - [Mock LIMA contract UI plan](docs/MOCK_LIMA_CONTRACT_UI_PLAN.md)
+- [Mock LIMA UI baseline lock](docs/MOCK_LIMA_UI_BASELINE_LOCK.md)
+- [Post mock-LIMA UI decision gate](docs/POST_MOCK_LIMA_UI_DECISION_GATE.md)
 
 ## Public MVP Highlights
 

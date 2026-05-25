@@ -5,8 +5,8 @@ Updated: 2026-05-24
 ## Current Preview
 
 - Current status color: `GREEN_CANDIDATE` (not public release; static preview readiness milestone reached).
-- Current branch: `mock-lima-contract-ui-display`.
-- Base signoff commit: `1f4ff3b` on `active-staging-baseline-lock`.
+- Current branch: `active-staging-baseline-mock-lima-ui-lock`.
+- Base lineage commit: `bbc4ebd` on `active-staging-baseline-lock` ancestry.
 - Current preview version: `0.8.0-layer8-preview`.
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`.
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`.
@@ -14,126 +14,40 @@ Updated: 2026-05-24
 - Current repo: `armpit-symphony/Sparkbot_shell` staging workspace.
 - Final public repo/home: TBD.
 
-`GREEN_CANDIDATE` means the current static preview artifact is ready to be considered for public preview; it is still not publicly released.
-
-Readiness rules:
+## Readiness Rules
 
 - Physical-device 390px QA is `REQUIRED_FOR_GREEN`.
 - Physical-device status is `PASSED` by Phil manual verification.
-- Connector/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW` for this static artifact and does not block static readiness unless runtime claims are added.
+- Connector/private recall is `OUT_OF_SCOPE_STATIC_PREVIEW`.
 
 ## Included
 
 - Static Vite/React/TypeScript shell.
-- Workstation, Chat, Round Table, Command Center, Task Guardian, Connectors, Robo Preview, and Docs routes.
-- Static `LIMA AI OS ready layer` panel with phased contract/install path messaging.
-- Polished public-preview UX for Workstation, Round Table, model-stack seats, Guardian basics, and Robo teaser.
-- Static fixture previews for Files/Knowledge, Memory, Tasks/Reminders, and a unified Demo Room context.
-- Final product-demo storyline polish across Workstation, Round Table, and demo fixtures.
-- Wave 1 candidate #1 complete: Workstation visual layout refinement as manual static adaptation only.
-- Wave 1 candidate #2 complete: Round Table visual flow refinement as manual static adaptation only.
-- Wave 1 candidate #3 complete: Model stack + Invite Wing visual flow refinement as manual static adaptation only.
-- Wave 1 candidate #4 complete: Docs/info visual refinement as manual static adaptation only.
-- Public docs bundle.
-- MIT `LICENSE`.
-- Preview package script.
-- Built static preview artifact.
-- Public-safe package metadata.
+- Static Workstation, Round Table, model-seat, files/memory/tasks, docs, and Robo preview surfaces.
+- Mock LIMA contract planning and static UI-display (examples + panel) are included in this branch.
+- Preview contracts are non-authoritative and no-runtime.
 
 ## Intentionally Excluded
 
 - Backend runtime.
 - Model/provider calls.
-- Local AI calls.
 - Connector sends or webhooks.
-- PIN verification or connector sessions.
-- Scheduler and health collector runtime.
-- Memory persistence/private recall.
-- Guardian internals.
+- Scheduler and persistence.
 - Terminal/browser execution.
 - Robotics/IoT control.
-- LIMA AI OS, Arc Bot, LIMA Office, or LIMA IT wiring.
-- Sparkbot R&D source code.
-- Direct R&D source-file copy.
-
-## Validation Already Passed
-
-- `git diff --check`.
-- `npm run build`.
-- `npm run package:preview`.
-- `npm pack --dry-run --json`.
-- `node --check scripts/package-preview.mjs`.
-- Markdown link check.
-- Runtime/persistence scan over `src`.
-- Source boundary check: no `backend/`, `src-tauri/`, `.github/`, `.agents/`.
-- Preview artifact high-risk scan.
-- Secret/private scan.
-- Edge headless 375px, 390px, 768px, and 1365px viewport screenshots.
-- Edge DevTools layout metrics for `/`, `/workstation`, `/chat`, `/roundtable`, `/command-center`, `/task-guardian`, `/connectors`, `/robo`, and `/docs`.
-- Physical-device QA pass confirmed manually by Phil.
-
-`npm run lint` is not configured.
-
-## Remaining Blockers
-
-- Explicit Phil approval is required before any tag, npm publish, public upload, or public announcement.
-- Final public release depends on release decision Option D and final repo-home/version/announcement decisions.
-
-## Risk Table
-
-| Risk | Current state | Color | Required action |
-|---|---|---|---|
-| Mobile QA | Edge emulated 375px/390px/768px/desktop QA passed; physical-device QA passed by Phil. | GREEN_CANDIDATE | Re-run physical-device checks if any UI or artifact layout changes are made. |
-| Connector/private recall | `OUT_OF_SCOPE_STATIC_PREVIEW` in the static shell artifact. | N/A | Validate live connector recall/delivery in future runtime-contract layers. |
-| License | MIT license added and package metadata says MIT. | GREEN | Keep LICENSE in artifact and package allowlists. |
-| Artifact contents | Preview artifact inspection passed against the public-safe allowlist. | GREEN | Re-run artifact inspection before any upload. |
-| Public messaging | Docs now record static-only shell and explicit release-action approval requirement. | YELLOW | Phil must choose the next release option. |
-| No runtime | Runtime/persistence scans passed; shell is static/demo only. | GREEN | Do not add runtime in this gate. |
-| No proprietary leakage | Artifact high-risk scan passed; repo-only staging docs remain excluded. | GREEN | Keep generated-artifact scans mandatory. |
-
-## Decision States
-
-| Color | Meaning |
-|---|---|
-| RED | Cannot preview. A release-boundary, private-leakage, build, artifact, or runtime-overclaim blocker exists. |
-| YELLOW | Internal/staging preview only. Public announcement, tag, npm publish, and upload are blocked. |
-| GREEN_CANDIDATE | Static preview artifact is complete and ready for final release decision; still not released. |
+- LIMA runtime integration.
+- Direct R&D source copy.
 
 ## Current Decision
 
-Current status is `GREEN_CANDIDATE`.
-
-The static preview package is complete for internal/staging use and physical/mobile QA in this branch.
-It is not approved for public announcement, tag, npm publish, upload, or final public release.
-
-Current work continues as static-only Wave 1 checkpoint/audit readiness lock.
-Current product-demo and docs/info polish pass is complete and now includes static mock LIMA contract UI display in Workstation and Command Center.
-Wave 1 candidate #1 (Workstation visual adaptation) is complete with no runtime/API/storage additions.
-Wave 1 candidate #2 (Round Table visual adaptation) is complete with no runtime/API/storage additions.
-Wave 1 candidate #3 (Model stack + Invite Wing visual adaptation) is complete with no runtime/API/storage additions.
-Wave 1 candidate #4 (Docs/info visual refinement) is complete with no runtime/API/storage additions.
-
-Wave 1 checkpoint status: verified as static and release-safe for this branch, consolidated with mock LIMA contract planning docs, and now includes UI-display render surfaces.
-
-## Mock LIMA Contract Planning Status
-
-- Option B is complete for static UI-display implementation from planning artifacts:
-  - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
-  - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
-  - `docs/LIMA_CONTRACT_FIXTURES.md`
-- `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
-- `docs/LIMA_CONTRACT_STOP_GATES.md`
-- `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
-- `src/data/mockLimaContracts.ts`
-- `src/components/MockLimaContractPanel.tsx`
-- `Sparkbot_shell` keeps these as docs/fixture-only references.
-- No runtime behavior or API calls added in this pass.
+- Candidate remains `GREEN_CANDIDATE`, `NOT_RELEASED`.
+- Option D blocked.
+- Mock LIMA contract UI display is locked and static.
+- No runtime calls or persistence introduced in this branch.
 
 ## Recommended Next Step
 
-Phil should choose one option from [Release decision gate](RELEASE_DECISION_GATE.md):
-
-- Continue static-only MVP shell progression via **Option B** mock LIMA contract UI display prep,
-  unless Phil elects **Option A** pause and return to LIMA AI OS universal contract work.
-- Release-candidate branch consolidation remains available later, but no public release action is approved now.
-- Option D for public announcement/tag/upload after explicit Phil approval.
+- Choose between:
+  - Option A (pause/return to LIMA AI OS contract work), or
+  - Option B (review/refresh mock contract UI copy if needed).
+- Keep runtime implementation blocked until explicit Phil approval.

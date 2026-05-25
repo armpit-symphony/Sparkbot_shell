@@ -2,64 +2,47 @@
 
 Updated: 2026-05-24
 
-Context: active staging baseline lock is complete on `active-staging-baseline-lock` (`1f4ff3b`), based on `static-shell-mock-contract-baseline` (`d6a528f`).
+Context: active staging baseline lock is `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`), based on `active-staging-baseline-lock` (`9142f71`).
 Release status: `GREEN_CANDIDATE`, `NOT_RELEASED`, no runtime behavior.
 
-## Decision Options
+## Option A — Pause / Preserve Static Baseline
 
-### Option A — Pause / Preserve Static Baseline
+- keep `armpit-symphony/Sparkbot_shell` as a static staging shell
+- benefits: maximal safety, least risk, strongest source-boundary control
+- costs: slower demo-product momentum
+- cleanup: periodic doc/link refresh and boundary revalidation
 
-- **When to use:** if Phil wants no immediate movement.
-- **What it means:** keep `armpit-symphony/Sparkbot_shell` as a static staging shell.
-- **Pros:** maximal safety, no drift, strongest source-boundary control.
-- **Cons:** slower momentum.
-- **Required cleanup:** ensure wave docs and artifact checks stay current.
-- **Notes:** good if focus shifts back to LIMA contract architecture first.
+## Option B — Mock LIMA Contract UI Review/Polish Only
 
-### Option B — Mock LIMA Contract UI Display
+- keep the current static UI-display and refresh copy/discoverability only
+- benefits: cleaner public-facing messaging without runtime risk
+- constraints: no runtime calls, no provider/model/connector integration
+- required: maintain current no-side-effect invariant labels
 
-- **When to use:** if Phil wants visible contract-demo value next.
-- **What it means:** render contract mock payloads in shell UI only (no runtime integration).
-- **Pros:** user-facing clarity for future path, low risk, good demo alignment.
-- **Cons:** does not provide runtime functionality.
-- **Required cleanup:** add fixture-driven mock readers and safe missing/malformed-state UX (non-authoritative labels).
-- **Required gates:** no fetch/network, no provider/model calls, no dispatch.
+## Option C — Frontend-Only Mock Contract Response Expansion
 
-### Option C — Wave 2 Frontend-Only Import Planning
+- add more static mock contract examples only (data + presentation)
+- benefits: richer contract-readiness discovery
+- constraints: still zero runtime, no actions, no fetch/network
 
-- **When to use:** if Phil wants broader planning after baseline lock.
-- **What it means:** classify more R&D frontend areas; no code import yet.
-- **Pros:** increases options for later static enrichment.
-- **Cons:** adds planning overhead.
-- **Required cleanup:** keep strict no-runtime and no-direct-copy posture.
+## Option D — Begin Functional Contract Runtime Planning
 
-### Option D — Release-Candidate Branch Consolidation / Merge
+- docs + architecture planning for future runtime contract integrations
+- explicitly requires Phil approval before implementation
+- must preserve no runtime behavior in this branch
 
-- **When to use:** if Phil wants branch-level lock before any release decision or movement.
-- **What it means:** keep this consolidated baseline branch as canonical handoff.
-- **Pros:** creates clean audit trail for Option D later.
-- **Cons:** still no release action.
-- **Required cleanup:** confirm all required docs and artifacts references are on this branch.
+## Option E — Wave 2 Source Import Planning
 
-### Option E — Official Repo-Home Decision
+- classify more Sparkbot frontend surfaces for potential static import
+- keep no direct runtime import, no R&D source copy
 
-- **When to use:** if Phil wants to choose where full official shell will live.
-- **What it means:** decide final destination later (currently `TBD`).
-- **Pros:** preserves governance and repo clarity.
-- **Cons:** until decided, official release operations remain blocked.
-- **Required cleanup:** keep routing and branding docs current.
+## Option F — Public Release Action
 
-### Option F — Public Preview Release Action
+- release actions only with explicit Phil approval
+- still requires repo home/version/tag/destination/announcement decisions
 
-- **When to use:** only after explicit Phil release approval.
-- **What it means:** tag/upload/announcement/publish with finalized destination/version.
-- **Pros:** advances to public distribution.
-- **Cons:** currently high risk if any boundary is incomplete.
-- **Required cleanup:** explicit approval for repo home, version/tag, artifact destination, release note/changelog, announcement policy.
+## Recommendation
 
-## Recommended Default
-
-- **Default now:** **Option B** (mock LIMA contract UI display, frontend/static only).
-- **Alternative:** **Option A** (pause and return to LIMA AI OS universal contract work).
-- Runtime implementation should remain off.
-- Option D remains blocked until explicit release approval.
+- **Preferred next**: Option A or B.
+- Option B should be a review-only cleanup pass if Phil wants immediate visual/clarity confirmation.
+- Runtime implementation is still blocked.

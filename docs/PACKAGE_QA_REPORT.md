@@ -2,8 +2,8 @@
 
 Updated: 2026-05-24
 
-Branch: `mock-lima-contract-ui-display`
-Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
+Branch: `active-staging-baseline-mock-lima-ui-lock`
+Base checkpoint commit: `9142f71` (`active-staging-baseline-lock`)
 
 ## Locked Preview Package
 
@@ -14,7 +14,7 @@ Base checkpoint commit: `1f4ff3b` (`static-shell-mock-contract-baseline`)
 - Final public repo/home: TBD.
 
 This artifact is for internal/staging review only. It is not a final public release, npm publication, tag, or upload.
-This mock LIMA contract UI-display pass adds static UI/data files and docs updates only, and does not change the package allowlist.
+This mock LIMA contract UI-display lock adds static UI/data files and docs updates only, and does not change the package allowlist.
 
 ## Package Dry Run
 
@@ -113,7 +113,7 @@ No repo-only staging docs, source files, scripts, dependency folders, logs, env 
 
 ## Checkpoint Baseline
 
-- Current checkpoint branch: `active-staging-baseline-lock`.
+- Current checkpoint branch: `active-staging-baseline-mock-lima-ui-lock`.
 - Release posture remains `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
 
 ## Connector/private recall classification

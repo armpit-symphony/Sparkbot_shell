@@ -2,8 +2,8 @@
 
 Updated: 2026-05-24
 
-- Baseline branch: `static-shell-mock-contract-baseline`
-- Baseline commit: `1f4ff3b`
+- Baseline branch: `active-staging-baseline-mock-lima-ui-lock`
+- Baseline commit: `bbc4ebd`
 - Staging repo: `armpit-symphony/Sparkbot_shell`
 - Current public repo/home: `TBD`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
@@ -12,7 +12,7 @@ Updated: 2026-05-24
 
 ## Baseline Summary
 
-This is the consolidated handoff point for the static Sparkbot_shell preview branch after:
+This is the consolidated handoff point for the static Sparkbot_shell baseline after:
 
 - Wave 1 frontend-only adaptation execution:
   - Workstation visual layout refinement
@@ -21,7 +21,7 @@ This is the consolidated handoff point for the static Sparkbot_shell preview bra
   - Docs/info visual refinement
 - Wave 1 checkpoint/audit closure
 - Mock LIMA contract planning completion
-- Static-shell baseline consolidation
+- Mock LIMA contract UI display lock-in
 
 ## What Is Complete
 
@@ -31,14 +31,14 @@ This is the consolidated handoff point for the static Sparkbot_shell preview bra
   - Model/seat/posture copy + static setup language
   - files/memory/tasks fixture surfaces
   - Robo teaser area
-  - LIMA readiness/contract readiness panel
+  - LIMA readiness/contract-readiness panel
 - Release readiness and packaging metadata are stable:
   - package: `0.8.0-layer8-preview`
   - artifact name: `sparkbot-shell-preview-0.8.0-layer8`
   - preview artifact location generated from allowlist
 - Safety/posture documentation is present and aligned:
   - GREEN_CANDIDATE + static-only caveats
-  - no runtime/runtime calls
+  - no runtime calls
   - no persistence/connector/provider dispatch
   - final repo/home remains `TBD`
 - Mock LIMA contract planning artifacts are in place:
@@ -47,7 +47,10 @@ This is the consolidated handoff point for the static Sparkbot_shell preview bra
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
-- Wave 1 artifact and readiness docs remain open for consolidation review.
+  - `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
+- Mock LIMA contract UI display is now locked in the shell UI:
+  - `src/data/mockLimaContracts.ts`
+  - `src/components/MockLimaContractPanel.tsx`
 
 ## What Is Intentionally Absent
 
@@ -63,19 +66,27 @@ This is the consolidated handoff point for the static Sparkbot_shell preview bra
 - No LIMA runtime integration
 - No Sparkbot R&D source copied in this branch
 
-## Mock LIMA Contract Planning Summary
+## Mock LIMA Contract Baseline Summary
 
-The branch now includes contract-first planning for future integration and remains docs/fixtures only:
+The branch includes static contract previews for:
 
-- planned contract data families: workstation, roundtable, model seats, context, guardian posture, robo teaser, readiness status
-- each mock family carries non-authoritative and no-side-effect invariants
-- explicit forbidden actions remain in place (`execution_allowed: false`, `dispatch_allowed: false`, etc.)
+- Workstation state
+- Round Table meeting
+- model/seat stack
+- file/memory/task context
+- Guardian posture
+- Robo teaser contract readiness
+- release readiness status
+
+Each example carries non-authoritative and explicit no-side-effect invariants:
+`execution_allowed: false`, `dispatch_allowed: false`, `provider_calls_allowed: false`,
+`connector_calls_allowed: false`, `lima_runtime_active: false`.
 
 ## Next Recommended Options
 
-This baseline is now the active staging baseline and is ready to support one of the following next paths:
+This baseline is now the active staging baseline and supports:
 
-- **Option B (preferred)**: continue mock LIMA contract UI display prep (frontend/static only).
+- **Option B (implemented)**: continue with static mock LIMA contract UI visibility as already locked.
 - **Option A (alternative)**: hold this clean static baseline while LIMA AI OS universal contract work advances.
 - **Option D prep**: release-candidate branch consolidation only (no release action).
 

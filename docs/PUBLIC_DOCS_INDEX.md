@@ -7,12 +7,13 @@ This is the user-facing docs index for future public release artifacts. It is se
 Public artifacts should contain only clean docs that help users install, understand, and safely use Sparkbot Shell. Repo staging docs can remain in git, but generated public artifacts must exclude extraction maps, R&D path maps, internal extraction planning, private/source-boundary notes, no-go/internal readiness docs, and staging implementation planning.
 
 Current release posture: `GREEN_CANDIDATE`, `NOT_RELEASED`, `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT`.
-Option B mock-LIMA contract UI-display is complete. Option A pause/return-to-LIMA is the alternative. Official repo home remains `TBD`.
+Active lock branch: `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`).
+Option B mock-LIMA contract UI-display is complete and locked. Option A pause/return-to-LIMA is the alternative. Official repo home remains `TBD`.
 Option D is blocked until Phil approves final repo home, final version/tag, artifact destination, and announcement policy.
 
 Current static shell preview status: ready for internal/staging preview artifact generation after public docs/package QA. MIT license, artifact naming, and package/version label are locked for this static preview. Physical/mobile browser review passed on 2026-05-23 for this branch and should be re-run if UI/layout/artifact content changes.
 Latest staging pass adds final product-demo polish for storyline clarity, fixture cohesion, and visual consistency.
-Latest planning pass includes Wave 1 consolidation and mock LIMA contract planning docs. No source import executed yet.
+Latest planning pass includes Wave 1 consolidation, mock LIMA contract planning docs, and mock LIMA contract UI-display lock.
 Current Wave 1 pass completes Workstation, Round Table, Model stack/Invite Wing, and Docs/info visual adaptations as manual static refinement only (no runtime/API/storage additions).
 Current pass also adds mock LIMA contract UI-display in static shell surfaces, with no runtime integration.
 
@@ -109,6 +110,8 @@ Keep these in the repo for auditability, but exclude them from public release ar
 - [LIMA contract frontend readiness](LIMA_CONTRACT_FRONTEND_READINESS.md)
 - [LIMA contract stop gates](LIMA_CONTRACT_STOP_GATES.md)
 - [Mock LIMA contract UI plan](MOCK_LIMA_CONTRACT_UI_PLAN.md)
+- [Mock LIMA UI baseline lock](MOCK_LIMA_UI_BASELINE_LOCK.md)
+- [Post mock-LIMA UI decision gate](POST_MOCK_LIMA_UI_DECISION_GATE.md)
 
 ## Release Artifact Rule
 

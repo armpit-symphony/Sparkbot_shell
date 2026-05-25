@@ -62,7 +62,7 @@ LIMA may return:
 - No runtime endpoint is used.
 - Contract examples are static fixtures only and render under advisory labels.
 - Workstation and Command Center surfaces now include the mock contract preview to make the future contract lane discoverable.
-- Current branch (`mock-lima-contract-ui-display`) adds this pass only as static contract UI visibility, with no runtime boundary changes.
+- Current branch (`active-staging-baseline-mock-lima-ui-lock`) adds this pass only as static contract UI visibility, with no runtime boundary changes.
 
 ## Current Wave 1 Connection
 

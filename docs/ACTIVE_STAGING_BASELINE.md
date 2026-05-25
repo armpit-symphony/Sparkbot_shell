@@ -4,10 +4,10 @@ Updated: 2026-05-24
 
 ## Active Baseline
 
-- Active branch: `active-staging-baseline-lock`
-- Active commit: `1f4ff3b`
-- Base branch: `static-shell-mock-contract-baseline`
-- Base commit: `d6a528f`
+- Active branch: `active-staging-baseline-mock-lima-ui-lock`
+- Active commit: `bbc4ebd`
+- Base branch: `active-staging-baseline-lock`
+- Base commit: `9142f71`
 - Artifact path: `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 - Artifact name: `sparkbot-shell-preview-0.8.0-layer8`
 - Package/version label: `0.8.0-layer8-preview`
@@ -30,10 +30,10 @@ Updated: 2026-05-24
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
-- Option B mock-LIMA contract UI display is now implemented in `mock-lima-contract-ui-display`:
+- Option B mock-LIMA contract UI display is locked in this branch:
   - `src/data/mockLimaContracts.ts`
   - `src/components/MockLimaContractPanel.tsx`
-  - Workstation and command-center placement in shell routes
+  - Workstation and docs-ready placement in shell routes
 - Release routing correction and baseline framing docs remain included:
   - `docs/OFFICIAL_PUBLIC_REPO_READINESS.md`
   - `docs/RELEASE_ROUTING_CORRECTION.md`
@@ -60,7 +60,7 @@ Updated: 2026-05-24
 - `git diff --check`: PASS
 - `npm run build`: PASS
 - `npm run package:preview`: PASS
-- `npm pack --dry-run --json`: PASS (verified from `C:\Users\limap\Sparkbot_shell`).
+- `npm pack --dry-run --json`: PASS
 - `node --check scripts/package-preview.mjs`: PASS
 - source-boundary checks: no `backend/`, `src-tauri/`, `.github/`, `.agents/`
 - forbidden API scan: no disallowed patterns found
@@ -71,21 +71,22 @@ Updated: 2026-05-24
 ## Branch Lineage Check (Locked Baseline)
 
 - Confirmed ancestry through:
-  - `static-shell-mock-contract-baseline` (`d6a528f`)
+  - `active-staging-baseline-lock` (`9142f71`)
+  - `static-shell-mock-contract-baseline` (`1f4ff3b`)
   - `mock-lima-contract-planning` (`d6a528f`)
   - `frontend-only-wave1-checkpoint-audit` (`61a08b6`)
   - `frontend-only-docs-info-static-adaptation` (`8e0fba1`)
   - `frontend-only-model-seat-static-adaptation` (`2d5e4f1`)
   - `frontend-only-roundtable-static-adaptation` (`7ba0373`)
   - `frontend-only-workstation-static-adaptation` (`c7d5f31`)
-- No newer required Wave 1 or mock-contract planning work is stranded on those branches.
+- No required Wave 1 or mock-contract planning work is stranded on those branches.
 
 ## Next Allowed Paths
 
-- Continue static-only demo readiness work.
-- Optionally add mock-LIMA contract UI display (docs/fixtures-driven) in the shell UI only.
-- Continue source-boundary and packaging sanity checks.
-- Prepare next decision packets without runtime implementation.
+- Maintain current static-only and boundary-safe posture.
+- Preserve this as the active staging baseline.
+- Run no runtime implementation in this consolidation phase.
+- Prepare release routing or planning only.
 
 ## Forbidden Paths Until Explicit Approval
 
@@ -100,12 +101,11 @@ Updated: 2026-05-24
 
 ## Current Status
 
-This branch is the official staging baseline context for current Sparkbot Shell work, with the lock committed on
-`active-staging-baseline-lock`.
-It is not yet a public release and should not be treated as a final public candidate.
+This branch is the active staging baseline for Sparkbot Shell work.
+It is not a public release and should not be treated as final.
 
 ## Current Pass Overlay
 
-- Current branch: `mock-lima-contract-ui-display` (extends `active-staging-baseline-lock`).
-- Added static mock LIMA contract display UI only.
-- No runtime changes; no boundary or release-state changes.
+- Current branch: `active-staging-baseline-mock-lima-ui-lock` (locks `mock-lima-contract-ui-display`).
+- Mock LIMA contract UI-display is static only.
+- No runtime behavior changes; no source-boundary or release-state changes.

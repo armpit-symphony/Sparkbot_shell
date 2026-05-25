@@ -4,13 +4,14 @@ Updated: 2026-05-24
 
 ## Purpose
 
-This audit records the consolidated static-shell baseline for the current branch and confirms that all required safety, runtime-absence, and release-posture gates remain in place.
+This audit records the current static-shell staging baseline and confirms that safety, runtime-absence, and release-posture gates remain in place after mock LIMA contract UI-display lock.
 
 ## Audit Inputs
 
-- Baseline branch: `static-shell-mock-contract-baseline`
-- Baseline commit: `1f4ff3b` (active lock branch `active-staging-baseline-lock`)
-- Parent branch: `frontend-only-wave1-checkpoint-audit` (`61a08b6`)
+- Baseline branch: `active-staging-baseline-mock-lima-ui-lock`
+- Baseline commit: `bbc4ebd`
+- Parent branch: `active-staging-baseline-lock` (`9142f71`)
+- Parent baseline: `static-shell-mock-contract-baseline` (`1f4ff3b`)
 - Source reference repo: `armpit-symphony/Sparkbot` (read-only only)
 - Artifacts examined: static preview artifact under `preview-artifacts/sparkbot-shell-preview-0.8.0-layer8/`
 
@@ -23,11 +24,12 @@ This audit records the consolidated static-shell baseline for the current branch
 - `src/components/GuardrailProfileShell.tsx`
 - `src/components/LimaReadyLayerPanel.tsx`
 - `src/components/StaticFixtureContentPreview.tsx`
+- `src/components/MockLimaContractPanel.tsx`
 - `src/data/demoFixtureContent.ts`
+- `src/data/mockLimaContracts.ts`
 - `src/pages/DocsPage.tsx`
 - `src/styles.css`
-- `README.md`
-- `docs/` handoff and readiness documents
+- `docs/` handoff/readiness and contract-planning documents
 
 ## Baseline Feature Checks
 
@@ -39,6 +41,7 @@ This audit records the consolidated static-shell baseline for the current branch
 - Robo teaser only: present
 - LIMA readiness panel/text: present
 - docs/info command-center: present
+- Mock LIMA contract UI display: present
 
 ## Source Boundary Check
 
@@ -61,7 +64,7 @@ Result: no hits in current source code for this baseline pass.
 
 ## Runtime Absence Check
 
-No runtime behavior was introduced in this consolidation pass:
+No runtime behavior was introduced in this lock pass:
 
 - no runtime networking/provider calls
 - no connector calls
@@ -77,26 +80,43 @@ No runtime behavior was introduced in this consolidation pass:
 
 - `npm run build`: pass
 - `npm run package:preview`: pass
-- `npm pack --dry-run --json`: pass.
+- `npm pack --dry-run --json`: pass
 - `node --check scripts/package-preview.mjs`: pass
-- Source files for public preview remain on allowlist in package output
-- `public artifact scan` confirms static docs/shell output only
+- Public-safe allowlist enforcement remains intact
+- Source files remain excluded from package payload via allowlist config
 
-## Docs/Readiness Checks
+## Docs / Readiness Checks
 
 - `GREEN_CANDIDATE` and `NOT_RELEASED` remain consistent across primary readiness docs
 - `NO_TAG`, `NO_UPLOAD`, `NO_ANNOUNCEMENT` remain enforced
 - final repo/home status remains `TBD`
-- mock LIMA planning docs exist and are clearly separated from preview artifacts
+- mock LIMA contract planning and UI-display docs are present and scoped
 
 ## Public/Private Boundary Check
 
-- Public artifacts and public-facing docs remain static only
-- Runtimes/wiring and private implementation references remain in repo-only planning docs
+- Public artifacts and public-facing docs remain static-only
+- Runtime/wiring and private implementation references remain in repo-only planning docs
 - release routing keeps this repo as active staging workspace
 
-## Risk Notes
+## Included / Locked Surfaces
 
-- Docs/index links are long; stale external-link references should be rechecked during every branch consolidation.
-- Any future source import remains out-of-scope until a separate approval.
-- Runtime-contract execution remains blocked by explicit stop gates.
+- Wave 1 static adaptations are present (Workstation/Round Table/Model/Invite/Docs-info).
+- Mock LIMA contract planning docs and fixture schema are present.
+- Mock LIMA contract UI-display implementation is present and static.
+
+## Baseline Lineage
+
+- Confirmed ancestry through:
+  - `active-staging-baseline-lock` (`9142f71`)
+  - `static-shell-mock-contract-baseline` (`1f4ff3b`)
+  - `mock-lima-contract-planning` (`d6a528f`)
+  - `frontend-only-wave1-checkpoint-audit` (`61a08b6`)
+  - `frontend-only-docs-info-static-adaptation` (`8e0fba1`)
+  - `frontend-only-model-seat-static-adaptation` (`2d5e4f1`)
+  - `frontend-only-roundtable-static-adaptation` (`7ba0373`)
+  - `frontend-only-workstation-static-adaptation` (`c7d5f31`)
+
+## Remaining Risks
+
+- Doc-link hygiene should be rechecked on future merges.
+- No runtime planning or contract execution is approved in this lock state.

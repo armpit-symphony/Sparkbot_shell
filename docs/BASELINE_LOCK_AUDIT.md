@@ -4,16 +4,16 @@ Updated: 2026-05-24
 
 ## Audit Purpose
 
-This document records the lock event for making `static-shell-mock-contract-baseline` the active staging baseline on `active-staging-baseline-lock`.
+This document records the lock event for making `active-staging-baseline-mock-lima-ui-lock` the active staging baseline.
 
 ## Baseline/Branch Lineage
 
-- Locked branch: `active-staging-baseline-lock`
-- Locked commit: `1f4ff3b`
-- Parent baseline: `static-shell-mock-contract-baseline` (`d6a528f`)
-- Source reference repo: `armpit-symphony/Sparkbot` (read-only review only)
+- Locked branch: `active-staging-baseline-mock-lima-ui-lock`
+- Locked commit: `bbc4ebd`
+- Parent baseline: `active-staging-baseline-lock` (`9142f71`)
+- Source reference: `armpit-symphony/Sparkbot` (read-only review only)
 
-Branch lineage confirmed:
+## Branch Lineage Included
 
 - `frontend-only-wave1-checkpoint-audit` (`61a08b6`) is included.
 - `frontend-only-docs-info-static-adaptation` (`8e0fba1`) is included.
@@ -21,12 +21,9 @@ Branch lineage confirmed:
 - `frontend-only-roundtable-static-adaptation` (`7ba0373`) is included.
 - `frontend-only-workstation-static-adaptation` (`c7d5f31`) is included.
 - `mock-lima-contract-planning` (`d6a528f`) is included.
-
-No required Wave 1 or contract-planning work is stranded on those branches relative to this lock branch.
+- `static-shell-mock-contract-baseline` (`1f4ff3b`) is included.
 
 ## Files/Surfaces Audited
-
-Frontend surfaces:
 
 - `src/App.tsx`
 - `src/components/WorkstationShell.tsx`
@@ -35,46 +32,24 @@ Frontend surfaces:
 - `src/components/GuardrailProfileShell.tsx`
 - `src/components/LimaReadyLayerPanel.tsx`
 - `src/components/StaticFixtureContentPreview.tsx`
+- `src/components/MockLimaContractPanel.tsx`
 - `src/data/demoFixtureContent.ts`
+- `src/data/mockLimaContracts.ts`
 - `src/pages/DocsPage.tsx`
 - `src/styles.css`
-
-Readiness/docs set:
-
-- `docs/CURRENT_PUBLIC_RELEASE_HANDOFF.md`
-- `docs/STATIC_SHELL_BASELINE_HANDOFF.md`
-- `docs/STATIC_SHELL_BASELINE_AUDIT.md`
-- `docs/ACTIVE_STAGING_BASELINE.md`
-- `docs/BASELINE_LOCK_AUDIT.md`
-- `docs/WAVE_1_CHECKPOINT_AUDIT.md`
-- `docs/WAVE_1_STATIC_DEMO_BASELINE.md`
-- `docs/LIMA_CONTRACT_*.md`
-- `docs/LIMA_AI_OS_INSTALL_READINESS.md`
-- `docs/SHELL_VS_OS_BOUNDARY.md`
-- `docs/PUBLIC_PREVIEW_RELEASE_CANDIDATE.md`
-- `docs/PUBLIC_PREVIEW_READINESS_SUMMARY.md`
-- `docs/PACKAGE_QA_REPORT.md`
-- `docs/PUBLIC_ARTIFACT_MANIFEST.md`
-- `docs/NEXT_PHASE_DECISION_MATRIX.md`
-- `docs/NEXT_RELEASE_ACTIONS.md`
-- `README.md`
+- Key release/readiness docs and mock-contract planning docs
 
 ## Validation Commands Run
 
 - `git diff --check`
 - `npm run build`
 - `npm run package:preview`
-- `npm pack --dry-run --json` (PASS from repository root `C:\Users\limap\Sparkbot_shell`).
+- `npm pack --dry-run --json` (PASS)
 - `node --check scripts/package-preview.mjs`
-- Markdown link check (best-effort path/manual)
+- markdown link check (best effort)
 - runtime/persistence scan over `src`
 - source-boundary check for `backend/`, `src-tauri/`, `.github/`, `.agents/`
-- forbidden API scan:
-  - `fetch`, `axios`, `WebSocket`, `EventSource`
-  - `localStorage`, `sessionStorage`, `document.cookie`
-  - `process.env`, `import.meta.env`
-  - `fs`, `child_process`
-- fixture/docs secret-like string scan (keys/tokens patterns)
+- forbidden API scan
 - preview artifact high-risk scan
 - secret/private scan
 - `npm run lint` (not configured)
@@ -85,12 +60,6 @@ Readiness/docs set:
 - `src-tauri/`: absent
 - `.github/`: absent
 - `.agents/`: absent
-
-No source-boundary regression observed.
-
-## Forbidden API Result
-
-No forbidden APIs were found in current source.
 
 ## Runtime/Behavior Result
 
@@ -110,10 +79,3 @@ No forbidden APIs were found in current source.
 - No public upload
 - No announcement
 - Option D remains blocked pending Phil explicit approval
-
-## Remaining Risks (Low / Controlled)
-
-- Documentation index still contains numerous repo-only planning docs; avoid treating all as release-ready.
-- Best-effort link scan is periodic and should be repeated with any major link churn.
-- Physical-device QA was preserved from prior passes but should be re-run for any layout-level changes.
-- Public repo/home decision is still `TBD`, so any release-routing step remains deferred.

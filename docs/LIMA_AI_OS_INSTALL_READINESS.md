@@ -84,7 +84,7 @@ Robo remains teaser-only in the public shell. Any robotics, drone, humanoid, dev
 
 ## Mock Contract Planning (Current Phase)
 
-Current status is now at completion for Phases 1 through 3 for UI-readiness visibility:
+Current status is now at completion for Phases 1 through 3 for UI-readiness visibility (current locked branch `active-staging-baseline-mock-lima-ui-lock`):
 
 - contract-first docs are now complete,
 - mock contract schemas and fixture examples are complete in repo planning docs,

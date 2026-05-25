@@ -14,64 +14,36 @@
 
 ## What Passed
 
-- Branch lineage up to `public-release-record-physical-qa-pass`, plus staging corrections and frontend-only readiness passes.
+- Branch lineage up to `public-release-record-physical-qa-pass`, plus Wave 1 and mock-contract planning/source lock consolidation.
 - Physical mobile QA pass recorded.
 - Static package preview packaging and allowlist checks completed.
 - Source-boundary checks completed for `backend/`, `src-tauri/`, `.github/`, `.agents/`.
-- No runtime wiring introduced by this branch.
+- No runtime wiring introduced by this lock pass.
 - Static fixture-content pass completed for Files, Memory, Tasks, and Demo Room preview surfaces.
-- Final frontend-only product-demo polish pass completed for storyline, copy density, and visual consistency.
-- Wave 1 candidate #1 completed: Workstation visual layout refined via manual static adaptation from R&D reference concepts.
-- Wave 1 candidate #2 completed: Round Table visual flow refined via manual static adaptation from R&D reference concepts.
-- Wave 1 candidate #3 completed: Model stack + Invite Wing visual flow refined via manual static adaptation from R&D reference concepts.
-- Wave 1 candidate #4 completed: Docs/info visual refinement completed via manual static adaptation from R&D + shell docs concepts.
-- Wave 1 checkpoint/audit baseline is consolidated on `active-staging-baseline-lock` (`1f4ff3b`), including `static-shell-mock-contract-baseline` content.
-- Mock LIMA contract planning docs/fixtures completed:
+- Final frontend-only product-demo polish pass completed.
+- Wave 1 candidates 1-4 completed as manual static adaptations.
+- Wave 1 checkpoint/audit baseline is consolidated on `active-staging-baseline-mock-lima-ui-lock` (`bbc4ebd`), including prior `static-shell-mock-contract-baseline` content.
+- Mock LIMA contract planning completed:
   - `docs/LIMA_CONTRACT_LAYER_PLAN.md`
   - `docs/LIMA_CONTRACT_MOCK_SCHEMA.md`
   - `docs/LIMA_CONTRACT_FIXTURES.md`
   - `docs/LIMA_CONTRACT_FRONTEND_READINESS.md`
   - `docs/LIMA_CONTRACT_STOP_GATES.md`
   - `docs/MOCK_LIMA_CONTRACT_UI_PLAN.md`
-- Option B mock LIMA contract UI display pass implemented in UI:
+- Mock LIMA contract UI-display is locked in shell UI:
   - `src/data/mockLimaContracts.ts`
   - `src/components/MockLimaContractPanel.tsx`
-  - `src/components/WorkstationShell.tsx`
-  - `src/components/LimaReadyLayerPanel.tsx` placement context updated in `src/App.tsx` and `src/pages/DocsPage.tsx`.
+  - placement in Workstation / Docs surfaces
 
 ## What is Included
 
 - Static shell UI and public demo surfaces.
-- Frontend-only MVP status/copy polish for `GREEN_CANDIDATE` and `NOT_RELEASED` visibility.
-- Polished Workstation, Round Table, model-stack, Guardian basics, Robo teaser, and LIMA readiness copy.
-- Round Table visual refinement:
-  - meeting mission and chair/manager emphasis
-  - stage rail from intake through artifact/notes
-  - owner interrupt posture panel
-  - seat/model summary cards
-  - recommendation artifact and follow-up fixture package
-  - explicit static/runtime boundary badges
-- Model stack + Invite Wing visual refinement:
-  - clearer seat-role hierarchy for Primary, Backup 1, Backup 2, Heavy Hitter, and BYO Invite Wing
-  - static setup-flow lane for future provider onboarding posture
-  - explicit no-key/no-provider/no-routing-runtime labels
-  - stronger tie-in counters for Round Table seat visibility and specialty coverage
-- Workstation AI-office floor grouping refinement:
-  - Sparkbot main desk
-  - model stack desks (Primary, Backup 1, Backup 2, Heavy Hitter)
-  - invite/model seat concept
-  - specialty wing context
-  - Round Table hub prominence
-  - fixture context tie-in
-  - Guardian basics / Robo teaser / LIMA readiness placement
-- Final product-demo storyline polish for top-level shell flow and cross-surface readability.
-- Documentation boundary and release staging docs.
-- Static previews for Workstation, Round Table, agent seats, connectors, and Robo teaser.
-- Static fixture previews for file/document workspace, memory shelf, task/reminder board, and demo room context.
-- Static `LIMA AI OS ready layer` panel and phased contract-install messaging.
-- Optional mock contract preview payload family (offline planning) plus static UI display implementation.
-- MIT licensing and artifact lock metadata.
-- Public-facing caveats around static-only behavior.
+- `GREEN_CANDIDATE` / `NOT_RELEASED` visibility.
+- Workstation + Round Table + model-seat + Guardian basics + Robo teaser + LIMA readiness copy.
+- Static fixture previews for file/memory/task and demo room context.
+- Contract examples for workstation, meeting, model seats, context, Guardian posture, Robo teaser, and release readiness.
+- Static-only boundary badges and no-side-effect invariants.
+- MIT licensing and package metadata.
 
 ## What is Excluded
 
@@ -89,15 +61,12 @@
 
 - Candidate remains internal/staging static readiness only.
 - `Option D` remains blocked pending Phil approval for final repo home (TBD), version/tag, artifact destination, and announcement policy.
-- No direct R&D source code copy was used for Wave 1 candidate #1.
-- No direct R&D source code copy was used for Wave 1 candidate #2.
-- No direct R&D source code copy was used for Wave 1 candidate #3.
-- No direct R&D source code copy was used for Wave 1 candidate #4.
-- No direct R&D source code copy in this consolidated checkpoint/audit branch is present.
+- No direct R&D source copy was used in this lock branch.
+- Mock contract UI display is static rendering only.
 
 ## Branch Baseline / Consolidation Status
 
-- This is the consolidated static baseline for current work.
-- Parent/lineage base: `mock-lima-contract-planning` (`61a08b6`) with active lock at `1f4ff3b` on `active-staging-baseline-lock`.
-- Wave 1 source adaptation is intentionally closed at this checkpoint pending Phil decision.
-- Current branch `mock-lima-contract-ui-display` adds only Option B mock-contract UI-display refinements and does not advance release posture.
+- This is the consolidated static baseline lock for current work.
+- Parent lineage base: `active-staging-baseline-lock` (`9142f71`) with active lock at `bbc4ebd`.
+- This branch is `active-staging-baseline-mock-lima-ui-lock`.
+- Wave 1 source adaptation is intentionally closed pending next routing/decision approval.
