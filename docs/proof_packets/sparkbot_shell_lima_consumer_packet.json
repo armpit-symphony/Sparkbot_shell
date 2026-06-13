@@ -1,0 +1,164 @@
+{
+  "consumer_name": "Sparkbot Shell",
+  "repo": "https://github.com/armpit-symphony/Sparkbot_shell",
+  "shell_type": "react_static_preview_shell",
+  "current_status": {
+    "release_posture": "GREEN_CANDIDATE",
+    "runtime": "static_preview_only",
+    "readiness": "not_ready_for_runtime"
+  },
+  "runtime_integration_status": {
+    "lima_runtime_wired": false,
+    "guardian_gate_active": false,
+    "safe_runtime_flags_supported": [
+      "runtime_active=false",
+      "execution_allowed=false",
+      "persistence_allowed=false",
+      "dispatch_allowed=false",
+      "connector_calls_allowed=false",
+      "model_provider_calls_allowed=false"
+    ],
+    "blocked_actions": [
+      "provider_calls",
+      "connector_calls",
+      "tool_calls",
+      "file_mutation",
+      "network_outbound",
+      "secret_handling",
+      "robotics_control"
+    ]
+  },
+  "public_api_expectation": "No public runtime API in current shell. Public surfaces should emit structured preview envelopes only (ConsumerRequest/TI/TaskIntent -> CandidatePreview -> RuntimeStateSnapshot) via LIMA boundary when introduced.",
+  "proposed_contracts": [
+    {
+      "surface": "workstation_overview",
+      "candidate_type": "CandidatePreview",
+      "active_state": "preview_only",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-workstation",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "chat_channel",
+      "candidate_type": "CandidatePreview",
+      "active_state": "explain_plan",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-chat",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "roundtable_planning",
+      "candidate_type": "CandidatePreview",
+      "active_state": "explain_plan",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-roundtable",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "model_seat_setup",
+      "candidate_type": "CandidatePreview",
+      "active_state": "blocked",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-model-seats",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "memory_context",
+      "candidate_type": "CandidatePreview",
+      "active_state": "deferred",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-memory-context",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "connector_gates",
+      "candidate_type": "CandidatePreview",
+      "active_state": "deferred",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-connectors",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "guardian_posture",
+      "candidate_type": "CandidatePreview",
+      "active_state": "preview_only",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-text-only-guardian",
+        "embodiment_type": "text_only",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    },
+    {
+      "surface": "robo_teaser",
+      "candidate_type": "CandidatePreview",
+      "active_state": "deferred",
+      "embodiment_profile": {
+        "embodiment_id": "sparkbot-robotics-deferred",
+        "embodiment_type": "robotics_deferred",
+        "physical_world_target": false,
+        "emergency_stop_vocabulary_only": true
+      }
+    }
+  ],
+  "blocked_surfaces": [
+    "chat_model_routing",
+    "roundtable_runtime_execution",
+    "provider_dispatch",
+    "connector_send",
+    "connector_pin_verification",
+    "memory_writeback",
+    "audit_persistence",
+    "scheduler_jobs",
+    "robotics_control",
+    "credentials_flow"
+  ],
+  "proof_files": [
+    "docs/proof_packets/SPARKBOT_SHELL_LIMA_CONSUMER_PROOF_PACKET.md",
+    "docs/audits/SPARKBOT_SHELL_LIMA_CONSUMER_PACKET_AUDIT.md",
+    "src/components/MockLimaContractPanel.tsx",
+    "src/data/mockLimaContracts.ts",
+    "src/data/demoShellState.ts",
+    "src/data/demoContextState.ts",
+    "src/data/demoConnectorState.ts",
+    "src/data/demoTaskGuardianState.ts",
+    "src/App.tsx",
+    "src/components/ChatShell.tsx",
+    "src/components/RoundTableFlowShell.tsx",
+    "src/components/ModelConfigShell.tsx",
+    "src/components/ConnectorIdentityShell.tsx",
+    "src/components/LimaReadyLayerPanel.tsx",
+    "src/components/GuardrailProfileShell.tsx",
+    "src/components/WorkstationShell.tsx",
+    "docs/LIMA_CONTRACT_LAYER_PLAN.md",
+    "docs/LIMA_CONTRACT_STOP_GATES.md",
+    "docs/LIMA_CONTRACT_MOCK_SCHEMA.md",
+    "docs/LIMA_CONTRACT_FRONTEND_READINESS.md",
+    "docs/SHELL_VS_OS_BOUNDARY.md"
+  ],
+  "validation_commands": [
+    "python3 --version || python --version",
+    "git diff --check",
+    "npm run build",
+    "npm run package:preview"
+  ],
+  "recommended_next_step": "Expose a LIMA intake + contract adapter service that accepts only non-side-effecting ConsumerRequest/TaskIntent previews, emits CandidatePreview with explicit safe states, and returns Guardian-owned decisions before any dispatch path is enabled."
+}
