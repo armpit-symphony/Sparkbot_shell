@@ -1,0 +1,119 @@
+{
+  "consumer_name": "Sparkbot_shell",
+  "reference_shell": "Sparkbot",
+  "api_status": "CANDIDATE_ONLY",
+  "source_branch": "sparkbot-shell-ux-state-proof-packet",
+  "runtime_behavior_added": false,
+  "lima_runtime_wiring_added": false,
+  "sparkbot_import_added": false,
+  "sparkbot_code_copied": false,
+  "haptic_implementation_added": false,
+  "shell_owns_haptics": true,
+  "lima_owns_haptics": false,
+  "required_shell_states": [
+    "received",
+    "thinking",
+    "needs_approval",
+    "blocked",
+    "explaining_plan",
+    "preview_ready",
+    "running_not_allowed_yet",
+    "completed",
+    "deferred",
+    "failed_safe"
+  ],
+  "observed_shell_states": {
+    "received": {
+      "support": "present_source",
+      "evidence": ["src/components/ChatShell.tsx"]
+    },
+    "thinking": {
+      "support": "missing",
+      "evidence": []
+    },
+    "needs_approval": {
+      "support": "docs_fixture_only",
+      "evidence": ["src/data/mockLimaContracts.ts", "src/data/demoShellState.ts"]
+    },
+    "blocked": {
+      "support": "present_source",
+      "evidence": [
+        "src/components/SetupNotice.tsx",
+        "src/components/StatusBadge.tsx",
+        "src/components/ConnectorIdentityShell.tsx",
+        "src/data/mockLimaContracts.ts"
+      ]
+    },
+    "explaining_plan": {
+      "support": "present_source",
+      "evidence": ["src/components/RoundTableFlowShell.tsx", "src/data/mockLimaContracts.ts"]
+    },
+    "preview_ready": {
+      "support": "present_source",
+      "evidence": [
+        "src/components/WorkstationShell.tsx",
+        "src/components/TaskGuardianPreview.tsx",
+        "src/components/RoundTableFlowShell.tsx",
+        "src/data/mockLimaContracts.ts"
+      ]
+    },
+    "running_not_allowed_yet": {
+      "support": "docs_fixture_only",
+      "evidence": ["README.md", "docs/BETA_LIMITATIONS.md", "src/components/WorkstationShell.tsx"]
+    },
+    "completed": {
+      "support": "present_source_local_preview_only",
+      "evidence": ["src/components/ChatShell.tsx", "src/components/RoundTableFlowShell.tsx"]
+    },
+    "deferred": {
+      "support": "present_source",
+      "evidence": ["src/data/mockLimaContracts.ts", "src/data/demoConnectorState.ts"]
+    },
+    "failed_safe": {
+      "support": "present_source_static_messaging_only",
+      "evidence": ["src/components/ConnectorIdentityShell.tsx", "src/data/demoConnectorState.ts"]
+    }
+  },
+  "missing_shell_states": [
+    "thinking"
+  ],
+  "docs_fixture_only_shell_states": [
+    "needs_approval",
+    "running_not_allowed_yet",
+    "failed_safe"
+  ],
+  "packet_statuses": [
+    "preview_only",
+    "explain_plan",
+    "blocked",
+    "deferred"
+  ],
+  "kernel_status_mappings": {
+    "proposed": "preview_only",
+    "needs_review": "explain_plan",
+    "blocked": "blocked",
+    "deferred": "packet-only for now"
+  },
+  "evidence_files": [
+    "docs/proof_packets/SPARKBOT_SHELL_UX_STATE_PROOF_PACKET.md",
+    "docs/audits/SPARKBOT_SHELL_UX_STATE_PROOF_AUDIT.md",
+    "docs/proof_packets/SPARKBOT_REFERENCE_UX_NOTES.md",
+    "src/components/ChatShell.tsx",
+    "src/components/RoundTableFlowShell.tsx",
+    "src/components/ConnectorIdentityShell.tsx",
+    "src/data/mockLimaContracts.ts",
+    "src/data/demoConnectorState.ts",
+    "src/data/demoShellState.ts"
+  ],
+  "blockers": [
+    "no live thinking or streaming state in Sparkbot_shell",
+    "no real approval enforcement or GuardianDecision path",
+    "no LIMA runtime wiring",
+    "no haptic implementation",
+    "no provider/model runtime",
+    "no connector runtime or sends",
+    "no audit persistence",
+    "no production runtime behavior"
+  ],
+  "recommended_next_step": "Add docs/tests/fixtures-only UX-state example copy and transition fixtures for Sparkbot_shell before any runtime implementation."
+}
