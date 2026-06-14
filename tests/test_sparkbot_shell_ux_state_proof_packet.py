@@ -35,6 +35,7 @@ def test_sparkbot_shell_ux_state_proof_packet_fixture() -> None:
     assert required_keys.issubset(fixture)
 
     assert fixture["runtime_behavior_added"] is False
+    assert fixture["sparkbot_shell_local_ui_behavior_added"] is True
     assert fixture["lima_runtime_wiring_added"] is False
     assert fixture["sparkbot_import_added"] is False
     assert fixture["sparkbot_code_copied"] is False
@@ -70,9 +71,13 @@ def test_sparkbot_shell_ux_state_proof_packet_fixture() -> None:
     required_docs = {
         "docs/proof_packets/SPARKBOT_SHELL_UX_STATE_PROOF_PACKET.md",
         "docs/audits/SPARKBOT_SHELL_UX_STATE_PROOF_AUDIT.md",
+        "docs/proof_packets/SPARKBOT_SHELL_THINKING_STATE_PROOF_PACKET.md",
+        "docs/audits/SPARKBOT_SHELL_THINKING_STATE_PROOF_AUDIT.md",
         "docs/proof_packets/SPARKBOT_REFERENCE_UX_NOTES.md",
     }
     assert required_docs.issubset(set(fixture["evidence_files"]))
+    assert fixture["observed_shell_states"]["thinking"]["support"] == "present_source_local_ui_only"
+    assert fixture["missing_shell_states"] == []
 
     for evidence_file in fixture["evidence_files"]:
         assert Path(evidence_file).exists()

@@ -1,0 +1,78 @@
+{
+  "proof_gap_id": "V1-G1",
+  "consumer_name": "Sparkbot_shell",
+  "reference_shell": "Sparkbot",
+  "state_name": "thinking",
+  "source_branch": "sparkbot-shell-thinking-state-proof-packet",
+  "base_branch": "sparkbot-shell-ux-state-proof-packet",
+  "source_backed_thinking": true,
+  "docs_fixture_only_thinking": false,
+  "sparkbot_shell_local_ui_behavior_added": true,
+  "thinking_source_files": [
+    "src/types/shell.ts",
+    "src/components/ChatShell.tsx",
+    "src/styles.css"
+  ],
+  "thinking_render_entrypoints": [
+    "ChatMessage.shellState",
+    "ChatShell.sendPlaceholderMessage",
+    "ChatShell transcript article className",
+    "chat-state-pill",
+    "chat-message thinking style"
+  ],
+  "state_transitions": [
+    {
+      "from": "received",
+      "to": "thinking",
+      "source": "sendPlaceholderMessage inserts a thinking assistant message after local submit"
+    },
+    {
+      "from": "thinking",
+      "to": "completed",
+      "source": "window.setTimeout replaces the thinking message with the completed local placeholder response"
+    }
+  ],
+  "desktop_behavior_reviewed": true,
+  "mobile_behavior_reviewed": true,
+  "haptics_shell_owned": true,
+  "lima_owns_haptics": false,
+  "haptic_implementation_added": false,
+  "lima_runtime_behavior_added": false,
+  "lima_runtime_wiring_added": false,
+  "sparkbot_code_copied_to_lima": false,
+  "sparkbot_import_added": false,
+  "provider_model_routing_added": false,
+  "guardian_decision_runtime_added": false,
+  "approval_enforcement_added": false,
+  "execution_dispatch_persistence_added": false,
+  "browser_file_network_device_robotics_behavior_added": false,
+  "production_readiness_claimed": false,
+  "accepted_evidence": [
+    "source-backed local in-band thinking state",
+    "received to thinking transition",
+    "thinking to completed transition",
+    "visible transcript state badge",
+    "bounded local placeholder transition"
+  ],
+  "rejected_claims": [
+    "live model streaming parity",
+    "provider/model response pacing",
+    "LIMA runtime integration",
+    "GuardianDecision authority",
+    "approval enforcement",
+    "haptic implementation",
+    "audit persistence",
+    "production readiness"
+  ],
+  "blockers_remaining": [
+    "no live model streaming parity",
+    "no real approval enforcement",
+    "no GuardianDecision path",
+    "no haptics proof",
+    "no LIMA runtime wiring",
+    "no provider/model/connector runtime",
+    "no audit persistence",
+    "no production behavior"
+  ],
+  "recommended_next_step": "Submit this packet to LIMA for source-backed thinking-state intake as evidence only."
+}

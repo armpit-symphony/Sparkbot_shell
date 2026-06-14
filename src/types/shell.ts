@@ -162,6 +162,7 @@ export type ChatMessage = {
   content: string;
   createdAt: string;
   modelSeatId?: string;
+  shellState?: "received" | "thinking" | "completed";
 };
 
 export type ChatSession = {

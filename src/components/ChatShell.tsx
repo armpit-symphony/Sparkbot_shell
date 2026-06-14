@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { MemoryContextShellState } from "../types/context";
 import type { ChatMessage, ChatSession, ModelSeat } from "../types/shell";
 import { SetupNotice } from "./SetupNotice";
@@ -12,13 +12,22 @@ type ChatShellProps = {
 };
 
 const contextChips = ["Workstation", "Round Table", "Task Guardian", "Meeting Notes", "Local AI"];
+const LOCAL_THINKING_TRANSITION_MS = 450;
 
 function newMessageId(prefix: string) {
   return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
 }
 
+function buildPlaceholderReply(selectedSeat: ModelSeat) {
+  return selectedSeat.setupStatus === "configured"
+    ? `Layer 5 placeholder response using the ${selectedSeat.label} shell selection. A later runtime layer could combine selected context sources; no provider or retrieval service was called.`
+    : `Layer 5 placeholder response: ${selectedSeat.label} is ${selectedSeat.setupStatus}, so a later runtime layer would ask for setup before calling a model or context service.`;
+}
+
 export function ChatShell({ session, modelSeats, memoryContext, onSessionChange }: ChatShellProps) {
   const [draft, setDraft] = useState("");
+  const [isLocalThinking, setIsLocalThinking] = useState(false);
+  const thinkingTimeoutRef = useRef<number | undefined>(undefined);
   const chatSeats = modelSeats.filter((seat) => seat.showInChat);
   const selectedSeat = useMemo(
     () => modelSeats.find((seat) => seat.id === session.selectedModelSeatId) ?? chatSeats[0] ?? modelSeats[0],
@@ -34,13 +43,21 @@ export function ChatShell({ session, modelSeats, memoryContext, onSessionChange 
     [memoryContext.events, memoryContext.retrievalPreview.includedSources, selectedSeat?.id],
   );
 
+  useEffect(() => {
+    return () => {
+      if (thinkingTimeoutRef.current !== undefined) {
+        window.clearTimeout(thinkingTimeoutRef.current);
+      }
+    };
+  }, []);
+
   function updateSelectedSeat(seatId: string) {
     onSessionChange({ ...session, selectedModelSeatId: seatId });
   }
 
   function sendPlaceholderMessage() {
     const trimmed = draft.trim();
-    if (!trimmed || !selectedSeat) return;
+    if (!trimmed || !selectedSeat || isLocalThinking) return;
 
     const userMessage: ChatMessage = {
       id: newMessageId("user"),
@@ -48,23 +65,40 @@ export function ChatShell({ session, modelSeats, memoryContext, onSessionChange 
       content: trimmed,
       createdAt: "Local shell state",
       modelSeatId: selectedSeat.id,
+      shellState: "received",
     };
-    const assistantMessage: ChatMessage = {
-      id: newMessageId("assistant"),
+    const thinkingMessage: ChatMessage = {
+      id: newMessageId("assistant-thinking"),
       role: "assistant",
-      content:
-        selectedSeat.setupStatus === "configured"
-          ? `Layer 5 placeholder response using the ${selectedSeat.label} shell selection. A later runtime layer could combine selected context sources; no provider or retrieval service was called.`
-          : `Layer 5 placeholder response: ${selectedSeat.label} is ${selectedSeat.setupStatus}, so a later runtime layer would ask for setup before calling a model or context service.`,
-      createdAt: "Local shell state",
+      content: `Thinking through the ${selectedSeat.label} local shell preview. No provider, retrieval service, connector, or LIMA runtime was called.`,
+      createdAt: "Local shell thinking state",
       modelSeatId: selectedSeat.id,
+      shellState: "thinking",
     };
+    const nextMessages = [...session.messages, userMessage, thinkingMessage];
 
     onSessionChange({
       ...session,
-      messages: [...session.messages, userMessage, assistantMessage],
+      messages: nextMessages,
     });
     setDraft("");
+    setIsLocalThinking(true);
+
+    thinkingTimeoutRef.current = window.setTimeout(() => {
+      const assistantMessage: ChatMessage = {
+        ...thinkingMessage,
+        content: buildPlaceholderReply(selectedSeat),
+        createdAt: "Local shell completed state",
+        shellState: "completed",
+      };
+
+      onSessionChange({
+        ...session,
+        messages: [...session.messages, userMessage, assistantMessage],
+      });
+      setIsLocalThinking(false);
+      thinkingTimeoutRef.current = undefined;
+    }, LOCAL_THINKING_TRANSITION_MS);
   }
 
   return (
@@ -87,10 +121,13 @@ export function ChatShell({ session, modelSeats, memoryContext, onSessionChange 
       <div className="chat-layout">
         <section className="chat-transcript" aria-label="Local placeholder chat transcript">
           {session.messages.map((message) => (
-            <article className={`chat-message ${message.role}`} key={message.id}>
+            <article className={`chat-message ${message.role} ${message.shellState ?? ""}`} key={message.id}>
               <div>
                 <strong>{message.role === "user" ? "You" : "Sparkbot Shell"}</strong>
-                <small>{message.createdAt}</small>
+                <small>
+                  {message.shellState ? <span className="chat-state-pill">{message.shellState}</span> : null}
+                  {message.createdAt}
+                </small>
               </div>
               <p>{message.content}</p>
             </article>
@@ -173,7 +210,9 @@ export function ChatShell({ session, modelSeats, memoryContext, onSessionChange 
             rows={3}
           />
         </label>
-        <button type="submit">Send local placeholder</button>
+        <button type="submit" disabled={isLocalThinking}>
+          {isLocalThinking ? "Thinking locally" : "Send local placeholder"}
+        </button>
       </form>
 
       <div className="runtime-boundary">

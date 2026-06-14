@@ -2,8 +2,9 @@
   "consumer_name": "Sparkbot_shell",
   "reference_shell": "Sparkbot",
   "api_status": "CANDIDATE_ONLY",
-  "source_branch": "sparkbot-shell-ux-state-proof-packet",
+  "source_branch": "sparkbot-shell-thinking-state-proof-packet",
   "runtime_behavior_added": false,
+  "sparkbot_shell_local_ui_behavior_added": true,
   "lima_runtime_wiring_added": false,
   "sparkbot_import_added": false,
   "sparkbot_code_copied": false,
@@ -28,8 +29,8 @@
       "evidence": ["src/components/ChatShell.tsx"]
     },
     "thinking": {
-      "support": "missing",
-      "evidence": []
+      "support": "present_source_local_ui_only",
+      "evidence": ["src/components/ChatShell.tsx", "src/types/shell.ts", "src/styles.css"]
     },
     "needs_approval": {
       "support": "docs_fixture_only",
@@ -74,9 +75,7 @@
       "evidence": ["src/components/ConnectorIdentityShell.tsx", "src/data/demoConnectorState.ts"]
     }
   },
-  "missing_shell_states": [
-    "thinking"
-  ],
+  "missing_shell_states": [],
   "docs_fixture_only_shell_states": [
     "needs_approval",
     "running_not_allowed_yet",
@@ -97,6 +96,8 @@
   "evidence_files": [
     "docs/proof_packets/SPARKBOT_SHELL_UX_STATE_PROOF_PACKET.md",
     "docs/audits/SPARKBOT_SHELL_UX_STATE_PROOF_AUDIT.md",
+    "docs/proof_packets/SPARKBOT_SHELL_THINKING_STATE_PROOF_PACKET.md",
+    "docs/audits/SPARKBOT_SHELL_THINKING_STATE_PROOF_AUDIT.md",
     "docs/proof_packets/SPARKBOT_REFERENCE_UX_NOTES.md",
     "src/components/ChatShell.tsx",
     "src/components/RoundTableFlowShell.tsx",
@@ -106,7 +107,7 @@
     "src/data/demoShellState.ts"
   ],
   "blockers": [
-    "no live thinking or streaming state in Sparkbot_shell",
+    "no live model streaming parity in Sparkbot_shell",
     "no real approval enforcement or GuardianDecision path",
     "no LIMA runtime wiring",
     "no haptic implementation",
@@ -115,5 +116,5 @@
     "no audit persistence",
     "no production runtime behavior"
   ],
-  "recommended_next_step": "Add docs/tests/fixtures-only UX-state example copy and transition fixtures for Sparkbot_shell before any runtime implementation."
+  "recommended_next_step": "Submit the source-backed thinking-state proof packet to LIMA for evidence-only intake."
 }

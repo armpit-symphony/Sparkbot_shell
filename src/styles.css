@@ -395,6 +395,11 @@ p {
   color: #e4f3ee;
 }
 
+.chat-message.thinking {
+  border: 1px solid #94b9aa;
+  background: #f5fbf8;
+}
+
 .chat-message div,
 .card-heading {
   display: flex;
@@ -407,6 +412,17 @@ p {
 .model-seat-card small {
   color: #6e807b;
   font-size: 0.76rem;
+}
+
+.chat-state-pill {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 2px 6px;
+  border: 1px solid #c8d9d3;
+  border-radius: 999px;
+  color: #25523f;
+  background: #f8fcfa;
+  font-weight: 800;
 }
 
 .chat-side-panel,
@@ -446,6 +462,13 @@ button {
 
 button:hover {
   background: #1d4232;
+}
+
+button:disabled {
+  border-color: #9baba5;
+  color: #f4f8f6;
+  background: #7f918b;
+  cursor: not-allowed;
 }
 
 label {

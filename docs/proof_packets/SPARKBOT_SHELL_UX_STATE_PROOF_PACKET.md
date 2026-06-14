@@ -5,7 +5,7 @@ Source repo: `armpit-symphony/Sparkbot_shell`
 Branch: `sparkbot-shell-ux-state-proof-packet`
 Requested by LIMA-AI-OS branch: `sparkbot-shell-ux-state-proof-request-gate`
 LIMA request commit: `98d190f2080bc7458ed19a8c294869e7675a2c17`
-Packet status: evidence-only, non-runtime
+Packet status: evidence-only, non-LIMA-runtime
 
 ## 1) Current Sparkbot_shell UX-state status
 
@@ -19,7 +19,7 @@ Current source supports these evidence points:
 
 | Area | Current source evidence | Proof value |
 | --- | --- | --- |
-| Chat input/output | `src/components/ChatShell.tsx` sends local user messages and immediate placeholder assistant replies in React component state. | Proves local `received` and completion-like placeholder response behavior. |
+| Chat input/output | `src/components/ChatShell.tsx` sends local user messages, renders a bounded local `thinking` assistant state, and then replaces it with a placeholder assistant reply in React component state. | Proves local `received`, `thinking`, and completion-like placeholder response behavior. |
 | Chat boundary copy | `ChatShell` states messages are not persisted, sent to a provider, saved to memory, or routed through connectors. | Proves no runtime claim in chat shell. |
 | Model-seat blocked/setup states | `src/components/StatusBadge.tsx`, `src/components/SetupNotice.tsx`, and `src/data/demoShellState.ts` expose `configured`, `setup_needed`, `disabled`, and `unreachable` states. | Proves setup/blocked-style visibility for non-ready model seats. |
 | Round Table phases | `src/components/RoundTableFlowShell.tsx` exposes local phases such as Launch, Framing, Synthesis, Assignments, Perspectives, Recommendation, and Artifact. | Proves plan/explanation and preview-ready flow structure. |
@@ -33,7 +33,7 @@ Current source supports these evidence points:
 
 | Capability | Current state |
 | --- | --- |
-| Live thinking/loading state | Missing as a real async runtime state. No streaming or model call is active. |
+| Live thinking/loading state | Present as local shell UI behavior only. No streaming or model call is active. |
 | Real approval-needed state | Docs/fixture-level only. There are approval posture labels, but no approval queue, PIN, GuardianDecision, or enforcement. |
 | Real blocked enforcement | Missing. The shell renders blocked labels and fail-closed copy only. |
 | Deferred runtime scheduling | Missing. Deferred means future-only or packet-only in this shell. |
@@ -47,7 +47,7 @@ Current source supports these evidence points:
 
 Sparkbot_shell can prove:
 
-- shell-owned local chat intake and immediate placeholder response rendering
+- shell-owned local chat intake, in-band local thinking state, and placeholder response rendering
 - visible non-ready setup/disabled/unreachable model-seat states
 - static blocked and deferred vocabulary in contract fixtures
 - connector private recall fail-closed messaging
@@ -62,7 +62,7 @@ Sparkbot_shell can prove:
 
 Sparkbot_shell cannot prove:
 
-- live answer streaming or live thinking state
+- live model answer streaming or provider-backed thinking state
 - real provider/model response pacing
 - real approval modal/inbox behavior
 - real Guardian enforcement
@@ -91,7 +91,7 @@ Sparkbot_shell should preserve that feel where practical, but it must not claim 
 | Required state | Current support | Evidence | Notes |
 | --- | --- | --- | --- |
 | `received` | Present | `ChatShell` accepts local draft text and appends a user message. | Local React state only. |
-| `thinking` | Missing | No live loading/typing/model stream in Sparkbot_shell source. | Future runtime/UI proof needed. |
+| `thinking` | Present as local shell UI state | `ChatShell` inserts a `shellState: "thinking"` assistant message and replaces it with a completed placeholder response. | Source-backed local state only; no live model stream. |
 | `needs_approval` | Docs/fixture-level | Guardrail profiles, approval posture fields, and setup notices describe future approval needs. | No real approval enforcement or inbox. |
 | `blocked` | Present as visible static state | Connector blocked state, disabled model seats, SetupNotice blocked severity, mock `active_state: blocked`. | Display only, not enforcement. |
 | `explaining_plan` | Present as static flow | Round Table phase rail, planning cards, mock `active_state: explain_plan`. | Static plan/explain posture. |
