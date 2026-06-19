@@ -1,6 +1,6 @@
 # Local AI Setup Overview
 
-Sparkbot Shell shows the planned Local AI setup shape. It does not call local model runtimes yet.
+Sparkbot Shell shows the planned Local AI setup shape. The Settings route can run explicit localhost/loopback endpoint reachability checks, but it does not send prompts, run model generation, or store credentials.
 
 ## Previewed Local AI Options
 
@@ -12,15 +12,17 @@ Sparkbot Shell shows the planned Local AI setup shape. It does not call local mo
 
 ## What The Shell Stores
 
-The preview stores labels, model IDs, setup status, and local runtime labels in local component state only. It does not store credentials or check whether an endpoint is reachable.
+The preview stores labels, model IDs, setup status, local runtime labels, and reachability-check results in local component state only. It does not store credentials. Endpoint checks are blocked unless the target resolves to localhost or loopback.
 
 ## Setup Status Labels
 
-- `configured preview`: sample state only, not live QA.
+- `configured preview`: sample state only, not generation QA.
 - `setup needed`: runtime setup is not connected.
-- `unreachable`: example status for a future endpoint check.
+- `running`: localhost/loopback endpoint responded to an operator-triggered reachability check.
+- `not detected`: localhost/loopback endpoint responded with a non-OK status.
+- `check failed`: localhost/loopback check failed or the target was not allowed.
 - `disabled`: not enabled in the preview.
 
 ## Future Runtime Requirements
 
-Before Local AI can be marked live, a runtime layer should add explicit endpoint checks, user-visible error states, credential boundaries for protected endpoints, and tests against at least one local runtime.
+Before Local AI can be marked live, a runtime layer should add governed model-generation calls, credential boundaries for protected endpoints, prompt/data redaction, audit evidence, and tests against at least one local runtime.

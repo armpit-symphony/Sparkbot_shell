@@ -132,6 +132,8 @@ export function DocsPage() {
           <h3>Core preview flows</h3>
           <a href="#/workstation">Workstation home</a>
           <a href="#/roundtable">Round Table hero flow</a>
+          <a href="#/work">Work page</a>
+          <a href="#/settings">Local AI settings</a>
           <a href="#/command-center">Model seats + Invite Wing</a>
           <a href="#/task-guardian">Task Guardian preview</a>
           <a href="#/robo-preview">Robo teaser</a>

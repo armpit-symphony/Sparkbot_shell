@@ -8,10 +8,14 @@ import { RoundTableFlowShell } from "./components/RoundTableFlowShell";
 import { TaskGuardianPreview } from "./components/TaskGuardianPreview";
 import { WorkstationShell } from "./components/WorkstationShell";
 import { demoShellState } from "./data/demoShellState";
+import { initialWorkspaceFiles, initialWorkPrograms } from "./data/demoWorkState";
 import { DocsPage } from "./pages/DocsPage";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
+import { SettingsPage } from "./pages/SettingsPage";
+import { WorkPage } from "./pages/WorkPage";
 import type { PageKey } from "./types";
-import type { ShellState } from "./types/shell";
+import type { ModelSeat, ShellState } from "./types/shell";
+import type { LocalModelProbeResult } from "./types/workspace";
 
 type NavItem = {
   key: PageKey;
@@ -21,12 +25,14 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { key: "workstation", label: "Home / Workstation", eyebrow: "Operating floor" },
+  { key: "work", label: "Work", eyebrow: "Programs and files" },
   { key: "chat", label: "Chat", eyebrow: "Command channel" },
   { key: "roundtable", label: "Round Table", eyebrow: "Agent meetings" },
   { key: "command-center", label: "Command Center", eyebrow: "Setup and safety" },
   { key: "task-guardian", label: "Task Guardian", eyebrow: "Health previews" },
   { key: "connectors", label: "Connectors", eyebrow: "Identity gates" },
   { key: "robo-preview", label: "Robo Preview", eyebrow: "Teaser only" },
+  { key: "settings", label: "Settings", eyebrow: "Local runtime setup" },
   { key: "docs", label: "Docs", eyebrow: "Public docs" },
 ];
 
@@ -36,6 +42,26 @@ const routeAliases: Record<string, PageKey> = {
   "": "workstation",
   robo: "robo-preview",
 };
+
+const fallbackRuntimeProbe: LocalModelProbeResult = {
+  checkedAt: "not checked",
+  details: "No runtime check has been run.",
+  detectedModels: "",
+  endpoint: "",
+  state: "unknown",
+};
+
+function buildRuntimeProbeState(modelSeats: ModelSeat[]) {
+  return modelSeats.reduce<Record<string, LocalModelProbeResult>>((acc, seat) => {
+    if (seat.providerKind === "local_ai" || seat.providerKind === "openai_compatible") {
+      acc[seat.id] = {
+        ...fallbackRuntimeProbe,
+        endpoint: seat.baseUrl ?? "",
+      };
+    }
+    return acc;
+  }, {});
+}
 
 function getRouteFromLocation(): PageKey {
   const hashRoute = window.location.hash.replace(/^#\/?/, "");
@@ -50,10 +76,46 @@ function getRouteFromLocation(): PageKey {
 export function App() {
   const [activePage, setActivePage] = useState<PageKey>(() => getRouteFromLocation());
   const [shellState, setShellState] = useState<ShellState>(demoShellState);
+  const [workspaceFiles, setWorkspaceFiles] = useState(() => initialWorkspaceFiles);
+  const [workPrograms, setWorkPrograms] = useState(() => initialWorkPrograms);
+  const [modelRuntimeChecks, setModelRuntimeChecks] = useState(() =>
+    buildRuntimeProbeState(demoShellState.modelSeats),
+  );
   const activeNavItem = useMemo(
     () => navItems.find((item) => item.key === activePage) ?? navItems[0],
     [activePage],
   );
+
+  function syncRuntimeChecks(nextSeats: ModelSeat[]) {
+    setModelRuntimeChecks((current) => {
+      const next = { ...current };
+
+      const activeSeatIds = new Set(
+        nextSeats.filter((seat) => seat.providerKind === "local_ai" || seat.providerKind === "openai_compatible").map((seat) => seat.id),
+      );
+      for (const seat of nextSeats) {
+        if (!activeSeatIds.has(seat.id)) continue;
+        if (!next[seat.id]) {
+          next[seat.id] = {
+            ...fallbackRuntimeProbe,
+            endpoint: seat.baseUrl ?? "",
+          };
+          continue;
+        }
+        next[seat.id] = { ...next[seat.id], endpoint: seat.baseUrl ?? next[seat.id].endpoint };
+      }
+      for (const seatId of Object.keys(next)) {
+        if (!activeSeatIds.has(seatId)) {
+          delete next[seatId];
+        }
+      }
+      return next;
+    });
+  }
+
+  useEffect(() => {
+    syncRuntimeChecks(shellState.modelSeats);
+  }, [shellState.modelSeats]);
 
   useEffect(() => {
     const onLocationChange = () => setActivePage(getRouteFromLocation());
@@ -128,6 +190,15 @@ export function App() {
 
         {activePage === "docs" ? <DocsPage /> : null}
         {activePage === "workstation" ? <WorkstationShell shellState={shellState} /> : null}
+        {activePage === "work" ? (
+          <WorkPage
+            workspaceFiles={workspaceFiles}
+            programs={workPrograms}
+            modelRuntimeState={modelRuntimeChecks}
+            onWorkspaceFilesChange={setWorkspaceFiles}
+            onProgramsChange={setWorkPrograms}
+          />
+        ) : null}
         {activePage === "roundtable" ? (
           <RoundTableFlowShell
             roundTable={shellState.roundTable}
@@ -165,7 +236,10 @@ export function App() {
               onSpecialtyAgentsChange={(specialtyAgents) =>
                 setShellState((current) => ({ ...current, specialtyAgents }))
               }
-              onModelSeatsChange={(modelSeats) => setShellState((current) => ({ ...current, modelSeats }))}
+              onModelSeatsChange={(modelSeats) => {
+                setShellState((current) => ({ ...current, modelSeats }));
+                syncRuntimeChecks(modelSeats);
+              }}
             />
             <section className="page-section">
               <LimaReadyLayerPanel />
@@ -205,13 +279,28 @@ export function App() {
             contextEvents={shellState.memoryContext.events}
           />
         ) : null}
+        {activePage === "settings" ? (
+          <SettingsPage
+            modelSeats={shellState.modelSeats}
+            runtimeChecks={modelRuntimeChecks}
+            onModelSeatsChange={(modelSeats) => {
+              setShellState((current) => ({ ...current, modelSeats }));
+              syncRuntimeChecks(modelSeats);
+            }}
+            onRuntimeCheck={(seatId, next) =>
+              setModelRuntimeChecks((current) => ({ ...current, [seatId]: next }))
+            }
+          />
+        ) : null}
         {activePage !== "docs" &&
         activePage !== "workstation" &&
+        activePage !== "work" &&
         activePage !== "roundtable" &&
         activePage !== "chat" &&
         activePage !== "command-center" &&
         activePage !== "task-guardian" &&
-        activePage !== "connectors" ? (
+        activePage !== "connectors" &&
+        activePage !== "settings" ? (
           <PlaceholderPage page={activePage} />
         ) : null}
       </main>

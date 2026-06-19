@@ -1,8 +1,8 @@
 # Sparkbot Shell
 
-Sparkbot Shell is the MIT-licensed static public-preview staging repo for a self-hosted AI workstation shell.
+Sparkbot Shell is the MIT-licensed preview staging repo for a self-hosted AI workstation shell.
 
-The public product model is a local-first, static-preview-oriented AI office shell with:
+The public product model is a local-first AI office shell with:
 
 - Workstation floor preview
 - Round Table hero flow
@@ -14,7 +14,8 @@ The public product model is a local-first, static-preview-oriented AI office she
 
 ## Current Status
 
-This repo is in public-release staging. The current shell is a Vite + React + TypeScript static preview with a coherent product demo flow: Workstation floor, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
+This repo is in public-release staging. The current shell is a Vite + React + TypeScript preview with a coherent product demo flow: Workstation floor, Work page, Local AI settings, Round Table meeting storyline, model/agent setup shells, Files/Memory/Tasks fixtures, Demo Room context, Guardian posture preview, Robo teaser, and LIMA-ready contract-layer notes.
+Branch `sparkbot-shell-work-settings-runtime-preview` moves beyond the prior static baseline only for explicit local browser preview behaviors: user-selected file reads into React state, in-memory work-program edits, simulated network-index search, and localhost/loopback-only model endpoint reachability checks. It is not a public release tag, not a production runtime, and not a provider/model execution layer.
 Current checkpoint baseline is `active-staging-baseline-mock-lima-ui-lock` (from `active-staging-baseline-lock`).
 Current branch: `active-staging-baseline-mock-lima-ui-lock` (implements Option B mock LIMA contract UI display lock).
 Current commit: HEAD of `active-staging-baseline-mock-lima-ui-lock` (`3fab1e8`).
@@ -27,7 +28,7 @@ Wave 1 candidate #4 (Docs/info visual refinement) is complete as a manual static
 Wave 1 checkpoint/audit docs are complete and consolidated on this branch with mock LIMA contract planning pass.
 Option B mock LIMA contract UI display now renders contract example cards and hard safety invariants in Workstation and Command Center preview surfaces.
 
-It has no backend runtime, no live model calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control.
+It has no backend runtime, no live model generation calls, no credential persistence, no connector sends, no connector sessions, no PIN verification, no scheduler, no health collector, no memory/context runtime, and no robotics/IoT control. The Work page stores uploaded/read/edited file text only in browser React state for the current page session. The Settings page can check localhost or loopback model endpoints only when the operator clicks the check button.
 It also includes a static `LIMA AI OS ready layer` panel that documents contract-first integration phases without bundling runtime wiring.
 
 Public users should wait for approved Sparkbot Shell release artifacts before treating this as an install path.
@@ -70,11 +71,13 @@ Current vocabulary alignment for mock contract examples:
 ## Public MVP Highlights
 
 - Workstation as the operating floor.
+- Work page for browser-local SOP/work-file intake, search, in-memory editing, and work-program staging.
 - Main Chat / DM as the operator command channel.
 - Round Table as the agent meeting room.
 - Meeting Manager as the coordinator and secretary.
 - Invite Wing model seats and Specialty Wing custom agents.
 - Local AI setup shapes for Ollama, LM Studio, llama.cpp / llama-server, and OpenAI-compatible endpoints.
+- Local AI settings route with localhost/loopback-only reachability checks and no credential fields.
 - Command Center AI Setup and public guardrail profile previews.
 - Unified memory/context contract preview and meeting-note labels.
 - Task Guardian PC/server health-check previews and app-first delivery preference shell.
@@ -202,7 +205,7 @@ Release decision support docs remain in the staging repo and are not included in
 - MIT is selected for this static public preview unless a legal blocker is discovered.
 - Final public repo migration remains a later release operation; this repo remains staging.
 - Physical/mobile 390px browser QA passed by Phil manual physical verification; keep requirement only for explicit Phil release approval.
-- Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, call Local AI endpoints, enforce guardrails, or control robots/IoT.
+- Shell state is local React state only. It intentionally does not persist settings, store model-seat credentials, execute Round Table meetings, write meeting notes to memory, retrieve context, verify PINs, create connector sessions, schedule Task Guardian jobs, collect health data, send connector messages, run provider/model generation calls, enforce guardrails, or control robots/IoT. The only network behavior in this branch is an explicit localhost/loopback endpoint reachability check from the Local AI settings route.
 
 ## Next Step
 

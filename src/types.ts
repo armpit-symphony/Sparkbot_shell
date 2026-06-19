@@ -1,11 +1,13 @@
 export type PageKey =
   | "workstation"
+  | "work"
   | "chat"
   | "roundtable"
   | "command-center"
   | "task-guardian"
   | "connectors"
   | "robo-preview"
+  | "settings"
   | "docs";
 
 export type Panel = {

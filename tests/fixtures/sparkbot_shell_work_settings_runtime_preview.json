@@ -1,0 +1,51 @@
+{
+  "packet_id": "sparkbot_shell_work_settings_runtime_preview",
+  "api_status": "CANDIDATE_ONLY",
+  "shell_repo": "Sparkbot_shell",
+  "proof_branch": "sparkbot-shell-work-settings-runtime-preview",
+  "source_commit_before_branch": "54057a6222dadb898da9389e4b2242554f4c0bf1",
+  "proof_packet_files": [
+    "docs/proof_packets/SPARKBOT_SHELL_WORK_SETTINGS_RUNTIME_PREVIEW_PACKET.md",
+    "docs/audits/SPARKBOT_SHELL_WORK_SETTINGS_RUNTIME_PREVIEW_AUDIT.md",
+    "tests/fixtures/sparkbot_shell_work_settings_runtime_preview.json",
+    "tests/test_sparkbot_shell_work_settings_runtime_preview.py"
+  ],
+  "runtime_preview_surfaces": [
+    "work",
+    "settings"
+  ],
+  "local_browser_behaviors": {
+    "user_selected_file_read_via_file_input": true,
+    "in_memory_document_editing": true,
+    "work_program_staging_in_react_state": true,
+    "simulated_network_index_search": true,
+    "operator_triggered_endpoint_reachability_check": true,
+    "endpoint_check_limited_to_localhost_or_loopback": true
+  },
+  "blocked_behaviors": {
+    "backend_runtime_added": false,
+    "lima_runtime_import_added": false,
+    "lima_runtime_call_added": false,
+    "provider_model_generation_call_added": false,
+    "chat_completion_call_added": false,
+    "connector_call_added": false,
+    "external_send_added": false,
+    "credential_field_added": false,
+    "credential_storage_added": false,
+    "api_key_or_provider_token_access_added": false,
+    "filesystem_write_added": false,
+    "non_local_endpoint_check_allowed": false,
+    "simulated_network_index_live_io_added": false,
+    "persistence_outside_react_state_added": false,
+    "guardian_enforcement_runtime_added": false,
+    "tool_execution_added": false,
+    "robotics_device_physical_world_behavior_added": false,
+    "product_readiness_claimed": false,
+    "production_readiness_claimed": false
+  },
+  "validation": {
+    "npm_run_build": "passed",
+    "git_diff_check": "passed"
+  },
+  "recommended_next_step": "keep_as_separate_bounded_runtime_preview_until_release_and_lima_gates_accept_local_browser_behaviors"
+}

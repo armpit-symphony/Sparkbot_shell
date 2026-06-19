@@ -1,12 +1,14 @@
 # Capabilities
 
-Sparkbot Shell is a static public preview for a self-hosted AI workstation shell. It is meant to show product shape, user flows, and safety boundaries before runtime layers are approved.
+Sparkbot Shell is a local-first preview for a self-hosted AI workstation shell. It is meant to show product shape, user flows, and safety boundaries before backend/runtime layers are approved.
 
 ## Available In The Preview
 
 - Workstation operating floor with links to major surfaces.
+- Work page with user-selected SOP/work-file reads into browser state, local search, in-memory editing, and work-program staging.
 - Main Chat shell with local placeholder messages.
 - Model-seat and Local AI setup shapes.
+- Local AI settings with explicit localhost/loopback endpoint reachability checks.
 - Round Table meeting flow with Meeting Manager, first pass, assignments, second pass, wrap-up, and notes preview.
 - Memory/context adapter preview with source labels and redaction states.
 - Task Guardian PC/server health report previews.
@@ -19,7 +21,9 @@ Sparkbot Shell is a static public preview for a self-hosted AI workstation shell
 
 - Backend runtime.
 - Provider/model calls.
-- Local AI calls or endpoint health checks.
+- Local AI model generation calls.
+- Non-local endpoint checks.
+- Credentialed endpoint checks.
 - Connector sends or webhooks.
 - PIN verification or connector sessions.
 - Scheduler/runtime Task Guardian jobs.

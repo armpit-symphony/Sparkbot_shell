@@ -615,6 +615,32 @@ textarea {
   justify-content: start;
 }
 
+.compact-fieldset {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid #cddad6;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px 12px;
+}
+
+.compact-fieldset .checkbox-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.compact-fieldset .checkbox-row input {
+  margin: 0;
+}
+
+.compact-fieldset legend {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #253531;
+}
+
 .checkbox-row input {
   width: auto;
 }

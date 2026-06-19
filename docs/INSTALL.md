@@ -1,6 +1,6 @@
 # Install And Setup
 
-Sparkbot Shell is a static public preview built with Vite, React, and TypeScript. It shows the planned product surfaces without a backend runtime.
+Sparkbot Shell is a local-first preview built with Vite, React, and TypeScript. It shows the planned product surfaces without a backend runtime.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ Sparkbot Shell is a static public preview built with Vite, React, and TypeScript
 - npm 10 or newer.
 - A local terminal.
 
-No database, server process, connector account, model provider account, or Local AI runtime is required for the current shell preview.
+No database, server process, connector account, model provider account, or Local AI runtime is required for the current shell preview. Local AI is optional if you want to try the localhost/loopback reachability check.
 
 ## Install
 
@@ -47,7 +47,8 @@ The package/version label is `0.8.0-layer8-preview`. This is an internal/staging
 ## Current Boundaries
 
 - No live model/provider calls.
-- No Local AI endpoint checks.
+- No Local AI generation calls.
+- Local AI endpoint checks are explicit and limited to localhost/loopback reachability.
 - No connector sends.
 - No scheduler, health collector, memory persistence, or backend runtime.
 - No terminal, browser automation, robotics, or IoT control.

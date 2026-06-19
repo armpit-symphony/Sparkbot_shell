@@ -1,6 +1,21 @@
 import type { PageContent, PageKey } from "../types";
 
 const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
+  work: {
+    title: "Work page",
+    summary:
+      "Upload local SOP/work files, create work programs, and stage worker assignments with read-only workspace tools.",
+    status: "Local preview for work queue and file handling. No outbound execution or filesystem writes are performed.",
+    panels: [
+      { title: "Program queue", body: "Create draft/active/ready/completed work programs with worker tags." },
+      {
+        title: "Workspace files",
+        body: "Upload SOPs and work docs into a local in-memory workspace for search and edits.",
+      },
+      { title: "Model readiness", body: "Read local model check summary before running live worker assignments." },
+    ],
+    boundary: "No edits are persisted outside the browser session and no network actions run by default.",
+  },
   workstation: {
     title: "Company floor for local-first agent work",
     summary:
@@ -61,6 +76,22 @@ const pageContent: Record<Exclude<PageKey, "docs">, PageContent> = {
     ],
     boundary:
       "No Vault, PIN, provider credential, policy engine, or Guardian Suite internals are imported.",
+  },
+  settings: {
+    title: "Local runtime settings",
+    summary:
+      "Configure local AI runtime routes and perform model endpoint checks for seats that are marked local-capable.",
+    status: "Local-only install/onboarding surface. No credentials are captured and no production routing is triggered.",
+    panels: [
+      { title: "Install routes", body: "Navigate directly to Ollama, LM Studio, and OpenAI-compatible setup docs." },
+      {
+        title: "Seat configuration",
+        body: "Edit local model seat labels, base URL, and selected local runtime style before checks.",
+      },
+      { title: "Readiness checks", body: "Track local endpoint reachability per model seat." },
+    ],
+    boundary:
+      "No credential storage, chat calls, tool execution, or connector routing occur in this shell surface.",
   },
   "task-guardian": {
     title: "Useful scheduled work without runtime execution",
